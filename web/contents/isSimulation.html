@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko" class="on">
+    <head href="javascript:;">
+        <title>군인공제회 - 저축안내 &gt; 현역/예비역 회원 저축(적립형) &gt; 예상금액 보기</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="../../cubersc/cube.ico" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, target-densitydpi=device-dpi" />
+
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/content.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/common/plugins/jquery_daterangepicker/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/animate-3.7.2.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/main.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/swiper.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/common.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/step.css?v=20250529" />
+        <script type="text/javascript" src="../../cubersc/common/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/wow.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/slick.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/swiper.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/matchHeight-min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/mainpage.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/common.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/step.js"></script>
+        <script type="text/javascript" src="../../cubersc/common/plugins/daterangepicker/moment.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/common/plugins/jquery_daterangepicker/jquery.daterangepicker.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/common/js/bankUtil.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/common/js/kuvUtil.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <script src="../../cubersc/common/itg-js.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/html2canvas.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/content.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/kuvdev/js/quickChat.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/calendar.js"></script>
+
+        <!-- 퍼블 확인용: 공통 인클루드 js -->
+        <script src="../../web/js/include.js"></script>
+    </head>
+    <body class="on" href="javascript:;">
+        <!-- [S] 퍼블 확인용: 헤더 인클루드 -->
+        <div data-include="../../web/includes/header.html"></div>
+        <!-- [E] 퍼블 확인용: 헤더 인클루드 -->
+
+        <!-- 본문 영역 -->
+        <div id="wrap" class="on" href="javascript:;">
+            <div class="subs on" href="javascript:;">
+                <!-- [S] 퍼블 확인용: 퀵메뉴 인클루드 -->
+                <div data-include="../../web/includes/quickmenu.html"></div>
+                <!-- [E] 퍼블 확인용: 퀵메뉴 인클루드 -->
+                <div id="containers" class="on" href="javascript:;">
+                    <!-- bread crumb -->
+                    <div class="box_toppagewrap pc on" href="javascript:;">
+                        <div class="nav on" href="javascript:;">
+                            <div class="nav-all on" href="javascript:;">
+                                <ul class="nav-tabs on" href="javascript:;">
+                                    <li class="home" href="javascript:;"><a href="javascript:;" title="군인공제회 메인으로 이동">홈</a></li>
+                                    <li class="nav-list on" href="javascript:;">
+                                        <ul class="nav1s on" href="javascript:;" style="left: 56px; width: 165px">
+                                            <li class="nav1 on" id="" href="javascript:;">
+                                                <a href="javascript:;" title="저축안내" name="0" tabindex="0"><span>저축안내</span></a>
+                                                <ul class="nav2s on" href="javascript:;" style="left: 165px; width: 167px">
+                                                    <li class="nav2 on" id="" href="javascript:;">
+                                                        <a href="javascript:;" title="청년간부준비적금" name="0" tabindex="0"><span>청년간부준비적금</span></a>
+                                                        <ul class="nav3s on last_ul" href="javascript:;" style="left: 167px; width: 167px">
+                                                            <li class="nav3 on active last_menulist" id="" href="javascript:;">
+                                                                <a href="javascript:;" title="예상금액 보기" name="0" tabindex="0"><span>예상금액 보기</span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <ul class="nav-btn" href="javascript:;">
+                                    <li class="n-url" title="링크 복사하기" onclick="copyUrl();return false;">
+                                        <a href="javascript:;" class="btn_addshare copy" title="새창 열림" tabindex="0">링크 복사하기</a>
+                                    </li>
+                                    <li class="n-link" title="공유하기" tabindex="0">
+                                        공유하기
+                                        <ul class="links">
+                                            <li class="kakao" title="카카오톡" onclick="fn_send('kakao');return false;">
+                                                <a href="javascript:;" class="btn_share kakao" title="새창 열림" tabindex="-1">카카오톡</a>
+                                            </li>
+                                            <li class="facebook" title="페이스북" onclick="fn_send('facebook');return false;">
+                                                <a href="javascript:;" class="btn_share facebook" title="새창 열림" tabindex="-1">페이스북</a>
+                                            </li>
+                                            <li class="naver" title="네이버" onclick="fn_send('naver');return false;">
+                                                <a href="javascript:;" class="btn_share naver" title="새창 열림" tabindex="-1">네이버</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="n-print" title="인쇄하기" onclick="toPrint();return false;" tabindex="-1">
+                                        <a href="javascript:;" class="btn_addshare print" title="새창 열림">인쇄하기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //bread crumb -->
+
+                    <!--container-->
+                    <section id="container" class="sub" href="javascript:;" tabindex="0">
+                        <div class="sub_inner">
+                            <div class="w">
+                                <div id="contents" class="content-all">
+                                    <div class="box_calcarea">
+                                        <!-- 기능 wrap 용 -->
+                                        <div class="box_btmborder_tit">
+                                            <h3>예상금액 보기</h3>
+                                        </div>
+
+                                        <div class="box_calcwrap">
+                                            <div class="tab-th two">
+                                                <!-- 탭 구분 -->
+                                                <ul class="notice-tab tab_type2">
+                                                    <!-- 탭 메뉴 2개 : tab_type2 -->
+                                                    <li data-tab="notice1" class="tab active" id="notice" data-taxtype="txtn" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px"><a href="javascript:;" title="선택됨">청년간부내일준비적금 예상금액보기</a></li>
+                                                    <li data-tab="notice2" class="tab" data-taxtype="ntax"><a href="javascript:;" title="">청년간부내일준비적금 비과세종합저축 예상금액보기</a></li>
+                                                </ul>
+                                                <!-- /탭 구분 -->
+                                                <!-- 본문 -->
+                                                <!-- (1) 예금형 목돈수탁저축 예상금액보기 탭 -->
+                                                <div id="notice1" class="notices active">
+                                                    <div class="subss">
+                                                        <div class="top-txt mgt">
+                                                            라이프 사이클별 목돈마련을 위한<br />
+                                                            <span class="spec"><span id="title1">청년간부내일준비적금</span> 예상금액을 조회하세요.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mycontent nosss rrt">
+                                                        <div class="box-one one01">
+                                                            <div class="box pb center box_simple_topsimul">
+                                                                <div class="chch down five">
+                                                                    <p class="only"><span id="title2">청년간부내일준비적금</span> 예상금액조회</p>
+                                                                    <div class="col4 total_4">
+                                                                        <!-- 4개인 경우, total_4 -->
+                                                                        <div class="total line wc">
+                                                                            <p class="top-t">월납부금</p>
+                                                                            <div class="slc">
+                                                                                <div>
+                                                                                    <label for="scbAmt" class="hide">월납부금</label> <input type="text" id="scbAmt" name="scbAmt" class="mon1" placeholder="월납부금을 입력하세요." data-inputregex="money" title="월납부금" />
+                                                                                    <div class="box_cntbtnwrap" id="rsMoneyBtn">
+                                                                                        <button type="button" class="btn_cnt btn_cnt100" data-setmoney="10000"><em class="m_hide">+</em>만</button>
+                                                                                        <button type="button" class="btn_cnt btn_cnt1000" data-setmoney="100000"><em class="m_hide">+</em>10만</button>
+                                                                                        <button type="button" class="btn_cnt btn_cnt1mil" data-setmoney="1000000"><em class="m_hide">+</em>100만</button>
+                                                                                        <button type="button" class="btn_cnt btn_resetmoney" data-setmoney="reset">정정</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="total line">
+                                                                            <p class="top-t">가입일자</p>
+                                                                            <div class="slc">
+                                                                                <div class="jq_dateicowrap">
+                                                                                    <label for="scbDt" class="hide">가입일자 달력</label>
+                                                                                    <input type="text" name="scbDt" id="scbDt" autocomplete="off" class="sd jqdate" placeholder="가입일을 선택하세요." data-inputregex="date" maxlength="10" title="가입일자 달력" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="total line">
+                                                                            <p class="top-t">가입기간</p>
+                                                                            <div class="slc">
+                                                                                <label for="scbPdCd" class="hide">가입기간 선택</label>
+                                                                                <select class="select-ac" name="" id="scbPdCd" title="가입기간">
+                                                                                    <option value="0">선택</option>
+                                                                                    <option value="Y3">3년</option>
+                                                                                    <option value="Y5">5년</option>
+                                                                                    <option value="Y7">7년</option>
+                                                                                    <option value="Y10">10년</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="total line">
+                                                                            <p class="top-t">가입금액</p>
+                                                                            <div class="slc">
+                                                                                <label for="totalscbAmt" class="hide">가입금액</label>
+                                                                                <input type="text" class="mon1" id="totalscbAmt" disabled="" title="가입금액" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="total">
+                                                                            <p class="top-t">금리</p>
+                                                                            <div class="slc">
+                                                                                <div>
+                                                                                    <label for="inrt" class="hide">금리</label>
+                                                                                    <input type="text" id="inrt" name="inrt" class="mon1" placeholder="4.9" title="금리" value="" autocomplete="off" maxlength="3" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btns top_panelbtns">
+                                                                    <!-- 상환예상금액 조회용 class -->
+                                                                    <div class="check-bt grey">
+                                                                        <button type="button" class="button" id="resetBtn">초기화</button>
+                                                                    </div>
+                                                                    <div class="check-bt">
+                                                                        <button type="button" class="button" id="applyBtn">적용</button>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 하단 조회 결과 영역 -->
+                                                                <div class="box_topinner" id="result_txtn">
+                                                                    <!-- 숨김 처리시, hide 클래스 추가 -->
+                                                                    <div class="box_tbl_mgtwrap">
+                                                                        <div class="st-table fix">
+                                                                            <p class="pc_tbltxt">(단위 : 원)</p>
+                                                                            <table class="no_mgb">
+                                                                                <caption>
+                                                                                    현역/예비역 회원저축(적립형) 지급 예정 내역
+                                                                                </caption>
+
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th rowspan="2">지급일자</th>
+                                                                                        <th rowspan="2">가입금액</th>
+                                                                                        <th rowspan="2">세전이자</th>
+                                                                                        <th colspan="3">세금</th>
+                                                                                        <th rowspan="2">실수령액</th>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <th>소득세</th>
+                                                                                        <th>지방소득세</th>
+                                                                                        <th class="r_border">합계</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody id="pcbody">
+                                                                                    <tr>
+                                                                                        <td>2028-11-10</td>
+                                                                                        <td class="right">36,000,000원</td>
+                                                                                        <td class="right">2,802,993원</td>
+                                                                                        <td class="right">392,410원</td>
+                                                                                        <td class="right">39,240원</td>
+                                                                                        <td class="right">431,650원</td>
+                                                                                        <td class="right">38,371,343원</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                                <tfoot id="pcfoot"></tfoot>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="app-mb">
+                                                                        <div id="mobody">
+                                                                            <div class="one-app next">
+                                                                                <div class="cont-mb">
+                                                                                    <div><span>지급일자</span> <span>2028-11-10</span></div>
+                                                                                    <div><span>가입금액</span> <span>36,000,000원</span></div>
+                                                                                    <div><span>세전이자</span> <span>2,802,993원</span></div>
+                                                                                    <div><span>소득세</span> <span>392,410원</span></div>
+                                                                                    <div><span>지방소득세</span> <span>39,240원</span></div>
+                                                                                    <div><span>세금계</span> <span>431,650원</span></div>
+                                                                                    <div><span>실수령액</span> <span>38,371,343원</span></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="box_notitxt">
+                                                                        <span class="txt_minnoti grey">※ 매월 이자수령액은 다소 차이가 있을 수 있습니다.</span>
+                                                                    </div>
+                                                                    <div class="btns">
+                                                                        <div class="check-bt"><button type="button" class="button" onclick="location.href='/web/contents/it-Open.do?page_2'">가입하기</button></div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- 하단 조회 결과 영역 끝-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //(1) 예금형 목돈수탁저축 예상금액보기 탭 -->
+                                                </div>
+
+                                                <div id="notice2" class="notices">
+                                                    <div class="subss">
+                                                        <div class="top-txt mgt">
+                                                            <!-- 나에게 필요한 <span id="myTitle">현역/예비역 회원저축(적립형)</span>금은? 이자율까지 계산해서<br> -->
+                                                            라이프 사이클별 목돈마련을 위한<br />
+                                                            <span class="spec"><span id="title1">청년간부내일준비적금 비과세종합저축</span> 예상금액을 조회하세요.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mycontent nosss rrt">
+                                                        <div class="box-one one01">
+                                                            <div class="box pb center box_simple_topsimul">
+                                                                <div class="chch down five">
+                                                                    <p class="only"><span id="title2">청년간부내일준비적금 비과세종합저축</span> 예상금액조회</p>
+                                                                    <div class="col4 total_4">
+                                                                        <!-- 4개인 경우, total_4 -->
+                                                                        <div class="total line wc">
+                                                                            <p class="top-t">월납부금</p>
+                                                                            <div class="slc">
+                                                                                <div>
+                                                                                    <label for="scbAmt" class="hide">월납부금</label> <input type="text" id="scbAmt" name="scbAmt" class="mon1" placeholder="월납부금을 입력하세요." data-inputregex="money" title="월납부금" />
+                                                                                    <div class="box_cntbtnwrap" id="rsMoneyBtn">
+                                                                                        <button type="button" class="btn_cnt btn_cnt100" data-setmoney="10000"><em class="m_hide">+</em>만</button>
+                                                                                        <button type="button" class="btn_cnt btn_cnt1000" data-setmoney="100000"><em class="m_hide">+</em>10만</button>
+                                                                                        <button type="button" class="btn_cnt btn_cnt1mil" data-setmoney="1000000"><em class="m_hide">+</em>100만</button>
+                                                                                        <button type="button" class="btn_cnt btn_resetmoney" data-setmoney="reset">정정</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="total line">
+                                                                            <p class="top-t">가입일자</p>
+                                                                            <div class="slc">
+                                                                                <div class="jq_dateicowrap">
+                                                                                    <label for="scbDt" class="hide">가입일자 달력</label>
+                                                                                    <input type="text" name="scbDt" id="scbDt" autocomplete="off" class="sd jqdate" placeholder="가입일을 선택하세요." data-inputregex="date" maxlength="10" title="가입일자 달력" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="total line">
+                                                                            <p class="top-t">가입기간</p>
+                                                                            <div class="slc">
+                                                                                <label for="scbPdCd" class="hide">가입기간 선택</label>
+                                                                                <select class="select-ac" name="" id="scbPdCd" title="가입기간">
+                                                                                    <option value="0">선택</option>
+                                                                                    <option value="Y3">3년</option>
+                                                                                    <option value="Y5">5년</option>
+                                                                                    <option value="Y7">7년</option>
+                                                                                    <option value="Y10">10년</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="total line">
+                                                                            <p class="top-t">가입금액</p>
+                                                                            <div class="slc">
+                                                                                <label for="totalscbAmt" class="hide">가입금액</label>
+                                                                                <input type="text" class="mon1" id="totalscbAmt" disabled="" title="가입금액" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="total">
+                                                                            <p class="top-t">금리</p>
+                                                                            <div class="slc">
+                                                                                <div>
+                                                                                    <label for="inrt" class="hide">금리</label>
+                                                                                    <input type="text" id="inrt" name="inrt" class="mon1" placeholder="4.9" title="금리" value="" autocomplete="off" maxlength="3" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btns top_panelbtns">
+                                                                    <!-- 상환예상금액 조회용 class -->
+                                                                    <div class="check-bt grey">
+                                                                        <button type="button" class="button" id="resetBtn">초기화</button>
+                                                                    </div>
+                                                                    <div class="check-bt">
+                                                                        <button type="button" class="button" id="applyBtn">적용</button>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 하단 조회 결과 영역 -->
+                                                                <div class="box_topinner" id="result_ntax">
+                                                                    <!-- 숨김 처리시, hide 클래스 추가 -->
+                                                                    <div class="box_tbl_mgtwrap">
+                                                                        <div class="st-table fix">
+                                                                            <p class="pc_tbltxt">(단위 : 원)</p>
+                                                                            <table class="no_mgb">
+                                                                                <caption>
+                                                                                    현역/예비역 회원저축(적립형) 지급 예정 내역
+                                                                                </caption>
+
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>지급일자</th>
+                                                                                        <th>가입금액</th>
+                                                                                        <th>이자</th>
+                                                                                        <th>실수령액</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody id="pcbody">
+                                                                                    <tr>
+                                                                                        <td>2028-11-10</td>
+                                                                                        <td class="right">36,000,000원</td>
+                                                                                        <td class="right">2,802,993원</td>
+                                                                                        <td class="right">38,802,993원</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                                <tfoot id="pcfoot"></tfoot>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="app-mb">
+                                                                        <div class="one-app next total-next">
+                                                                            <div class="cont-mb" id="mohead"></div>
+                                                                        </div>
+                                                                        <div id="mobody">
+                                                                            <div class="one-app next">
+                                                                                <div class="cont-mb">
+                                                                                    <div><span>지급일자</span> <span>2028-11-10</span></div>
+                                                                                    <div><span>가입금액</span> <span>36,000,000원</span></div>
+                                                                                    <div><span>이자</span> <span>2,802,993원</span></div>
+                                                                                    <div><span>실수령액</span> <span>38,802,993원</span></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="box_notitxt">
+                                                                            <span class="txt_minnoti grey">※ 매월 이자수령액은 다소 차이가 있을 수 있습니다.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- 하단 조회 결과 영역 끝-->
+
+                                                                    <div class="btns">
+                                                                        <div class="check-bt"><button type="button" class="button" onclick="location.href='/web/contents/it-Open.do?page_2'">가입하기</button></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //(1) 예금형 목돈수탁저축 예상금액보기 탭 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //w -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- 본문 영역 -->
+
+        <!-- [S] 퍼블 확인용: 푸터 인클루드 -->
+        <div data-include="../../web/includes/footer.html"></div>
+        <!-- [E] 퍼블 확인용: 푸터 인클루드 -->
+    </body>
+</html>

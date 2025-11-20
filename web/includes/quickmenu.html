@@ -1,0 +1,855 @@
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            // 스크롤탑 버튼
+            if ($(window).scrollTop() <= 0) {
+                $(".btn-top, .btn-help, .btn-msimulation").removeClass("show");
+                $(".btn-top, .btn-help, .btn-msimulation").css("cursor", "auto");
+            } else {
+                $(".btn-top, .btn-help, .btn-msimulation").addClass("show");
+                $(".btn-top, .btn-help, .btn-msimulation").css("cursor", "pointer");
+            }
+        });
+        $(".btn-top").click(function () {
+            $("html,body").animate(
+                {
+                    scrollTop: 0,
+                },
+                500
+            );
+            return false;
+        });
+
+        if ($("div").hasClass("subs") === true) {
+            $(".quick").css("top", "107px");
+        }
+
+        $(".quick-button").click(function () {
+            // 퀵메뉴 버튼
+            $(".quick").toggleClass("close");
+            if ($(this).text() == "퀵메뉴 닫기") {
+                $(this).text("퀵메뉴 열기");
+            } else {
+                $(this).text("퀵메뉴 닫기");
+            }
+        });
+        $(window).resize(function () {
+            if ($(window).width() <= 1600) {
+                $(".quick").addClass("close");
+                $("quick-button").text("퀵메뉴 열기");
+            } else {
+                $(".quick").removeClass("close");
+                $("quick-button").text("퀵메뉴 닫기");
+            }
+        });
+        if ($(window).width() <= 1600) {
+            $(".quick").addClass("close");
+            $(".quick-button").text("퀵메뉴 열기");
+        }
+
+        $(".quick1, .btn-msimulation").click(function () {
+            $(".simul").addClass("active");
+            $(".simul-box").find(".simul-close").focus();
+            $("#header").css("z-index", "9");
+            $("body").addClass("hidden");
+        });
+
+        /* $(window).resize(function() {
+			if($(window).width() <= 1024) {
+				$(".simul").removeClass('active');
+			}
+		}); */
+        $(".simul-box .simul_tabs li").click(function () {
+            var tab_id = $(this).attr("data-tab");
+
+            $(".simul-box .simul_tabs li").removeClass("active");
+            $(".simul-box .tab-content").removeClass("active");
+            $(this).addClass("active");
+            $("#" + tab_id).addClass("active");
+        });
+
+        $(".simul-box .btn1").click(function () {
+            setTimeout(function () {
+                $(".simul-box .tab-content.active .box1").css("margin-bottom", "0");
+            }, 500);
+            $(".simul-box .tab-content.active .box2").slideUp(500);
+            $("body").addClass("hidden");
+        });
+
+        $(".simul-box .btn2").click(function () {
+            $(".simul-box .tab-content.active .box1").css("margin-bottom", "27px");
+            $(".simul-box .tab-content.active .box2").slideDown(500);
+            $("body").addClass("hidden");
+        });
+
+        // 퀵메뉴 미리 체크 -s-
+        var quick1 = "#chk_top_e";
+        var quick2 = "#chk_top_f";
+        var quick3 = "#chk_top_g";
+        var quick4 = "#chk_top_h";
+
+        $(quick1).attr("checked", true);
+        $(quick2).attr("checked", true);
+        $(quick3).attr("checked", true);
+        $(quick4).attr("checked", true);
+
+        var disquick1 = "dis_chk_top_e";
+        var disquick2 = "dis_chk_top_f";
+        var disquick3 = "dis_chk_top_g";
+        var disquick4 = "dis_chk_top_h";
+
+        document.getElementById(disquick1).style.display = "";
+        document.getElementById(disquick2).style.display = "";
+        document.getElementById(disquick3).style.display = "";
+        document.getElementById(disquick4).style.display = "";
+        // 퀵메뉴 미리 체크 -e-
+    });
+
+    //4개만 체크되게 하기
+    function count_ck(obj) {
+        var chkbox = document.getElementsByName("chk_top");
+        var chkCnt = 0;
+
+        for (var i = 0; i < chkbox.length; i++) {
+            if (chkbox[i].checked) {
+                chkCnt++;
+            }
+        }
+
+        // 좌측 목록 변경
+        var leftchk = obj.checked;
+        var chktest = "dis_" + $(obj).attr("id");
+
+        if (leftchk == true) {
+            document.getElementById(chktest).style.display = "";
+
+            switch (chkCnt) {
+                case 0:
+                    document.getElementById("empty1").style.display = "";
+                    document.getElementById("empty2").style.display = "";
+                    document.getElementById("empty3").style.display = "";
+                    document.getElementById("empty4").style.display = "";
+                    break;
+                case 1:
+                    document.getElementById("empty1").style.display = "none";
+                    document.getElementById("empty2").style.display = "";
+                    document.getElementById("empty3").style.display = "";
+                    document.getElementById("empty4").style.display = "";
+                    break;
+                case 2:
+                    document.getElementById("empty1").style.display = "none";
+                    document.getElementById("empty2").style.display = "none";
+                    document.getElementById("empty3").style.display = "";
+                    document.getElementById("empty4").style.display = "";
+                    break;
+                case 3:
+                    document.getElementById("empty1").style.display = "none";
+                    document.getElementById("empty2").style.display = "none";
+                    document.getElementById("empty3").style.display = "none";
+                    document.getElementById("empty4").style.display = "";
+                    break;
+                case 4:
+                    document.getElementById("empty1").style.display = "none";
+                    document.getElementById("empty2").style.display = "none";
+                    document.getElementById("empty3").style.display = "none";
+                    document.getElementById("empty4").style.display = "none";
+                    break;
+            }
+        } else {
+            document.getElementById(chktest).style.display = "none";
+
+            switch (chkCnt) {
+                case 0:
+                    document.getElementById("empty1").style.display = "";
+                    document.getElementById("empty2").style.display = "";
+                    document.getElementById("empty3").style.display = "";
+                    document.getElementById("empty4").style.display = "";
+                    break;
+                case 1:
+                    document.getElementById("empty1").style.display = "none";
+                    document.getElementById("empty2").style.display = "";
+                    document.getElementById("empty3").style.display = "";
+                    document.getElementById("empty4").style.display = "";
+                    break;
+                case 2:
+                    document.getElementById("empty1").style.display = "none";
+                    document.getElementById("empty2").style.display = "none";
+                    document.getElementById("empty3").style.display = "";
+                    document.getElementById("empty4").style.display = "";
+                    break;
+                case 3:
+                    document.getElementById("empty1").style.display = "none";
+                    document.getElementById("empty2").style.display = "none";
+                    document.getElementById("empty3").style.display = "none";
+                    document.getElementById("empty4").style.display = "";
+                    break;
+                case 4:
+                    document.getElementById("empty1").style.display = "none";
+                    document.getElementById("empty2").style.display = "none";
+                    document.getElementById("empty3").style.display = "none";
+                    document.getElementById("empty4").style.display = "none";
+                    break;
+            }
+        }
+
+        if (chkCnt > 4) {
+            alert("최대 4개까지만 체크 가능합니다.");
+
+            obj.checked = false;
+            document.getElementById(chktest).style.display = "none";
+            return false;
+        }
+    }
+
+    // 퀵메뉴 초기화 버튼
+    function quickdf() {
+        // 기본값 제외 전부 체크 헤제
+        let qdf = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v"];
+        //let qdf1 = ['a','b','c','d'];
+        let qdf1 = ["e", "f", "g", "h"];
+
+        for (var i = 0; i < qdf.length; i++) {
+            var def = "#chk_top_" + qdf[i];
+            $(def).attr("checked", false);
+
+            var disdef = "dis_chk_top_" + qdf[i];
+            document.getElementById(disdef).style.display = "none";
+        }
+
+        // 기본값 체크 진행
+        for (var i = 0; i < qdf1.length; i++) {
+            var def1 = "#chk_top_" + qdf1[i];
+            $(def1).prop("checked", true);
+
+            var disdef1 = "dis_chk_top_" + qdf1[i];
+            document.getElementById(disdef1).style.display = "";
+
+            var empty = "empty" + (i + 1);
+            document.getElementById(empty).style.display = "none";
+        }
+    }
+
+    // 퀵메뉴 선택 4개 체크 알림
+    function formChk() {
+        var chkbox = document.getElementsByName("chk_top");
+        var chkCnt = 0;
+
+        for (var i = 0; i < chkbox.length; i++) {
+            if (chkbox[i].checked) {
+                chkCnt++;
+            }
+        }
+
+        if (chkCnt >= 4) {
+            document.sandquick.submit();
+            return true;
+        } else {
+            alert("4가지를 전부 선택해주세요.");
+            return false;
+        }
+    }
+
+    // iframe 동작감지 호출 함수
+    function motionDetection() {
+        console.log("세션갱신 ::::::::::::::::::::");
+
+        $.ajax({
+            url: "/api/chatPossible.do",
+            type: "post",
+            dataType: "json",
+            async: true,
+            success: function (response) {
+                var responseJSON = response["AA010"];
+
+                // 테스트 하려면 != 200 으로 하고 테스트 끝나면 == 200 으로 복귀해야 함
+                if (responseJSON["status"] == 200) {
+                    if (responseJSON["data"]["possible"] == "Y") {
+                        //alert("상담채팅 가능");
+
+                        console.log("세션갱신 완료<<<<<<<<<<<<<");
+                    } else {
+                        console.log("상담채팅이 불가능한 시간입니다.");
+                    }
+                } else if (responseJSON["status"] == 500) {
+                    console.log("status:" + responseJSON["status"] + "\n" + responseJSON["message"]);
+                } else {
+                    console.log("처리 중 오류가 발생하였습니다.");
+                }
+            },
+            error: function (request, status, error) {
+                if (request.responseText.indexOf("로그인") > 0) {
+                    console.log("로그인 후 이용 가능합니다.");
+                    location.href = "/web/contents/webLogin.do";
+                } else {
+                    console.log("api오류\ncode:" + request.status + "\n" + "message:" + request.responseText + "\n");
+                }
+            },
+        });
+    }
+</script>
+
+<button type="button" class="btn-msimulation">저축/대여 시뮬레이션</button>
+<button type="button" class="btn-help">채팅 상담</button>
+<button type="button" class="btn-top">맨 위로 이동</button>
+<div class="simul">
+    <div class="simul-bg"></div>
+    <div class="simul-box">
+        <a href="javascript:;" title="시뮬레이션 닫기" class="simul-close">시뮬레이션 닫기</a>
+        <div class="top">
+            <p class="tit-p">저축/대여 시뮬레이션</p>
+            <!-- <ul class="simul_tabs">
+				<li data-tab="simul1" class="active"><a href="javascript:;" title="저축">저축</a></li>
+				<li data-tab="simul2"><a href="javascript:;" title="대여">대여</a></li>
+			</ul> -->
+        </div>
+        <div class="box_simullink_wrap">
+            <ul>
+                <li class="simul_01">
+                    <a class="btn_simul01" href="/web/contents/wSimulation.do"
+                        ><span class="simul_ico simul_ico01"></span><span class="simul_txt">퇴직급여<em class="m_hide"> 예상금액 보기</em></span></a
+                    >
+                </li>
+                <li class="simul_02">
+                    <a class="btn_simul02" href="/web/contents/rSimulation.do"
+                        ><span class="simul_ico simul_ico02"></span><span class="simul_txt">연금식 분할급여<em class="m_hide"> 예상금액 보기</em></span></a
+                    >
+                </li>
+                <li class="simul_03">
+                    <a class="btn_simul03" href="/web/contents/isSimulation.do"
+                        ><span class="simul_ico simul_ico03"></span><span class="simul_txt">현역/예비역 회원저축<em class="m_hide">(적립형) 예상금액 보기</em></span></a
+                    >
+                </li>
+                <li class="simul_04">
+                    <a class="btn_simul04" href="/web/contents/tsSimulation.do"
+                        ><span class="simul_ico simul_ico04"></span><span class="simul_txt">예금형 목돈수탁저축 가입<em class="m_hide"> 예상금액 보기</em></span></a
+                    >
+                </li>
+                <li class="simul_05">
+                    <a class="btn_simul05" href="/web/contents/loanRepaySimulation1.do"
+                        ><span class="simul_ico simul_ico05"></span><span class="simul_txt">퇴직급여대여<em class="m_hide"> 상환예상금액 조회</em></span></a
+                    >
+                </li>
+                <li class="simul_06">
+                    <a class="btn_simul05" href="/web/contents/loanRepaySimulation2.do"
+                        ><span class="simul_ico simul_ico06"></span><span class="simul_txt">예금형 목돈수탁대여<em class="m_hide"> 상환예상금액 조회</em></span></a
+                    >
+                </li>
+            </ul>
+        </div>
+
+        <!-- <div class="boxs simulationLinkList">
+		
+			<div id="simul1" class="tab-content active">
+				<div class="box1">
+					<a href="/web/contents/wSimulation.do">퇴직급여 예상금액 보기</a>
+					<a href="/web/contents/rSimulation.do">연금식 분할급여 예상금액 보기</a>
+					<a href="/web/contents/isSimulation.do">현역/예비역 회원저축(적립형) 예상금액 보기</a>
+					<a href="/web/contents/tsSimulation.do">예금형 목돈수탁저축 예상금액 보기</a>
+				</div>
+			
+				<div class="box1">
+					<p class="main_page_title">입력사항</p>
+					<div class="inputbox">
+						<div class="inputs"><span>종류</span>
+						<label for="kind1">종류</label>
+						<select id="kind1"><option>퇴직급여</option><option>분할급여</option></select></div>
+						<div class="inputs"><span>기간</span>
+							<label for="period1">기간</label>
+							<select id="period1">
+								<option>1년</option>
+								<option>2년</option>
+								<option>3년</option>
+								<option>4년</option>
+								<option>5년</option>
+								<option>6년</option>
+								<option>7년</option>
+								<option>8년</option>
+								<option>9년</option>
+								<option>10년</option>
+								<option>11년</option>
+								<option>12년</option>
+								<option>13년</option>
+								<option>14년</option>
+								<option>15년</option>
+								<option>16년</option>
+								<option>17년</option>
+								<option>18년</option>
+								<option>19년</option>
+								<option>20년</option>
+								<option>21년</option>
+								<option>22년</option>
+								<option>23년</option>
+								<option>24년</option>
+								<option>25년</option>
+								<option>26년</option>
+								<option>27년</option>
+								<option>28년</option>
+								<option>29년</option>
+								<option>30년</option>
+							</select>
+						</div>
+						<div class="inputs"><span>월상환액</span>
+						<label for="monthly1">월상환액</label>
+						<input type="text" id="monthly1"></div>
+						<div class="inputs"><span>이자율</span>
+						<label for="rate1">이자율</label>
+						<input type="text" id="rate1"></div>
+					</div>
+					<div class="buttons">
+						<button type="button" title="초기화" class="btn1">초기화</button>
+						<button type="button" title="조회" class="btn2">조회</button>
+					</div>
+				</div>
+				<div class="box2">
+					<p class="title">조회 결과</p>
+					<div class="result">
+						<div class="text1"><p>예상 만기금액</p><p><span>1,231,453</span> 원</p></div>
+						<div class="text"><p>원금</p><p><span>1,200,000</span> 원</p></div>
+						<div class="text"><p>세전이자</p><p><span>22,180</span> 원</p></div>
+						<div class="text"><p>세금</p><p><span>3,415</span> 원</p></div>
+						<div class="text"><p>세후이자</p><p><span>18,765</span> 원</p></div>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			<div id="simul2" class="tab-content">
+				<div class="box1">
+					<a href="/web/contents/loanRepaySimulation1.do">퇴직급여대여 상환예상금액 조회</a>
+					<a href="/web/contents/loanRepaySimulation2.do">목돈수탁대여 상환예상금액 조회</a>
+				</div>
+			
+				<div class="box1">
+					<p class="main_page_title">입력사항</p>
+					<div class="inputbox">
+						<div class="inputs"><span>종류</span>
+						<label for="kind2">종류</label>
+						<select id="kind2"><option>퇴직급여</option><option>예금형 목돈수탁</option></select></div>
+						<div class="inputs"><span>기간</span>
+							<label for="period2">기간</label>
+							<select id="period2">
+								<option>1년</option>
+								<option>2년</option>
+								<option>3년</option>
+								<option>4년</option>
+								<option>5년</option>
+								<option>6년</option>
+								<option>7년</option>
+								<option>8년</option>
+								<option>9년</option>
+								<option>10년</option>
+								<option>11년</option>
+								<option>12년</option>
+								<option>13년</option>
+								<option>14년</option>
+								<option>15년</option>
+								<option>16년</option>
+								<option>17년</option>
+								<option>18년</option>
+								<option>19년</option>
+								<option>20년</option>
+								<option>21년</option>
+								<option>22년</option>
+								<option>23년</option>
+								<option>24년</option>
+								<option>25년</option>
+								<option>26년</option>
+								<option>27년</option>
+								<option>28년</option>
+								<option>29년</option>
+								<option>30년</option>
+							</select>
+						</div>
+						<div class="inputs"><span>월상환액</span>
+						<label for="monthly2">월상환액</label>
+						<input type="text" id="monthly2"></div>
+						<div class="inputs"><span>이자율</span>
+						<label for="rate2">이자율</label>
+						<input type="text" id="rate2"></div>						
+					</div>
+					<div class="buttons">
+						<button type="button" title="초기화" class="btn1">초기화</button>
+						<button type="button" title="조회" class="btn2">조회</button>
+					</div>
+				</div> 
+				<div class="box2"> 
+					<p class="title">조회 결과</p>
+					<div class="result">
+						<div class="text1"><p>예상 만기금액</p><p><span>1,231,453</span> 원</p></div>
+						<div class="text"><p>원금</p><p><span>1,200,000</span> 원</p></div>
+						<div class="text"><p>세전이자</p><p><span>22,180</span> 원</p></div>
+						<div class="text"><p>세금</p><p><span>3,415</span> 원</p></div>
+						<div class="text"><p>세후이자</p><p><span>18,765</span> 원</p></div>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+		</div>
+		 -->
+        <a href="javascript:;" title="시뮬레이션 닫기" class="simul-close2"><span class="blind">시뮬레이션 닫기</span></a>
+    </div>
+</div>
+<div class="quick close" style="top: 107px">
+    <div class="quick-tit">
+        <p>Quick<br />Menu</p>
+    </div>
+    <ul>
+        <li class="q1">
+            <a href="javascript:;" title="저축/대여 시뮬레이션" class="quick1">저축/대여<br />시뮬레이션</a>
+        </li>
+        <li class="q2"><a href="/web/contents/r-Cancel.do" title="연금식 분할급여 퇴직시 가입">연금식 분할급여 퇴직시 가입</a></li>
+        <li class="q3"><a href="/web/contents/it-Open.do" title="목돈수탁저축 가입">목돈수탁저축 가입</a></li>
+        <li class="q4"><a href="/web/contents/wagesavingOpen.do" title="퇴직급여 증좌">퇴직급여 증좌</a></li>
+        <li class="q5"><a href="/web/contents/lifefundloanOpen.do" title="퇴직급여 대여" class="bluebold">퇴직급여 대여</a></li>
+    </ul>
+    <button type="button" class="quick-button">퀵메뉴 열기</button>
+</div>
+
+<div class="q-pop">
+    <div class="q-win">
+        <div class="q-tit">나만의 퀵메뉴 설정</div>
+        <div class="q-text">
+            - 퀵메뉴를 통해 군인공제회 메뉴를 빠르게 접속할 수 있도록 퀵메뉴를 설정할 수 있습니다.<br />
+            (시뮬레이션은 변경불가 / 최대 4개 지정)
+        </div>
+
+        <form action="https://www.mmaa.or.kr/web/main/index.do/quickcheck" method="POST" id="sandquick" name="sandquick" onsubmit="formChk(); return false">
+            <div class="quick-s">
+                <div class="qk-a">
+                    <div class="qw a" id="dis_chk_top_a" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw1.png" alt="" /></div>
+                        <div class="qw-text">나의 신청내역</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_b" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw2.png" alt="" /></div>
+                        <div class="qw-text">법률상담</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_c" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw3.png" alt="" /></div>
+                        <div class="qw-text">증명서출력</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_d" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw4.png" alt="" /></div>
+                        <div class="qw-text">회원증출력</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_e" style="">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw5.png" alt="" /></div>
+                        <div class="qw-text">연금식 분할급여 퇴직시 가입</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_f" style="">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw6.png" alt="" /></div>
+                        <div class="qw-text">목돈수탁저축 가입</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_g" style="">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw7.png" alt="" /></div>
+                        <div class="qw-text">퇴직급여 증좌</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_h" style="">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw8.png" alt="" /></div>
+                        <div class="qw-text">퇴직급여 대여</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_i" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw9.png" alt="" /></div>
+                        <div class="qw-text">목돈수탁 대여</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_j" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw10.png" alt="" /></div>
+                        <div class="qw-text">출산축하금 신청</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_k" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw11.png" alt="" /></div>
+                        <div class="qw-text">재해위로금 조회</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_l" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw12.png" alt="" /></div>
+                        <div class="qw-text">통합예약</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_m" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw13.png" alt="" /></div>
+                        <div class="qw-text">인터넷 주택청약</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_n" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw14.png" alt="" /></div>
+                        <div class="qw-text">분양정보</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_o" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw15.png" alt="" /></div>
+                        <div class="qw-text">분양대금정보</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_p" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw16.png" alt="" /></div>
+                        <div class="qw-text">FAQ</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_q" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw17.png" alt="" /></div>
+                        <div class="qw-text">문의하기</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_r" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw18.png" alt="" /></div>
+                        <div class="qw-text">서식자료실</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_s" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw19.png" alt="" /></div>
+                        <div class="qw-text">공지사항</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_t" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw20.png" alt="" /></div>
+                        <div class="qw-text">이벤트</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_u" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw21.png" alt="" /></div>
+                        <div class="qw-text">제휴복지 프로모션</div>
+                    </div>
+
+                    <div class="qw a" id="dis_chk_top_v" style="display: none">
+                        <div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw22.png" alt="" /></div>
+                        <div class="qw-text">원격지원</div>
+                    </div>
+                    <!-- 
+				<div class="qw a" id="dis_chk_top_w" style="display:none;">
+					<div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw23.png" alt=""></div>
+					<div class="qw-text">재해위로금 신청</div>
+				</div>
+				
+				<div class="qw a" id="dis_chk_top_x" style="display:none;">
+					<div class="qw-icon"><img class="qw1" src="../../cubersc/template/user/img/qw24.png" alt=""></div>
+					<div class="qw-text">복지적립금 안내</div>
+				</div>	 -->
+
+                    <div class="qw a empty" id="empty1" style="display: none">
+                        <div class="qw_empty">선택하세요</div>
+                    </div>
+
+                    <div class="qw a empty" id="empty2" style="display: none">
+                        <div class="qw_empty">선택하세요</div>
+                    </div>
+
+                    <div class="qw a empty" id="empty3" style="display: none">
+                        <div class="qw_empty">선택하세요</div>
+                    </div>
+
+                    <div class="qw a empty" id="empty4" style="display: none">
+                        <div class="qw_empty">선택하세요</div>
+                    </div>
+                </div>
+
+                <!-- 1번째 줄 -->
+                <div class="qk-b">
+                    <div class="qk-b1">
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_a" class="chk_top" name="chk_top" value="a" onclick="count_ck(this);" />
+                                <label for="chk_top_a"></label>
+                            </div>
+                            <div class="res-nm">나의 신청내역</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_b" class="chk_top" name="chk_top" value="b" onclick="count_ck(this);" />
+                                <label for="chk_top_b"></label>
+                            </div>
+                            <div class="res-nm">법률상담</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_c" class="chk_top" name="chk_top" value="c" onclick="count_ck(this);" />
+                                <label for="chk_top_c"></label>
+                            </div>
+                            <div class="res-nm">증명서 출력</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_d" class="chk_top" name="chk_top" value="d" onclick="count_ck(this);" />
+                                <label for="chk_top_d"></label>
+                            </div>
+                            <div class="res-nm">회원증 출력</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_e" class="chk_top" name="chk_top" value="e" onclick="count_ck(this);" checked="checked" />
+                                <label for="chk_top_e"></label>
+                            </div>
+                            <div class="res-nm">연금식 분할급여 퇴직시 가입</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_f" class="chk_top" name="chk_top" value="f" onclick="count_ck(this);" checked="checked" />
+                                <label for="chk_top_f"></label>
+                            </div>
+                            <div class="res-nm">목돈수탁저축 가입</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_g" class="chk_top" name="chk_top" value="g" onclick="count_ck(this);" checked="checked" />
+                                <label for="chk_top_g"></label>
+                            </div>
+                            <div class="res-nm">퇴직급여 증좌</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_h" class="chk_top" name="chk_top" value="h" onclick="count_ck(this);" checked="checked" />
+                                <label for="chk_top_h"></label>
+                            </div>
+                            <div class="res-nm">퇴직급여 대여</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_i" class="chk_top" name="chk_top" value="i" onclick="count_ck(this);" />
+                                <label for="chk_top_i"></label>
+                            </div>
+                            <div class="res-nm">목돈수탁 대여</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_j" class="chk_top" name="chk_top" value="j" onclick="count_ck(this);" />
+                                <label for="chk_top_j"></label>
+                            </div>
+                            <div class="res-nm">출산축하금 신청</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_k" class="chk_top" name="chk_top" value="k" onclick="count_ck(this);" />
+                                <label for="chk_top_k"></label>
+                            </div>
+                            <div class="res-nm">재해위로금 조회</div>
+                        </div>
+                    </div>
+
+                    <!-- 2번째 줄 -->
+                    <div class="qk-b2">
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_l" class="chk_top" name="chk_top" value="l" onclick="count_ck(this);" />
+                                <label for="chk_top_l"></label>
+                            </div>
+                            <div class="res-nm">통합예약</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_m" class="chk_top" name="chk_top" value="m" onclick="count_ck(this);" />
+                                <label for="chk_top_m"></label>
+                            </div>
+                            <div class="res-nm">인터넷주택청약</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_n" class="chk_top" name="chk_top" value="n" onclick="count_ck(this);" />
+                                <label for="chk_top_n"></label>
+                            </div>
+                            <div class="res-nm">분양정보</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_o" class="chk_top" name="chk_top" value="o" onclick="count_ck(this);" />
+                                <label for="chk_top_o"></label>
+                            </div>
+                            <div class="res-nm">분양대금정보</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_p" class="chk_top" name="chk_top" value="p" onclick="count_ck(this);" />
+                                <label for="chk_top_p"></label>
+                            </div>
+                            <div class="res-nm">FAQ</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_q" class="chk_top" name="chk_top" value="q" onclick="count_ck(this);" />
+                                <label for="chk_top_q"></label>
+                            </div>
+                            <div class="res-nm">문의하기</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_r" class="chk_top" name="chk_top" value="r" onclick="count_ck(this);" />
+                                <label for="chk_top_r"></label>
+                            </div>
+                            <div class="res-nm">서식자료실</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_s" class="chk_top" name="chk_top" value="s" onclick="count_ck(this);" />
+                                <label for="chk_top_s"></label>
+                            </div>
+                            <div class="res-nm">공지사항</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_t" class="chk_top" name="chk_top" value="t" onclick="count_ck(this);" />
+                                <label for="chk_top_t"></label>
+                            </div>
+                            <div class="res-nm">이벤트</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_u" class="chk_top" name="chk_top" value="u" onclick="count_ck(this);" />
+                                <label for="chk_top_u"></label>
+                            </div>
+                            <div class="res-nm">제휴복지 프로모션</div>
+                        </div>
+                        <div class="res1">
+                            <div class="chk_box">
+                                <input type="checkbox" id="chk_top_v" class="chk_top" name="chk_top" value="v" onclick="count_ck(this);" />
+                                <label for="chk_top_v"></label>
+                            </div>
+                            <div class="res-nm">원격지원</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-close">
+                <a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /></a>
+            </div>
+            <div class="btns quicks">
+                <div class="check-bt">
+                    <button type="button" onclick="quickdf();" class="button greys">초기화</button>
+                </div>
+
+                <div class="check-bt">
+                    <button type="submit" class="button">저장하기</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- 채팅상담 팝업 -->
+<div class="help-bg beta-helpchat">
+    <div class="help-w2">
+        <div class="h-wincont_new" id="viewChat"></div>
+        <!-- <div class="btns">
+			<div class="check-bt grey">
+				<button type="button" class="button greys d-close">닫기</button>
+			</div>
+							
+		</div> -->
+    </div>
+    <!-- help-w -->
+</div>
+
+<!-- //채팅상담 팝업 -->
+<!-- 퀵메뉴 -->

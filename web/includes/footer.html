@@ -1,0 +1,933 @@
+<!--footer-->
+
+<script src="https://cert.ez-iok.com/stdauth/ds_auth_ptb/asset/js/ptb_ezauth_proc.js"></script>
+<!-- <script src="https://scert.ez-iok.com/stdauth/ds_auth_ptb/asset/js/ptb_ezauth_proc.js"></script> -->
+
+<script>
+    var PCC_window;
+
+    function openPCCWindow(param) {
+        console.log(param);
+        let reqInfo =
+            "F9C0600F5ADC1851E44D3290DD0170A4D8180C04DBF73F40825B726DF00CC0EA130450A6810DCB8AFF557A8AF5030C77B429F5AA3EB51B7A6B0B98DEA137D736EDC1B6F943BD3B4D218DC551CB4A6E0AEE01DA06A41103A22C63563D401AA2E3F18B71C4F6261686F7F7A40A1E6BB721E9CB1F6EEF6F990AD2F1B65161884CA3DA58D2EE4BCEA31CD3FBCFC9B913260C93577D53B54826009FEEF6C97F3EDB7AF298C40BADDA726A1D44375A94D566A62B06500DAA1AE1E04E9B0252B6D09EF5C08C187654669491ABF775E8B995F04A9F2CD06EDDAE6C06FAC50997531CDE26B552047167830855E4E2B80BD1D37A345C38CCD58CD5B401A840DE80E42C3D1BF61A4257C690E0CC3ADF6B74097E8D10F4AF3FDD0BBB2EDD3C49CBC06907EFDB15E9B0AEDA42BEF71EC3987DC3868BD21923DCCC45D9306DB993FAE6ECB9ADF59E4752D51E8AF0C08C7E47550AF1A94F00CAB3A2A4FAA7E4B4361F75721D233609632E087228ABBA94CA42E2603CC991CEADC56D6AA7F6005FA9EB30A5A1397846E5BE9D93B4F6BA9C7EFFCC8D9438100A87598486836B5D1D71D6E300749792";
+        let retUrl = "32https://www.mmaa.or.kr/pcc/pcc_V3_popup_seed_v2.jsp";
+        if (param == "reqPCCForm") {
+            listKind = "smPCCV3Window";
+        } else if (param == "reqPCCLongTimeForm") {
+            listKind = "ltPCCV3Window";
+        } else {
+            listKind = "PCCV3Window";
+        }
+        let applyForm = document.getElementById(param);
+        $("#" + param)
+            .find('[name="reqInfo"]')
+            .val(reqInfo);
+        $("#" + param)
+            .find('[name="retUrl"]')
+            .val(retUrl);
+        $(".help_member_inquiries").fadeOut("fast");
+        $(".help_payment_apply").fadeOut("fast");
+
+        var PCC_window = window.open("", listKind, "width=400, height=630, resizable=1, scrollbars=no, status=0, titlebar=0, toolbar=0, left=300, top=200");
+        //let messageToChild = {formParent: true, message: 'success'};
+        //PCC_window.postMessage(messageToChild,'*');
+        // iframe형식으로 개발하시지 말아주십시오. iframe으로 개발 시 나오는 문제는 개발지원해드리지 않습니다.
+        if (PCC_window == null) {
+            alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+        }
+
+        //창을 오픈할때 크롬 및 익스플로어 양쪽 다 테스트 하시길 바랍니다.
+        applyForm.action = "https://pcc.siren24.com/pcc_V3/jsp/pcc_V3_j10_v2.jsp";
+        //applyForm.action = '/pcc/dev_result.jsp'; //개발용
+        applyForm.target = listKind;
+        return true;
+    }
+
+    function nextPcc(param) {
+        console.log("nextPcc   param");
+        console.log(param);
+
+        if (param == "reqPCCForm") {
+            footerPrintResult();
+        } else if (param == "reqPCCLongTimeForm") {
+            longTimeCheckResult();
+        } else {
+            if (typeof printResult == "function") {
+                printResult();
+            }
+        }
+    }
+</script>
+
+<script>
+    //간편인증 공통함수.
+    function init_popup_auth(listkind) {
+        let openFunctionNm = "printResult";
+        //파라미터 적용되더라도 [회원자격조회] 버튼이 활성화되었을때만 함수 가져오도록 함.
+        if (listkind != undefined && listkind == "CiLoginInfo" && typeof footerPrintResult == "function") {
+            $(".help_member_inquiries").fadeOut("fast");
+            openFunctionNm = "footerPrintResult";
+        } else {
+            $(".help_payment_apply").fadeOut("fast");
+        }
+
+        /* 1. 간편인증-표준창 인증요청  */
+        // eziok_std_process(간편인증-표준창 인증요청 생성 URL, 웹브라우져타입[WB:웹브라우져, MB:모바일웹, MWV:모바일웹View], callback함수명)
+        eziok_std_process("https://www.mmaa.or.kr/eziok/request_auth.jsp", "WB", openFunctionNm);
+    }
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("[data-alertType] .a-close, .a-che").click(function () {
+            if ($(this).hasClass("cancle")) {
+                $("[data-alertType]").fadeOut("fast");
+                return;
+            }
+        });
+
+        //숫자만 허용
+        let regex = /^[0-9]/;
+        inputregex("footnumber", regex);
+    });
+
+    function longTimeCheckResult() {
+        $.ajax({
+            url: "/api/dormant.do",
+            type: "post",
+            data: "",
+            contentType: "application/json",
+            dataType: "json",
+            async: true,
+            success: function (response) {
+                //요청 api 성공시(실패경우있음)
+                if (response.hasOwnProperty("CA028")) {
+                    if (response["CA028"]["status"] === 200) {
+                        $("#showLongTimePopup").hide();
+                        location.href = "/web/main/index.do";
+                    } else {
+                        alert("code:" + response["status"] + "\n" + "message:" + response["message"]);
+                    }
+                } else {
+                    alert("code:" + response["status"] + "\n" + "message:" + response["message"]);
+                }
+            },
+            error: function (request, status, error) {
+                //api 중단될때
+                alert("api오류\ncode:" + request.status + "\n" + "message:" + request.responseText + "\n");
+            },
+        });
+    }
+    //회원자격조회
+    function footerPrintResult() {
+        //CA002 -> EA036, EA025(최대가입가능 구좌수)
+
+        $.ajax({
+            url: "/api/SerchMemberShip.do", //ci
+            type: "get",
+            dataType: "json",
+            async: true,
+            cache: false,
+            success: function (response) {
+                console.log("response ================");
+                console.log(response);
+                //각결과의 status가 200이 아닐경우를 확인하고, 존재 시 해당 메세지 출력 후 즉시 종료
+                $.each(response, function (index, map) {
+                    let value = map["status"];
+                    if (value != 200) {
+                        alert(map["message"]);
+                        return;
+                    }
+                });
+
+                //예비회원인 경우 (EA036존재 시) 내역 출력.
+                if (response.hasOwnProperty("EA036")) {
+                    printMemberOpenList(response["EA036"], response["EA025"]);
+                    //예비회원이 아닌경우 상태 출력(회원/비회원)
+                } else {
+                    //상태 출력
+                    printMemberShipStatus(response["CA002"], response["CA011"]);
+                }
+            },
+            error: function (request) {
+                alert("api오류\ncode:" + request.status + "\n" + "message:" + request.responseText + "\n");
+            },
+        });
+    }
+
+    function printMemberShipStatus(CA002, CA011) {
+        //------------------- 구분 조건 초기화 -----------------------
+        let memJoinScbYn = "";
+        let webjoinScbYn = "";
+        let isWebMember = "";
+        let memStts = "";
+        let memSttsSeCd = "";
+        let memSttsSeCdNm = "";
+        let webLgnId = "";
+        //------------------- //구분 조건 초기화 -----------------------
+        //---------------------- 데이터 담기 --------------------------
+
+        memJoinScbYn = CA002["scbYn"];
+        isWebMember = CA002["wbMemYn"];
+        memStts = CA002["memStts"];
+        if (CA002.hasOwnProperty("memSttsSeCd")) {
+            memSttsSeCd = CA002["memSttsSeCd"];
+            memSttsSeCdNm = CA002["memSttsSeCdNm"];
+        }
+
+        webjoinScbYn = CA011["scbYn"];
+        if (CA011.hasOwnProperty("webLgnId")) webLgnId = CA011["webLgnId"];
+        //------------------------- //데이터 담기 ---------------------------
+
+        $("[data-inforesult]").css("display", "none");
+        console.log("memJoinScbYn:" + memJoinScbYn + "/isWebMember:" + isWebMember + "/memStts:" + memStts + "/webjoinScbYn:" + webjoinScbYn);
+
+        if (memJoinScbYn == "Y" && memStts == "0") {
+            $('[data-inforesult="t0"]').css("display", "");
+            $('[data-inforesult="l0"]').css("display", "");
+        } else if (memJoinScbYn == "Y" && memStts == "1") {
+            if (isWebMember == "N") {
+                $('[data-inforesult="t3"]').css("display", "");
+                $('[data-inforesult="l1"]').css("display", "");
+            } else if (isWebMember == "Y") {
+                $('[data-inforesult="t3"]').css("display", "");
+                $('[data-idresult="webLgnId"]').text(webLgnId);
+                $('[data-inforesult="l2"]').css("display", "");
+            }
+        } else if (memJoinScbYn == "N" && webjoinScbYn == "Y") {
+            $('[data-inforesult="t1"]').css("display", "");
+            $('[data-inforesult="l1"]').css("display", "");
+        } else if (isWebMember == "Y") {
+            $('[data-inforesult="t2"]').css("display", "");
+            $('[data-idresult="webLgnId"]').text(webLgnId);
+            $('[data-inforesult="l2"]').css("display", "");
+        } else {
+            //그 외 종료
+            alert("");
+            return;
+        }
+        //------------------- //조건별로 안내화면 출력하기 ---------------------
+        //결과 창 열기
+        $("#emptyJoinOpenResult").removeClass("hide");
+        $("#printJoinresult").addClass("hide");
+        $(".help_member_inquiries").fadeOut("fast");
+        $(".beta-loginresult").fadeIn("fast");
+    }
+
+    //신규가입 신청서 조회
+    function printMemberOpenList(response, resEA025) {
+        //데이터 없는지 확인
+        //데이터 없으면 공제회원 아님 표시
+        if (!response.hasOwnProperty("data") || !response["data"].hasOwnProperty("rrsyScbEvList") || response["data"]["rrsyScbEvList"].length == 0) {
+            console.log(!response.hasOwnProperty("data"));
+            console.log(!response["data"].hasOwnProperty("rrsyScbEvList"));
+            console.log(response["data"]["rrsyScbEvList"].length == 0);
+
+            $("#printJoinresult").addClass("hide");
+            alert("신청 내역을 찾을 수 없습니다. 관리자에게 문의해주세요.");
+            return;
+        } else {
+            //--데이터 있을때 처리--
+            let rrsyScbEvList = response["data"]["rrsyScbEvList"];
+            let count = 0;
+            for (var i = 0; i < rrsyScbEvList.length; i++) {
+                let listOne = rrsyScbEvList[i];
+                let rrsyRcptMt = listOne["rrsyRcptMt"];
+
+                //신청중인 내역(1개만 있을예정) 출력
+                if (rrsyRcptMt["rcptSttsSeCd"] == "00" || rrsyRcptMt["rcptSttsSeCd"] == "10") {
+                    count++;
+                    //기본 데이터 설정
+                    rrsyRcptMt["accnt"] = listOne["accnt"];
+                    rrsyRcptMt["scbYm"] = listOne["scbYm"];
+
+                    if (rrsyRcptMt["rcptSttsSeCd"] == "00") {
+                        //수정용 화면 세팅
+                        $('div[data-printobj="accnt"]').css("display", "none");
+                        $('input[data-printobj="accnt"]').css("display", "");
+
+                        //최대 구좌 수 구하기
+                        let mxmmScbAccnt = resEA025.data["mxmmScbAccnt"];
+                        //수정용 데이터 넣기
+                        $("[data-reqdrcptno]").data("reqdrcptno", listOne["reqdRcptNo"]);
+                        $("[data-reqdrcptno]").data("accnt", listOne["accnt"]);
+                        $("[data-reqdrcptno]").data("mxmmScbAccnt", mxmmScbAccnt);
+
+                        //최대 구좌수 입력 설정하기
+                        $("#printJoinresult #accnt").off("input").off("focusout"); //기존 input,focusout 이벤트 초기화
+                        $("#printJoinresult #accnt")
+                            .on("input", function () {
+                                //input 이벤트 추가
+                                let currentVal = $(this).val();
+                                if (currentVal > mxmmScbAccnt) {
+                                    currentVal = mxmmScbAccnt;
+                                }
+                                $(this).val(currentVal);
+                            })
+                            .on("focusout", function () {
+                                let currentVal = $(this).val();
+                                if (currentVal == 0) {
+                                    alert("가입구좌는 1구좌 이상이어야 합니다.");
+                                    currentVal = 1;
+                                }
+                                $(this).val(currentVal);
+                            });
+                    } else if (rrsyRcptMt["rcptSttsSeCd"] == "10") {
+                        //출력용 화면 세팅
+                        $('div[data-printobj="accnt"]').css("display", "inline-block");
+                        $('input[data-printobj="accnt"]').css("display", "none");
+                    }
+                    allResultaddHtmlDataAttr(rrsyRcptMt);
+                    findDataAttrChangeDateFormat("");
+                    findDataAttrChangePhoneFormat("");
+                }
+            }
+            if (count == 0) {
+                alert("신청 내역을 찾을 수  없습니다. 관리자에게 문의해주세요.");
+                return;
+            }
+
+            $("#emptyJoinOpenResult").addClass("hide");
+        }
+        // help_member_inquiries 인증화면 구역
+        // beta-loginresult 회원가입 출력 구역
+        $(".help_member_inquiries").fadeOut("fast");
+        $(".beta-loginresult").fadeIn("fast");
+    }
+
+    //신청서 신청구좌수정
+    function modifyMemberOpen() {
+        //신청번호 구하기
+        let reqdrcptno = $("#printJoinresult").data("reqdrcptno");
+        //수정 전 신청 구좌 수 구하기
+        let prevaccnt = $("#printJoinresult").data("accnt");
+        //신청 구좌 수 구하기
+        let accnt = $("#printJoinresult #accnt").val();
+
+        if (prevaccnt == accnt) {
+            alert("변경사항이 없습니다.");
+            $("[data-alertType]").fadeOut("fast");
+            $("#printJoinresult #accnt").focus();
+            return;
+        }
+
+        $.ajax({
+            url: "/api/MemberOpenModify.do",
+            data: {
+                reqdRcptNo: reqdrcptno,
+                accnt: accnt,
+            },
+            type: "get",
+            dataType: "json",
+            async: true,
+            cache: false,
+            success: function (response) {
+                console.log("response ================");
+                console.log(response);
+                if (response["status"] == 200) {
+                    alert("수정되었습니다.");
+                    footerPrintResult();
+                } else {
+                    alert(response["message"]);
+                }
+            },
+            error: function (request) {
+                alert("api오류\ncode:" + request.status + "\n" + "message:" + request.responseText + "\n");
+            },
+        });
+    }
+
+    //신청서 취소(삭제)
+    function delMemberOpen() {
+        //더블클릭방지
+        const footerDelMemberBtn = $("#footerDelMemberBtn");
+        if (footerDelMemberBtn.prop("disabled")) {
+            console.log("신청서 취소 서버통신 중");
+        }
+        //버튼 비활성화
+        footerDelMemberBtn.attr("disabled", true);
+
+        // id="printJoinresult" data-reqdrcptno
+        //신청번호 구하기
+        let reqdrcptno = $("#printJoinresult").data("reqdrcptno");
+        //신청번호가 있는경우만 신청서 취소
+        if (reqdrcptno != null && reqdrcptno != "") {
+            $.ajax({
+                url: "/api/MemberOpenDel.do",
+                data: {
+                    reqdRcptNo: reqdrcptno,
+                },
+                type: "get",
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (response) {
+                    console.log("response ================");
+                    console.log(response);
+                    if (response["status"] == 200) {
+                        alert("삭제되었습니다.");
+                        $(".beta-loginresult").fadeOut("fast");
+                    } else {
+                        alert(response["message"]);
+                    }
+                },
+                error: function (request) {
+                    alert("api오류\ncode:" + request.status + "\n" + "message:" + request.responseText + "\n");
+                },
+            });
+        } else {
+            alert("신청번호가 없어 삭제할수 없습니다.");
+        }
+
+        //버튼 활성화
+        footerDelMemberBtn.attr("disabled", false);
+    }
+
+    //뒤로가기 신청사항 리셋(알람창 확인 후 리셋, 새로고침)
+    function delAlert() {
+        $("[data-alertType='del']").fadeIn("100", function () {});
+    }
+
+    //뒤로가기 신청사항 리셋(알람창 확인 후 리셋, 새로고침)
+    function modiAlert() {
+        $("[data-alertType='modi']").fadeIn("100", function () {});
+    }
+    <!-- ***** 회원자격 조회 ***** -->
+</script>
+<style>
+    /* .help_member_inquiries .wrap_btns .bl_btn {
+                width: 100%;
+                cursor: pointer;
+            }
+            .help_payment_apply .wrap_btns .bl_btn {
+                width: 100%;
+                cursor: pointer;
+            } */
+</style>
+<!-- 휴대전화번호 인증하기  -->
+<div class="help-bg help_member_inquiries" id="help">
+    <div class="help-w">
+        <div class="w-close">
+            <a href="javascript:;" title="닫기"> <img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /> </a>
+        </div>
+
+        <div class="h-win help_certi_prev" tabindex="0">
+            <div class="win-t">회원 자격 조회</div>
+            <div class="box_member_certiareawrap">
+                <!-- 휴대전화번호 인증 -->
+                <div class="box_member_certification">
+                    <div class="inner">
+                        <span class="tit">휴대전화번호 인증</span> <img src="../../cubersc/template/user/img/sub/ico_certi_mobile.png" alt="" /> <span>본인확인서비스를 통한 휴대전화번호 인증</span>
+                        <div class="wrap_btns">
+                            <!-- 본인실명확인서비스 요청 form --------------------------->
+                            <form id="reqPCCForm" name="reqPCCForm" method="post" onsubmit="return openPCCWindow('reqPCCForm')">
+                                <input type="hidden" name="reqInfo" value="" />
+                                <input type="hidden" name="retUrl" value="" />
+                                <input type="hidden" name="verSion" value="2" />
+                                <!--모듈 버전정보-->
+                                <input type="submit" class="bl_btn btn_changepop" data-name="help_certi_detail" value="인증하기" />
+                            </form>
+                            <!-- <a href="javascript:void(0);" class="bl_btn btn_changepop" data-name="help_certi_detail">인증하기</a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //휴대전화번호 인증 -->
+                <!-- 간편 인증 -->
+                <div class="box_member_certification">
+                    <div class="inner">
+                        <span class="tit">간편인증</span> <img src="../../cubersc/template/user/img/sub/ip-icon.png" alt="아이콘" /> <span>다양한 소셜 로그인을 통한 간편인증</span>
+                        <div class="wrap_btns">
+                            <form name="simpleAuth" method="post">
+                                <input type="button" class="bl_btn btn_changepop" data-name="help_certi_detail" value="인증하기" onclick="init_popup_auth('CiLoginInfo')" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- //간편 인증 -->
+            </div>
+        </div>
+
+        <!-- help-w -->
+        <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
+    </div>
+</div>
+<!-- //***** 회원자격 조회 ***** -->
+
+<!-- ***** 추가인증 ***** -->
+<!-- 휴대전화번호 인증하기  -->
+<div class="help-bg help_payment_apply" id="help2">
+    <div class="help-w">
+        <div class="w-close">
+            <a href="javascript:;" title="닫기"> <img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /> </a>
+        </div>
+
+        <div class="h-win help_certi_prev" tabindex="0">
+            <div class="win-t">추가 인증</div>
+            <div class="box_payment_certiareawrap">
+                <!-- 휴대전화번호 인증 -->
+                <div class="box_payment_certification">
+                    <div class="inner">
+                        <span class="tit">휴대전화번호 인증</span> <img src="../../cubersc/template/user/img/sub/ico_certi_mobile.png" alt="" /> <span>본인확인서비스를 통한 휴대전화번호 인증</span>
+                        <div class="wrap_btns">
+                            <!-- 본인실명확인서비스 요청 form --------------------------->
+                            <form id="reqPCCAddForm" name="reqPCCAddForm" method="post" onsubmit="return openPCCWindow('reqPCCAddForm')">
+                                <input type="hidden" name="reqInfo" value="" />
+                                <input type="hidden" name="retUrl" value="" />
+                                <input type="hidden" name="verSion" value="2" />
+                                <!--모듈 버전정보-->
+                                <input type="submit" class="bl_btn btn_changepop" data-name="help_certi_detail" value="인증하기" />
+                            </form>
+                            <!-- <a href="javascript:void(0);" class="bl_btn btn_changepop" data-name="help_certi_detail">인증하기</a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //휴대전화번호 인증 -->
+                <!-- 간편 인증 -->
+                <div class="box_payment_certification">
+                    <div class="inner">
+                        <span class="tit">간편인증</span> <img src="../../cubersc/template/user/img/sub/ip-icon.png" alt="아이콘" /> <span>다양한 소셜 로그인을 통한 간편인증</span>
+                        <div class="wrap_btns">
+                            <form name="simpleAuth2" method="post">
+                                <input type="button" class="bl_btn btn_changepop" data-name="help_certi_detail" value="인증하기" onclick="init_popup_auth('addApply')" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- //간편 인증 -->
+            </div>
+        </div>
+
+        <!-- help-w -->
+        <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
+    </div>
+</div>
+<!-- //***** 추가인증 ***** -->
+
+<!-- 회원자격 조회 결과 팝업 -->
+<div class="help-bg beta-loginresult" style="display: none">
+    <div class="help-w">
+        <!-- 회원가입 신청 삭제 확인 알람창 -->
+        <div class="btns">
+            <div id="alert1" data-alerttype="del">
+                <div class="a-w">
+                    <div class="a-top">
+                        <p>웹 페이지의 메시지</p>
+                        <button type="button">
+                            <img class="a-close" src="../../cubersc/template/user/img/sub/a-close.png" alt="알림창 닫기" />
+                        </button>
+                    </div>
+                    <div class="a-bottom">
+                        <div class="a-txt"><br />신청내역을 삭제하시겠습니까?</div>
+                        <button type="button" class="a-che cancle">취소</button>
+                        <button type="button" class="a-che" id="footerDelMemberBtn" onclick="delMemberOpen()">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 회원가입 신청 삭제 확인 알람창 -->
+        <!-- 회원가입 신청 수정 확인 알람창 -->
+        <div class="btns">
+            <div id="alert1" data-alerttype="modi">
+                <div class="a-w">
+                    <div class="a-top">
+                        <p>웹 페이지의 메시지</p>
+                        <button type="button">
+                            <img class="a-close" src="../../cubersc/template/user/img/sub/a-close.png" alt="알림창 닫기" />
+                        </button>
+                    </div>
+                    <div class="a-bottom">
+                        <div class="a-txt"><br />신청 가입구좌수를 수정하시겠습니까?</div>
+                        <button type="button" class="a-che cancle">취소</button>
+                        <button type="button" class="a-che" onclick="modifyMemberOpen()">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 회원가입 신청 수정 확인 알람창 -->
+        <!-- 회원자격 조회 결과 -->
+        <div class="w-close">
+            <a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /></a>
+        </div>
+        <div class="h-win" tabindex="0">
+            <div class="box_btmborder_tit">
+                <h3>회원가입 조회 결과</h3>
+            </div>
+            <div class="h-wincont">
+                <!-- 가입신청 이력 없을 경우 : (아이콘+텍스트) : 회원 상태에 따라 안내하는곳-->
+                <div class="box_joinresult_icon" id="emptyJoinOpenResult">
+                    <div class="box_member_certificationdetail">
+                        <div class="inner">
+                            <img src="../../cubersc/template/user/img/sub/ico_certi_searchresult.png" alt="" />
+
+                            <!-- 회원에게 안내할 메세지 출력목록 -->
+                            <div data-inforesult="t0" style="display: none">
+                                <span class="txt_tit">공제회 회원가입(퇴직급여가입)을 하지 않은 상태입니다.</span>
+                                <span class="txt_desc">공제회 회원가입(퇴직급여가입) 안내를 확인하신 후<br />공제회원가입 신청을 하시기 바랍니다.</span>
+                            </div>
+                            <div data-inforesult="t1" style="display: none">
+                                <span class="txt_tit">인터넷 회원이 아닙니다.</span>
+                                <span class="txt_desc">인터넷 회원가입을 하신 후 이용해 주시기 바랍니다.</span>
+                            </div>
+                            <div data-inforesult="t2" style="display: none">
+                                <span class="txt_tit">현재 홈페이지 이용이 가능한 상태입니다.</span>
+                                <span class="txt_tit" data-idresult="webLgnId"></span>
+                                <span class="txt_desc">로그인하신 후 다양한 홈페이지 업무를 이용해주세요.</span>
+                            </div>
+                            <div data-inforesult="t3" style="display: none">
+                                <span class="txt_tit">공제회회원가입(퇴직급여가입)을 하지 않은 상태입니다.</span>
+                                <span class="txt_tit" data-idresult="webLgnId"></span>
+                                <span class="txt_desc">현재 재직중 이신경우 로그인 후 공제회원가입(퇴직급여가입) 신청을 하실 수있습니다.</span>
+                            </div>
+                            <!-- //회원에게 안내할 메세지 출력목록 -->
+                        </div>
+                    </div>
+
+                    <!-- 회원에게 안내할 링크 목록 -->
+                    <div class="btns" data-inforesult="l0" style="display: none">
+                        <div class="check-bt tc" style="width: 350px; padding: 0px 20px">
+                            <button type="button" class="button last_popbtn" onclick="location.href='/web/contents/MemberJoin.do'" tabindex="0">공제회회원(퇴직급여)가입</button>
+                        </div>
+                    </div>
+                    <div class="btns" data-inforesult="l1" style="display: none">
+                        <div class="check-bt tc" style="width: 300px; padding: 0px 20px">
+                            <button type="button" class="button last_popbtn" onclick="location.href='/web/contents/MemberEjoin.do'" tabindex="0">웹회원가입</button>
+                        </div>
+                    </div>
+                    <div class="btns" data-inforesult="l2" style="display: none">
+                        <div class="check-bt tc" style="width: 300px; padding: 0px 20px">
+                            <button type="button" class="button last_popbtn" onclick="location.href='/web/contents/webLogin.do'" tabindex="0">로그인</button>
+                        </div>
+                    </div>
+                    <!-- //회원에게 안내할 링크 목록 -->
+                </div>
+                <!-- //가입신청 이력 없을 경우 : (아이콘+텍스트) -->
+
+                <!-- 가입신청 이력 있을 경우 : (테이블) -->
+                <div class="box_joinresult_table" id="printJoinresult" data-reqdrcptno="">
+                    <p class="tbl_txt"><em>*</em>표시는 필수 입력 항목</p>
+                    <div class="q type_verti">
+                        <div class="aline">
+                            <div class="aline-a">소속</div>
+                            <div class="aline-b" data-printobj="afstCdNm">군인 공제회</div>
+                        </div>
+                        <div class="aline">
+                            <div class="aline-a">직급</div>
+                            <div class="aline-b" data-printobj="clsfCdNm">일반직</div>
+                        </div>
+                        <div class="aline">
+                            <div class="aline-a">군번(순번)</div>
+                            <div class="aline-b" data-printobj="groupNo">2131233</div>
+                        </div>
+                        <div class="aline">
+                            <div class="aline-a">이름</div>
+                            <div class="aline-b" data-printobj="flnm">주범심</div>
+                        </div>
+                        <div class="aline">
+                            <div class="aline-a">휴대전화번호</div>
+                            <div class="aline-b" data-printobj="mblTelno" data-phoneformat="">010-1234-1230</div>
+                        </div>
+                        <div class="aline">
+                            <div class="aline-a">주소</div>
+                            <div class="aline-b">
+                                <div><span data-printobj="homeAddr">서울특별시 강남구 남부순환로 373길 23 (도곡동, 도곡동 상지카일룸) 1111</span> <span class="block" data-printobj="homeZip">(우06274)</span></div>
+                            </div>
+                        </div>
+                        <div class="aline">
+                            <div class="aline-a">
+                                <div class="aline-a-1 required">가입구좌</div>
+                            </div>
+                            <div class="aline-b">
+                                <div>
+                                    <div class="box_txtinp">
+                                        <input type="text" id="accnt" name="" class="inp_sm" placeholder="" data-printobj="accnt" data-inputregex="footnumber" value="" />
+                                        <span style="display: none" data-printobj="accnt"></span><span>구좌</span>
+                                    </div>
+                                    <div class="box_subtxtwrap"><span>1구좌당 5,000원이며, 최대 600구좌(월 300만원)까지 가입 가능</span> <span>단, 신규가입축하금 20구좌, 재해위로금, 출산축하금 등 복지수혜 자격 부여는 10구좌 이상 가입하여야 함</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aline">
+                            <div class="aline-a">가입년월</div>
+                            <div class="aline-b" data-printobj="scbYm" data-dateformat="">2021.02</div>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <div class="check-bt tc">
+                            <button type="button" class="button" id="checkme" onclick="modiAlert()" tabindex="0">수정</button>
+                        </div>
+                        <div class="check-bt tc grey">
+                            <button type="button" class="button" onclick="delAlert()" tabindex="0">신청취소</button>
+                        </div>
+                        <div class="check-bt tc grey">
+                            <button type="button" class="button d-close last_popbtn" onclick="" tabindex="0">닫기</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //가입신청 이력 있을 경우 : (테이블) -->
+            </div>
+        </div>
+        <!-- //회원자격 조회 결과 -->
+        <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
+    </div>
+</div>
+<!-- //회원자격 조회 결과 팝업 -->
+
+<!-- 장기 미사용 팝업 : 비밀번호 변경 -->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#30daysHidePopup").on("click", function () {
+            var date = new Date();
+            date.setTime(date.getTime() + 30 * 24 * 60 * 60 * 1000); //30일 후로 지정
+            var expires = "expires=" + date.toUTCString();
+            var popT = "";
+            document.cookie = "30daysHidePopup_" + popT + "=true; " + expires + "; path=/";
+        });
+
+        $("#changePswd").on("click", function () {
+            let pswd = $("#prevPwsd").val();
+            let newPswd = $("#newPwsd").val();
+            var webLgnId = "";
+
+            var val = {};
+
+            val["pswd"] = pswd;
+            val["newPswd"] = newPswd;
+            val["webLgnId"] = webLgnId;
+
+            $.ajax({
+                url: "/api/ResetPassword.do",
+                data: JSON.stringify(val),
+                contentType: "application/json",
+                type: "post",
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    // 비밀번호 재설정 결과
+                    console.log("test================");
+                    var CA006 = data["CA006"];
+                    console.log(data);
+                    if (CA006["status"] == 200) {
+                        //비밀번호 변경 후 안내 팝업 필요여부 검토필요
+                        alert("비밀번호가 변경되었습니다.");
+                        $("#pswdChgPopup").hide();
+                        location.href = "/web/main/index.do";
+                    } else {
+                        alert(CA006["message"]);
+                    }
+                },
+                error: function (request) {
+                    alert("code:" + request["status"] + "\n" + "message:" + request["message"]);
+                },
+            });
+        });
+    });
+</script>
+<!-- //장기 미사용 팝업 : 비밀번호 변경 -->
+
+<!-- 장기 미사용 팝업 : 해제 완료 -->
+<!-- <div class="help-bg beta-dormancyunlock" style="display: block;">
+		<div class="help-w w_auto">
+			<div class="w-close">
+				<a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt=""></a>
+			</div>
+			<div class="h-win" tabindex="0">
+				<div class="box_btmborder_tit">
+					<h3>장기미사용 회원</h3>
+				</div>
+				<div class="h-wincont">
+					<ul class="one-line">
+						<li class="one-person">
+							<div class="top-chk">
+								<img class="ques" src="../../cubersc/template/user/img/sub/chk.png" alt="">
+								<div class="chk-txt">
+									<span class="chk-bold txt_dblue">장기미사용 정지 해제가 완료되었습니다. </span>
+									<span class="box_bg_grey">로그인 후 서비스 이용 부탁드립니다.</span></div>
+							</div>
+						</li>
+					</ul>
+					<div class="btns">
+						<div class="check-bt tc">
+							<button type="button" class="button d-close" id="" onclick="" tabindex="0">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			help-w
+			<div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div><div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div><div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div></div>
+	</div> -->
+<!-- //장기 미사용 팝업 : 해제 완료 -->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".f-dd").click(function () {
+            $(this).toggleClass("on");
+            $(this).find(".f_list").slideToggle();
+            $(this).find(".lis:first-child > a").focus();
+        });
+    });
+</script>
+<button type="button" class="btn-back">뒤로가기</button>
+<!-- 태블릿에서부터 노출 됨 (뒤로가기 버튼) -->
+<div id="footer">
+    <div class="f_wrap">
+        <div class="top">
+            <div class="top-all">
+                <ul class="f-link">
+                    <li class="list1">
+                        <ul>
+                            <li><a href="/web/contents/personalinfopolicy.do" title="개인정보처리방침">개인정보처리방침</a></li>
+                            <li><a href="https://www.epeople.go.kr/index.jsp" title="새창 열림" target="_blank">전자민원 창구</a></li>
+                            <li><a href="/web/contents/invest.do" title="투자사업제안">투자사업제안</a></li>
+                        </ul>
+                    </li>
+                    <li class="list2">
+                        <ul>
+                            <li><a href="/web/contents/roughMap.do" title="오시는 길">오시는 길</a></li>
+                            <li><a href="/web/contents/webSitemap.do" title="사이트맵">사이트맵</a></li>
+                            <li><a href="http://as82.kr/mmaa/" title="새창 열림" target="_blank" class="red">원격지원</a></li>
+                            <li><a href="/sharedata/mngr/login.jsp" target="_blank" title="새창 열림">외부기관 관리자</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="f-dds">
+                    <div class="f-dd">
+                        <ul class="f_list">
+                            <li class="lis"><a href="http://www.mmaacnc.or.kr" target="_blank" title="새창 열림">군인공제회 C&amp;C</a></li>
+                            <li class="lis"><a href="http://www.mplusfnc.or.kr/" target="_blank" title="새창 열림">엠플러스에프엔씨(주)</a></li>
+                            <li class="lis"><a href="http://www.kongwooenc.com/" target="_blank" title="새창 열림">공우이엔씨(주)</a></li>
+                            <li class="lis"><a href="https://www.reitpia.com/" target="_blank" title="새창 열림">대한토지신탁(주)</a></li>
+                            <li class="lis"><a href="https://www.hankookcapital.co.kr/ib20/mnu/HKCMAN000000" target="_blank" title="새창 열림">한국캐피탈(주)</a></li>
+                            <li class="lis"><a href="http://www.mplusasset.co.kr/" target="_blank" title="새창 열림">엠플러스자산운용(주)</a></li>
+                        </ul>
+                        <span>산하사업체</span>
+                        <button type="button" class="dropbtn">리스트 보기</button>
+                    </div>
+                    <div class="f-dd">
+                        <ul class="f_list">
+                            <li class="lis"><a href="https://www.mnd.go.kr/mbshome/mbs/mnd/index.jsp" target="_blank" title="새창 열림">국방부</a></li>
+                            <li class="lis"><a href="https://www.army.mil.kr/sites/army/index.do" target="_blank" title="새창 열림">육군</a></li>
+                            <li class="lis"><a href="https://www.navy.mil.kr/mbshome/mbs/navy/index.do" target="_blank" title="새창 열림">해군</a></li>
+                            <li class="lis"><a href="https://rokaf.airforce.mil.kr/airforce/index.do" target="_blank" title="새창 열림">공군</a></li>
+                            <li class="lis"><a href="https://www.rokmc.mil.kr:10005/index.do" target="_blank" title="새창 열림">해병대</a></li>
+                            <li class="lis"><a href="https://www.mpva.go.kr/mpva/index.do" target="_blank" title="새창 열림">국가보훈부</a></li>
+                            <li class="lis"><a href="https://www.imnd.or.kr/user/main/userMain.go" target="_blank" title="새창 열림">국방복지포털</a></li>
+                            <li class="lis"><a href="https://www.moti.or.kr/" target="_blank" title="새창 열림">국방전직교육원</a></li>
+                            <li class="lis"><a href="http://www.dema.mil.kr/" target="_blank" title="새창 열림">국방홍보원</a></li>
+                            <li class="lis"><a href="https://www.welfare.mil.kr/content/content.do?m_code=7" target="_blank" title="새창 열림">군체력단련장</a></li>
+                            <li class="lis"><a href="http://www.dapa.go.kr/dapa/main.do" target="_blank" title="새창 열림">방위사업청</a></li>
+                            <li class="lis"><a href="https://www.korva.or.kr/" target="_blank" title="새창 열림">재향군인회</a></li>
+                            <li class="lis"><a href="https://www.warmemo.or.kr:8443/" target="_blank" title="새창 열림">전쟁기념관</a></li>
+                        </ul>
+                        <span>관련사이트</span>
+                        <button type="button" class="dropbtn">리스트 보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p class="flogo">
+                <img src="../../cubersc/mngr/img/f_logo.png" alt="군인공제회 로고" />
+            </p>
+            <ul class="f_text">
+                <li>(06292) 서울시 강남구 남부순환로 2806 군인공제회</li>
+                <li>고객센터(일반) : 1544-9090, 1599-9090</li>
+                <li>군인공제회 청렴신고센터(Hot-Line) : 메일신고 cjdqorfl@mmaa.or.kr</li>
+                <li>COPYRIGHT © THE MILITARY MUTUAL AID ASSOCIATION. ALL. RIGHTS RESERVED</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 로그인 연장 여부 안내 팝업 -->
+<div class="help-bg beta-loginextension" style="display: none">
+    <div class="help-w">
+        <div class="w-close">
+            <a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /></a>
+        </div>
+        <div class="h-win" tabindex="0">
+            <div class="box_btmborder_tit">
+                <h3>로그아웃 안내</h3>
+            </div>
+            <div class="h-wincont">
+                <div class="box_top_cntclockwrap">
+                    <div class="box_top_cnt">
+                        <div class="box_cnttxt">
+                            <span>남은시간</span> <span><em>60</em>초</span>
+                        </div>
+                    </div>
+                    <div class="box_mid_descwrap">
+                        <span
+                            >회원님의 정보보호를 위해<br />
+                            10분 동안 서비스 이용이 없을 경우<br />
+                            자동으로 로그아웃 됩니다.
+                        </span>
+                        <span class="txt_bl">지금 로그인을 연장하시겠습니까?</span>
+                    </div>
+                </div>
+                <div class="btns">
+                    <div class="check-bt tc">
+                        <button type="button" class="button" id="checkme2" onclick="" tabindex="0">로그인 연장하기</button>
+                    </div>
+                    <div class="check-bt tc grey">
+                        <button type="button" class="button last_popbtn" onclick="" tabindex="0">로그아웃</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- help-w -->
+        <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
+    </div>
+</div>
+<!-- //로그인 연장 여부 안내 팝업 -->
+
+<!-- 로딩바 -->
+<div class="box_loading" style="display: none">
+    <!-- 임시로 display:none 처리 함 -->
+    <div class="blackscreen"></div>
+    <!-- loading circle -->
+    <svg version="1.1" class="svg-loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 80 80" xml:space="preserve">
+        <path
+            fill="#0B4398"
+            d="M40,72C22.4,72,8,57.6,8,40C8,22.4,
+			22.4,8,40,8c17.6,0,32,14.4,32,32c0,1.1-0.9,2-2,2
+			s-2-0.9-2-2c0-15.4-12.6-28-28-28S12,24.6,12,40s12.6,
+			28,28,28c1.1,0,2,0.9,2,2S41.1,72,40,72z"
+        >
+            <!-- #0B4398 -->
+            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 40 40" to="360 40 40" dur="1s" repeatCount="indefinite"></animateTransform>
+        </path>
+    </svg>
+    <!-- //loading circle -->
+
+    <!-- 로고 -->
+    <img src="../../cubersc/template/user/img/logo_symbol.png" id="Capa_1" class="svg-logo" alt="" />
+    <!-- //로고 -->
+</div>
+<!-- //로딩바 -->
+
+<script>
+    $(document).ready(function () {
+        $(document).ajaxStart(function () {
+            $(".box_loading").show();
+        });
+
+        $(document).ajaxStop(function () {
+            $(".box_loading").hide();
+        });
+    });
+
+    $(function () {
+        /*loader*/
+        $(".svg-logo").fadeIn(1000);
+        setTimeout(function () {
+            $(".svg-loader").fadeIn(2000);
+        }, 2000);
+
+        /* 페이지 로드 되면 hide 처리 */
+        //$(".box_loading").hide();
+    });
+</script>
+
+<!--footer-->

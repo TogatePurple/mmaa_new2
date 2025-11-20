@@ -1,0 +1,45 @@
+/* common.css */
+#header .h_wrap .bottom .h_menu .depth-bg .dep3-list .dep3s .dep3 > a.mintbold:not(.reset) {
+    font-weight: bold;
+    color: #0acccc;
+}
+
+@media screen and (min-width: 1024px) {
+    .list_half_cardnoti > li .box_line .line span.long_menu { 
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .list_half_cardnoti > li .box_line .line span.long_menu {
+        font-size: 14px;
+    }
+}
+
+/* content.css */
+.list_freeveiw_allmenu.mint li .box_freeview { color: #0acccc;}
+.list_freeveiw_allmenu.mint li .box_freeview .line { border-color: #0acccc; color: #0acccc;}
+.list_freeveiw_allmenu.mint li .box_freeview .dash {background-color: #0acccc;}
+
+.list_freeveiw_allmenu.mint li:hover .box_freeview { background-color: #0acccc; color: #fff; } 
+.list_freeveiw_allmenu.mint li:hover .box_freeview .line { border-color:#fff; color:inherit; } 
+.list_freeveiw_allmenu.mint li:hover .box_freeview .dash { background-color: #fff; color: #0acccc; } 
+
+.long-txt { font-size: 18px; }
+.long-long-txt { padding-top: 18px; font-size: 18px; line-height: 120%; }
+
+@media screen and (max-width: 1082px) and (min-width: 769px) {
+    .long-txt { font-size: 18px; line-height: 120%; }
+    .list_freeveiw_allmenu.mint span:not(.dash) { 
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 540px) {
+    .long-txt, .long-long-txt { padding-top: 0; }
+    .list_freeveiw_allmenu.mint span:not(.dash).long-txt, .list_freeveiw_allmenu.mint span:not(.dash).long-long-txt {font-size: 16px;}
+}
+
+@media screen and (max-width: 539px) {
+    .long-txt, .long-long-txt { padding-top: 0; }
+}

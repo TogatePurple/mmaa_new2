@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>군인공제회 - 회원 가입 안내회원가입</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="../../cubersc/cube.ico" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, target-densitydpi=device-dpi" />
+
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/content.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/common/plugins/jquery_daterangepicker/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/animate-3.7.2.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/main.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/swiper.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/common.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/step.css?v=20250529" />
+        <script type="text/javascript" src="../../cubersc/common/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/wow.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/slick.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/swiper.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/matchHeight-min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/mainpage.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/common.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/step.js"></script>
+        <script type="text/javascript" src="../../cubersc/common/plugins/daterangepicker/moment.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/common/plugins/jquery_daterangepicker/jquery.daterangepicker.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/common/js/bankUtil.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/common/js/kuvUtil.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <script src="../../cubersc/common/itg-js.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/html2canvas.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/content.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/kuvdev/js/quickChat.js"></script>
+
+        <!-- 퍼블 확인용: 공통 인클루드 js -->
+        <script src="../js/include.js"></script>
+        <style></style>
+    </head>
+    <body>
+        <!-- [S] 퍼블 확인용: 헤더 인클루드 -->
+        <div data-include="../includes/header.html"></div>
+        <!-- [E] 퍼블 확인용: 헤더 인클루드 -->
+
+        <!-- 본문 영역 -->
+        <div id="wrap">
+            <div class="subs">
+                <!-- [S] 퍼블 확인용: 퀵메뉴 인클루드 -->
+                <div data-include="../includes/quickmenu.html"></div>
+                <!-- [E] 퍼블 확인용: 퀵메뉴 인클루드 -->
+                <div id="containers">
+                    <!-- [S] 퍼블 확인용: 브레드크럼 인클루드 -->
+                    <div data-include="../includes/breadcrumb.html"></div>
+                    <!-- [E] 퍼블 확인용: 브레드크럼 인클루드 -->
+
+                    <!--container-->
+                    <section id="container" class="sub" tabindex="0">
+                        <div class="sub_inner">
+                            <div class="w">
+                                <div id="contents" class="content-all">
+                                    <!-- [S]: 퍼블 추가 -->
+                                    <div class="help-bg beta-registration_guide" style="display: block">
+                                        <div class="help-w">
+                                            <div class="w-close" tabindex="0">
+                                                <a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /></a>
+                                            </div>
+                                            <div class="h-win" tabindex="0">
+                                                <div class="box_calcarea">
+                                                    <!-- 기능 wrap 용 -->
+                                                    <div class="box_btmborder_tit">
+                                                        <h3>회원 가입 안내(청년)</h3>
+                                                    </div>
+                                                    <div class="box_calcwrap">
+                                                        <ul class="notice-tab tab_type2 mgtb">
+                                                            <!-- 탭 메뉴 2개 : tab_type2 -->
+                                                            <li data-tab="notice1" class="tab active" id="notice" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px"><a href="javascript:;" title="선택됨">가입안내</a></li>
+                                                            <li data-tab="notice2" class="tab"><a href="javascript:;" title="">혜택안내</a></li>
+                                                        </ul>
+                                                        <div id="notice1" class="notices active">
+                                                            <!-- 회원유형 및 서비스 내용 -->
+                                                            <div class="subss">
+                                                                <h4 class="sub_tit">청년회원유형 및 서비스 내용</h4>
+                                                            </div>
+                                                            <div class="st-table all_tdview" tabindex="0">
+                                                                <table>
+                                                                    <colgroup>
+                                                                        <col style="width: 30%" />
+                                                                        <col style="width: 35%" />
+                                                                        <col style="width: 35%" />
+                                                                    </colgroup>
+                                                                    <caption>
+                                                                        회원유형 및 서비스 내용
+                                                                    </caption>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>구분</th>
+                                                                            <th>이자소득세율</th>
+                                                                            <th>금융소득종합과세</th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="bg">회원유형</td>
+                                                                            <td>공제회에 매달 부담금을 저축하는 회원</td>
+                                                                            <td>공제회 회원으로 인터넷회원가입을 신청한 회원</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="bg">가입대상</td>
+                                                                            <td>군인공제회법과 정관에 의거 가입자격 부여</td>
+                                                                            <td>공제회 회원이거나 회원이었던 자(예비역포함)</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="bg">서비스 내용</td>
+                                                                            <td>
+                                                                                공제회 홈페이지 기본정보 이용<br />
+                                                                                예) 공제회소개, 공지사항, 각종 업무안내 등
+                                                                            </td>
+                                                                            <td>
+                                                                                공제회 홈페이지 모든 서비스 이용 가능<br />
+                                                                                예) 급여저축금조회, 목돈수탁저축조회, 인터넷대여신청,<br />
+                                                                                법률상담, 복지매장이용 등
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <!-- //회원유형 및 서비스 내용 -->
+                                                            <div class="subss">
+                                                                <h4 class="sub_tit">회원가입 및 증좌안내</h4>
+                                                            </div>
+                                                            <div class="subss_add">
+                                                                <ul class="list_arr">
+                                                                    <li>
+                                                                        <span>회원급여 사업</span>
+                                                                        <ul class="list_dot">
+                                                                            <li><span>직업군인과 군무원이 재직기간중에 군인공제회 회원으로 가입하여 매월 받는 급여에서 일정액(부담금)을 적립식으로 저축하고, 전역 및 퇴직시 목돈으로 수령, 퇴직후의 생활 안정자금으로 활용할 수 있도록 지원하기 위한 공제회의 기본사업으로서, 재직 중일 때에만 가입이 가능합니다.</span></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span>회원가입 자격</span>
+                                                                        <ul class="list_dot">
+                                                                            <li>
+                                                                                <span
+                                                                                    >군인공제회법과 정관에 의하여 다음과 같이 회원가입 자격이 부여됩니다. <em><b>가.</b> <span>군인사법에 의한 하사 이상의 군인</span></em
+                                                                                    ><em><b>나.</b> <span>군무원인사법에 의한 군무원</span></em
+                                                                                    ><em
+                                                                                        ><b>다.</b>
+                                                                                        <span>
+                                                                                            국방부본부와 국방부 소속기관인 국립서울현충원, 국방홍보원, 국방전산정보원<br />
+                                                                                            다만, 국방부 일반직 공무원 중 정부시책에 의하여 타 행정부처에 교류 근무하는 자에 대하여는 교류근무기간 중에도 회원자격이 유지된다.<br />
+                                                                                            이 경우 교류기간 종료 후 미 복귀 또는 전속조치 등의 사유발생 시는 즉시 회원자격이 상실된다.
+                                                                                        </span></em
+                                                                                    ><em><b>라.</b> <span>한국국방연구원법에 의하여 설립된 한국국방연구원의 임직원</span></em
+                                                                                    ><em><b>마.</b> <span>국방대학교 설치법에 의하여 설립된 국방대학교의 교수, 부교수, 조교수 및 전임강사</span></em
+                                                                                    ><em><b>바.</b> <span>군인공제회의 임직원</span></em
+                                                                                    ><em><b>사.</b> <span>방위사업청의 공무원</span></em
+                                                                                    ><em><b>아.</b> <span>국방과학연구소의 임직원</span></em
+                                                                                    ><em><b>자.</b> <span>국방기술품질원의 임직원</span></em
+                                                                                    ><em><b>차.</b> <span>병무청의 공무원</span></em
+                                                                                    ><em><b>카.</b> <span>전쟁기념사업회의 임직원</span></em
+                                                                                    ><em><b>타.</b> <span>국방전직교육원의 임직원</span></em>
+                                                                                </span>
+                                                                                <span class="reds_noti">신규가입 회원은 가입신청시 신분 확인용 복무확인서 또는 재직증명서를 첨부하시기 바랍니다.</span> <span class="reds_noti">신규가입 불가자(임시직, 무기계약직, 한시계약직, 조건부 채용 직원 등)의 가입은 가입취소 대상입니다.</span>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span>가입구좌 및 금액</span>
+                                                                        <ul class="list_dot">
+                                                                            <li><span>1구좌 당 5,000원이며 최저 기본 1구좌(5천원)부터 600구좌(300만원)까지 가입이 가능합니다.</span> <span class="reds_noti">단, 신규가입축하금 20구좌, 재해위로금, 출산축하금 등 복지수혜 자격부여는 10구좌 이상 가입하여야 함</span></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span>가입절차</span>
+                                                                        <ul class="list_dot">
+                                                                            <li>
+                                                                                <span>본인 희망에 의거 신규가입 및 증좌 희망자는 회원가입(증좌)신청서를 작성, 개인별 또는 소속부대에서 종합하여 매월 20일까지 군인공제회에 제출하거나 전화, ARS, 모바일, 인터넷으로 신청하시면 익월급여 시 국군 재정관리단에서 중앙공제하여 본회에 송금, 납부하고 신규 가입 및 증좌처리 됩니다.</span>
+                                                                                <span class="reds_noti">국방부본부 및 직할기관 인원의 가입(공무원, 군무원, 기타대상자) : 소속기관에서는 신규가입 및 증좌희망자를 종합하여 매월 20일까지 공제회에 신청하고, 각 기관에서는 개인별로 급여액에서 공제하여 익월 10일까지 본회가 지정하는 금융기관에 송금 납부함으로써 회원가입, 증좌처리 됩니다.</span>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="box_stepfigure">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="box_img"><img src="../../cubersc/template/user/img/sub/img_joinguide01.png" alt="" /></div>
+                                                                        <div class="box_txt"><em>군인공제회 가입신청</em><span>군인공제회 가입신청서 작성</span></div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="box_img"><img src="../../cubersc/template/user/img/sub/img_joinguide02.png" alt="" /></div>
+                                                                        <div class="box_txt">
+                                                                            <em>공제회원 가입완료</em
+                                                                            ><span>
+                                                                                공제회원 가입신청 처리완료,<br />
+                                                                                매월 10일 부담금 수납</span
+                                                                            >
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="box_img"><img src="../../cubersc/template/user/img/sub/img_joinguide03.png" alt="" /></div>
+                                                                        <div class="box_txt">
+                                                                            <em>인터넷회원 가입신청</em
+                                                                            ><span>
+                                                                                홈페이지에서 인터넷회원 가입신청,<br />
+                                                                                신청 후 즉시 회원가입 처리완료</span
+                                                                            >
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="box_img"><img src="../../cubersc/template/user/img/sub/img_joinguide04.png" alt="" /></div>
+                                                                        <div class="box_txt">
+                                                                            <em>홈페이지 서비스 이용</em
+                                                                            ><span>
+                                                                                홈페이지 서비스 이용<br />
+                                                                                군인공제회 홈페이지 로그인, 조회,신청 등 모든 서비스 이용 가능</span
+                                                                            >
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="subss_add">
+                                                                <ul class="list_arr">
+                                                                    <li>
+                                                                        <span>부담금 납부</span>
+                                                                        <ul class="list_dot">
+                                                                            <li><span>회원에 가입하신 이후에는 매월 급여액에서 일괄 공제되어 당월 10일까지 본회에 납부하게 됩니다.</span></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span>가입신청서 보내시는 주소</span>
+                                                                        <ul class="list_dot">
+                                                                            <li><span>(06292) 서울특별시 강남구 남부순환로 2806 군인공제회관 32층 공제사업팀 귀중</span></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span>가입신청서 이중제출 금지</span>
+                                                                        <ul class="list_dot">
+                                                                            <li><span>가입신청서는 군인공제회에 처음 가입할 때와 증좌 희망 시에만 제출하는 것입니다.</span> <span>서면 신청 후 전화, ARS, 모바일, 인터넷으로 신청하면 이중처리 되므로 유의하여야 합니다.</span></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span>회원의 권리와 의무</span>
+                                                                        <ul class="list_dot">
+                                                                            <li>
+                                                                                <span
+                                                                                    >권리 <em><b>가.</b> <span>전역(퇴직)시 회원급여금 수급</span></em
+                                                                                    ><em><b>나.</b> <span>복지후생사업 수혜 : 퇴직급여대여, 보증보험대여, 재해위로금, 출산보조금, 목돈수탁저축 ,주택분양</span></em
+                                                                                    ><em><b>다.</b> <span>회원 복지시설(회원콘도, 제휴복지시설) 이용</span></em></span
+                                                                                >
+                                                                            </li>
+                                                                            <li>
+                                                                                <span
+                                                                                    >의무 <em><b>가.</b> <span>부담금 납부 : 해당 가입금액</span></em
+                                                                                    ><em><b>나.</b> <span>공제회 운영에 협조</span></em
+                                                                                    ><em><b>다.</b> <span>각종 공지사항에 대한 확인·인지 및 협조</span></em></span
+                                                                                >
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span>회원의 자격취득</span>
+                                                                        <ul class="list_dot">
+                                                                            <li><span>회원이 되고자 하는 자는 공제회 소정의 가입절차에 의하여 신청을 하여야 하며 최초의 부담금을 납부한 날(급여일 기준)에 회원자격이 취득됩니다.</span></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span>회원의 자격상실</span>
+                                                                        <ul class="list_dot">
+                                                                            <li>
+                                                                                <span
+                                                                                    >회원은 다음 사유가 발생한 때에 그 자격을 상실합니다. <em><b>가.</b> <span>전역(퇴직)/제적(면직)</span></em
+                                                                                    ><em><b>나.</b> <span>탈퇴</span></em
+                                                                                    ><em><b>다.</b> <span>제명</span></em
+                                                                                    ><em><b>라.</b> <span>계속하여 6개월 이상 부담금을 납입하지 아니한 때(최초 미납 월부터 자격상실)</span></em
+                                                                                    ><em class="dep"
+                                                                                        ><span class="flex"> <b>마.</b> <span>제명(회원으로서 다음에 해당하는 자는 운영위원회의 의결을 거쳐 제명할 수 있습니다.)</span> </span>
+                                                                                        <span class="sub">
+                                                                                            <mark> <b>1).</b> <span>공제회의 명예를 훼손한 자</span> </mark> <mark> <b>2).</b> <span>고의 또는 중대한 과실로 공제회에 재산상 손실을 가져오게 한 자</span> </mark> <mark> <b>3).</b> <span>법 또는 정관과 공제회의 제규정을 위반한 자</span></mark></span
+                                                                                        ></em
+                                                                                    ></span
+                                                                                >
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div id="notice2" class="notices">
+                                                            <!-- (1) 퇴직급여 이자지급 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">청년 이자지급</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li><span>퇴직급여지급률 : 단일 연복리 4.90%</span> <span>가입기간 중 필요에 따라 탈퇴 및 기납입금액의 일부분을 부분해약(10구좌 제외) 할 수 있습니다.</span></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //(1) 퇴직급여 이자지급 --><!-- (2) 연금식 분할급여 전환가입 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">연금식 분할급여 전환가입</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li><span>가입기간별 금리표</span></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="st-table fix all_tdview no_mgb" tabindex="0">
+                                                                    <table>
+                                                                        <caption>
+                                                                            세금공제전 금리 테이블입니다.
+                                                                        </caption>
+                                                                        <colgroup>
+                                                                            <col />
+                                                                            <col />
+                                                                        </colgroup>
+                                                                        <tbody>
+                                                                            <!-- thead -->
+                                                                            <tr>
+                                                                                <th>매년 지급식(연금리)</th>
+                                                                                <th>매월 지급식(연금리)</th>
+                                                                            </tr>
+                                                                            <!-- //thead --><!-- tbody -->
+                                                                            <tr>
+                                                                                <td>5.00%</td>
+                                                                                <td>4.88%</td>
+                                                                            </tr>
+                                                                            <!-- //tbody -->
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <div class="box_notitxt"><span class="txt_minnoti">※ 매금리 주기 변경일에 군인공제회 홈페이지에 고시합니다.</span></div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //(2) 연금식 분할급여 전환가입 --><!-- (3) 연금식 분할급여 전환가입 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">예금형 목돈 수탁저축 가입</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li>
+                                                                            <span>현재 군인공제회 회원(또는 회원으로 1년 이상 가입하였던 자)의 여유자금 (100만원~10억원 까지)을 높은 이율로 증식시켜주는 저축제도 입니다.</span>
+                                                                            <ul class="list_dot">
+                                                                                <li><!-- <span class="reds_noti"> 목돈수탁저축 이율은 아래와 같이 적용하고 있습니다.(2022.12.05 기준)</span> --><span class="reds_noti">목돈수탁저축 이율은 아래와 같이 적용하고 있습니다.(2023.11.16 부)</span></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li><span>가입기간별 금리표</span></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="st-table all_tdview all_one rowspan_header no_mgb h_auto" tabindex="0">
+                                                                    <table style="border-top: 2px solid rgb(0, 0, 0)">
+                                                                        <caption>
+                                                                            예금형 목돈 수탁저축 가입 내용
+                                                                        </caption>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th rowspan="2">가입기간</th>
+                                                                                <th colspan="2">만기 지급식(연금리)</th>
+                                                                                <th colspan="2">매월 지급식(연금리)</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>세전 이율</th>
+                                                                                <th>세후 이율</th>
+                                                                                <th>세전 이율</th>
+                                                                                <th>세후 이율</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>6개월</td>
+                                                                                <td>4.35%</td>
+                                                                                <td>3.68%</td>
+                                                                                <td>4.26%</td>
+                                                                                <td>3.60%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>1년</td>
+                                                                                <td>5.00%</td>
+                                                                                <td>4.23%</td>
+                                                                                <td>4.88%</td>
+                                                                                <td>4.13%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2년</td>
+                                                                                <td>5.20%</td>
+                                                                                <td>4.40%</td>
+                                                                                <td>5.08%</td>
+                                                                                <td>4.30%</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="add_listnoti"><span class="reds">* 이자소득세 : 15.4%(소득세14% + 지방소득세1.4%)</span><span class="reds">※ 비과세 종합저축은 비과세(전 금융기관 포함 5,000만원 가입 한도)</span></div>
+                                                            </div>
+                                                            <!-- //(3) 연금식 분할급여 전환가입 --><!-- (4) 비과세 종합저축 가입 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">비과세 종합저축 가입</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li>
+                                                                            <span>가입자격은 현재회원이거나 회원으로 1년 이상 가입하였던 자 중 다음 각 항목 해당자</span>
+                                                                            <ul class="list_dot">
+                                                                                <li></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                            <ul class="list_dot">
+                                                                                <li>
+                                                                                    <span class="no_dot"
+                                                                                        ><em><b>1)</b> <span>직업군인과 군무원이 재직기간중에 군인공제회 회원으로 가입하여 매월 받는 급여에서 일정액(부담금)을 적립식으로 저축하고, 전역 및 퇴직시 목돈으로 수령, 퇴직후의 생활 안정자금으로 활용할 수 있도록 지원하기 위한 공제회의 기본사업으로서, 재직 중일 때에만 가입이 가능합니다.</span></em
+                                                                                        ><em><b>2)</b> <span>「장애인복지법」제32조에 따라 등록한 장애인</span></em
+                                                                                        ><em><b>3)</b> <span>「독립유공자 예우에 관한 법률」제6조에 따라 등록한 독립유공자와 그 유족 또는 가족</span></em
+                                                                                        ><em><b>4)</b> <span>「국가유공자 등 예우 및 지원에 관한 법률」제6조에 따라 등록한 상이자(傷痍者)</span></em
+                                                                                        ><em><b>5)</b> <span>「국민기초생활보장법」제2조 제2호에 따른 수급자</span></em
+                                                                                        ><em><b>6)</b> <span>「고엽제후유의증 환자지원 등에 관한 법률」제2조 제3호에 따른 고엽제후유의증환자</span></em
+                                                                                        ><em><b>7)</b> <span>「5·18 민주유공자 예우에 관한 법률」제4조 제2호에 따른 5·18 민주화운동 부상자</span></em
+                                                                                        ><em><span class="reds_noti">법적근거 : 조세특례제한법 제 88조의 2 비과세 종합저축에 대한 과세특례 등 조세특례제한법 시행령 제 82조의 2 생계형저축 요건 등</span></em></span
+                                                                                    >
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //(4) 비과세 종합저축 가입 --><!-- (5) 현역/예비역 회원 저축(적립형) -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">현역/예비역 회원 저축(적립형)</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li>
+                                                                            <span>현재 군인공제회 회원의 라이프 사이클별 필요한 목돈을 마련하기 위해 정기적금처럼 매월 일정액을 높은 이율로 적립하는 저축제도 입니다.</span>
+                                                                            <ul class="list_dot">
+                                                                                <li><span class="reds_noti">적립형 목돈수탁저축 이율은 아래와 같이 적용하고 있습니다.(2023.11.16 기준)</span></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li><span>가입기간별 금리표</span></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="st-table all_tdview no_mgb" tabindex="0">
+                                                                    <table>
+                                                                        <caption>
+                                                                            현역/예비역 회원 저축(적립형) 내용
+                                                                        </caption>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th>가입기간</th>
+                                                                                <th>3년</th>
+                                                                                <th>5년</th>
+                                                                                <th>7년</th>
+                                                                                <th>10년</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>금리</td>
+                                                                                <td colspan="4">5.00%</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="add_listnoti"><span class="reds">* 가입기간 단일금리, 변동금리, 연복리 적용</span><span class="reds">* 이자소득세 : 15.4%(소득세14% + 지방소득세1.4%)</span></div>
+                                                            </div>
+                                                            <!-- //(5) 현역/예비역 회원 저축(적립형) --><!-- (6) 퇴직급여대여 이용 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">퇴직급여대여 이용 : 퇴직급여의 90% 이내</h4>
+                                                                </div>
+                                                                <div class="st-table all_tdview no_mgb" tabindex="0">
+                                                                    <table>
+                                                                        <colgroup>
+                                                                            <col style="width: 30% !important" />
+                                                                            <col />
+                                                                        </colgroup>
+                                                                        <caption>
+                                                                            적립형 목돈 수탁저축 가입 내용
+                                                                        </caption>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th>대여종류</th>
+                                                                                <th>퇴직급여대여</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>대여한도</td>
+                                                                                <td class="left">회원급여금의 90% 이내</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>상환방법(대여기간)</td>
+                                                                                <td class="left">원금균등분할상환()1~10년, 원금일시상환(1~10년)</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>대여금리</td>
+                                                                                <td class="left">신한은행(3개월 변동금리), 우리은행, 씨티은행(6개월 변동금리)</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="box_notitxt"><span class="txt_minnoti">* 전 금융기관 합산 DSR 70% 초과인 경우 은행에서 확인하여 퇴직급여대여를 제한합니다.</span></div>
+                                                            </div>
+                                                            <!-- // (6) 퇴직급여대여 이용 --><!-- (7) 복지적립금 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">복지적립금</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li>
+                                                                            <span>매 회계연도 말 현재 퇴직급여 회원인 자에게 매년 적립하여 퇴직(탈퇴)시 지급합니다.</span>
+                                                                            <ul class="list_dot">
+                                                                                <li><span>지급규모(재원) : 연간 회원 전체 퇴직급여저축 수납액(최근 3개년 평균)의 0.2%(①)</span> <span>개인별적립 방법 : 총 지급규모를 회원 전체 원금 누적수납액(②)대비 회원별 원금 누적수납액(③) 비율만큼 배분, 적립</span> <span>계산식 : ①×(③/②)</span> <span class="reds_noti">퇴직(탈퇴)시 지급 자동지급</span> <span class="reds_noti star">적립금 누적에 따른 이자는 시중은행의 1년 만기 정기예금 평균금리 적용</span> <span class="reds_noti">지급제외 : 지급대상 회계연도 말 이전에 퇴직(탈퇴) 한 경우</span></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //(7) 복지적립금 --><!-- (8) 신규가입축하금 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">신규가입축하금</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li>
+                                                                            <span>공제회 회원으로 최초 신규가입하고, 퇴직급여를 20구좌 이상 가입하고 1회이상 납입한 신규가입자에 지급합니다.</span>
+                                                                            <ul class="list_dot">
+                                                                                <li><span>20구좌이상 1회 이상 불입(단, 최초 신규가입구좌 20구좌 24개월 이상 유지)</span> <span class="reds_noti">2020. 1. 1. 이후 최초 신규가입 회원부터 적용</span> <span class="reds_noti">지급제외 : 20구좌 미만 신규가입자, 재가입자, 최초 신규가입구좌 해지자</span></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //(8) 신규가입축하금 --><!-- (9) 출산축하금 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">출산축하금</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li>
+                                                                            <span>퇴직급여를 10구좌 이상 가입 후, 1개월이 경과한 후에 자녀 출산 시 출산축하금을 출산 자녀 수에 따라 차등 지급합니다.</span>
+                                                                            <ul class="list_dot">
+                                                                                <li><span class="reds_noti">퇴직급여 가입기간이 2년 미만일 경우 2년간 퇴직급여 10구좌 이상 유지(단, 전역/퇴직시 제외)</span> <span class="reds_noti">부부회원 모두에게 지급(단, 2021.3.25 이전 출산자녀인 경우 부부회원 1인에게만 지급)</span> <span class="reds_noti">유산 및 사산인 경우에는 미지급</span></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //(9) 출산축하금 --><!-- (10) 재해위로금 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">재해위로금</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li>
+                                                                            <span>사망 또는 심신장애로 전역 시 재해위로금을 받을 수 있는 혜택을 부여하고 있습니다.</span>
+                                                                            <ul class="list_dot">
+                                                                                <li><span class="reds_noti">지급자격 : 전역일 기준 본회에 10구좌이상 가입한 후 12회 이상 연속적으로 불입한 회원 단, 전사자는 회원급여저축 10구좌 이상을 1회 이상 불입하면 지급</span></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <!-- // (10) 재해위로금 --><!-- (11) 복지·휴양시설 운영 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">복지·휴양시설 운영</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li><span>대명리조트 : 홍천, 양양, 삼척, 단양, 청송, 경주, 변산, 거제, 제주(샤인빌)</span></li>
+                                                                        <li><span>한화콘도 : 평창, 해운대, 대천, 경주, 거제, 용인, 제주</span></li>
+                                                                        <li>
+                                                                            <ul class="list_arr">
+                                                                                <li><span>제휴복지시설 : 회원 대상</span></li>
+                                                                                <li>
+                                                                                    <ul class="list_dot">
+                                                                                        <li><span class="reds_noti">이용요금 : 정상금액의 5~84% 할인 (보험 제외)</span></li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <!-- // (11) 복지·휴양시설 운영 --><!-- (12) 회원아파트 분양혜택 -->
+                                                            <div class="box_rows">
+                                                                <div class="subss mgt">
+                                                                    <h4 class="sub_tit">회원아파트 분양혜택</h4>
+                                                                </div>
+                                                                <div class="subss_add">
+                                                                    <ul class="list_arr">
+                                                                        <li>
+                                                                            <span>회원내집마련 주택사업으로 현역회원(퇴직급여 가입 회원)과 10년이상 복무한 예비역 등의 내집마련을 지원하고 있습니다.</span>
+                                                                            <ul class="list_dot">
+                                                                                <li><span class="reds_noti">단, 10년이상 복무 후 퇴직한 예비역 등은 차순위로 청약자격 부여</span> <span class="reds_noti">자세한 사항은 "주택정보 - 분양신청안내" 참조</span></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //(12) 회원아파트 분양혜택 -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- help-w -->
+                                            <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
+                                        </div>
+                                    </div>
+                                    <!-- [E]: 퍼블 추가 -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- 본문 영역 -->
+
+        <!-- [S] 퍼블 확인용: 푸터 인클루드 -->
+        <div data-include="../includes/footer.html"></div>
+        <!-- [E] 퍼블 확인용: 푸터 인클루드 -->
+    </body>
+</html>

@@ -1,0 +1,10 @@
+
+.receipt{
+    --font-16:16px;
+    --font-w-350:350;
+}
+
+.receipt .blue-bx-container{ display: flex; gap: 24px; }
+.receipt .bx-tit { display: flex }
+.receipt .blue-bx { flex-direction: column; }
+.receipt .unit { text-align:end; font-size: var(--font-16); font-weight: var(--font-w-350); margin-bottom: 10px; }

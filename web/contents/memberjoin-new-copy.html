@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>군인공제회 -</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="../../cubersc/cube.ico" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, target-densitydpi=device-dpi" />
+
+        <!-- 퍼블 확인용 -->
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/content.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/common/plugins/jquery_daterangepicker/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/animate-3.7.2.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/main.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/swiper.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/common.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/step.css?v=20250529" />
+        <script type="text/javascript" src="../../cubersc/common/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/wow.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/slick.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/swiper.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/matchHeight-min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/mainpage.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/common.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/step.js"></script>
+        <script type="text/javascript" src="../../cubersc/common/plugins/daterangepicker/moment.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/common/plugins/jquery_daterangepicker/jquery.daterangepicker.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/common/js/bankUtil.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/common/js/kuvUtil.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <script src="../../cubersc/common/itg-js.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/html2canvas.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/content.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/kuvdev/js/quickChat.js"></script>
+        <script>
+            function tabStatus(tobtn, frombtn) {
+                return true;
+            }
+        </script>
+        <!-- <script src="../../web/js/include.js"></script> -->
+        <!-- // 퍼블 확인용 -->
+        <!-- 퍼블 추가 -->
+        <script type="text/javascript" src="../../cubersc/template/user/js/memberjoin-new.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/memberjoin-new.css" />
+        <!-- // 퍼블 추가 -->
+    </head>
+    <body>
+        <!-- [S] 퍼블 확인용: 헤더 인클루드 -->
+        <div data-include="../../web/includes/header.html"></div>
+        <!-- [E] 퍼블 확인용: 헤더 인클루드 -->
+
+        <div id="wrap">
+            <div class="subs">
+                <!-- [S] 퍼블 확인용: 퀵메뉴 인클루드 -->
+                <div data-include="../../web/includes/quickmenu.html"></div>
+                <!-- [E] 퍼블 확인용: 퀵메뉴 인클루드 -->
+
+                <div id="containers">
+                    <!-- [S] 퍼블 확인용: bread crumb -->
+                    <div class="box_toppagewrap pc on" href="javascript:;">
+                        <div class="nav on" href="javascript:;">
+                            <div class="nav-all on" href="javascript:;">
+                                <ul class="nav-tabs on" href="javascript:;">
+                                    <li class="home" href="javascript:;"><a href="javascript:;" title="군인공제회 메인으로 이동">홈</a></li>
+                                    <li class="nav-list on" href="javascript:;">
+                                        <ul class="nav1s on" href="javascript:;" style="left: 56px; width: 165px">
+                                            <li class="nav1 on" id="" href="javascript:;">
+                                                <a href="javascript:;" title="회원가입" name="0" tabindex="0"><span>회원가입</span></a>
+                                                <ul class="nav2s on last_ul" href="javascript:;" style="left: 165px; width: 167px">
+                                                    <li class="nav2 on active last_menulist" id="" href="javascript:;">
+                                                        <a href="javascript:;" title="퇴직급여 가입" name="0" tabindex="0"><span class="bold">퇴직급여 가입</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <ul class="nav-btn" href="javascript:;">
+                                    <li class="n-url" title="링크 복사하기" onclick="copyUrl();return false;">
+                                        <a href="javascript:;" class="btn_addshare copy" title="새창 열림" tabindex="0">링크 복사하기</a>
+                                    </li>
+                                    <li class="n-link" title="공유하기" tabindex="0">
+                                        공유하기
+                                        <ul class="links">
+                                            <li class="kakao" title="카카오톡" onclick="fn_send('kakao');return false;">
+                                                <a href="javascript:;" class="btn_share kakao" title="새창 열림" tabindex="-1">카카오톡</a>
+                                            </li>
+                                            <li class="facebook" title="페이스북" onclick="fn_send('facebook');return false;">
+                                                <a href="javascript:;" class="btn_share facebook" title="새창 열림" tabindex="-1">페이스북</a>
+                                            </li>
+                                            <li class="naver" title="네이버" onclick="fn_send('naver');return false;">
+                                                <a href="javascript:;" class="btn_share naver" title="새창 열림" tabindex="-1">네이버</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="n-print" title="인쇄하기" onclick="toPrint();return false;" tabindex="-1">
+                                        <a href="javascript:;" class="btn_addshare print" title="새창 열림">인쇄하기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [E] 퍼블 확인용: bread crumb -->
+
+                    <section id="container" class="sub" tabindex="0">
+                        <div class="sub_inner">
+                            <div class="w">
+                                <div id="contents" class="content-all">
+                                    <div class="box_calcarea">
+                                        <div class="box_btmborder_tit">
+                                            <h3>퇴직급여 가입</h3>
+                                        </div>
+                                        <div class="box_calcwrap">
+                                            <section class="common-section">
+                                                <div class="tab-Box">
+                                                    <div class="tab-title clearfix">
+                                                        <div class="tab-step line" data-tab="tab-0">
+                                                            <a href="javascript:;">
+                                                                <div><span>STEP</span><span> 01</span></div>
+                                                                <p>이용 및 유의사항</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="tab-step line" data-tab="tab-1">
+                                                            <a href="javascript:;">
+                                                                <div><span>STEP</span><span> 02</span></div>
+                                                                <p>약관동의</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="tab-step line active" data-tab="tab-2">
+                                                            <a href="javascript:;">
+                                                                <div><span>STEP</span><span> 03</span></div>
+                                                                <p>개인정보 입력</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="tab-step" data-tab="tab-3">
+                                                            <a href="javascript:;">
+                                                                <div><span>STEP</span><span> 04</span></div>
+                                                                <p>회원가입 완료</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="color" id="red"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-Con">
+                                                    <!-- [S] 퍼블 추가 -->
+                                                    <div id="tab-2" class="tab-content active memberjoin-new">
+                                                        <form id="form_memberjoinOpen" name="form_memberjoinOpen" method="post">
+                                                            <h4 class="sub_tit no_mgt">개인정보 입력</h4>
+                                                            <div class="q basic-info">
+                                                                <div class="aline">
+                                                                    <div class="aline_col">
+                                                                        <div class="aline-a fstart">성명</div>
+                                                                        <div class="aline-b" id="userNm2">홍길동</div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="aline half_aline">
+                                                                    <div class="aline_col b-bottom">
+                                                                        <div class="aline-a">연락처</div>
+                                                                        <div class="aline-b" id="userPhone">010-1234-1234</div>
+                                                                    </div>
+                                                                    <div class="aline_col">
+                                                                        <div class="aline-a">가입년월</div>
+                                                                        <div class="aline-b" id="scbYm2">2025-12</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="accordion-group">
+                                                                <div class="accordion-item personal">
+                                                                    <a class="accordion-header"><i>1</i><span>개인 상세정보 입력</span></a>
+                                                                    <div class="accordion-content">
+                                                                        <div class="q">
+                                                                            <div class="aline" id="rrnoArea">
+                                                                                <div class="aline-a fstart" style="display: flex; align-items: center">
+                                                                                    주민등록번호 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                </div>
+                                                                                <div class="aline-b birth-d">
+                                                                                    <div class="inp">
+                                                                                        <label for="userBirthday" class="hide">주민등록번호 앞자리</label>
+                                                                                        <input type="text" id="userBirthday" class="email" maxlength="6" data-nextinput="" data-inputregex="numberinput" title="주민번호 앞자리" />
+                                                                                    </div>
+                                                                                    <div class="mid-line">-</div>
+                                                                                    <div class="inp">
+                                                                                        <label for="rrno2" class="hide">주민등록번호 뒷자리</label>
+                                                                                        <input type="password" id="rrno2" class="email" maxlength="7" data-nextinput="" data-inputregex="numberinput" title="주민번호 뒷자리" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="aline aline-mail">
+                                                                                <!-- 이메일용 class -->
+                                                                                <div class="aline-a fstart r_border">
+                                                                                    전자우편 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                </div>
+                                                                                <div class="aline-b memb">
+                                                                                    <div class="inp m-0">
+                                                                                        <label for="emailid" class="hide">이메일 앞자리</label>
+                                                                                        <input type="text" id="emailid" class="email" placeholder="이메일을 입력하세요." data-inputregex="emaildid" title="이메일 앞자리" />
+                                                                                    </div>
+                                                                                    <p class="at">@</p>
+                                                                                    <div class="inp mtt">
+                                                                                        <label for="email_domain_text" class="hide">이메일 도메인</label>
+                                                                                        <input type="text" id="email_domain_text" class="email" data-tolower="" data-inputregex="emaildomain" title="이메일 도메인" />
+                                                                                    </div>
+                                                                                    <div class="slc">
+                                                                                        <label for="email_domain_select" class="hide">이메일 도메인 선택</label>
+                                                                                        <select class="select-ac" id="email_domain_select">
+                                                                                            <option value="0">직접 입력</option>
+                                                                                            <option value="naver.com">naver.com</option>
+                                                                                            <option value="nate.com">nate.com</option>
+                                                                                            <option value="dreamwiz.com">dreamwiz.com</option>
+                                                                                            <option value="yahoo.co.kr">yahoo.co.kr</option>
+                                                                                            <option value="empal.com">empal.com</option>
+                                                                                            <option value="unitel.co.kr">unitel.co.kr</option>
+                                                                                            <option value="gmail.com">gmail.com</option>
+                                                                                            <option value="korea.com">korea.com</option>
+                                                                                            <option value="chol.com">chol.com</option>
+                                                                                            <option value="paran.com">paran.com</option>
+                                                                                            <option value="freechal.com">freechal.com</option>
+                                                                                            <option value="hanmail.net">hanmail.net</option>
+                                                                                            <option value="hotmail.com">hotmail.com</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="aline address">
+                                                                                <div class="aline-a fstart">
+                                                                                    자택주소 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                </div>
+                                                                                <div class="aline-b n-num">
+                                                                                    <div class="inp">
+                                                                                        <label for="homeZip" class="hide">우편 번호</label>
+                                                                                        <input type="text" id="homeZip" name="homeZip" class="email" placeholder="우편번호" title="우편 번호" readonly="" />
+                                                                                        <div class="add">
+                                                                                            <label for="homeAddr" class="hide">주소</label>
+                                                                                            <input type="text" id="homeAddr" name="homeAddr" class="email mines" placeholder="주소" data-inputregex="addr" title="주소" />
+                                                                                            <label for="homeDtlAddr" class="hide">상세 주소</label>
+                                                                                            <input type="text" id="homeDtlAddr" name="homeDtlAddr" class="email mines" placeholder="상세주소를 입력해주세요." data-inputregex="addr" title="상세 주소" />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <a href="javascript:;" class="bl-btn m010 post btn_pop m-10" data-name="beta-searchpost">우편번호 검색</a>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="aline">
+                                                                                <div class="aline-a fstart">
+                                                                                    기타 연락처 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                </div>
+                                                                                <div class="aline-b memb">
+                                                                                    <div class="inp m-0">
+                                                                                        <label for="home_tel1" class="hide">기타 연락처 앞 4자리</label>
+                                                                                        <input type="text" id="home_tel1" class="email" data-inputregex="numberinput" maxlength="4" data-nextinput="hometel" title="기타 연락처 앞 4자리" />
+                                                                                    </div>
+                                                                                    <p class="at">-</p>
+                                                                                    <div class="inp m-0">
+                                                                                        <label for="home_tel2" class="hide">기타 연락처 중간 4자리</label>
+                                                                                        <input type="text" id="home_tel2" class="email" data-inputregex="numberinput" maxlength="4" data-nextinput="hometel" title="기타 연락처 중간 4자리" />
+                                                                                    </div>
+                                                                                    <p class="at">-</p>
+                                                                                    <div class="inp mtt log m-0">
+                                                                                        <label for="home_tel3" class="hide">기타 연락처 마지막 4자리</label>
+                                                                                        <input type="text" id="home_tel3" class="email" data-inputregex="numberinput" maxlength="4" data-nextinput="hometel" title="기타 연락처 마지막 4자리" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="add_mint"><span class="reds">*</span> 표시는 필수입력 항목입니다.</div>
+                                                                        </div>
+                                                                        <div class="q">
+                                                                            <div class="aline address">
+                                                                                <div class="aline-a fstart">
+                                                                                    직장주소 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                </div>
+                                                                                <div class="aline-b n-num n-between">
+                                                                                    <div class="inp">
+                                                                                        <label for="wrcZip" class="hide">우편 번호</label>
+                                                                                        <input type="text" id="wrcZip" name="wrcZip" class="email" placeholder="우편번호" title="우편 번호" readonly="" />
+                                                                                        <div class="add">
+                                                                                            <label for="wrcAddr" class="hide">주소</label>
+                                                                                            <input type="text" id="wrcAddr" name="wrcAddr" class="email mines" placeholder="주소" title="주소" />
+                                                                                            <label for="wrcDtlAddr" class="hide">상세 주소</label>
+                                                                                            <input type="text" id="wrcDtlAddr" name="wrcDtlAddr" class="email mines" placeholder="상세주소를 입력해주세요." title="상세 주소" />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="inp_r">
+                                                                                        <a href="javascript:;" class="bl-btn m010 post btn_pop" data-name="beta-searchpost">우편번호 검색</a>
+                                                                                        <a href="javascript:;" class="bl-btn m010">자택주소와 동일</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="aline like_aline">
+                                                                                <div class="aline-a fstart">
+                                                                                    직장연락처 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                </div>
+                                                                                <div class="aline-b memb">
+                                                                                    <div class="inp m-0">
+                                                                                        <label for="off_tel1" class="hide">직장 연락처 앞 4자리</label>
+                                                                                        <input type="text" id="off_tel1" class="email" data-inputregex="numberinput" maxlength="4" data-nextinput="offtel" />
+                                                                                    </div>
+                                                                                    <p class="at">-</p>
+                                                                                    <div class="inp m-0">
+                                                                                        <label for="off_tel2" class="hide">직장 연락처 중간 4자리</label>
+                                                                                        <input type="text" id="off_tel2" class="email" data-inputregex="numberinput" maxlength="4" data-nextinput="offtel" />
+                                                                                    </div>
+                                                                                    <p class="at">-</p>
+                                                                                    <div class="inp mtt log m-0">
+                                                                                        <label for="off_tel3" class="hide">직장 연락처 마지막 4자리</label>
+                                                                                        <input type="text" id="off_tel3" class="email" data-inputregex="numberinput" maxlength="4" data-nextinput="offtel" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="add_mint"><span class="reds">*</span> 표시는 필수입력 항목입니다.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="accordion-item info">
+                                                                    <a class="accordion-header"><i>2</i><span>소속 및 가입정보 입력</span></a>
+                                                                    <div class="accordion-content mb-40">
+                                                                        <div class="aline half_aline bt-2-333">
+                                                                            <div class="aline_col">
+                                                                                <div class="aline-a">소속<span class="reds">*</span></div>
+                                                                                <div class="aline-b two_verti">
+                                                                                    <div class="inp">
+                                                                                        <label for="afstNm" class="hide">소속 입력</label>
+                                                                                        <input type="text" maxlength="50" id="afstNm" name="afstNm" class="depart" placeholder="소속을 입력하세요." title="소속 입력" />
+                                                                                    </div>
+                                                                                    <div class="inp">
+                                                                                        <label for="afstCd" class="hide">소속 선택</label>
+                                                                                        <select class="select-ac" id="afstCd" name="afstCd">
+                                                                                            <option value="0">소속을 선택하세요.</option>
+                                                                                        </select>
+                                                                                        <div class="reds ko">※ 현역회원은 육군, 해군, 공군, 해병대 선택</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="aline_col">
+                                                                                <div class="aline-a">계급<span class="reds">*</span></div>
+                                                                                <div class="aline-b two_verti">
+                                                                                    <div class="inp">
+                                                                                        <label for="clsfNm" class="hide">계급 입력</label>
+                                                                                        <input type="text" maxlength="50" id="clsfNm" name="clsfNm" class="depart" placeholder="계급을 입력하세요." title="계급 입력" />
+                                                                                    </div>
+                                                                                    <div class="inp">
+                                                                                        <label for="clsfCd" class="hide">계급 선택</label>
+                                                                                        <select class="select-ac" id="clsfCd" name="clsfCd">
+                                                                                            <option value="0">계급을 선택하세요.</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="aline">
+                                                                            <div class="aline-a fstart">
+                                                                                군번(순번/사번) <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                            </div>
+                                                                            <div class="aline-b n-num type-btn2">
+                                                                                <div class="inp_dblbtn_wrap">
+                                                                                    <div class="inp">
+                                                                                        <label for="groupNo" class="hide">군번(순번/사번)</label>
+                                                                                        <input type="text" id="groupNo" name="groupNo" class="email" data-inputregex="armyNumberInput" placeholder="군번을 입력하세요." title="군번 입력" />
+                                                                                    </div>
+                                                                                    <div class="inp_r">
+                                                                                        <a href="javascript:;" class="bl-btn m010 btn_pop" data-name="det-inputbyinst">기관별 입력항목</a>
+                                                                                        <a href="javascript:;" class="bl-btn m010 next btn_pop" data-name="det-inputbyserialnum">군번 입력 시 유의사항</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <p class="war-txt"><img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" />군무원, 국직기관 근무자는 순번을 입력하고, 그 외의 기관은 기관 사번 입력</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="aline">
+                                                                            <div class="aline-a fstart">
+                                                                                가입구좌 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                            </div>
+                                                                            <div class="aline-b n-num idea">
+                                                                                <div class="inp">
+                                                                                    <label for="accnt" class="hide">구좌</label>
+                                                                                    <input type="text" id="accnt" name="accnt" class="email wth" maxlength="3" data-notfirstzero="" data-inputregex="numberinput" title="가입 구좌" /><span class="txt_lb">구좌</span>
+                                                                                    <p class="reds ko" id="sddYm">※ 2025년 11월 급여공제는 마감 됐습니다.</p>
+                                                                                    <p class="war-txt"><img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" />1구좌당 5,000원이며, 최대 600구좌(월300만원)까지 가입 가능</p>
+                                                                                    <p class="war-txt"><img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" />단, 신규가입축하금 20구좌, 재해위로금, 출산축하금 등 복지수혜 자격부여는 10구좌 이상 가입하여야 함</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="aline">
+                                                                            <div class="aline-a">
+                                                                                <div class="aline-a-1">
+                                                                                    인사명령서 첨부 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="aline-b" id="formfileList">
+                                                                                <div>
+                                                                                    <button type="button" class="bl-btn">파일선택( pdf, hwpx, jpg, png )</button>
+                                                                                    <div id="dropZone" class="file-section" style="display: table">
+                                                                                        <div id="text-filemanage" class="text-center" style="display: table-cell; vertical-align: middle; cursor: pointer; width: 100%">이곳에 파일을 올려놓거나 파일선택 버튼을 눌러주세요.</div>
+                                                                                        <table id="fileTable">
+                                                                                            <tbody></tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                    <div id="fileControl" style="display: none; width: 1000px; height: 200px" class="innorix_basic chart-hide">
+                                                                                        <div style="display: none" class="circle_loading_wrapper"><div class="circle_loading"></div></div>
+                                                                                        <div class="irx_filetree empty-uploader" style="width: 840px; height: 200px">
+                                                                                            <div style="display: none" class="irx-empty-download-text">There is no download file here.</div>
+                                                                                            <div class="irx-file-header">
+                                                                                                <div class="tree-icon fileheader-checkbox"></div>
+                                                                                                <div class="irx-file-header-desc">Selected Files</div>
+                                                                                                <div class="irx-file-remove-button-wrapper"><button class="irx-file-remove-button">Remove</button></div>
+                                                                                                <div class="irx-file-download-button-wrapper"><button class="irx-file-download-button">Download</button></div>
+                                                                                            </div>
+                                                                                            <ul class="irx_filetree_list irx_listGrid" data-filetree=""></ul>
+                                                                                        </div>
+                                                                                        <div class="irx_infoBox" style="height: 200px">
+                                                                                            <div class="irx-chart-wrapper">
+                                                                                                <div class="irx-chart-btn-group"><div class="irx_btn_del irx-chart-toggle"></div></div>
+                                                                                                <div class="irx-canvas-wrapper"><canvas class="irx-chart-canvas"></canvas></div>
+                                                                                                <div class="irx-chart-file-size"></div>
+                                                                                                <div class="irx-chart-file-count"></div>
+                                                                                            </div>
+                                                                                            <div class="irx-preview-wrapper">
+                                                                                                <div class="irx-chart-btn-group"><div class="irx_btn_del irx-chart-toggle"></div></div>
+                                                                                                <div class="irx-preview-element"><img src="" class="irx-preview-image" /> <canvas id="irx-preview-pdf" class="irx-preview-pdf"></canvas></div>
+                                                                                                <div class="irx-preview-file-name"></div>
+                                                                                                <div class="irx-preview-file-size"></div>
+                                                                                            </div>
+                                                                                            <div class="irx-mass-wrapper">
+                                                                                                <div class="irx-mass-file-title"></div>
+                                                                                                <div class="irx-mass-file-size"></div>
+                                                                                                <div class="irx-mass-file-content"></div>
+                                                                                                <div class="irx-chart-btn-group"><div class="irx-mass-toggle">×</div></div>
+                                                                                                <div class="irx-mass-wrapper-paper-image"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="__irx context-menu-layer" style="display: none"></div>
+                                                                                        <ul class="__irx context-menu-list context-menu-root innorix" style="display: none; text-align: left">
+                                                                                            <li class="context-menu-item action-openFileDialog" data-action="openFileDialog">Add file</li>
+                                                                                            <li class="context-menu-item action-upload" data-action="upload">Upload</li>
+                                                                                            <li class="context-menu-item action-downloadSelectedFiles" data-action="downloadSelectedFiles">Download Selected files</li>
+                                                                                            <li class="context-menu-item action-download" data-action="download">Download</li>
+                                                                                            <li class="context-menu-item action-downloadAndOpen" data-action="downloadAndOpen">Download and open</li>
+                                                                                            <li class="context-menu-item action-removeSelectedFiles" data-action="removeSelectedFiles">Remove selected files</li>
+                                                                                            <li class="context-menu-item action-clearFiles" data-action="clearFiles">Remove all files</li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="sub_txt-wrap" style="padding: 5px">
+                                                                                        <p class="war-txt">
+                                                                                            <img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" />
+                                                                                            <span>아이폰 사진(HEIF → JPEG)로 변경 후 촬영으로 첨부 방법</span>
+                                                                                        </p>
+                                                                                        <p class="war-txt">
+                                                                                            <span class="br"><em>설정 &gt; 카메라 &gt; 포맷 &gt; 높은 호환성</em> 설정 후 사진 촬영</span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!-- 가입사유 -->
+                                                                        <div class="aline half_aline">
+                                                                            <!-- 2개 일때 half_aline-->
+                                                                            <div class="aline_col">
+                                                                                <div class="aline-a">가입경로<span class="reds">*</span></div>
+                                                                                <div class="aline-b">
+                                                                                    <div class="inp inp_auto">
+                                                                                        <label for="" class="hide">가입경로 선택</label>
+                                                                                        <select class="select-ac" id="scbRsnCd" name="scbRsnCd">
+                                                                                            <option value="0">가입경로를 선택하세요.</option>
+                                                                                            <option value="01">모바일 검색</option>
+                                                                                            <option value="02">인터넷 검색</option>
+                                                                                            <option value="03">회원가입 홍보자료</option>
+                                                                                            <option value="04">상담/고객센터</option>
+                                                                                            <option value="05">경제교육단</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- <div class="aline_col select_control_target hide">
+                                                                                <div class="aline-a">전문강사<span class="reds">*</span></div>
+                                                                                <div class="aline-b">
+                                                                                    <div class="inp inp_auto">
+                                                                                        <select class="select-ac" id="exptInstr" name="exptInstr">
+                                                                                            <option value="">전문강사를 선택하세요.</option>
+                                                                                            <option value="kangsa001">이종철</option>
+                                                                                            <option value="kangsa009">윤형택</option>
+                                                                                            <option value="01241101">김종철</option>
+                                                                                            <option value="01250501">조경구</option>
+                                                                                            <option value="kangsa005">김재규</option>
+                                                                                            <option value="kangsa007">정호준</option>
+                                                                                            <option value="kangsa008">정요섭</option>
+                                                                                            <option value="01241102">이영석</option>
+                                                                                            <option value="01250502">이재철</option>
+                                                                                            <option value="01250401">유병렬</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div> -->
+                                                                        </div>
+                                                                        <!-- 가입사유 -->
+
+                                                                        <div class="add_mint"><span class="reds">*</span> 표시는 필수입력 항목입니다.</div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="accordion-item id-pw">
+                                                                    <a class="accordion-header"><i>3</i><span>아이디/비밀번호 설정</span></a>
+                                                                    <div class="accordion-content">
+                                                                        <div class="q">
+                                                                            <div class="aline">
+                                                                                <div class="aline-a fstart">
+                                                                                    아이디
+                                                                                    <span data-rejointype="" style="color: #c6002c">*</span>
+                                                                                </div>
+                                                                                <div class="aline_col" id="webLgnIdDiv" style="display: none">
+                                                                                    <div class="aline-b" id="webLgnIdtxt"></div>
+                                                                                </div>
+                                                                                <div data-rejointype="" class="aline-b n-num type-btnbig1">
+                                                                                    <!-- 우측 버튼 큰거 1개 : type-btnbig1 추가 -->
+                                                                                    <div class="box_inp_chkid">
+                                                                                        <div class="inp inp_chkid">
+                                                                                            <!-- 아이디 중복확인 : inp_chkid -->
+                                                                                            <label for="webLgnId" class="hide">아이디 입력</label>
+                                                                                            <input type="text" id="webLgnId" name="webLgnId" class="email" placeholder="아이디를 입력해주세요." data-inputregex="idinput" maxlength="12" title="아이디 입력" />
+                                                                                        </div>
+                                                                                        <a href="javascript:;" class="bl-btn m010 btn_blueline">아이디 중복확인</a>
+                                                                                    </div>
+                                                                                    <div class="box_inp_chkidtxt">
+                                                                                        <p class="war-txt"><img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" />6~12자리 영소문자, 숫자 조합만 사용 가능합니다.</p>
+                                                                                        <!-- 아이디 사용 불가 -->
+                                                                                        <div class="id-check hide" id="disableId">
+                                                                                            <span class="txt_check txt_fail"> <i></i><b data-chkid=""></b>은 <em>사용 불가능</em>한 아이디입니다. </span>
+                                                                                        </div>
+                                                                                        <!-- //아이디 사용 불가 -->
+                                                                                        <!-- 아이디 사용 가능 -->
+                                                                                        <div class="id-check hide" id="ableId">
+                                                                                            <!-- 숨김 처리시 hide 클래스 추가 -->
+                                                                                            <span class="txt_check txt_succ"> <i></i><b data-chkid="">''</b>은 <em>사용 가능</em>한 아이디입니다. </span>
+                                                                                        </div>
+                                                                                        <!-- //아이디 사용 가능 -->
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div data-rejointype="">
+                                                                                <div class="aline">
+                                                                                    <div class="aline-a fstart">
+                                                                                        비밀번호 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                    </div>
+                                                                                    <div class="aline-b n-num idea">
+                                                                                        <div class="inp inp_minone">
+                                                                                            <!-- 1개 작은 인풋 : inp_minone -->
+                                                                                            <label for="pswd" class="hide">비밀번호 입력</label>
+                                                                                            <input type="password" id="pswd" name="pswd" class="email" placeholder="비밀번호를 입력해주세요." maxlength="12" data-inputregex="pswd" title="비밀번호 입력" />
+                                                                                            <!-- <span onclick="visionToggle()">임시토글</span> -->
+                                                                                            <p class="war-txt"><img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" />8~12자리 영문, 숫자, 특수문자 조합만 사용 가능합니다.</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="aline">
+                                                                                    <div class="aline-a fstart">
+                                                                                        비밀번호 확인 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                    </div>
+                                                                                    <div class="aline-b n-num idea">
+                                                                                        <div class="inp inp_minone">
+                                                                                            <!-- 1개 작은 인풋 : inp_minone -->
+                                                                                            <label for="pswd_check" class="hide">비밀번호 확인</label>
+                                                                                            <input type="password" id="pswd_check" class="email" placeholder="비밀번호를 한번 더 입력해주세요." maxlength="12" data-inputregex="pswd" />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="aline pw-rules">
+                                                                                    <div class="aline-a fstart">비밀번호 등록규칙</div>
+                                                                                    <div class="aline-b aline-b-rows">
+                                                                                        <!-- aline-b-rows : display:block  -->
+                                                                                        <span>- 영문(대ㆍ소문자 구분)과 숫자 및 특수기호를 포함하여 8~12자 (세가지 형식 모두 포함)</span> <span>- 동일 문자 2개 까지만 사용가능 예) aa135bb36 a 2(2개), 3(2개), b(2개)</span> <span>- 오름, 내림차순 2개 까지만 사용가능 예) abf125</span> <span>- 아이디(계정)과 동일한 비밀번호는 사용금지</span> <span>- 현재 비밀번호 재사용금지</span> <span>- 한글, 영어 등의 사전적 단어를 포함하지 않는 비밀번호로 입력</span>
+                                                                                        <span
+                                                                                            >- 제3자가 쉽게 알 수 있는 개인정보를 포함하지 않은 비밀번호로 입력<br />
+                                                                                            (※ 개인정보는 본인과 가족의 생일 및 주소, 휴대전화번호 등을 포함함)
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="add_mint"><span class="reds">*</span> 표시는 필수입력 항목입니다.</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="accordion-item youth">
+                                                                    <a class="accordion-header"><i>4</i><span>(선택) 장기간부도약적금 신청</span></a>
+                                                                    <div class="accordion-content">
+                                                                        <div class="aline bt-2-333">
+                                                                            <div class="aline-a fstart">성명</div>
+                                                                            <div class="aline-b n-num idea">
+                                                                                <div class="inp">
+                                                                                    <label for="name" class="hide">구좌</label>
+                                                                                    <input type="text" id="name" name="name" class="email" maxlength="3" data-notfirstzero="" data-inputregex="numberinput" title="가입 구좌" value="홍길동" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="aline">
+                                                                            <div class="aline-a">소속<span class="reds">*</span></div>
+                                                                            <div class="aline-b two_verti">
+                                                                                <div class="inp">
+                                                                                    <label for="afstNm-youth" class="hide">소속 입력</label>
+                                                                                    <input type="text" maxlength="50" id="afstNm-youth" name="afstNm-youth" class="depart w-360" placeholder="소속을 입력하세요." title="소속 입력" />
+                                                                                </div>
+                                                                                <div class="inp">
+                                                                                    <label for="afstCd-youth" class="hide">소속 선택</label>
+                                                                                    <select class="select-ac w-360" id="afstCd-youth" name="afstCd-youth">
+                                                                                        <option value="0">소속을 선택하세요.</option>
+                                                                                    </select>
+                                                                                    <div class="reds ko">※ 현역회원은 육군, 해군, 공군, 해병대 선택</div>
+                                                                                </div>
+                                                                                <div class="inp" id="mrcpYnArea" style="display: none">
+                                                                                    <label for="mrcpYn" class="hide">해병대 여부 선택</label>
+                                                                                    <select class="select-ac" id="mrcpYn" name="mrcpYn">
+                                                                                        <option value="0">해병대 여부를 선택하세요.</option>
+                                                                                        <option value="Y">예</option>
+                                                                                        <option value="N">아니오</option>
+                                                                                    </select>
+                                                                                    <div class="reds ko">※ 해군회원은 해병대 여부 선택</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="aline">
+                                                                            <div class="aline-a">임관일<span class="reds">*</span></div>
+                                                                            <div class="aline-b">
+                                                                                <div class="inp">
+                                                                                    <div class="jq_dateicowrap">
+                                                                                        <label for="scbDt" class="hide">기준일자</label>
+                                                                                        <input type="text" id="scbDt" name="" class="jqdate w-360" placeholder="" data-inputregex="numberinput" maxlength="12" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="aline">
+                                                                            <div class="aline-a">
+                                                                                <div class="aline-a-1">
+                                                                                    자격확인서 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="aline-b" id="formfileList">
+                                                                                <div>
+                                                                                    <button type="button" class="bl-btn">파일선택( pdf, hwpx, jpg, png )</button>
+                                                                                    <div id="dropZone" class="file-section" style="display: table">
+                                                                                        <div id="text-filemanage" class="text-center" style="display: table-cell; vertical-align: middle; cursor: pointer; width: 100%">이곳에 파일을 올려놓거나 파일선택 버튼을 눌러주세요.</div>
+                                                                                        <table id="fileTable">
+                                                                                            <tbody></tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                    <div id="fileControl" style="display: none; width: 1000px; height: 200px" class="innorix_basic chart-hide">
+                                                                                        <div style="display: none" class="circle_loading_wrapper"><div class="circle_loading"></div></div>
+                                                                                        <div class="irx_filetree empty-uploader" style="width: 840px; height: 200px">
+                                                                                            <div style="display: none" class="irx-empty-download-text">There is no download file here.</div>
+                                                                                            <div class="irx-file-header">
+                                                                                                <div class="tree-icon fileheader-checkbox"></div>
+                                                                                                <div class="irx-file-header-desc">Selected Files</div>
+                                                                                                <div class="irx-file-remove-button-wrapper"><button class="irx-file-remove-button">Remove</button></div>
+                                                                                                <div class="irx-file-download-button-wrapper"><button class="irx-file-download-button">Download</button></div>
+                                                                                            </div>
+                                                                                            <ul class="irx_filetree_list irx_listGrid" data-filetree=""></ul>
+                                                                                        </div>
+                                                                                        <div class="irx_infoBox" style="height: 200px">
+                                                                                            <div class="irx-chart-wrapper">
+                                                                                                <div class="irx-chart-btn-group"><div class="irx_btn_del irx-chart-toggle"></div></div>
+                                                                                                <div class="irx-canvas-wrapper"><canvas class="irx-chart-canvas"></canvas></div>
+                                                                                                <div class="irx-chart-file-size"></div>
+                                                                                                <div class="irx-chart-file-count"></div>
+                                                                                            </div>
+                                                                                            <div class="irx-preview-wrapper">
+                                                                                                <div class="irx-chart-btn-group"><div class="irx_btn_del irx-chart-toggle"></div></div>
+                                                                                                <div class="irx-preview-element"><img src="" class="irx-preview-image" /> <canvas id="irx-preview-pdf" class="irx-preview-pdf"></canvas></div>
+                                                                                                <div class="irx-preview-file-name"></div>
+                                                                                                <div class="irx-preview-file-size"></div>
+                                                                                            </div>
+                                                                                            <div class="irx-mass-wrapper">
+                                                                                                <div class="irx-mass-file-title"></div>
+                                                                                                <div class="irx-mass-file-size"></div>
+                                                                                                <div class="irx-mass-file-content"></div>
+                                                                                                <div class="irx-chart-btn-group"><div class="irx-mass-toggle">×</div></div>
+                                                                                                <div class="irx-mass-wrapper-paper-image"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="__irx context-menu-layer" style="display: none"></div>
+                                                                                        <ul class="__irx context-menu-list context-menu-root innorix" style="display: none; text-align: left">
+                                                                                            <li class="context-menu-item action-openFileDialog" data-action="openFileDialog">Add file</li>
+                                                                                            <li class="context-menu-item action-upload" data-action="upload">Upload</li>
+                                                                                            <li class="context-menu-item action-downloadSelectedFiles" data-action="downloadSelectedFiles">Download Selected files</li>
+                                                                                            <li class="context-menu-item action-download" data-action="download">Download</li>
+                                                                                            <li class="context-menu-item action-downloadAndOpen" data-action="downloadAndOpen">Download and open</li>
+                                                                                            <li class="context-menu-item action-removeSelectedFiles" data-action="removeSelectedFiles">Remove selected files</li>
+                                                                                            <li class="context-menu-item action-clearFiles" data-action="clearFiles">Remove all files</li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="sub_txt-wrap" style="padding: 5px">
+                                                                                        <p class="war-txt">
+                                                                                            <img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" />
+                                                                                            <span>아이폰 사진(HEIF → JPEG)로 변경 후 촬영으로 첨부 방법</span>
+                                                                                        </p>
+                                                                                        <p class="war-txt">
+                                                                                            <span class="br"><em>설정 &gt; 카메라 &gt; 포맷 &gt; 높은 호환성</em> 설정 후 사진 촬영</span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="aline">
+                                                                            <div class="aline-a">가입금액<span class="reds">*</span></div>
+                                                                            <div class="aline-b two_verti a-start">
+                                                                                <div class="inp">
+                                                                                    <div class="flex-center">
+                                                                                        <label for="price" class="hide">금액 입력</label>
+                                                                                        <input type="text" id="price" name="price" class="input-amount w-360" placeholder="" />
+                                                                                        <span class="won">원</span>
+                                                                                    </div>
+                                                                                    <div class="reds ko">※ 매월 10일 공제액으로, 최초 가입시에만 공제 가능합니다.</div>
+                                                                                </div>
+                                                                                <div class="inp">
+                                                                                    <div class="flex-center">
+                                                                                        <label for="price-pseudo" class="hide">금액 입력</label>
+                                                                                        <input type="text" id="price-pseudo" name="price-pseudo" class="input-amount w-360" placeholder="" />
+                                                                                        <span class="won">원</span>
+                                                                                    </div>
+                                                                                    <div class="reds ko">※ 매월 가상계좌 입금액으로, 가입 후 2회차부터 적용됩니다.</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="aline">
+                                                                            <div class="aline-a">지급계좌<span class="reds">*</span></div>
+                                                                            <div class="aline-b two_verti">
+                                                                                <div class="inp">
+                                                                                    <label for="bank" class="hide">은행 선택</label>
+                                                                                    <select class="select-ac w-360" id="bank" name="bank">
+                                                                                        <option value="0">은행을 선택해 주세요.</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="inp">
+                                                                                    <label for="bank-num" class="hide">계좌번호 입력</label>
+                                                                                    <input type="text" maxlength="50" id="bank-num" name="bank-num" class="depart w-360" placeholder="계좌번호를 입력해주세요." title="소속 입력" />
+                                                                                    <div class="sub_txt-wrap mt-4">
+                                                                                        <p class="war-txt"><img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" /><span>계좌번호는 숫자만 입력가능합니다.</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="add_mint"><span class="reds">*</span> 표시는 필수입력 항목입니다.</div>
+
+                                                                        <div class="btns youth">
+                                                                            <div class="check-bt tc btn-navy w-full">
+                                                                                <button type="button" class="button" disabled>장기간부도약적금 가입신청 작성 완료</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="btns">
+                                                                <div class="check-bt tc grey">
+                                                                    <button type="button" class="button">취소</button>
+                                                                </div>
+                                                                <div class="check-bt tc signup-bt">
+                                                                    <button type="button" class="button" disabled>가입하기</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <!-- [E] 퍼블 추가 -->
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- 본문 영역 -->
+
+        <!-- [S] 퍼블 확인용: 푸터 인클루드 -->
+        <div data-include="../../web/includes/footer.html"></div>
+        <!-- [E] 퍼블 확인용: 푸터 인클루드 -->
+    </body>
+</html>

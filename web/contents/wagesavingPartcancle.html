@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>군인공제회 -</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="../../cubersc/cube.ico" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, target-densitydpi=device-dpi" />
+
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/content.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/common/plugins/jquery_daterangepicker/daterangepicker.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/animate-3.7.2.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/main.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/swiper.min.css" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/common.css?v=20250529" />
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/step.css?v=20250529" />
+        <script type="text/javascript" src="../../cubersc/common/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/wow.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/slick.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/swiper.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/matchHeight-min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/mainpage.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/common.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/step.js"></script>
+        <script type="text/javascript" src="../../cubersc/common/plugins/daterangepicker/moment.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/common/plugins/jquery_daterangepicker/jquery.daterangepicker.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/common/js/bankUtil.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/common/js/kuvUtil.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <script src="../../cubersc/common/itg-js.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/html2canvas.min.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/user/js/content.js"></script>
+        <script type="text/javascript" src="../../cubersc/template/kuvdev/js/quickChat.js"></script>
+
+        <!-- 퍼블 확인용: 공통 인클루드 js -->
+        <script src="../../web/js/include.js"></script>
+        <script>
+            function tabStatus(tobtn, frombtn) {
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <!-- [S] 퍼블 확인용: 헤더 인클루드 -->
+        <div data-include="../../web/includes/header.html"></div>
+        <!-- [E] 퍼블 확인용: 헤더 인클루드 -->
+
+        <!-- 본문 영역 -->
+        <div id="wrap">
+            <div class="subs">
+                <!-- [S] 퍼블 확인용: 퀵메뉴 인클루드 -->
+                <div data-include="../../web/includes/quickmenu.html"></div>
+                <!-- [E] 퍼블 확인용: 퀵메뉴 인클루드 -->
+                <div id="containers">
+                    <!-- [S] 퍼블 확인용: 브레드크럼 인클루드 -->
+                    <div data-include="../../web/includes/breadcrumb.html"></div>
+                    <!-- [E] 퍼블 확인용: 브레드크럼 인클루드 -->
+
+                    <!--container-->
+                    <section id="container" class="sub" href="javascript:;" tabindex="0">
+                        <div class="sub_inner">
+                            <div class="w">
+                                <!-- 지급계좌 등록 팝업-->
+
+                                <!-- 지급계좌 등록 팝업 -->
+                                <div class="help-bg" id="popupAccountregistration">
+                                    <div class="help-w">
+                                        <div class="w-close">
+                                            <a href="javascript:;" title="닫기">
+                                                <img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" />
+                                            </a>
+                                        </div>
+                                        <div class="h-win" tabindex="0">
+                                            <div class="box_btmborder_tit mgb">
+                                                <h3>지급계좌 등록</h3>
+                                            </div>
+                                            <div class="cont_box">
+                                                <div class="subss">
+                                                    <h4 class="sub_tit">지급계좌 등록</h4>
+                                                </div>
+                                                <div class="q new_type_q">
+                                                    <!-- 새로운 케이스 추가 : new_type_q -->
+
+                                                    <!-- 계좌명 -->
+                                                    <div class="tline">
+                                                        <div class="tline-a">계좌명</div>
+                                                        <div class="tline-b tline-b-rows">
+                                                            <div class="inp one_wide">
+                                                                <label for="" class="hide"></label>
+                                                                <input type="text" data-accountregistration="acctNm" placeholder="예시 : 예금형목돈수탁용 수령계좌" maxlength="20" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //계좌명 -->
+
+                                                    <!-- 은행명 -->
+                                                    <div class="tline">
+                                                        <div class="tline-a">
+                                                            은행명 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                        </div>
+                                                        <div class="tline-b tline-b-rows">
+                                                            <div class="row one_wide">
+                                                                <div class="slc">
+                                                                    <select class="select-ac" data-accountregistration="fnstCd">
+                                                                        <option value="0">은행을 선택해 주세요.</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //은행명 -->
+
+                                                    <!-- 계좌번호 -->
+                                                    <div class="tline">
+                                                        <div class="tline-a">
+                                                            계좌번호 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                        </div>
+                                                        <div class="tline-b tline-b-rows">
+                                                            <div class="inp one_wide">
+                                                                <label for="" class="hide"></label>
+                                                                <input type="text" data-accountregistration="acctNo" oninput="this.value = this.value.replace(/[^0-9]/g,'')" placeholder="공백 없이 입력해 주세요." maxlength="20" data-inputregex="numberinput" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //계좌번호 -->
+
+                                                    <!-- 비고 -->
+                                                    <div class="tline">
+                                                        <div class="tline-a">비고</div>
+                                                        <div class="tline-b tline-b-rows">
+                                                            <div class="inp one_wide">
+                                                                <label for="" class="hide"></label>
+                                                                <input type="text" data-accountregistration="rmk" placeholder="" maxlength="50" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //비고 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add_mint"><span class="reds">*</span> 표시는 필수입력 항목입니다.</div>
+                                        <div class="btns">
+                                            <div class="check-bt grey">
+                                                <button type="button" class="button greys d-close" tabindex="0">닫기</button>
+                                            </div>
+                                            <div class="check-bt tc">
+                                                <button type="button" class="button last_popbtn" id="acctApply" onclick="popupAddAccValid()" tabindex="0">등록하기</button>
+                                            </div>
+                                        </div>
+                                        <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
+                                    </div>
+                                    <!-- help-w -->
+                                </div>
+
+                                <!-- //지급계좌 등록 팝업 -->
+
+                                <!-- //지급계좌 등록 팝업-->
+
+                                <input type="hidden" id="apliedDeacYn" value="N" />
+
+                                <!-- 도움말 : 이용안내 팝업 -->
+                                <div class="help-bg help_etc" id="help">
+                                    <div class="help-w">
+                                        <div class="w-close">
+                                            <a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /></a>
+                                        </div>
+                                        <div class="h-win" tabindex="0">
+                                            <div class="box_btmborder_tit">
+                                                <h3>홈페이지 사용자 매뉴얼</h3>
+                                            </div>
+                                            <div class="h-wincont">
+                                                <div class="win-list">
+                                                    <ul class="lw">
+                                                        <li>
+                                                            <span><a href="">회원가입</a></span>
+                                                        </li>
+                                                        <li>
+                                                            <span><a href="">퇴직급여</a></span>
+                                                        </li>
+                                                        <li>
+                                                            <span><a href="">연금식 분할급여</a></span>
+                                                        </li>
+                                                        <li>
+                                                            <span><a href="">예금형 목돈수탁저축</a></span>
+                                                        </li>
+                                                        <li>
+                                                            <span><a href="">현역/예비역 회원 저축(적립형)</a></span>
+                                                        </li>
+                                                        <li>
+                                                            <span><a href="">퇴직급여대여</a></span>
+                                                        </li>
+                                                        <li>
+                                                            <span><a href="">목돈수탁대여</a></span>
+                                                        </li>
+                                                        <li>
+                                                            <span><a href="">중도해약</a></span>
+                                                        </li>
+                                                        <li>
+                                                            <span><a href="">시뮬레이션</a></span>
+                                                        </li>
+                                                        <li>
+                                                            <span><a href="">복지부조</a></span>
+                                                        </li>
+                                                        <li>
+                                                            <span><a href="">부담금납입</a></span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="w-btns">
+                                                    <div data-tab="wstep-1" class="active">
+                                                        <a href="javascript:;" class="select" title="선택됨">퇴직급여 가입</a>
+                                                    </div>
+                                                    <div data-tab="wstep-2">
+                                                        <a href="javascript:;">퇴직급여 증·감좌신청</a>
+                                                    </div>
+                                                    <div data-tab="wstep-3">
+                                                        <a href="javascript:;">퇴직급여 청구</a>
+                                                    </div>
+                                                </div>
+                                                <div class="w-linkcont active" id="sub-wstep-1">
+                                                    <div class="w-link">
+                                                        <a href="https://www.mmaa.or.kr/">1. 군인공제회 홈페이지(https://www.mmaa.or.kr/) 접속</a>
+                                                        <p>1) 홈페이지 회원가입 클릭 또는 저축-퇴직급여-제도안내-신청하기</p>
+                                                        <img class="hpage" src="../../cubersc/template/user/img/sub/hpage.png" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="w-linkcont" id="sub-wstep-2">
+                                                    <div class="w-link">탭2</div>
+                                                </div>
+                                                <div class="w-linkcont" id="sub-wstep-3">
+                                                    <div class="w-link">탭3</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- help-w -->
+                                        <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
+                                    </div>
+                                </div>
+                                <!-- //도움말 : 이용안내 팝업 -->
+
+                                <!-- 부분해약 신청시 유의사항 안내 팝업 -->
+                                <div class="help-bg beta-noti_wagesavingout">
+                                    <div class="help-w">
+                                        <div class="w-close">
+                                            <a href="javascript:;" title="닫기">
+                                                <img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" />
+                                            </a>
+                                        </div>
+                                        <div class="h-win" tabindex="0">
+                                            <div class="box_btmborder_tit">
+                                                <h3>부분해약 신청시 유의사항</h3>
+                                            </div>
+                                            <div class="h-wincont">
+                                                <div class="box_chknoti_wrap">
+                                                    <p class="box_chknoti_icowrap">
+                                                        <img class="img-re-m" src="../../cubersc/template/user/img/sub/title1.png" alt="" />
+                                                    </p>
+                                                    <ul class="box_chklistwrap">
+                                                        <li>
+                                                            <div class="box_checklist first">
+                                                                <strong>주택구입 등 생활자금 필요시 퇴직급여의 90%까지는 회원대여를 활용하는 것이 유리합니다.</strong>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="box_checklist">
+                                                                <strong>복지수혜는 잔류 10구좌부터 기간산정이 되므로 부분해약 시 불이익이 없도록 유의하시기 바랍니다.</strong>
+                                                            </div>
+                                                        </li>
+                                                        <!-- <li>
+                            <div class="box_checklist">
+                                <strong>복지수혜는 잔류 10구좌부터 기간산정이 되므로 탈퇴 시 불이익이 없도록 유의하시기 바랍니다. </strong>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box_checklist">
+                                <strong class="emphasis">퇴직급여금은 “연금식 분할급여”로 전환가입이
+                                    가능하며, 저율과세(0~6.5%) 적용은 물론
+                                    금융소득 종합과세가 제외되는 상품입니다.</strong>
+                            </div>
+                        </li> -->
+                                                        <li>
+                                                            <div class="btns">
+                                                                <!-- <div class="check-bt tc navy">
+								    <button type="button" class="button w-close" id="" onclick="location.href='/web/contents/r-Cancel.do'">연금식 분할급여 신청</button>
+								</div> -->
+                                                                <div class="check-bt tc">
+                                                                    <button type="button" class="button last_popbtn" id="" onclick="popupBtnSubmit(this);" tabindex="0">확인</button>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
+                                    </div>
+                                    <!-- help-w -->
+                                </div>
+                                <!-- //부분해약 신청시 유의사항 안내 팝업 -->
+
+                                <div id="contents" class="content-all">
+                                    <div class="box_calcarea">
+                                        <!-- 기능 wrap 용 -->
+                                        <!-- <h3 class="main_title">부분해약신청</h3> -->
+                                        <div class="box_btmborder_tit">
+                                            <h3>부분해약신청</h3>
+                                        </div>
+                                        <div class="box_calcwrap">
+                                            <section class="common-section">
+                                                <div class="tab-Box">
+                                                    <div class="tab-title clearfix">
+                                                        <div class="tab-step line active" data-tab="tab-0">
+                                                            <a href="javascript:;">
+                                                                <div><span>STEP</span><span> 01</span></div>
+                                                                <p>이용 및 유의사항</p>
+                                                            </a>
+                                                        </div>
+                                                        <!-- <div class="tab-step line" data-tab="tab-1">
+							<a href="javascript:;">
+								<div>
+									<span>STEP</span><span> 02</span>
+								</div>
+								<p>약관동의</p>
+							</a>
+						</div> -->
+                                                        <div class="tab-step line" data-tab="tab-1">
+                                                            <a href="javascript:;">
+                                                                <div><span>STEP</span><span> 02</span></div>
+                                                                <p>신청사항</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="tab-step" data-tab="tab-2">
+                                                            <a href="javascript:;">
+                                                                <div><span>STEP</span><span> 03</span></div>
+                                                                <p>신청완료 및 조회</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="color" id="red"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- tab-Box 끝-->
+
+                                                <div class="tab-Con">
+                                                    <div id="tab-0" class="tab-content active">
+                                                        <ul class="one-line">
+                                                            <li class="one-person">
+                                                                <div class="cbox open b1">
+                                                                    <div class="subss">
+                                                                        <h4 class="titles">
+                                                                            이용 및 유의사항
+                                                                            <!-- <a href="javascript:;" class="clickme_linkwrap btn_pop" data-name="help_etc" title="팝업 열림"><img class="ques clickme" id="" src="../../cubersc/template/user/img/sub/ques.png" alt="도움말"></a> -->
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="mycontent">
+                                                                        <div class="box-one one01">
+                                                                            <div class="box">
+                                                                                <a href="javascript:;" title="" class="title">이용안내</a>
+                                                                                <ul class="box-content" style="display: none">
+                                                                                    <li>
+                                                                                        <span class="red" style="color: #c6002c">지급 예정일자 : <b data-busnday="">2025년 11월 12일</b> (신청 <b data-diffday="">익익일</b>영업일)</span>
+                                                                                    </li>
+                                                                                    <li><span>인트라넷 급여포털에서 제공하는 퇴직급여현황은 전월자료이며, 실시간 저축현황은 본회 인터넷 홈페이지 현황을 참조하시기 바랍니다.</span></li>
+                                                                                    <li>
+                                                                                        <span>신청일 및 지급일 기준</span>
+                                                                                        <div class="spe"><span>지급일 : 휴무일 및 미지급일(급여지급일, 급여지급일 다음 근무일)를 제외한 매일 지급</span><span>지급시간 : 지급일에 부분해약 신청계좌로 9 ~ 15시경 입금 예정</span> <span>신청일 : 오전 12시까지 신청자 → 지급일 : 익일 근무일에 지급</span><span>신청일 : 오전 12시 이후 신청자 → 지급일 : 2 근무일 후에 지급</span></div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span>미지급일(2일) 운영 사유</span>
+                                                                                        <div class="spe">
+                                                                                            <span>급여지급일에 탈퇴 및 부분해약 신청 시 해당 월 급여공제금이 반영되지 않아 실지급 금액의 차이가 발생하는 업무혼란을 예방하기 위함</span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li><span class="red" style="color: #c6002c">1998년 12월 이전 가입구좌를 탈퇴, 모두 해약시는 비과세 혜택이 없어집니다.</span></li>
+                                                                                    <!-- <li><span>재정단 자료발송 마감일부터 급여일 전전 근무일 까지 신청한 탈퇴, 부분해약한 구좌의 재가입 및 증좌 구좌는 차기 급여일에 반영되며, 그 이상의 구좌는 차차기급여일에 반영됩니다.</span></li> -->
+                                                                                    <li><span>국군재정관리단 급여공제 마감일(매월 20일) 이후부터 ~ 급여일 2근무일전까지 탈퇴 또는 부분해약 신청하신 회원은 해약하신 구좌만큼 재가입/재증좌 신청을 희망하실 경우 급여일 2 근무일전까지 대표번호 1544-9090(상담원 연결 "0번")으로 신청하시면 급여에서 반영됩니다.</span></li>
+                                                                                    <li><span>공제 마감일(매월 20일) 이후부터 급여일 2근무일전까지 접수하지 않으면 급여일 기준 1 ~ 2근무일에 자동으로 환불됩니다.</span></li>
+                                                                                    <li>
+                                                                                        <span class="red" style="color: #c6002c">지급신청완료 문자를 받기 위한 회원님의 연락처(휴대전화번호)를 변경 하시려면 마이페이지의 개인정보변경 메뉴를 이용하십시오.</span>
+                                                                                    </li>
+                                                                                    <li class="pdl"><a href="/web/contents/MyinfoModify.do" class="btn_linkmove">개인정보변경 바로가기</a></li>
+                                                                                    <li>
+                                                                                        <span class="bold">한국캐피탈(주) 군인·군무원이라면! 고금리대출을 저금리대출로 환승(최대 5,000만원 까지)</span>
+                                                                                    </li>
+                                                                                    <li class="pdl"><a href="https://www.hankookcapital.co.kr/ib20/mnu/HKCMAN000000" target="_blank" title="새창 열림" class="btn_linkmove">바로가기</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mycontent">
+                                                                        <div class="box-one one02">
+                                                                            <div class="box">
+                                                                                <a href="javascript:;" title="" class="title">부분해약/대여상환신청 안내</a>
+                                                                                <ul class="box-content" style="display: none">
+                                                                                    <li><span>부분해약후 한도가 마이너스(-)이면 상환이 불가능합니다.</span></li>
+                                                                                    <li><span>최소 1구좌를 제외한 나머지 구좌에서 원하시는 만큼 신청 가능합니다.</span></li>
+                                                                                    <li><span>부분해약 신청구좌에 해당하는 금액을 입금 받게 되며, 금액의 지급없이 구좌만 줄이실 수는 없습니다.</span></li>
+                                                                                    <li><span>부분해약 금액으로 대여잔액의 전부 혹은 일부를 상환할 수 있습니다.</span></li>
+                                                                                    <li><span>대여를 상환하지 않고 지급을 원할 경우, 대여 상환보증금액으로 인해 부분해약이 일부 제한되며, 부분해약 후 한도가 마이너스(-)인 경우는 반드시 대여를 상환해야 합니다.</span></li>
+                                                                                    <li><span>복지수혜 기준은 남은 구좌 중(반드시 10구좌 이상) 가장 오래된 구좌를 기준으로 산정됩니다.</span></li>
+                                                                                    <li><span>출산 보조금 지급 기한에는 10구좌 미만으로 부분해약이 불가능합니다.</span></li>
+                                                                                    <li><span>각각의 구좌는 가입년월에 따라 이자율이 상이하며 오래된 구좌일수록 이자율이 높습니다.</span></li>
+                                                                                    <!-- <li><span class="red" style="color: #c6002c;">각군 인트라넷에서 제공되는 군인공제회 부담금 현황자료는 본회에서 월 1회 제공하는 자료를 각 군 중경단에서 업데이트한 자료로써, 실시간으로 제공하는 본회 홈페이지 금액과는 차이가 있습니다.</span></li> -->
+                                                                                    <li><span class="red" style="color: #c6002c">국방통합급여포털(인트라넷) 공제관리에서 조회되는 군인공제내역조회는 본회에서 월 1회(정기수납일 기준) 제공하는 자료로, 실시간으로 제공하는 본회 금액과는 차이가 있습니다.</span></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="btns">
+                                                                        <div class="check-bt">
+                                                                            <button type="button" class="button btn_pop" onclick="" data-name="beta-noti_wagesavingout">확인</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- tab-0 -->
+
+                                                    <!-- tab-1 -->
+                                                    <div id="tab-1" class="tab-content">
+                                                        <form id="formWsPartcancleAcc" name="formWsPartcancleAcc" method="post">
+                                                            <!-- 지급 예정일자 상단 파란 영역 -->
+                                                            <div class="lbl-box lbl-nbox">
+                                                                <div class="lbl_newin">
+                                                                    <strong> <em>지급 예정일자</em><span data-busnday="">2025년 11월 12일</span> (신청 <span data-diffday="">익익일</span>영업일) </strong>
+                                                                </div>
+                                                            </div>
+                                                            <!-- <div class="lbl_tbox">
+								<div class="lbl_newin">
+									<em>한국캐피탈(주) 군인·군무원이라면!</em>
+									<span>고금리대출을 저금리대출로 환승(최대 5,000만원 까지)</span>
+									<div class="lbl_btn">
+										<a href="https://www.hankookcapital.co.kr/ib20/mnu/HKCMAN000000" target="_blank" title="새창 열림" class="bl-btn">알아보기</a> 
+									</div>
+								</div>
+							</div> -->
+                                                            <!-- //지급 예정일자 상단 파란 영역 -->
+                                                            <ul class="one-line">
+                                                                <li class="one-person">
+                                                                    <div class="mycontent">
+                                                                        <div class="box-one one05">
+                                                                            <div class="box pb center">
+                                                                                <a href="javascript:;" title="" class="title chch down tel">
+                                                                                    <p class="only">부분해약 신청 시 실지급액(예정)</p>
+                                                                                    <div class="col4">
+                                                                                        <div class="total line mb">
+                                                                                            <p class="top-t">실지급액</p>
+                                                                                            <p class="bigwon"><span data-rfndafpayamt="">0</span><span class="smallwon">원</span></p>
+                                                                                        </div>
+                                                                                        <div class="total line pc">
+                                                                                            <p class="top-t">부분해약 금액</p>
+                                                                                            <p class="bigwon"><span data-cclntotalamt="">0</span><span class="smallwon">원</span></p>
+                                                                                        </div>
+                                                                                        <div class="total line pc">
+                                                                                            <p class="top-t">퇴직급여대여 상환액</p>
+                                                                                            <p class="bigwon"><span data-memlendrfndamt="">0</span><span class="smallwon">원</span></p>
+                                                                                        </div>
+                                                                                        <div class="total pc">
+                                                                                            <p class="top-t">해약 후 회원급여 잔액</p>
+                                                                                            <p class="bigwon"><span data-cclnafbalcamt="">000,000</span><span class="smallwon">원</span></p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                                <ul class="box-content box-dropcontent" style="display: none">
+                                                                                    <!--  sf 삭제 : box-dropcontent 추가 -->
+                                                                                    <!-- 													<li><span class="non">지급잔액</span>
+														<p class="mr" data-cclnAfBalcAmt></p></li> -->
+                                                                                    <li>
+                                                                                        <span class="non">퇴직급여 대여</span>
+                                                                                        <p class="mr" data-rfndaflendbalcamt="">000,000</p>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span class="non">보증 대여</span>
+                                                                                        <p class="mr" data-grtlendrfndamt="">0</p>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span class="non">해약후 대여한도</span>
+                                                                                        <p class="mr" data-cclnaflendlmitamt="">000,000</p>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <span class="non">세금(이자소득세)</span>
+                                                                                        <p class="mr" data-tax=""></p>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-th">
+                                                                <ul class="tabs00">
+                                                                    <li class="tab-link currents" data-tab="step-1">
+                                                                        <a href="javascript:;" title="선택됨">부분해약 구좌별 상세내역</a>
+                                                                    </li>
+                                                                    <li class="tab-link" data-tab="step-2">
+                                                                        <a href="javascript:;">대여금 부분상환 상세내역</a>
+                                                                    </li>
+                                                                    <li class="tab-link" data-tab="step-3">
+                                                                        <a href="javascript:;">지급계좌 및 사유선택</a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div id="sub-step-1" class="tabs-content currents">
+                                                                    <div class="mon">부분해약 구좌별 상세내역</div>
+                                                                    <!-- <div class="blue-bx m_absolute">
+										모바일일때 absolute
+										<div class="bl-a p line">
+											<p class="top-t">해약금액(세전)</p>
+											<p class="bigwon" data-cclnTotalAmt>
+												<span class="smallwon">원</span>
+											</p>
+										</div>
+										<div class="bl-a p line">
+											<p class="top-t">세금</p>
+											<p class="bigwon" data-tax>0
+												<span class="smallwon">원</span>
+											</p>
+										</div>
+										<div class="bl-a p ups">
+											<p class="top-t">부분해약 해약금액(세후)</p>
+											<p class="bigwon" data-ddcAftrAmt>
+												<span class="smallwon">원</span>
+											</p>
+										</div>
+									</div> -->
+                                                                    <div class="tab-tbl">
+                                                                        <div class="st-table">
+                                                                            <table id="aham05List">
+                                                                                <caption>
+                                                                                    퇴직급여 가입내역
+                                                                                </caption>
+                                                                                <colgroup>
+                                                                                    <col style="width: 5%" />
+                                                                                    <col style="width: 15%" />
+                                                                                    <col style="width: 10%" />
+                                                                                    <col style="width: 35%" />
+                                                                                    <col style="width: 15%" />
+                                                                                    <col style="width: 20%" />
+                                                                                </colgroup>
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th style="width: 5%">순번</th>
+                                                                                        <th>가입년월</th>
+                                                                                        <th>구좌수</th>
+                                                                                        <th>해약구좌수</th>
+                                                                                        <th>잔류구좌수</th>
+                                                                                        <th>해약금액</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody id="wlist_pc">
+                                                                                    <tr id="rowdata0" data-rowdataidx="0001199244">
+                                                                                        <td data-ctrtseq="">최초</td>
+                                                                                        <td data-scbym="">2005-10</td>
+                                                                                        <td data-accnt="">4</td>
+                                                                                        <td><button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" data-input="" class="all-ap num_only" oninput="deacinput(this);" placeholder="0" maxlength="3" value="" /></td>
+                                                                                        <td data-restaccnt="">4</td>
+                                                                                        <td style="text-align: right; padding-right: 10px" data-cclnpnamt="">0</td>
+                                                                                    </tr>
+                                                                                    <tr id="rowdata1" data-rowdataidx="0001206502">
+                                                                                        <td data-ctrtseq="">001</td>
+                                                                                        <td data-scbym="">2005-11</td>
+                                                                                        <td data-accnt="">96</td>
+                                                                                        <td><button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" data-input="" class="all-ap num_only" oninput="deacinput(this);" placeholder="0" maxlength="3" value="" /></td>
+                                                                                        <td data-restaccnt="">96</td>
+                                                                                        <td style="text-align: right; padding-right: 10px" data-cclnpnamt="">0</td>
+                                                                                    </tr>
+                                                                                    <tr id="rowdata2" data-rowdataidx="0001449766">
+                                                                                        <td data-ctrtseq="">002</td>
+                                                                                        <td data-scbym="">2008-04</td>
+                                                                                        <td data-accnt="">50</td>
+                                                                                        <td><button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" data-input="" class="all-ap num_only" oninput="deacinput(this);" placeholder="0" maxlength="3" value="" /></td>
+                                                                                        <td data-restaccnt="">50</td>
+                                                                                        <td style="text-align: right; padding-right: 10px" data-cclnpnamt="">0</td>
+                                                                                    </tr>
+                                                                                    <tr id="rowdata3" data-rowdataidx="0002803100">
+                                                                                        <td data-ctrtseq="">003</td>
+                                                                                        <td data-scbym="">2018-01</td>
+                                                                                        <td data-accnt="">50</td>
+                                                                                        <td><button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" data-input="" class="all-ap num_only" oninput="deacinput(this);" placeholder="0" maxlength="3" value="" /></td>
+                                                                                        <td data-restaccnt="">50</td>
+                                                                                        <td style="text-align: right; padding-right: 10px" data-cclnpnamt="">0</td>
+                                                                                    </tr>
+                                                                                    <tr id="rowdata4" data-rowdataidx="0002980883">
+                                                                                        <td data-ctrtseq="">004</td>
+                                                                                        <td data-scbym="">2019-01</td>
+                                                                                        <td data-accnt="">100</td>
+                                                                                        <td><button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" data-input="" class="all-ap num_only" oninput="deacinput(this);" placeholder="0" maxlength="3" value="" /></td>
+                                                                                        <td data-restaccnt="">100</td>
+                                                                                        <td style="text-align: right; padding-right: 10px" data-cclnpnamt="">0</td>
+                                                                                    </tr>
+                                                                                    <tr id="rowdata5" data-rowdataidx="0003567902">
+                                                                                        <td data-ctrtseq="">005</td>
+                                                                                        <td data-scbym="">2022-01</td>
+                                                                                        <td data-accnt="">100</td>
+                                                                                        <td><button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" data-input="" class="all-ap num_only" oninput="deacinput(this);" placeholder="0" maxlength="3" value="" /></td>
+                                                                                        <td data-restaccnt="">100</td>
+                                                                                        <td style="text-align: right; padding-right: 10px" data-cclnpnamt="">0</td>
+                                                                                    </tr>
+                                                                                    <tr id="rowdata6" data-rowdataidx="0004210528">
+                                                                                        <td data-ctrtseq="">006</td>
+                                                                                        <td data-scbym="">2024-01</td>
+                                                                                        <td data-accnt="">20</td>
+                                                                                        <td><button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" data-input="" class="all-ap num_only" oninput="deacinput(this);" placeholder="0" maxlength="3" value="" /></td>
+                                                                                        <td data-restaccnt="">20</td>
+                                                                                        <td style="text-align: right; padding-right: 10px" data-cclnpnamt="">0</td>
+                                                                                    </tr>
+                                                                                    <tr id="rowdata7" data-rowdataidx="0004670386">
+                                                                                        <td data-ctrtseq="">008</td>
+                                                                                        <td data-scbym="">2025-05</td>
+                                                                                        <td data-accnt="">20</td>
+                                                                                        <td><button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" data-input="" class="all-ap num_only" oninput="deacinput(this);" placeholder="0" maxlength="3" value="" /></td>
+                                                                                        <td data-restaccnt="">20</td>
+                                                                                        <td style="text-align: right; padding-right: 10px" data-cclnpnamt="">0</td>
+                                                                                    </tr>
+                                                                                    <tr id="rowdata8" data-rowdataidx="0004728949">
+                                                                                        <td data-ctrtseq="">009</td>
+                                                                                        <td data-scbym="">2025-07</td>
+                                                                                        <td data-accnt="">160</td>
+                                                                                        <td><button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" data-input="" class="all-ap num_only" oninput="deacinput(this);" placeholder="0" maxlength="3" value="" /></td>
+                                                                                        <td data-restaccnt="">160</td>
+                                                                                        <td style="text-align: right; padding-right: 10px" data-cclnpnamt="">0</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="app-mb" id="wlist_mo">
+                                                                        <div class="one-app" id="m_rowdata0" data-rowdataidx="0001199244">
+                                                                            <div class="date-mb" data-scbym="">2005-10</div>
+                                                                            <div class="cont-mb r_wide">
+                                                                                <div>
+                                                                                    <span>구좌수</span> <span><span data-accnt="">4</span>/<span data-restaccnt=""></span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약금액</span> <span><span data-cclnpnamt="">0</span>원</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약구좌수</span> <span> <button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" oninput="deacinput(this);" maxlength="3" data-input="" class="all-ap" placeholder="0" /> </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="one-app" id="m_rowdata1" data-rowdataidx="0001206502">
+                                                                            <div class="date-mb" data-scbym="">2005-11</div>
+                                                                            <div class="cont-mb r_wide">
+                                                                                <div>
+                                                                                    <span>구좌수</span> <span><span data-accnt="">96</span>/<span data-restaccnt=""></span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약금액</span> <span><span data-cclnpnamt="">0</span>원</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약구좌수</span> <span> <button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" oninput="deacinput(this);" maxlength="3" data-input="" class="all-ap" placeholder="0" /> </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="one-app" id="m_rowdata2" data-rowdataidx="0001449766">
+                                                                            <div class="date-mb" data-scbym="">2008-04</div>
+                                                                            <div class="cont-mb r_wide">
+                                                                                <div>
+                                                                                    <span>구좌수</span> <span><span data-accnt="">50</span>/<span data-restaccnt=""></span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약금액</span> <span><span data-cclnpnamt="">0</span>원</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약구좌수</span> <span> <button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" oninput="deacinput(this);" maxlength="3" data-input="" class="all-ap" placeholder="0" /> </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="one-app" id="m_rowdata3" data-rowdataidx="0002803100">
+                                                                            <div class="date-mb" data-scbym="">2018-01</div>
+                                                                            <div class="cont-mb r_wide">
+                                                                                <div>
+                                                                                    <span>구좌수</span> <span><span data-accnt="">50</span>/<span data-restaccnt=""></span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약금액</span> <span><span data-cclnpnamt="">0</span>원</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약구좌수</span> <span> <button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" oninput="deacinput(this);" maxlength="3" data-input="" class="all-ap" placeholder="0" /> </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="one-app" id="m_rowdata4" data-rowdataidx="0002980883">
+                                                                            <div class="date-mb" data-scbym="">2019-01</div>
+                                                                            <div class="cont-mb r_wide">
+                                                                                <div>
+                                                                                    <span>구좌수</span> <span><span data-accnt="">100</span>/<span data-restaccnt=""></span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약금액</span> <span><span data-cclnpnamt="">0</span>원</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약구좌수</span> <span> <button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" oninput="deacinput(this);" maxlength="3" data-input="" class="all-ap" placeholder="0" /> </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="one-app" id="m_rowdata5" data-rowdataidx="0003567902">
+                                                                            <div class="date-mb" data-scbym="">2022-01</div>
+                                                                            <div class="cont-mb r_wide">
+                                                                                <div>
+                                                                                    <span>구좌수</span> <span><span data-accnt="">100</span>/<span data-restaccnt=""></span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약금액</span> <span><span data-cclnpnamt="">0</span>원</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약구좌수</span> <span> <button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" oninput="deacinput(this);" maxlength="3" data-input="" class="all-ap" placeholder="0" /> </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="one-app" id="m_rowdata6" data-rowdataidx="0004210528">
+                                                                            <div class="date-mb" data-scbym="">2024-01</div>
+                                                                            <div class="cont-mb r_wide">
+                                                                                <div>
+                                                                                    <span>구좌수</span> <span><span data-accnt="">20</span>/<span data-restaccnt=""></span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약금액</span> <span><span data-cclnpnamt="">0</span>원</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약구좌수</span> <span> <button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" oninput="deacinput(this);" maxlength="3" data-input="" class="all-ap" placeholder="0" /> </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="one-app" id="m_rowdata7" data-rowdataidx="0004670386">
+                                                                            <div class="date-mb" data-scbym="">2025-05</div>
+                                                                            <div class="cont-mb r_wide">
+                                                                                <div>
+                                                                                    <span>구좌수</span> <span><span data-accnt="">20</span>/<span data-restaccnt=""></span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약금액</span> <span><span data-cclnpnamt="">0</span>원</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약구좌수</span> <span> <button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" oninput="deacinput(this);" maxlength="3" data-input="" class="all-ap" placeholder="0" /> </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="one-app" id="m_rowdata8" data-rowdataidx="0004728949">
+                                                                            <div class="date-mb" data-scbym="">2025-07</div>
+                                                                            <div class="cont-mb r_wide">
+                                                                                <div>
+                                                                                    <span>구좌수</span> <span><span data-accnt="">160</span>/<span data-restaccnt=""></span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약금액</span> <span><span data-cclnpnamt="">0</span>원</span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>해약구좌수</span> <span> <button type="button" class="all-a" onclick="allTrans(this);">전체 신청</button> <label for="a-app" class="hide"></label> <input type="text" data-cancleaccnt="" pattern="[0-9]+" name="cclnInput" oninput="deacinput(this);" maxlength="3" data-input="" class="all-ap" placeholder="0" /> </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div id="sub-step-2" class="tabs-content">
+                                                                    <div class="mon">대여금 부분상환 상세내역</div>
+
+                                                                    <!--<div class="blue-bx change">
+			                                            <div class="bl-a p line del">
+			                                                <p class="top-t">대여일자(구분)</p>
+			                                                <p class="bigwon">2018-07-20<div style="font-weight: bold;padding-top: 5px;font-size: 16px;">(퇴직급여대여)</div></p>
+			                                            </div>
+			                                            <div class="bl-a p line">
+			                                                <p class="top-t">대여원금</p>
+			                                                <p class="bigwon">90,000,000<span class="smallwon">원</span></p>
+			                                            </div>
+			                                            <div class="bl-a p line">
+			                                                <p class="top-t">상환잔액</p>
+			                                                <p class="bigwon">80,000,000<span class="smallwon">원</span></p>
+			                                            </div>
+			                                            <div class="bl-a p line">
+			                                                <p class="top-t">상환원금</p>
+			                                                <label for="a-app" class="hide"></label>
+			                                                <input type="text" name="sangwon" class="all-ap num_only2" placeholder="0" style="margin-top: 10px;">
+			                                            </div>
+			                                            <div class="bl-a p line">
+			                                                <p class="top-t">상환이자</p>
+			                                                <p class="bigwon">500,000<span class="smallwon">원</span></p>
+			                                            </div>
+			                                            <div class="bl-a p ups">
+			                                                <p class="top-t">소계</p>
+			                                                <p class="bigwon">1,500,000<span class="smallwon">원</span></p>
+			                                            </div>
+			                                        </div> -->
+                                                                    <!-- 리스트로 수정 -->
+                                                                    <div class="tab-tbl">
+                                                                        <div class="st-table">
+                                                                            <table id="dbm02R014List">
+                                                                                <caption>
+                                                                                    대여금 부분상환 상세내역
+                                                                                </caption>
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>대여일자(구분)</th>
+                                                                                        <th>대여원금</th>
+                                                                                        <th>상환잔액</th>
+                                                                                        <th>상환원금</th>
+                                                                                        <th>상환이자</th>
+                                                                                        <th>소계</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody id="lendlist">
+                                                                                    <tr id="lendrowdata0" data-rowdataidx="undefined">
+                                                                                        <td>
+                                                                                            <span data-lenddt="">2023-09-04</span>
+                                                                                            <div style="font-weight: bold; padding-top: 5px; font-size: 16px" data-lendkndsecdnm="">(퇴직급여대여)</div>
+                                                                                        </td>
+                                                                                        <td><span data-lendpnamt="">100,000,000</span><span class="smallwon">원</span></td>
+                                                                                        <td><span data-lendbalc="">70,000,000</span><span class="smallwon">원</span></td>
+                                                                                        <td><button type="button" class="all-a" style="margin: 5px 0" onclick="allTransLend(this);">전체 신청</button><br /><input type="text" name="rpmtAmt" pattern="[0-9]+" data-rpmtinput="" autocomplete="off" class="all-ap num_only2" placeholder="0" /></td>
+                                                                                        <td><span data-rpmtitamt="">0</span><span class="smallwon">원</span></td>
+                                                                                        <td><span data-rpmtamtsum=""></span><span class="smallwon">원</span></td>
+                                                                                    </tr>
+                                                                                    <tr id="lendrowdata1" data-rowdataidx="undefined">
+                                                                                        <td>
+                                                                                            <span data-lenddt="">2024-06-28</span>
+                                                                                            <div style="font-weight: bold; padding-top: 5px; font-size: 16px" data-lendkndsecdnm="">(퇴직급여대여)</div>
+                                                                                        </td>
+                                                                                        <td><span data-lendpnamt="">100,000,000</span><span class="smallwon">원</span></td>
+                                                                                        <td><span data-lendbalc="">100,000,000</span><span class="smallwon">원</span></td>
+                                                                                        <td><button type="button" class="all-a" style="margin: 5px 0" onclick="allTransLend(this);">전체 신청</button><br /><input type="text" name="rpmtAmt" pattern="[0-9]+" data-rpmtinput="" autocomplete="off" class="all-ap num_only2" placeholder="0" /></td>
+                                                                                        <td><span data-rpmtitamt="">0</span><span class="smallwon">원</span></td>
+                                                                                        <td><span data-rpmtamtsum=""></span><span class="smallwon">원</span></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- 리스트로 수정-->
+                                                                    <!-- 모바일 -->
+                                                                    <div class="app-mb" id="m_lendlist">
+                                                                        <div class="one-app" id="m_lendrowdata0" data-rowdataidx="undefined">
+                                                                            <div class="cont-mb">
+                                                                                <div>
+                                                                                    <span>대여일자(구분)</span>
+                                                                                    <span class="flex-column"
+                                                                                        ><span data-lenddt="">2023-09-04</span><br />
+                                                                                        <em class="bold br" data-lendkndsecdnm="">퇴직급여대여</em></span
+                                                                                    >
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>대여원금</span> <span><span data-lendpnamt="">100,000,000</span><span>원</span> </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>상환잔액</span> <span><span data-lendbalc="">70,000,000</span><span>원</span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>상환원금</span>
+                                                                                    <span
+                                                                                        ><button type="button" class="all-a" onclick="allTransLend(this);">전체 신청</button><br />
+                                                                                        <input type="text" name="rpmtAmt" pattern="[0-9]+" data-rpmtinput="" autocomplete="off" class="all-ap num_only2" placeholder="0" />
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>상환이자</span> <span><span data-rpmtitamt="">0</span><span>원</span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>소계</span> <span><span data-rpmtamtsum=""></span><span>원</span></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="one-app" id="m_lendrowdata1" data-rowdataidx="undefined">
+                                                                            <div class="cont-mb">
+                                                                                <div>
+                                                                                    <span>대여일자(구분)</span>
+                                                                                    <span class="flex-column"
+                                                                                        ><span data-lenddt="">2024-06-28</span><br />
+                                                                                        <em class="bold br" data-lendkndsecdnm="">퇴직급여대여</em></span
+                                                                                    >
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>대여원금</span> <span><span data-lendpnamt="">100,000,000</span><span>원</span> </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>상환잔액</span> <span><span data-lendbalc="">100,000,000</span><span>원</span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>상환원금</span>
+                                                                                    <span
+                                                                                        ><button type="button" class="all-a" onclick="allTransLend(this);">전체 신청</button><br />
+                                                                                        <input type="text" name="rpmtAmt" pattern="[0-9]+" data-rpmtinput="" autocomplete="off" class="all-ap num_only2" placeholder="0" />
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>상환이자</span> <span><span data-rpmtitamt="">0</span><span>원</span></span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <span>소계</span> <span><span data-rpmtamtsum=""></span><span>원</span></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- //모바일 -->
+                                                                </div>
+                                                                <div id="sub-step-3" class="tabs-content">
+                                                                    <div class="input-ac m_mgt0 inpit-addbtnac">
+                                                                        <!-- 모바일일때 marginTop : 0 -->
+                                                                        <div class="ent">
+                                                                            <p class="sel-t">지급계좌</p>
+                                                                            <div class="con-select one">
+                                                                                <label for="memAcctMngNo" class="hide">지급계좌</label>
+                                                                                <select class="select-ac" id="memAcctMngNo" name="memAcctMngNo">
+                                                                                    <option value="0">지급계좌를 선택해주세요.</option>
+                                                                                    <option value="M000000000">신한은행_메인 | 00000000000 | 신한은행</option>
+                                                                                </select>
+                                                                                <a href="javascript:;" class="bl-btn btn_line btn_pop" onclick="popupAddAccount()">추가</a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="ent w_auto">
+                                                                            <p class="sel-t">부분해약사유</p>
+                                                                            <div class="con-select one">
+                                                                                <label for="payRsnSeCd" class="hide">부분해약사유</label>
+                                                                                <select class="select-ac" id="payRsnSeCd" name="payRsnSeCd">
+                                                                                    <option value="0">부분해약 사유를 선택해주세요.</option>
+                                                                                    <option value="1">개인사정</option>
+                                                                                    <option value="2">주택구입</option>
+                                                                                    <option value="3">병원비</option>
+                                                                                    <option value="4">대여상환</option>
+                                                                                    <option value="5">교육비</option>
+                                                                                    <option value="6">경조사자금</option>
+                                                                                    <option value="7">저축수단변경</option>
+                                                                                    <option value="9">기타</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- container -->
+
+                                                            <div class="btns">
+                                                                <div id="alert1">
+                                                                    <div class="a-w">
+                                                                        <div class="a-top">
+                                                                            <p>웹 페이지의 메시지</p>
+                                                                            <button type="button">
+                                                                                <img class="a-close" src="../../cubersc/template/user/img/sub/a-close.png" alt="알림창 닫기" />
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="a-bottom">
+                                                                            <div class="a-txt"><br />모두 초기화됩니다.</div>
+                                                                            <button type="button" class="a-che cancle">취소</button>
+                                                                            <button type="button" class="a-che">확인</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="check-bt tc grey">
+                                                                    <button type="button" class="button" onclick=" changeSteps('tab-0');">뒤로가기</button>
+                                                                </div>
+                                                                <div class="check-bt tc">
+                                                                    <button type="button" id="subBtn" class="button">신청하기</button>
+                                                                    <!-- <a href="javascript:;" class="clickme_linkwrap btn_pop" data-name="help_member_inquiries">신청하기</a> -->
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <!-- tab-2 -->
+
+                                                    <div id="tab-2" class="tab-content">
+                                                        <ul class="one-line">
+                                                            <li class="one-person">
+                                                                <div class="top-chk">
+                                                                    <img class="ques" src="../../cubersc/template/user/img/sub/chk.png" alt="" />
+                                                                    <div class="chk-txt">
+                                                                        <span class="chk-bold">신청이 완료되었습니다.</span>
+                                                                        <span>나의 신청내역에서 신청사항을 확인하실 수 있습니다. </span>
+                                                                        <span>신청에 따른 안내 사항은 카카오톡(카카오톡 미사용 시 휴대폰 문자)으로 발송됩니다.</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="btns">
+                                                                    <div class="check-bt">
+                                                                        <button type="button" class="button" onclick="location.href='/web/contents/MyopenList.do?wsdtl=pt';">신청내역 조회</button>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- tab-3 -->
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box_toppagewrap mo"></div>
+                            </div>
+                            <!-- //w -->
+                        </div>
+                        <!-- //sub_inner -->
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- 본문 영역 -->
+
+        <!-- [S] 퍼블 확인용: 푸터 인클루드 -->
+        <div data-include="../../web/includes/footer.html"></div>
+        <!-- [E] 퍼블 확인용: 푸터 인클루드 -->
+    </body>
+</html>
