@@ -144,45 +144,113 @@
                                                                         <!-- //가입된 내역 없을 때 -->
                                                                         <!-- 가입된 내역 있을 때 -->
                                                                         <p class="unit">(단위 : 원)</p>
-                                                                        <div class="blue-bx-container">
-                                                                            <div class="blue-bx flex" id="info_hasOwn">
+                                                                        <div class="bx-container">
+                                                                            <div class="blue-bx flex">
                                                                                 <div class="bx-tit">
-                                                                                    <p class="bigwon">총 저축금액</p>
-                                                                                    <p class="top-t">(납입금액+정부지원금+이자)</p>
+                                                                                    <p>총 저축금액</p>
+                                                                                    <p class="bx-tit-sub">(납입금액+정부지원금+이자)</p>
                                                                                 </div>
-                                                                                <p class="bigwon" id="scbDt">000,000,000<span>원</span></p>
+                                                                                <div class="bigwon"><span class="num">000,000,000</span><span class="won">원</span></div>
+                                                                            </div>
+                                                                            <div class="blue-bx flex">
+                                                                                <div class="bx-tit">
+                                                                                    <p>총 납입금액</p>
+                                                                                    <p class="bx-tit-sub">(공제 의뢰액+가상계좌 입금금액)</p>
+                                                                                </div>
+                                                                                <div class="bigwon"><span class="num">000,000,000</span><span class="won">원</span></div>
+                                                                            </div>
+                                                                            <div class="blue-bx flex">
+                                                                                <div class="bx-tit">
+                                                                                    <p>총 정부지원금</p>
+                                                                                    <p class="bx-tit-sub">(<span class="emp">6</span>/36회)</p>
+                                                                                </div>
+                                                                                <div class="bigwon"><span class="num">000,000,000</span><span class="won">원</span></div>
                                                                             </div>
                                                                         </div>
+                                                                        <div class="bx-container ratio-1-2">
+                                                                            <div class="blue-bx flex bg-grey">
+                                                                                <div class="bx-tit">
+                                                                                    <p>가입 상세내역</p>
+                                                                                </div>
+                                                                                <div class="bx-row">
+                                                                                    <span class="row-title">가입일자</span>
+                                                                                    <span class="row-content">2026/01/10</span>
+                                                                                </div>
+                                                                                <div class="bx-row">
+                                                                                    <span class="row-title">만기일자</span>
+                                                                                    <span class="row-content">2026/01/10</span>
+                                                                                </div>
+                                                                                <div class="bx-row">
+                                                                                    <span class="row-title">공제 의뢰액 (매달)</span>
+                                                                                    <span class="row-content emp"><span class="num">100,000</span><span>원</span></span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="blue-bx flex bg-grey">
+                                                                                <div class="bx-tit">
+                                                                                    <p>추가납부 안내</p>
+                                                                                    <div class="info">
+                                                                                        <span class="info-icon"></span>
+                                                                                        <div class="tooltip">
+                                                                                            <p>가상계좌 입금 가능 기간</p>
+                                                                                            <ul>
+                                                                                                <li>매달 1일 ~ 10일까지 가능</li>
+                                                                                                <li>입금 가능 금액은 한 달 최대 저축 가능 금액인 30만원에서 공제 의뢰액을 뺀 금액을 의미 (30만원 – 공제액 = 납입가능 금액)</li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="bx-row">
+                                                                                    <span class="row-title">입금가능 여부</span>
+                                                                                    <span class="row-content tag not">불가능</span>
+                                                                                </div>
+                                                                                <div class="bx-row">
+                                                                                    <span class="row-title">추가 입금가능 금액</span>
+                                                                                    <span class="row-content emp"><span class="num">0</span><span>원</span></span>
+                                                                                </div>
+                                                                                <div class="bx-row">
+                                                                                    <span class="row-title">가상계좌</span>
+                                                                                    <span class="row-content emp">신한은행 110-000-123456</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <ul class="caution">
+                                                                            <li>※ 가상계좌 입금가능 기간 및 한도가 정해진 상품으로, 기간과 상황에 따라 입금이 제한될 수 있습니다.</li>
+                                                                            <li>※ 입금가능 기간 및 한도는 추가납부 안내사항을 확인하시기 바랍니다.</li>
+                                                                            <li>※ 중도해지 시, 정부지원금 및 정부지원금으로 인한 이자는 지급받을 수 없습니다.</li>
+                                                                        </ul>
                                                                         <!-- //가입된 내역 있을 때 -->
                                                                     </div>
                                                                     <ul class="tabs00 tabs2">
-                                                                        <li class="tab-link currents" data-tab="step-child-1" id="trustMid" data-taxtype="txtn"><a href="javascript:;" title="선택됨">병(兵) 회원 저축 수납내역</a></li>
-                                                                        <li class="tab-link" data-tab="step-child-2" id="trustMidBi" data-taxtype="ntax"><a href="javascript:;">병(兵) 회원 저축 지급내역</a></li>
+                                                                        <li class="tab-link currents" data-tab="step-child-1" id="trustMid" data-taxtype="txtn"><a href="javascript:;" title="선택됨">수납내역</a></li>
+                                                                        <li class="tab-link" data-tab="step-child-2" id="trustMidBi" data-taxtype="ntax"><a href="javascript:;">지급내역</a></li>
                                                                     </ul>
-                                                                    <!-- 예금형 목돈수탁저축 탭 -->
 
                                                                     <div id="sub-step-child-1" class="tabs-content currents" data-taxtype="txtn">
                                                                         <section class="info-section common-section">
                                                                             <div class="subss">
-                                                                                <h4 class="sub_tit no_mgt">병(兵) 회원 저축 수납내역</h4>
+                                                                                <h4 class="sub_tit no_mgt">장기간부도약적금 지급내역</h4>
                                                                             </div>
-                                                                            <!-- 병(兵) 회원 저축 수납내역  -->
                                                                             <form name="trustInquiryForm" id="trustInquiryForm" method="post" action="">
-                                                                                <input type="hidden" id="bgngYr" name="bgngYr" value="2015" />
-                                                                                <input type="hidden" id="endYr" name="endYr" value="2025" />
-                                                                                <input type="hidden" id="ctrtNo" name="ctrtNo" value="0000000001" />
-                                                                                <input type="hidden" id="taxType" name="taxType" value="txtn" />
                                                                                 <div class="tbl_wrapbox">
-                                                                                    <p class="all_tbltxt">(단위 : 원)</p>
+                                                                                    <div class="caution_bright_container">
+                                                                                        <span class="caution_bright">※ 중도해지 시, 정부지원금 및 정부지원금으로 인한 이자는 지급받을 수 없습니다.</span>
+                                                                                        <span class="unit">(단위 : 원)</span>
+                                                                                    </div>
                                                                                     <div class="st-table fix">
-                                                                                        <table id="tsReceiptTable">
+                                                                                        <table id="tsReceiptTable" class="pay-receipt">
                                                                                             <caption>
-                                                                                                병(兵) 회원 저축 수납내역
+                                                                                                장기간부도약적금 지급내역
                                                                                             </caption>
                                                                                             <colgroup>
                                                                                                 <col style="width: 15%" />
                                                                                                 <col style="width: 15%" />
                                                                                                 <col style="" />
+                                                                                                <col style="width: 15%" />
+                                                                                                <col style="width: 15%" />
+                                                                                                <col style="width: 15%" />
+                                                                                                <col style="width: 15%" />
+                                                                                                <col style="width: 15%" />
+                                                                                                <col style="width: 15%" />
                                                                                                 <col style="width: 20%" />
                                                                                                 <col style="width: 20%" />
                                                                                             </colgroup>
@@ -239,7 +307,7 @@
                                                                                 <!-- //병(兵) 회원 저축 수납내역 -->
                                                                                 <!-- //병(兵) 회원 저축 수납대기내역 -->
                                                                                 <div class="subss">
-                                                                                    <h4 class="sub_tit">병(兵) 회원 저축 수납대기내역</h4>
+                                                                                    <h4 class="sub_tit">수납대기 내역</h4>
                                                                                 </div>
                                                                                 <div class="tbl_wrapbox">
                                                                                     <p class="all_tbltxt">(단위 : 원)</p>
