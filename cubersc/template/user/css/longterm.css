@@ -1,6 +1,8 @@
 
-.receipt{
+.longterm{
+    --font-13:13px;
     --font-14:14px;
+    --font-15:15px;
     --font-16:16px;
     --font-18:18px;
     --font-20:20px;
@@ -11,6 +13,7 @@
     --font-w-400:400;
     --font-w-500:500;
     --font-w-700:700;
+    --font-w-900:900;
 
     --color-0: #000;
     --color-45: #454545;
@@ -19,6 +22,7 @@
     --color-f: #ffffff;
     --color-red: #C6002C;
     --color-text-basic: #1E2124;
+    --color-blue: #0074DB;
 
     --border-b: 1px solid var(--color-0);
     --border-d: 1px solid var(--color-d);
@@ -39,20 +43,20 @@
 .longterm .tooltip ul li::before { content: "•"; position: absolute; left: 8px; top: 0; height: 1.5em; line-height: 1.5em; display: flex; align-items: center; color: var(--color-text-basic); }
 .longterm .tooltip ul li + li { margin-top: 8px; }
 
-
 /* 브래드크럼 */
 .subs .nav .nav-list li a span.bold { font-weight: bold }
 /* 개인정보 표 */
 .memberjoin-new .q {margin-bottom:60px;}
 /* 아코디언 */
+.accordion-group {margin-bottom: 60px;}
 .accordion-group .accordion-content { display: none; }
 .accordion-header { padding: 20px 30px; position: relative; display: flex; align-items: center; box-sizing: border-box; height: 80px; border-radius: 10px; box-shadow: 3px 3px 10px 0px rgba(47, 46, 44, 0.25); cursor: pointer; }
 .accordion-header::before { content: ""; position:absolute; right: 30px; width: 14px; height: 8px; background: url('../../../template/user/img/sub/s3_mybox_bottom.png') no-repeat center / contain; }
 .accordion-header i { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; background-color: #CCD8E3; border-radius: 100px; color: #fff; text-align: center;
   font-size: 14px; font-weight: 400; font-style: normal; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: background-color 0.3s cubic-bezier(.25,.1,.25,1); }
-.accordion-item.on .accordion-header i { background-color: #0074db; }
+.accordion-item.on .accordion-header i { background-color: var(--color-blue); }
 .accordion-item.on .accordion-header::before { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); }
-.accordion-header.comp i {background-color: #0074db;}
+.accordion-header.comp i {background-color: var(--color-blue);}
 .accordion-content{padding:30px; box-shadow: -10px 0 10px -10px rgba(0,0,0,0.05), 10px 0 10px -10px rgba(0,0,0,0.05); }
 /* 아코디언 내부 */
 .accordion-item .aline-b.memb .slc {margin-left: 20px;}
@@ -68,6 +72,18 @@
 .memberjoin-new .btns .check-bt:has(button:disabled) { background: #F2F2F2; }
 .memberjoin-new button:disabled { color: #333; cursor: not-allowed; }
 .memberjoin-new .btns .check-bt:not(.check-linebt):has(button:disabled):hover {box-shadow: none}
+/* 장기간부도약적금 영역 */
+.longterm-join .header { display: flex; align-items: center; gap:8px; margin-bottom:16px; }
+.longterm-join .header .sub_tit {width: auto; margin-bottom:0}
+.longterm-join .info { display: flex; align-items: center; }
+.longterm-join .info-icon { display: inline-block; margin-left: 6px; width:26px; height:26px; background-size: cover; background-position: center center;}
+.longterm-join .question {margin: 18px 0; line-height: 150%}
+.longterm-join .question .emp {font-weight: var(--font-w-900)}
+.longterm-join .btn_linkmove {font-size: var(--font-18); line-height: 150%;}
+.longterm .tooltip {bottom: calc(100% + 22px); }
+.longterm .tooltip .sub { font-size: var(--font-16); font-weight: var(--font-w-500); line-height: normal; }
+.longterm .tooltip ol li { position: relative; padding-left: 20px; margin-bottom: 6px; font-size: var(--font-14); font-weight: var(--font-w-400); line-height: normal; }
+.longterm .tooltip ol li span { position: absolute; left: 0; top: 0; color:var(--color-blue) }
 
 /****** 태블릿 기존 css 수정 */
 @media screen and (max-width: 1240px) {
@@ -104,6 +120,7 @@
   .tab-content.memberjoin-new .q.basic-info .aline-b {min-height: 0;}
   .common-section .memberjoin-new .q.basic-info .aline-b{padding:14px 0;}
   /* 아코디언 */
+  .accordion-group {margin-bottom: 70px;}
   .accordion-header { border-radius: 20px 20px 0 0; padding: 24px 20px; margin: 0 -20px 0 -20px;  width: calc(100% + 40px); height: 64px; box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.05); }
   .accordion-header::before { right: 20px; }
   .accordion-header span { margin-left: 16px; font-size: 18px; font-weight: 700; }
@@ -134,14 +151,26 @@
   .accordion-content .add_mint {margin-top:20px; padding-top:8px;}
   /* 버튼 */
   .btns .check-bt.w-full {width:100%;}
-  .btns .check-bt.grey {display: none;}
-  .btns .check-bt + .check-bt {margin-left: 0 !important;}
 }
 
-/****** MO 기존 css 수정 */
+/****** MO */
 @media screen and (max-width: 720px) {
+  /* 기존 css 수정 */
   .accordion-item .aline-b.memb .slc {margin-left: 0;}
   .memberjoin-new .btns .check-bt {padding:0}
+  
+  /* 장기도약 영역 */
+  .longterm-join .question {font-size: var(--font-16);}
+  .longterm-join .question .emp {display: block;}
+  .longterm-join .btn_linkmove {padding-top: 3px; padding-bottom: 3px;}
+  /* 툴팁 */
+  .longterm-join .info-icon { margin-left: 4px; width:20px; height:20px; }
+  .longterm-join .tooltip {left: -12%; width:336px; padding: 16px;}
+  .longterm-join .tooltip::after {left: 56%;}
+  .longterm .tooltip .main { font-size: var(--font-15); }
+  .longterm .tooltip .sub { font-size: var(--font-13); }
+  .longterm .tooltip ol li { font-size: var(--font-13); }
+  .longterm .tooltip ol li span { position: absolute; left: 0; top: 0; color:var(--color-blue) }
 }
 
 /* 조회 페이지 */

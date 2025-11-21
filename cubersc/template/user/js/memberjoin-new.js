@@ -5,24 +5,21 @@ $(document).ready(function () {
             .find(".accordion-content")
             .stop()
             .slideDown("fast", function () {
-                $("html, body").animate({ scrollTop: item.offset().top - 20 }, 300);
+                $("html").animate({ scrollTop: item.offset().top - 20 }, 300);
+                $(this).css({
+                    height: "",
+                    paddingTop: "",
+                    paddingBottom: "",
+                    marginTop: "",
+                    marginBottom: "",
+                });
             });
-
-        // youth 버튼 처리
-        if (item.hasClass("youth")) {
-            $(".btns").not(".btns.youth").addClass("hide");
-        }
     }
 
     // 아코디언 닫을 때
     function closeAccordion(item) {
         item.removeClass("on").find(".accordion-content").stop().slideUp("fast");
         item.find(".accordion-header").removeClass("on").attr("aria-expanded", false);
-
-        // youth 버튼 처리
-        if (item.hasClass("youth")) {
-            $(".btns").removeClass("hide");
-        }
     }
 
     // 이전 단계 인풋 확인
