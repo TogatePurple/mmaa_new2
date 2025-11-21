@@ -18,6 +18,7 @@
     --color-0: #000;
     --color-45: #454545;
     --color-6: #666;
+    --color-6c: #6c6c6c;
     --color-d: #DDD;
     --color-f: #ffffff;
     --color-red: #C6002C;
@@ -31,7 +32,9 @@
 /****** 공통 */
 /* 툴팁 */
 .longterm .info { position: relative; }
-.longterm .info-icon { display: inline-block; width: 20px; height: 20px; background: url(../../../../cubersc/template/user/img/sub/ico_info_blue.svg) no-repeat center / 20px 20px; cursor: pointer;}
+.longterm .info-icon { display: inline-block; width: 20px; height: 20px; cursor: pointer; background-color: var(--color-6c); border-radius: 100px;}
+.longterm .info-icon:hover {background-color: var(--color-blue)}
+.longterm .info-icon::before { content: ""; position: absolute; top: 50%; left: 50%; width: 70%; height: 70%; transform: translate(-50%, -50%); background-image: url('../../../../cubersc/template/user/img/sub/ico_info_1.svg'); background-size: contain; background-repeat: no-repeat; background-position: center; }
 .longterm .tooltip { width: 425px; position: absolute; left: 50%; bottom: calc(100% + 48px); transform: translateX(-50%); background: var(--color-f); padding: 24px; border-radius: 12px; box-shadow: 3px 3px 10px 0 rgba(47, 46, 44, 0.25);
     opacity: 0; visibility: hidden; transition: opacity .2s ease, transform .2s ease; pointer-events: none; }
 .longterm .tooltip::after { content: ""; position: absolute; left: 50%; bottom: -12px; transform: translateX(-50%); display:block; width:0; height:0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 12px solid var(--color-f);
@@ -76,7 +79,8 @@
 .longterm-join .header { display: flex; align-items: center; gap:8px; margin-bottom:16px; }
 .longterm-join .header .sub_tit {width: auto; margin-bottom:0}
 .longterm-join .info { display: flex; align-items: center; }
-.longterm-join .info-icon { display: inline-block; margin-left: 6px; width:26px; height:26px; background-size: cover; background-position: center center;}
+.longterm-join .info-icon { margin-left: 6px; width:26px; height:26px; }
+.longterm-join .info-icon::before { margin-left: 4px; }
 .longterm-join .question {margin: 18px 0; line-height: 150%}
 .longterm-join .question .emp {font-weight: var(--font-w-900)}
 .longterm-join .btn_linkmove {font-size: var(--font-18); line-height: 150%;}
@@ -165,6 +169,7 @@
   .longterm-join .btn_linkmove {padding-top: 3px; padding-bottom: 3px;}
   /* 툴팁 */
   .longterm-join .info-icon { margin-left: 4px; width:20px; height:20px; }
+  .longterm .info-icon::before { margin-left: 2px; }
   .longterm-join .tooltip {left: -12%; width:336px; padding: 16px;}
   .longterm-join .tooltip::after {left: 56%;}
   .longterm .tooltip .main { font-size: var(--font-15); }
