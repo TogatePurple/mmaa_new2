@@ -5,6 +5,7 @@
     --font-18:18px;
     --font-20:20px;
     --font-22:22px;
+    --font-24:24px;
 
     --font-w-350:350;
     --font-w-400:400;
@@ -14,11 +15,14 @@
     --color-0: #000;
     --color-45: #454545;
     --color-6: #666;
+    --color-d: #DDD;
     --color-f: #ffffff;
     --color-red: #C6002C;
     --color-text-basic: #1E2124;
 
     --border-b: 1px solid var(--color-0);
+    --border-d: 1px solid var(--color-d);
+
 }
 
 .receipt .bx-container{ display: flex; gap: 24px; }
@@ -64,7 +68,16 @@
 .receipt .tooltip ul li::before { content: "•"; position: absolute; left: 8px; top: 0; height: 1.5em; line-height: 1.5em; display: flex; align-items: center; color: var(--color-text-basic); }
 .receipt .tooltip ul li + li { margin-top: 8px; }
 
-.caution_bright_container { display: flex; justify-content: space-between; margin-bottom: 18px}
+.caution_bright_container { display: flex; justify-content: space-between; }
 .caution_bright { color: #F00; font-size: var(--font-14); font-weight: var(--font-w-500); }
 
-.pay-receipt {}
+.receipt .pay-receipt tbody tr td:not(.center) {text-align: right;}
+.receipt .pay-receipt th.b-r {border-right:var(--border-d)}
+.receipt .pay-receipt .sub-th { color: var(--color-6); font-size: var(--font-14); font-weight: var(--font-w-400); line-height: 22px; }
+
+.receipt .sub-caution { margin-top: 8px; color: var(--color-6); font-size: var(--font-16); font-weight: var(--font-w-500); }
+.receipt .alert { width: 100%; padding: 40px 0; margin-bottom: 26px; display: flex; justify-content: center; border-radius: 10px; border: var(--border-d); }
+.receipt .alert .text { padding-top: 100px; text-align: center; color: var(--color-0); font-size: var(--font-24); font-weight: var(--font-w-700); }
+.receipt .alert.empty .text { background: url(../../../../cubersc/template/user/img/sub/ico_alert_empty.svg) no-repeat top; }
+.receipt .alert.not-empty .text { background: url(../../../../cubersc/template/user/img/sub/chk.png) no-repeat top; background-size: 68px 68px;}
+.receipt .alert.not-empty .text .detail { margin-top: 20px; color: var(--color-0); font-size: var(--font-20); font-weight: var(--font-w-350); line-height: 150%; }
