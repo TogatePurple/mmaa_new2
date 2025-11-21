@@ -77,6 +77,7 @@
 
 .receipt .sub-caution { margin-top: 8px; color: var(--color-6); font-size: var(--font-16); font-weight: var(--font-w-500); }
 .receipt .alert { width: 100%; padding: 40px 0; margin-bottom: 26px; display: flex; justify-content: center; border-radius: 10px; border: var(--border-d); }
+.receipt .alert.not-empty {margin-bottom: 60px; }
 .receipt .alert .text { padding-top: 100px; text-align: center; color: var(--color-0); font-size: var(--font-24); font-weight: var(--font-w-700); }
 .receipt .alert.empty .text { background: url(../../../../cubersc/template/user/img/sub/ico_alert_empty.svg) no-repeat top; }
 .receipt .alert.not-empty .text { background: url(../../../../cubersc/template/user/img/sub/chk.png) no-repeat top; background-size: 68px 68px;}
