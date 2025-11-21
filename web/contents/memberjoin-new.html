@@ -47,7 +47,6 @@
                 return true;
             }
         </script>
-        <script src="../../cubersc/template/user/js/calendar.js"></script>
         <script type="text/javascript" src="../../cubersc/template/user/js/memberjoin-new.js"></script>
         <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/memberjoin-new.css" />
     </head>
@@ -1534,174 +1533,12 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="accordion-item youth">
-                                                                    <a class="accordion-header"><i>4</i><span>(선택) 장기간부도약적금 신청</span></a>
-                                                                    <div class="accordion-content">
-                                                                        <div class="aline bt-2-333">
-                                                                            <div class="aline-a fstart">성명</div>
-                                                                            <div class="aline-b n-num idea">
-                                                                                <div class="inp">
-                                                                                    <label for="name" class="hide">구좌</label>
-                                                                                    <input type="text" id="name" name="name" class="email" maxlength="3" data-notfirstzero="" data-inputregex="numberinput" title="가입 구좌" value="홍길동" />
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="aline">
-                                                                            <div class="aline-a">소속<span class="reds">*</span></div>
-                                                                            <div class="aline-b two_verti">
-                                                                                <div class="inp">
-                                                                                    <label for="afstNm" class="hide">소속 입력</label>
-                                                                                    <input type="text" maxlength="50" id="afstNm" name="afstNm" class="depart w-360" placeholder="소속을 입력하세요." title="소속 입력" />
-                                                                                </div>
-                                                                                <div class="inp">
-                                                                                    <label for="afstCd" class="hide">소속 선택</label>
-                                                                                    <select class="select-ac w-360" id="afstCd" name="afstCd">
-                                                                                        <option value="0">소속을 선택하세요.</option>
-                                                                                    </select>
-                                                                                    <div class="reds ko">※ 현역회원은 육군, 해군, 공군, 해병대 선택</div>
-                                                                                </div>
-                                                                                <div class="inp" id="mrcpYnArea" style="display: none">
-                                                                                    <label for="mrcpYn" class="hide">해병대 여부 선택</label>
-                                                                                    <select class="select-ac" id="mrcpYn" name="mrcpYn">
-                                                                                        <option value="0">해병대 여부를 선택하세요.</option>
-                                                                                        <option value="Y">예</option>
-                                                                                        <option value="N">아니오</option>
-                                                                                    </select>
-                                                                                    <div class="reds ko">※ 해군회원은 해병대 여부 선택</div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="aline">
-                                                                            <div class="aline-a">임관일<span class="reds">*</span></div>
-                                                                            <div class="aline-b">
-                                                                                <div class="inp">
-                                                                                    <div class="jq_dateicowrap">
-                                                                                        <label for="scbDt" class="hide">기준일자</label>
-                                                                                        <input type="text" id="scbDt" name="" class="jqdate w-360" placeholder="" data-inputregex="numberinput" maxlength="12" />
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="aline">
-                                                                            <div class="aline-a">
-                                                                                <div class="aline-a-1">
-                                                                                    자격확인서 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="aline-b" id="formfileList">
-                                                                                <div>
-                                                                                    <button type="button" class="bl-btn" onclick="control.openFileDialog();">파일선택( pdf, hwpx, jpg, png )</button>
-                                                                                    <div id="dropZone" class="file-section" style="display: table">
-                                                                                        <div id="text-filemanage" class="text-center" style="display: table-cell; vertical-align: middle; cursor: pointer; width: 100%" onclick="control.openFileDialog();">이곳에 파일을 올려놓거나 파일선택 버튼을 눌러주세요.</div>
-                                                                                        <table id="fileTable">
-                                                                                            <tbody></tbody>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                    <div id="fileControl" style="display: none; width: 1000px; height: 200px" class="innorix_basic chart-hide">
-                                                                                        <div style="display: none" class="circle_loading_wrapper"><div class="circle_loading"></div></div>
-                                                                                        <div class="irx_filetree empty-uploader" style="width: 840px; height: 200px">
-                                                                                            <div style="display: none" class="irx-empty-download-text">There is no download file here.</div>
-                                                                                            <div class="irx-file-header">
-                                                                                                <div class="tree-icon fileheader-checkbox"></div>
-                                                                                                <div class="irx-file-header-desc">Selected Files</div>
-                                                                                                <div class="irx-file-remove-button-wrapper"><button class="irx-file-remove-button">Remove</button></div>
-                                                                                                <div class="irx-file-download-button-wrapper"><button class="irx-file-download-button">Download</button></div>
-                                                                                            </div>
-                                                                                            <ul class="irx_filetree_list irx_listGrid" data-filetree=""></ul>
-                                                                                        </div>
-                                                                                        <div class="irx_infoBox" style="height: 200px">
-                                                                                            <div class="irx-chart-wrapper">
-                                                                                                <div class="irx-chart-btn-group"><div class="irx_btn_del irx-chart-toggle"></div></div>
-                                                                                                <div class="irx-canvas-wrapper"><canvas class="irx-chart-canvas"></canvas></div>
-                                                                                                <div class="irx-chart-file-size"></div>
-                                                                                                <div class="irx-chart-file-count"></div>
-                                                                                            </div>
-                                                                                            <div class="irx-preview-wrapper">
-                                                                                                <div class="irx-chart-btn-group"><div class="irx_btn_del irx-chart-toggle"></div></div>
-                                                                                                <div class="irx-preview-element"><img src="" class="irx-preview-image" /> <canvas id="irx-preview-pdf" class="irx-preview-pdf"></canvas></div>
-                                                                                                <div class="irx-preview-file-name"></div>
-                                                                                                <div class="irx-preview-file-size"></div>
-                                                                                            </div>
-                                                                                            <div class="irx-mass-wrapper">
-                                                                                                <div class="irx-mass-file-title"></div>
-                                                                                                <div class="irx-mass-file-size"></div>
-                                                                                                <div class="irx-mass-file-content"></div>
-                                                                                                <div class="irx-chart-btn-group"><div class="irx-mass-toggle">×</div></div>
-                                                                                                <div class="irx-mass-wrapper-paper-image"></div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="__irx context-menu-layer" style="display: none"></div>
-                                                                                        <ul class="__irx context-menu-list context-menu-root innorix" style="display: none; text-align: left">
-                                                                                            <li class="context-menu-item action-openFileDialog" data-action="openFileDialog">Add file</li>
-                                                                                            <li class="context-menu-item action-upload" data-action="upload">Upload</li>
-                                                                                            <li class="context-menu-item action-downloadSelectedFiles" data-action="downloadSelectedFiles">Download Selected files</li>
-                                                                                            <li class="context-menu-item action-download" data-action="download">Download</li>
-                                                                                            <li class="context-menu-item action-downloadAndOpen" data-action="downloadAndOpen">Download and open</li>
-                                                                                            <li class="context-menu-item action-removeSelectedFiles" data-action="removeSelectedFiles">Remove selected files</li>
-                                                                                            <li class="context-menu-item action-clearFiles" data-action="clearFiles">Remove all files</li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                    <div class="sub_txt-wrap" style="padding: 5px">
-                                                                                        <p class="war-txt">
-                                                                                            <img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" />
-                                                                                            <span>아이폰 사진(HEIF → JPEG)로 변경 후 촬영으로 첨부 방법</span>
-                                                                                        </p>
-                                                                                        <p class="war-txt">
-                                                                                            <span class="br"><em>설정 &gt; 카메라 &gt; 포맷 &gt; 높은 호환성</em> 설정 후 사진 촬영</span>
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="aline">
-                                                                            <div class="aline-a">가입금액<span class="reds">*</span></div>
-                                                                            <div class="aline-b two_verti a-start">
-                                                                                <div class="inp">
-                                                                                    <div class="flex-center">
-                                                                                        <label for="price" class="hide">금액 입력</label>
-                                                                                        <input type="text" id="price" name="price" class="input-amount w-360" placeholder="" />
-                                                                                        <span class="won">원</span>
-                                                                                    </div>
-                                                                                    <div class="reds ko">※ 매월 10일 공제액으로, 최초 가입시에만 공제 가능합니다.</div>
-                                                                                </div>
-                                                                                <div class="inp">
-                                                                                    <div class="flex-center">
-                                                                                        <label for="price" class="hide">금액 입력</label>
-                                                                                        <input type="text" id="price" name="price" class="input-amount w-360" placeholder="" />
-                                                                                        <span class="won">원</span>
-                                                                                    </div>
-                                                                                    <div class="reds ko">※ 매월 가상계좌 입금액으로, 가입 후 2회차부터 적용됩니다.</div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="aline">
-                                                                            <div class="aline-a">지급계좌<span class="reds">*</span></div>
-                                                                            <div class="aline-b two_verti">
-                                                                                <div class="inp">
-                                                                                    <label for="afstCd" class="hide">은행 선택</label>
-                                                                                    <select class="select-ac w-360" id="afstCd" name="afstCd">
-                                                                                        <option value="0">은행을 선택해 주세요.</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                                <div class="inp">
-                                                                                    <label for="afstNm" class="hide">계좌번호 입력</label>
-                                                                                    <input type="text" maxlength="50" id="afstNm" name="afstNm" class="depart w-360" placeholder="계좌번호를 입력해주세요." title="소속 입력" />
-                                                                                    <div class="sub_txt-wrap mt-4">
-                                                                                        <p class="war-txt"><img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" /><span>계좌번호는 숫자만 입력가능합니다.</span></p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="add_mint"><span class="reds">*</span> 표시는 필수입력 항목입니다.</div>
-
-                                                                        <div class="btns youth">
-                                                                            <div class="check-bt tc btn-navy w-full">
-                                                                                <button type="button" class="button" onclick="openValid()" disabled>장기간부도약적금 가입신청 작성 완료</button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                            <h4 class="sub_tit no_mgt">장기간부도약적금</h4>
+                                                            <div class="q basic-info">
+                                                                <div>장기복무 군인을 위한 정부 지원 적금도 함께 가입하시겠어요?</div>
+                                                                <a href="javascript:;" class="bl-btn m010 btn_blueline" onclick="serchAbleId()">자격 확인 및 가입신청</a>
                                                             </div>
 
                                                             <div class="btns">
