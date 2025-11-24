@@ -115,7 +115,7 @@
                         <div class="sub_inner">
                             <div class="w longterm">
                                 <!-- 장기간부도약적금 자격확인 팝업 -->
-                                <div id="popup1" class="help-bg" style="display: block">
+                                <div id="popup1" class="help-bg">
                                     <div class="help-w">
                                         <div class="w-close" tabindex="0">
                                             <a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /></a>
@@ -474,7 +474,6 @@
                                                                                 >※ 제공받는 기관의 개인정보 보유 및 이용 기간<br />
                                                                                 <span>개인정보는 제공된 날로부터 동의 철회 시 또는 제공된 목적을 달성할 때까지 보유·이용됩니다. 단, 동의 철회 또는 제공된 목적 달성 이후에는 분쟁(민원)해결 및 법령상 의무이행을 위하여 필요한 범위 내에서만 보유·이용됩니다.<br /><br /> </span
                                                                             ></span>
-                                                                            <span class="sub_txt dot"> <span></span></span>
                                                                         </div>
                                                                     </div>
                                                                 </li>
@@ -484,18 +483,17 @@
                                                 </div>
                                             </div>
 
-                                            <h4 class="sub_tit">장기간부도약적금 가입자 신분확인</h4>
+                                            <h4 class="sub_tit"><span class="mo-hide">장기간부도약적금 </span>가입자 신분확인</h4>
                                             <div class="q">
-                                                <div class="aline" id="rrnoArea">
-                                                    <div class="aline-a fstart">
-                                                        소속 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
-                                                    </div>
-                                                    <div class="aline-b birth-d">
+                                                <div class="aline">
+                                                    <div class="aline-a">소속<span class="reds">*</span></div>
+                                                    <div class="aline-b two_verti">
                                                         <div class="inp">
                                                             <label for="afstCd" class="hide">소속 선택</label>
                                                             <select class="select-ac" id="afstCd" name="afstCd">
                                                                 <option value="0">소속을 선택하세요.</option>
                                                             </select>
+                                                            <div class="reds ko">※ 현역회원은 육군, 해군, 공군, 해병대 선택</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -508,9 +506,7 @@
                                                         <div class="inp">
                                                             <label for="solNum" class="hide">군번 앞자리</label>
                                                             <input type="text" id="solNum" class="email" maxlength="6" data-nextinput="" data-inputregex="numberinput" title="군번 앞자리" />
-                                                        </div>
-                                                        <div class="mid-line">-</div>
-                                                        <div class="inp">
+                                                            <div class="mid-line">-</div>
                                                             <label for="rrno2" class="hide">군번 뒷자리</label>
                                                             <input type="text" id="rrno2" class="email" maxlength="7" data-nextinput="" data-inputregex="numberinput" title="군번 뒷자리" />
                                                         </div>
@@ -536,7 +532,7 @@
                                 <!-- //장기간부도약적금 자격확인 팝업 -->
 
                                 <!-- 장기간부도약적금 가입 팝업 -->
-                                <div id="popup2" class="help-bg">
+                                <div id="popup2" class="help-bg" style="display: block">
                                     <div class="help-w">
                                         <div class="w-close" tabindex="0">
                                             <a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /></a>
@@ -552,35 +548,104 @@
                                                 <p class="common-txt">하단의 가입정보를 입력해주시기 바랍니다.</p>
                                             </div>
 
-                                            <h4 class="sub_tit no_mgt">가입정보 입력</h4>
+                                            <h4 class="sub_tit">가입정보 입력</h4>
                                             <div class="q">
-                                                <div class="aline" id="rrnoArea">
-                                                    <div class="aline-a fstart" style="display: flex; align-items: center">
-                                                        소속 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                <div class="aline">
+                                                    <div class="aline-a">
+                                                        공제금액 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
                                                     </div>
-                                                    <div class="aline-b birth-d">
+                                                    <div class="aline-b">
                                                         <div class="inp">
-                                                            <label for="afstCd" class="hide">소속 선택</label>
-                                                            <select class="select-ac" id="afstCd" name="afstCd">
-                                                                <option value="0">소속을 선택하세요.</option>
-                                                            </select>
+                                                            <label for="accnt" class="hide">원</label>
+                                                            <input type="text" id="accnt" name="accnt" class="email wth" maxlength="6" data-notfirstzero="" data-inputregex="numberinput" title="공제금액" /><span class="txt_lb">원</span>
+                                                            <p class="reds ko" id="sddYm">※ 매월 10일 공제액으로, 최대 30만원까지 입력 가능합니다.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-
-                                                <div class="aline" id="rrnoArea">
-                                                    <div class="aline-a fstart" style="display: flex; align-items: center">
-                                                        주민등록번호 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
-                                                    </div>
-                                                    <div class="aline-b birth-d">
+                                                <div class="aline">
+                                                    <div class="aline-a">지급 계좌<span class="reds">*</span></div>
+                                                    <div class="aline-b two_verti">
                                                         <div class="inp">
-                                                            <label for="userBirthday" class="hide">주민등록번호 앞자리</label>
-                                                            <input type="text" id="userBirthday" class="email" maxlength="6" data-nextinput="" data-inputregex="numberinput" title="주민번호 앞자리" />
+                                                            <label for="afstCd" class="hide">은행 선택</label>
+                                                            <select class="select-ac" id="afstCd" name="afstCd">
+                                                                <option value="0">은행을 선택해 주세요.</option>
+                                                            </select>
                                                         </div>
-                                                        <div class="mid-line">-</div>
-                                                        <div class="inp">
-                                                            <label for="rrno2" class="hide">주민등록번호 뒷자리</label>
-                                                            <input type="password" id="rrno2" class="email" maxlength="7" data-nextinput="" data-inputregex="numberinput" title="주민번호 뒷자리" />
+                                                        <div class="inp box_btmtxt">
+                                                            <label for="afstNm" class="hide">소속 입력</label>
+                                                            <input type="text" maxlength="50" id="afstNm" name="afstNm" class="depart" placeholder="계좌번호를 입력해주세요." title="소속 입력" />
+                                                            <p class="war-txt"><img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" /><span>계좌번호는 숫자만 입력가능합니다.</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="aline">
+                                                    <div class="aline-a">
+                                                        <div class="aline-a-1">
+                                                            자격확인서 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="aline-b" id="formfileList">
+                                                        <div>
+                                                            <button type="button" class="bl-btn" onclick="control.openFileDialog();">파일선택( pdf, hwpx, jpg, png )</button>
+                                                            <div id="dropZone" class="file-section" style="display: table">
+                                                                <div id="text-filemanage" class="text-center" style="display: table-cell; vertical-align: middle; cursor: pointer; width: 100%" onclick="control.openFileDialog();">이곳에 파일을 올려놓거나 파일선택 버튼을 눌러주세요.</div>
+                                                                <table id="fileTable">
+                                                                    <tbody></tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div id="fileControl" style="display: none; width: 1000px; height: 200px" class="innorix_basic chart-hide">
+                                                                <div style="display: none" class="circle_loading_wrapper"><div class="circle_loading"></div></div>
+                                                                <div class="irx_filetree empty-uploader" style="width: 840px; height: 200px">
+                                                                    <div style="display: none" class="irx-empty-download-text">There is no download file here.</div>
+                                                                    <div class="irx-file-header">
+                                                                        <div class="tree-icon fileheader-checkbox"></div>
+                                                                        <div class="irx-file-header-desc">Selected Files</div>
+                                                                        <div class="irx-file-remove-button-wrapper"><button class="irx-file-remove-button">Remove</button></div>
+                                                                        <div class="irx-file-download-button-wrapper"><button class="irx-file-download-button">Download</button></div>
+                                                                    </div>
+                                                                    <ul class="irx_filetree_list irx_listGrid" data-filetree=""></ul>
+                                                                </div>
+                                                                <div class="irx_infoBox" style="height: 200px">
+                                                                    <div class="irx-chart-wrapper">
+                                                                        <div class="irx-chart-btn-group"><div class="irx_btn_del irx-chart-toggle"></div></div>
+                                                                        <div class="irx-canvas-wrapper"><canvas class="irx-chart-canvas"></canvas></div>
+                                                                        <div class="irx-chart-file-size"></div>
+                                                                        <div class="irx-chart-file-count"></div>
+                                                                    </div>
+                                                                    <div class="irx-preview-wrapper">
+                                                                        <div class="irx-chart-btn-group"><div class="irx_btn_del irx-chart-toggle"></div></div>
+                                                                        <div class="irx-preview-element"><img src="" class="irx-preview-image" /> <canvas id="irx-preview-pdf" class="irx-preview-pdf"></canvas></div>
+                                                                        <div class="irx-preview-file-name"></div>
+                                                                        <div class="irx-preview-file-size"></div>
+                                                                    </div>
+                                                                    <div class="irx-mass-wrapper">
+                                                                        <div class="irx-mass-file-title"></div>
+                                                                        <div class="irx-mass-file-size"></div>
+                                                                        <div class="irx-mass-file-content"></div>
+                                                                        <div class="irx-chart-btn-group"><div class="irx-mass-toggle">×</div></div>
+                                                                        <div class="irx-mass-wrapper-paper-image"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="__irx context-menu-layer" style="display: none"></div>
+                                                                <ul class="__irx context-menu-list context-menu-root innorix" style="display: none; text-align: left">
+                                                                    <li class="context-menu-item action-openFileDialog" data-action="openFileDialog">Add file</li>
+                                                                    <li class="context-menu-item action-upload" data-action="upload">Upload</li>
+                                                                    <li class="context-menu-item action-downloadSelectedFiles" data-action="downloadSelectedFiles">Download Selected files</li>
+                                                                    <li class="context-menu-item action-download" data-action="download">Download</li>
+                                                                    <li class="context-menu-item action-downloadAndOpen" data-action="downloadAndOpen">Download and open</li>
+                                                                    <li class="context-menu-item action-removeSelectedFiles" data-action="removeSelectedFiles">Remove selected files</li>
+                                                                    <li class="context-menu-item action-clearFiles" data-action="clearFiles">Remove all files</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="sub_txt-wrap" style="padding: 5px">
+                                                                <p class="war-txt">
+                                                                    <img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" />
+                                                                    <span>아이폰 사진(HEIF → JPEG)로 변경 후 촬영으로 첨부 방법</span>
+                                                                </p>
+                                                                <p class="war-txt">
+                                                                    <span class="br"><em>설정 &gt; 카메라 &gt; 포맷 &gt; 높은 호환성</em> 설정 후 사진 촬영</span>
+                                                                </p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
