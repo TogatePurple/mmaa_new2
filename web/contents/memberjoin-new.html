@@ -110,8 +110,8 @@
                     </div>
                     <!-- //bread crumb -->
 
-                    <!-- 팝업 -->
-                    <div id="popup1" class="help-bg" style="display: block">
+                    <!-- 장기간부도약적금 자격확인 팝업 -->
+                    <div id="popup1" class="help-bg">
                         <div class="help-w">
                             <div class="w-close" tabindex="0">
                                 <a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /></a>
@@ -521,14 +521,83 @@
                                 </div>
                             </div>
                             <div class="btns">
-                                <div class="check-bt tc">
-                                    <button type="button" class="button last_popbtn btn_pop" id="" tabindex="0" data-pop="popup2">자격확인 하기</button>
+                                <div class="check-bt tc w-close">
+                                    <button type="button" class="button last_popbtn btn_pop" id="" tabindex="0" data-pop="popup2" class="">자격확인 하기</button>
                                 </div>
                             </div>
                             <!-- help-w -->
                             <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
                         </div>
                     </div>
+                    <!-- //장기간부도약적금 자격확인 팝업 -->
+
+                    <!-- 장기간부도약적금 가입 팝업 -->
+                    <div id="popup2" class="help-bg">
+                        <div class="help-w">
+                            <div class="w-close" tabindex="0">
+                                <a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /></a>
+                            </div>
+                            <div class="h-win" tabindex="0">
+                                <!-- 기능 wrap 용 -->
+                                <div class="box_btmborder_tit">
+                                    <h3>장기간부도약적금 가입</h3>
+                                </div>
+
+                                <div>
+                                    <p>장기간부도약적금 가입 자격 충족</p>
+                                    <p>하단의 가입정보를 입력해주시기 바랍니다.</p>
+                                </div>
+
+                                <h4 class="sub_tit no_mgt">가입정보 입력</h4>
+                                <div class="q">
+                                    <div class="aline" id="rrnoArea">
+                                        <div class="aline-a fstart" style="display: flex; align-items: center">
+                                            소속 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                        </div>
+                                        <div class="aline-b birth-d">
+                                            <div class="inp">
+                                                <label for="afstCd" class="hide">소속 선택</label>
+                                                <select class="select-ac" id="afstCd" name="afstCd">
+                                                    <option value="0">소속을 선택하세요.</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="aline" id="rrnoArea">
+                                        <div class="aline-a fstart" style="display: flex; align-items: center">
+                                            주민등록번호 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                        </div>
+                                        <div class="aline-b birth-d">
+                                            <div class="inp">
+                                                <label for="userBirthday" class="hide">주민등록번호 앞자리</label>
+                                                <input type="text" id="userBirthday" class="email" maxlength="6" data-nextinput="" data-inputregex="numberinput" title="주민번호 앞자리" />
+                                            </div>
+                                            <div class="mid-line">-</div>
+                                            <div class="inp">
+                                                <label for="rrno2" class="hide">주민등록번호 뒷자리</label>
+                                                <input type="password" id="rrno2" class="email" maxlength="7" data-nextinput="" data-inputregex="numberinput" title="주민번호 뒷자리" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add_mint"><span class="reds">*</span> 표시는 필수입력 항목입니다.</div>
+                                </div>
+
+                                <div>
+                                    <p>위와 같이 소속 및 군번 등 개인정보를 국방부로 전송 및 활용에 동의하시는 경우, 자격확인하기 버튼을 클릭해주세요.</p>
+                                    <p>※ 귀하가 입력한 정보가 상이하여 발생한 모든 책임은 본인에게 있습니다.</p>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <div class="check-bt tc">
+                                    <button type="button" class="button last_popbtn btn_pop" id="" tabindex="0" data-pop="popup2">저장하기</button>
+                                </div>
+                            </div>
+                            <!-- help-w -->
+                            <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
+                        </div>
+                    </div>
+                    <!-- //장기간부도약적금 가입 팝업 -->
 
                     <!--container-->
                     <section id="container" class="sub" tabindex="0">

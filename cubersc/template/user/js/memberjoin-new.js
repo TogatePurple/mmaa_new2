@@ -170,4 +170,11 @@ $(document).ready(function () {
         updateComp();
         updateSignupButton();
     });
+
+    // 팝업
+    $(".btn_pop").on("click", function (e) {
+        e.preventDefault();
+        const id = $(this).data("pop");
+        $("#" + id).fadeIn("slow");
+    });
 });
