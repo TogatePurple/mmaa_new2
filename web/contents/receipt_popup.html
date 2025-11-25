@@ -125,21 +125,20 @@
                                         </div>
                                         <div class="h-win" tabindex="0">
                                             <div class="box_btmborder_tit mgb">
-                                                <h3>지급계좌 등록</h3>
+                                                <h3>지급 계좌 등록</h3>
                                             </div>
                                             <div class="cont_box">
                                                 <div class="subss">
-                                                    <h4 class="sub_tit">지급계좌 등록</h4>
+                                                    <h4 class="sub_tit">지급 계좌 등록</h4>
                                                 </div>
-                                                <div class="q new_type_q">
-                                                    <!-- 새로운 케이스 추가 : new_type_q -->
+                                                <div class="q">
                                                     <!-- 은행명 -->
                                                     <div class="tline">
                                                         <div class="tline-a">
                                                             은행명 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
                                                         </div>
                                                         <div class="tline-b tline-b-rows">
-                                                            <div class="row one_wide">
+                                                            <div class="one_wide">
                                                                 <div class="slc">
                                                                     <select class="select-ac" data-accountregistration="fnstCd">
                                                                         <option value="0">은행을 선택해 주세요.</option>
@@ -150,42 +149,32 @@
                                                     </div>
                                                     <!-- //은행명 -->
 
-                                                    <!-- 계좌번호 -->
+                                                    <!-- 지급 계좌 -->
                                                     <div class="tline">
                                                         <div class="tline-a">
-                                                            계좌번호 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                            지급 계좌 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
                                                         </div>
                                                         <div class="tline-b tline-b-rows">
                                                             <div class="inp one_wide">
                                                                 <label for="" class="hide"></label>
-                                                                <input type="text" data-accountregistration="acctNo" oninput="this.value = this.value.replace(/[^0-9]/g,'')" placeholder="공백 없이 입력해 주세요." maxlength="20" data-inputregex="numberinput" />
+                                                                <input type="text" data-accountregistration="acctNo" oninput="this.value = this.value.replace(/[^0-9]/g,'')" placeholder="계좌번호를 입력해주세요." maxlength="20" data-inputregex="numberinput" />
+                                                                <p class="war-txt"><img class="war" src="../../cubersc/template/user/img/sub/warn.png" alt="" /><span>계좌번호는 숫자만 입력가능합니다.</span></p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- //계좌번호 -->
+                                                    <!-- //지급 계좌 -->
 
-                                                    <!-- 계좌명 -->
+                                                    <!-- 계좌별칭 -->
                                                     <div class="tline">
                                                         <div class="tline-a">계좌별칭</div>
                                                         <div class="tline-b tline-b-rows">
                                                             <div class="inp one_wide">
                                                                 <label for="" class="hide"></label>
-                                                                <input type="text" data-accountregistration="acctNm" placeholder="예시 : 자유적립형목돈수탁용 수령계좌" maxlength="20" />
+                                                                <input type="text" data-accountregistration="acctNm" placeholder="예시 : 장기간부도약적금 수령계좌" maxlength="20" />
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- //계좌명 -->
-                                                    <!-- 비고 -->
-                                                    <!-- <div class="tline">
-						<div class="tline-a">비고</div>
-						<div class="tline-b tline-b-rows">
-							<div class="inp one_wide">
-								<label for="" class="hide"></label>
-								<input type="text" data-accountregistration="rmk" placeholder="" maxlength="50">
-							</div>
-						</div>
-					</div> -->
-                                                    <!-- //비고 -->
+                                                    <!-- //계좌별칭 -->
                                                 </div>
                                             </div>
                                         </div>

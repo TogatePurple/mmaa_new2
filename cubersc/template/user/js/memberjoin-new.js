@@ -22,24 +22,6 @@ $(document).ready(function () {
         item.find(".accordion-header").removeClass("on").attr("aria-expanded", false);
     }
 
-    // 이전 단계 인풋 확인
-    function isPrevStepFilled(item) {
-        const prev = item.prev(".accordion-item");
-        if (prev.length === 0) return true;
-
-        const fields = prev.find("input:not([readonly]), select");
-        let filled = true;
-
-        fields.each(function () {
-            const tag = this.tagName.toLowerCase();
-
-            if (tag === "input" && $(this).val().trim() === "") filled = false;
-            if (tag === "select" && (!$(this).val() || $(this).val() === "")) filled = false;
-        });
-
-        return filled;
-    }
-
     // 1) 아코디언 기본 toggle
     $(".accordion-group .accordion-item .accordion-header").click(function () {
         var item = $(this).closest(".accordion-item");
@@ -47,7 +29,7 @@ $(document).ready(function () {
 
         if (item.hasClass("on")) {
             closeAccordion(item);
-        } else if (isPrevStepFilled(item)) {
+        } else {
             openAccordion(item);
             // 다른 아코디언 닫기
             group
@@ -56,44 +38,15 @@ $(document).ready(function () {
                 .each(function () {
                     closeAccordion($(this));
                 });
-        } else {
-            alert("입력되지 않은 정보가 있습니다.");
         }
     });
 
-    // 2) 모든 인풋 채워질 때
+    // 2) 오토 포커스
     $(".accordion-group .accordion-item").each(function () {
         const item = $(this);
         const fields = item.find("input:not([readonly]), select");
 
-        // 현 단계 인풋 확인
-        function checkAllFilled() {
-            let filled = true;
-
-            fields.each(function () {
-                const tag = this.tagName.toLowerCase();
-
-                if (tag === "input" && $(this).val().trim() === "") filled = false;
-                if (tag === "select" && (!$(this).val() || $(this).val() === "")) filled = false;
-            });
-
-            return filled;
-        }
-
-        // comp 클래스 업데이트
-        function updateComp() {
-            if (checkAllFilled()) {
-                item.find(".accordion-header").addClass("comp");
-            } else {
-                item.find(".accordion-header").removeClass("comp");
-            }
-        }
-
-        // 입력/선택 변경 감지
         fields.on("input change", function () {
-            updateComp();
-
-            const allFilled = checkAllFilled();
             let isLastFilledEnough = true;
 
             const isLastField = $(this).is(fields.last());
@@ -119,7 +72,7 @@ $(document).ready(function () {
             }
 
             // personal → info → id-pw 자동 이동
-            if (allFilled && isLastFilledEnough) {
+            if (isLastFilledEnough) {
                 const nextItem = item.nextAll(".accordion-item.info, .accordion-item.id-pw").first();
                 if (nextItem.length) {
                     closeAccordion(item);
@@ -134,31 +87,6 @@ $(document).ready(function () {
 
             updateSignupButton();
         });
-
-        // 전체 단계(personal/info/id-pw) 모두 채워졌는지
-        function checkAllStepsFilled() {
-            let filled = true;
-
-            $(".accordion-item.personal, .accordion-item.info, .accordion-item.id-pw").each(function () {
-                const itemFields = $(this).find("input:not([readonly]), select");
-
-                itemFields.each(function () {
-                    const tag = this.tagName.toLowerCase();
-                    if (tag === "input" && $(this).val().trim() === "") filled = false;
-                    if (tag === "select" && (!$(this).val() || $(this).val() === "")) filled = false;
-                });
-            });
-
-            return filled;
-        }
-
-        // 버튼 disable
-        function updateSignupButton() {
-            $(".btns .signup-bt button").prop("disabled", !checkAllStepsFilled());
-        }
-
-        updateComp();
-        updateSignupButton();
     });
 
     // 팝업

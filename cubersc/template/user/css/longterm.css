@@ -1,7 +1,7 @@
 /*---------------------------------------------
     #공통
 ---------------------------------------------*/
-.longterm{
+.longterm, .receipt{
     --font-13:13px;
     --font-14:14px;
     --font-15:15px;
@@ -157,6 +157,14 @@
 .receipt .alert.empty .text { background: url(../../../../cubersc/template/user/img/sub/ico_alert_empty.svg) no-repeat top; }
 .receipt .alert.not-empty .text { background: url(../../../../cubersc/template/user/img/sub/chk.png) no-repeat top; background-size: 68px 68px;}
 .receipt .alert.not-empty .text .detail { margin-top: 20px; color: var(--color-0); font-size: var(--font-20); font-weight: var(--font-w-350); line-height: 150%; }
+
+/* 팝업 */
+.receipt .h-win .subss {margin-bottom: 20px; display: flex; align-items: center; }
+.receipt .h-win .subss select {max-width: 170px;}
+.subs .receipt .h-win .sub_tit {margin-bottom:0}
+.receipt .tline-b .slc select, .receipt .tline-b .inp input[type=text] {width: 360px;}
+.receipt .tline-b .inp .war-txt { margin-top: 5px; display: flex; color: var(--color-6); font-size: var(--font-16); }
+.receipt .tline-b .inp .war-txt span {padding-left: 5px;padding-bottom: 0}
 
 /*---------------------------------------------
     반응형
