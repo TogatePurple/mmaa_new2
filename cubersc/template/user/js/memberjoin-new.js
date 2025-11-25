@@ -118,11 +118,6 @@ $(document).ready(function () {
                 }
             }
 
-            // youth 단계
-            if (item.hasClass("youth")) {
-                $(".btns.youth button").prop("disabled", !checkAllFilled());
-            }
-
             // personal → info → id-pw 자동 이동
             if (allFilled && isLastFilledEnough) {
                 const nextItem = item.nextAll(".accordion-item.info, .accordion-item.id-pw").first();
@@ -161,11 +156,6 @@ $(document).ready(function () {
         function updateSignupButton() {
             $(".btns .signup-bt button").prop("disabled", !checkAllStepsFilled());
         }
-
-        // 청년 버튼 클릭 시 닫기
-        $(".btns.youth button").click(function () {
-            closeAccordion(item);
-        });
 
         updateComp();
         updateSignupButton();
