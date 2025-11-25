@@ -126,7 +126,7 @@
 .receipt .bx-container .bx-tit .bx-tit-sub { color: var(--color-6); font-size: var(--font-16); font-weight: var(--font-w-400); }
 .receipt .bx-container .bx-tit .bx-tit-sub .emp {color: var(--color-0); font-size: var(--font-16); font-weight: var(--font-w-500);}
 .receipt .bx-container .bigwon {margin-top:30px;text-align: end;}
-.receipt .bx-container .bigwon .num { line-height: 100%; border-bottom: var(--border-b) }
+.receipt .bx-container .bigwon .num { line-height: 150%; border-bottom: var(--border-b) }
 .receipt .bx-container .bigwon .won { font-size: var(--font-22); text-decoration: none;}
 
 .blue-bx.bg-grey { background: #F8F8F8; margin-top:0 }
@@ -242,7 +242,7 @@
   .subs .longterm .sub_tit:after{top: 50%; transform: translateY(-50%);}
   .subs .longterm .h-win .cbox + .sub_tit {margin-top: 65px;}
   .longterm .h-win .mo-hide {display:none;}
-  .longterm .h-win .grey-popup-card {padding:20px; text-align:center; }
+  .longterm .h-win .grey-popup-card {padding:20px; margin-top:40px; text-align:center; }
   .longterm .h-win .grey-popup-card .common-txt{font-size: var(--font-16)}
   .longterm .h-win .grey-popup-card .reds{font-size: var(--font-14)}
   .longterm .h-win .grey-popup-card .common-txt + .reds {margin-top:5px;}
@@ -285,6 +285,8 @@
   .longterm .tooltip ol li { font-size: var(--font-13); }
   .longterm .tooltip ol li span { position: absolute; left: 0; top: 0; color:var(--color-blue) }
   /* 팝업 */
+  .longterm .help-w {height: 90%}
+  .longterm .help-bg .btns {margin:0; margin-top:10px !important;}
   .longterm .h-win .colorful { top: 18px; }
   .longterm .h-win input[type="text"].wth {width: 88%}
   .longterm .h-win .sub_tit{margin-bottom: 30px;}
