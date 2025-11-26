@@ -355,6 +355,80 @@
                                 </div>
                                 <!-- ⭐[E] 퍼블 추가: 장기간부도약적금 가입 팝업 -->
 
+                                <!-- ⭐[S] 25/11/26 퍼블 추가: 휴대전화번호 인증 팝업 -->
+                                <!-- 간편인증하기 -->
+                                <div class="help-bg help_member_join" id="help" style="display: block">
+                                    <div class="help-w">
+                                        <div class="w-close">
+                                            <a href="javascript:;" title="닫기">
+                                                <img class="hpage" src="/cubersc/template/user/img/sub/close1.png" alt="" />
+                                            </a>
+                                        </div>
+
+                                        <div id="login2" class="logintent log2">
+                                            <div class="box_btmborder_tit">
+                                                <h3>휴대전화번호 인증</h3>
+                                            </div>
+                                            <!-- 	<div class="login_box">
+				<div class="log_box">										
+					<img src="/cubersc/template/user/img/login_icon2-big.png" alt="간편인증 아이콘">										
+					<button type="submit" class="log_btn mt15" title="아이디 로그인" onclick="init_popup_auth();">간편인증</button>
+				</div>
+			</div>
+			 -->
+                                            <div class="two-boxs one-boxs">
+                                                <!-- 인증 1개일 경우, one-boxs 추가 -->
+                                                <div class="ph-bx" style="margin-right: 0px">
+                                                    <div class="ph-title">휴대전화번호 인증</div>
+                                                    <div class="ph-icon"><img src="/cubersc/template/user/img/sub/ph-icon.png" alt="아이콘" /></div>
+                                                    <div class="ph-txt">본인확인서비스를 통한<br />휴대전화번호 인증</div>
+                                                    <div class="btns">
+                                                        <div class="check-bt">
+                                                            <!-- 본인실명확인서비스 요청 form --------------------------->
+                                                            <form id="reqPCCFormCon" name="reqPCCFormCon" method="post" action="" onsubmit="return openPCCWindow('reqPCCFormCon')">
+                                                                <input type="hidden" name="reqInfo" value="" />
+                                                                <input type="hidden" name="retUrl" value="" />
+                                                                <input type="hidden" name="verSion" value="2" />
+                                                                <!--모듈 버전정보-->
+                                                                <input type="submit" class="bl_btn btn_changepop button" data-name="help_certi_detail" value="인증하기" />
+                                                            </form>
+                                                            <!-- <a href="javascript:void(0);" class="bl_btn btn_changepop" data-name="help_certi_detail">인증하기</a> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="ip-bx">
+					<div class="ip-title">간편 인증</div>
+					<div class="ip-icon"><img src="/cubersc/template/user/img/sub/ip-icon.png" alt="아이콘"></div>
+					<div class="ip-txt">다양한 소셜 로그인을 통한 간편인증</div>
+					<div class="btns">
+	                   <div class="check-bt">
+	                   	   <button type="button" class="button" title="간편인증하기" onclick="init_popup_auth();">인증하기</button>
+	                   	    <button type="button" class="button" title="간편인증하기" onclick="init_popup_auth();">인증하기</button>                    
+	                   </div>
+	               </div>
+				</div>	 -->
+                                            </div>
+                                        </div>
+
+                                        <!-- 
+		<div class="h-win help_join_prev">
+			<div class="win-t">간편인증</div>
+			<div class="box_member_join">
+				<div class="inner">
+					<span class="tit">간편인증</span>
+					<img src="/cubersc/template/user/img/login_icon2-big.png" alt="">
+					<button type="submit" class="log_btn mt15" title="간편인증" onclick="init_popup_auth();">간편인증</button>
+					<span>본인확인서비스를 통한 간편인증</span>
+				</div>
+			</div>
+		</div> -->
+                                        <!-- help-w -->
+                                        <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
+                                    </div>
+                                </div>
+                                <!-- //간편인증하기 -->
+                                <!-- ⭐[E] 25/11/26 퍼블 추가: 휴대전화번호 인증 팝업 -->
+
                                 <!-- 기관별 입력항목 팝업 -->
                                 <div class="help-bg det-inputbyinst" style="display: none">
                                     <div class="help-w">
@@ -762,7 +836,6 @@
                                                 </div>
                                                 <!-- tab-Box 끝-->
                                                 <div class="tab-Con">
-                                                    <!-- ⭐TODO: 25/11/26 퍼블 추가 이런식으로 날짜 남기기 -->
                                                     <div id="tab-0" class="tab-content">
                                                         <ul class="one-line">
                                                             <li class="one-person">

@@ -48,6 +48,12 @@
 .longterm .tooltip ul li::before { content: "•"; position: absolute; left: 8px; top: 0; height: 1.5em; line-height: 1.5em; display: flex; align-items: center; color: var(--color-text-basic); }
 .longterm .tooltip ul li + li { margin-top: 8px; }
 
+/* 휴대전화번호 인증 팝업 */
+.longterm .help_member_join .help-w .box_btmborder_tit h3 {margin-bottom: 26px; }
+.longterm .help_member_join .help-w .box_btmborder_tit h3:after { display: none; }
+.longterm .help_member_join .help-w .ph-bx .ph-title {margin-bottom:20px;}
+.longterm .help_member_join .help-w .ph-bx .ph-txt {margin:20px 0;}
+
 /*---------------------------------------------
     #memberjoin-new
 ---------------------------------------------*/
@@ -301,6 +307,7 @@
   .longterm .tooltip ol li span { position: absolute; left: 0; top: 0; color:var(--color-blue) }
   /* 팝업 */
   .longterm .help-w {height: 90%}
+  .longterm .help_member_join .help-w {height: auto}
   .longterm .help-bg .btns {margin:0; margin-top:10px !important;}
   .longterm .h-win .colorful { top: 18px; }
   .longterm .h-win input[type="text"].wth {width: 88%}
