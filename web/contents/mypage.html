@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko" class="on">
     <head href="javascript:;">
-        <title>군인공제회 - 인터넷창구 &gt; 마이페이지</title>
+        <title>군인공제회 -</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <link rel="shortcut icon" type="image/x-icon" href="../../cubersc/cube.ico" />
@@ -42,6 +42,7 @@
 
         <!-- 퍼블 확인용: 공통 인클루드 js -->
         <script src="../../web/js/include.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/longterm.css" />
     </head>
     <body class="on" href="javascript:;">
         <!-- [S] 퍼블 확인용: 헤더 인클루드 -->
@@ -49,7 +50,6 @@
         <!-- [E] 퍼블 확인용: 헤더 인클루드 -->
 
         <!-- 본문 영역 -->
-
         <div id="wrap" class="on" href="javascript:;">
             <div class="subs sub3 on" href="javascript:;">
                 <!-- [S] 퍼블 확인용: 퀵메뉴 인클루드 -->
@@ -299,22 +299,16 @@
                                                         </div>
                                                     </div>
                                                     <p class="mycloses">금액 숨김 중</p>
+                                                    <!-- ⭐[S]: 퍼블 수정 -->
+                                                    <!-- 퇴직급여 가입시 -->
                                                     <ul class="box-bottom" id="ul_saving_box">
                                                         <li>
                                                             <span>회원퇴직급여<em class="p_br">(퇴직, 세전 기준)</em></span>
                                                             <p>
                                                                 <a href="/web/contents/WagesavingInquiry.do" class="bluebold"><b data-rrsyadiamt="">000,000,000</b></a
                                                                 >원
+                                                                <em data-txrt="" class="p_br">(*세율 : 0.00%)</em>
                                                             </p>
-                                                            <em data-txrt="" class="p_br">(*세율 : 0.00%)</em>
-                                                        </li>
-                                                        <li>
-                                                            <span>연금식 분할급여<em class="p_br">(잔액 기준)</em></span>
-                                                            <p>
-                                                                <a href="/web/contents/RetiresavingInquiry.do"><b data-ptslpnamt_s="">0</b></a
-                                                                >원
-                                                            </p>
-                                                            <em data-ptsltxrt="" class="p_br"></em>
                                                         </li>
                                                         <li>
                                                             <span>예금형 목돈수탁저축<em class="p_br">(원금 기준)</em></span>
@@ -324,7 +318,7 @@
                                                             </p>
                                                         </li>
                                                         <li>
-                                                            <span>현역/예비역 회원저축(적립형)<em class="p_br">(원금 기준)</em></span>
+                                                            <span>현역/예비역 회원저축(적립형)<em class="p_br inline">(원금 기준)</em></span>
                                                             <p>
                                                                 <a href="/web/contents/it-Inquiry.do?no=is"><b data-tslsactypnamt="">0</b></a
                                                                 >원
@@ -337,10 +331,50 @@
                                                                 >원
                                                             </p>
                                                         </li>
-                                                        <!-- <li><span>연금식 분할급여</span><p><b data-ptslPnamt>0</b>원</p></li>
-											<li><span>예금형</span><p><b data-tslsDptyPnamt>0</b>원</p></li>
-											<li><span>적립형</span><p><b data-tslsActyPnamt>0</b>원</p></li> -->
+                                                        <li>
+                                                            <span>장기간부도약적금<em class="p_br">(잔액 기준)</em></span>
+                                                            <p>
+                                                                <a href="/web/contents/RetiresavingInquiry.do"><b data-ptslpnamt_s="">0</b></a
+                                                                >원
+                                                                <em data-ptsltxrt="" class="p_br"></em>
+                                                            </p>
+                                                        </li>
                                                     </ul>
+                                                    <!-- //퇴직급여 가입시 -->
+                                                    <!-- 퇴직급여 미가입시 -->
+                                                    <!-- <ul class="box-bottom" id="ul_saving_box">
+                                                        <li>
+                                                            <span>연금식 분할급여<em class="p_br">(잔액 기준)</em></span>
+                                                            <p>
+                                                                <a href="/web/contents/RetiresavingInquiry.do"><b data-ptslpnamt_s="">0</b></a
+                                                                >원
+                                                                <em data-ptsltxrt="" class="p_br"></em>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <span>예금형 목돈수탁저축<em class="p_br">(원금 기준)</em></span>
+                                                            <p>
+                                                                <a href="/web/contents/it-Inquiry.do?no=ts"><b data-tslsdptypnamt="">000,000,000</b></a
+                                                                >원
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <span>현역/예비역 회원저축(적립형)<em class="p_br inline">(원금 기준)</em></span>
+                                                            <p>
+                                                                <a href="/web/contents/it-Inquiry.do?no=is"><b data-tslsactypnamt="">0</b></a
+                                                                >원
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <span>연금형 목돈수탁저축<br /><em class="p_br">(원금 기준)</em></span>
+                                                            <p>
+                                                                <a href="/web/contents/it-Inquiry.do?no=ss"><b data-tslspntypnamt="">0</b></a
+                                                                >원
+                                                            </p>
+                                                        </li>
+                                                    </ul> -->
+                                                    <!-- //퇴직급여 미가입시 -->
+                                                    <!-- ⭐[E]: 퍼블 수정 -->
                                                 </div>
                                                 <div class="mycontent">
                                                     <!-- <div class="box-one one1">
@@ -683,6 +717,8 @@
                                                         </div>
                                                     </div>
                                                     <p class="mycloses">금액 숨김 중</p>
+                                                    <!-- ⭐[S]: 퍼블 수정 -->
+                                                    <!-- 퇴직급여 가입시 -->
                                                     <ul class="box-bottom">
                                                         <li>
                                                             <span>회원퇴직급여 <span data-txrt="" style="width: auto">(*세율 : 0.00%)</span></span>
@@ -692,7 +728,39 @@
                                                             </p>
                                                         </li>
                                                         <li>
-                                                            <span style="width: 30%">연금식 분할급여</span><span data-ptsltxrt="" style="width: 40%"></span>
+                                                            <span>예금형 목돈수탁저축</span>
+                                                            <p>
+                                                                <a href="/web/contents/it-Inquiry.do?no=ts" tabindex="0"><b data-tslsdptypnamt="">000,000,000</b></a
+                                                                >원
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <span>현역/예비역 회원저축(적립형)</span>
+                                                            <p>
+                                                                <a href="/web/contents/it-Inquiry.do?no=is" tabindex="0"><b data-tslsactypnamt="">0</b></a
+                                                                >원
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <span>연금형 목돈수탁저축</span>
+                                                            <p>
+                                                                <a href="/web/contents/it-Inquiry.do?no=ss" tabindex="0"><b data-tslspntypnamt="">0</b></a
+                                                                >원
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <span>장기간부도약적금</span>
+                                                            <p>
+                                                                <a href="/web/contents/RetiresavingInquiry.do" tabindex="0"><b data-ptslpnamt_s="">0</b></a
+                                                                >원
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- //퇴직급여 가입시 -->
+                                                    <!-- 퇴직급여 미가입시 -->
+                                                    <!-- <ul class="box-bottom">
+                                                        <li>
+                                                            <span>연금식 분할급여</span><span data-ptsltxrt="" style="width: 40%"></span>
                                                             <p>
                                                                 <a href="/web/contents/RetiresavingInquiry.do" tabindex="0"><b data-ptslpnamt_s="">0</b></a
                                                                 >원
@@ -719,7 +787,9 @@
                                                                 >원
                                                             </p>
                                                         </li>
-                                                    </ul>
+                                                    </ul> -->
+                                                    <!-- //퇴직급여 미가입시 -->
+                                                    <!-- ⭐[E]: 퍼블 수정 -->
                                                 </div>
                                                 <div class="mycontent" style="">
                                                     <div class="box-one one1">
