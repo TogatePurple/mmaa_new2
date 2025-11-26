@@ -120,7 +120,7 @@
 
 .receipt .unit { margin-bottom: 10px; text-align:end; font-size: var(--font-16); font-weight: var(--font-w-350); }
 
-.receipt .bx-container .blue-bx { flex-direction: column; padding: 30px 25px; }
+.receipt .bx-container .blue-bx { flex-direction: column; padding: 30px 25px; margin-top:0 }
 .receipt .bx-container .blue-bx.flex { align-items: stretch; }
 .receipt .bx-container .bx-tit { display: flex; align-items: flex-end; gap:6px; text-align: start; font-size: var(--font-20); font-weight: var(--font-w-700); }
 .receipt .bx-container .bx-tit .bx-tit-sub { color: var(--color-6); font-size: var(--font-16); font-weight: var(--font-w-400); }
