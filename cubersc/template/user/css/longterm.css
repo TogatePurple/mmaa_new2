@@ -117,6 +117,11 @@
 .memberjoin-new .btns .check-bt:not(.check-linebt):has(button:disabled):hover {box-shadow: none}
 
 /*---------------------------------------------
+    #memberjoin-longterm
+---------------------------------------------*/
+.memberjoin-new .q:not(.basic-info) .add_mint .reds {margin-bottom: 10px;}
+
+/*---------------------------------------------
     #receipt
 ---------------------------------------------*/
 .receipt .bx-container{ display: flex; gap: 24px; }
@@ -238,7 +243,7 @@
   .memberjoin-new .q .aline .aline_col { flex-direction: row; }
   .memberjoin-new .q.basic-info .aline-a {width:50%; padding:14px 0;}
   .memberjoin-new .q .aline .aline_col.b-bottom {border-bottom: 1px solid #ddd;}
-  .memberjoin-new .accordion-content .q {margin-bottom:12px; border-top: none;}
+  .memberjoin-new .q:not(.basic-info) {margin-bottom:12px; border-top: none;}
   .tab-content.memberjoin-new .q.basic-info .aline-b {min-height: 0;}
   .common-section .memberjoin-new .q.basic-info .aline-b{padding:14px 0;}
   /* step3-아코디언 */
@@ -267,7 +272,7 @@
   .memberjoin-new .q:not(.basic-info) .aline.pw-rules {border-top: 1px solid #ddd; margin-top:38px;}
   .memberjoin-new .q:not(.basic-info) .aline.pw-rules .aline-a::before {content: ""; display: inline-block; width: 34px; height: 34px; margin-right: 8px; background: url('../img/sub/ico_info.svg') no-repeat center / contain;}
   .memberjoin-new .q:not(.basic-info) .aline.pw-rules .aline-a {padding:14px 0 18px 0}
-  .memberjoin-new .accordion-group .aline {border-bottom:none}
+  .memberjoin-new .q:not(.basic-info) .aline, .accordion-item.info .aline {border-bottom:none}
   .common-section .memberjoin-new .q:not(.basic-info) .add_mint, .common-section .accordion-item.info .add_mint {border-top:1px solid #ddd;}
   .memberjoin-new .q:not(.basic-info) .add_mint, .common-section .accordion-item.info .add_mint {margin-top:20px; padding-top:8px;}
   /* step3-버튼 */
@@ -297,6 +302,15 @@
   .longterm .h-win .colorful { top: 32px; height: 20px; }
   .help-w .aline-a.pt-0 {padding-top:0;}
   /*---------------------------------------------
+      #memberjoin-longterm
+  ---------------------------------------------*/
+  .memberjoin-new .q:not(.basic-info) .aline-a.pt-10{padding-top:10px;}
+  .common-section .memberjoin-new .q:not(.basic-info) .aline-b {text-align: start;}
+  .memberjoin-new .q:not(.basic-info) .add_mint .reds.ko {font-size: var(--font-14); margin-top: 0; margin-bottom: 8px;}
+  .memberjoin-new .q:not(.basic-info) .add_mint:has(.reds) {margin-top: 10px;}
+  .tab-content.memberjoin-new .q:not(.basic-info) .aline-b.idea input.won {width: 94%;}
+  .tab-content.memberjoin-new .q:not(.basic-info) .aline-b.idea input.won ~ .txt_lb {margin-left:12px;}
+  /*---------------------------------------------
       #SignUpSelection_new
   ---------------------------------------------*/
   .list_half_cardnoti {display: flex; flex-wrap:wrap; gap:30px;}
@@ -314,10 +328,16 @@
 
 /****** MO */
 @media screen and (max-width: 720px) {
+  /*---------------------------------------------
+      #memberjoin-new
+  ---------------------------------------------*/
   /* 기존 css 수정 */
   .accordion-item .aline-b.memb .slc {margin-left: 0;}
   .memberjoin-new .btns .check-bt {padding:0}
-  
+
+  /* step3-아코디언 내부(memberjoin-new, memberjoin-longterm 공통) */
+  .memberjoin-new .aline-b .sub_txt-wrap .war-txt {align-items:start; }
+  .memberjoin-new .aline-b .sub_txt-wrap .war-txt img {position: relative; top:2px; }
   /* step3-장기간부도약적금 영역 */
   .longterm-join .question {font-size: var(--font-16);}
   .longterm-join .question .emp {display: block;}
@@ -339,4 +359,9 @@
   .longterm .h-win .colorful { top: 18px; }
   .longterm .h-win input[type="text"].wth {width: 88%}
   .longterm .h-win .sub_tit{margin-bottom: 30px;}
+  /*---------------------------------------------
+      #memberjoin-longterm
+  ---------------------------------------------*/
+  .memberjoin-new .q:not(.basic-info) .add_mint .reds.ko {margin-bottom: 0;}
+  .tab-content.memberjoin-new .q:not(.basic-info) .aline-b.idea input.won {width: 88%;}
 }
