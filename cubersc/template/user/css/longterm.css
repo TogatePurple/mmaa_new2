@@ -194,6 +194,9 @@
 }
 
 @media screen and (max-width: 1036px) and (min-width: 720px) {
+  /*---------------------------------------------
+      #memberjoin-new
+  ---------------------------------------------*/
   .tab-content.memberjoin-new .aline-b.n-num a { display: flex; align-items: center; justify-content: center;line-height: 120%; }
   .tab-content.memberjoin-new .accordion-content .aline-b .inp_dblbtn_wrap .inp_r {gap:0}
 }
@@ -210,7 +213,7 @@
   .accordion-item.on .accordion-header{border-radius: 10px 10px 0 0; box-shadow: none; position: relative; }
   .accordion-item.on .accordion-header::after { content: ""; position: absolute; left: 30px; right: 30px; bottom: 0; height: 1px; background: #ddd;}
   /* step3-아코디언 내부 */
-  .memberjoin-new .accordion-item .q {margin-bottom:0px;}
+  .memberjoin-new .q:not(.basic-info) {margin-bottom:0px;}
   .memberjoin-new .bt-2-333 {border-top: 2px solid #333;}
   .memberjoin-new .inp input[type="text"].w-360{width:360px;}
   .memberjoin-new .aline .inp select.w-360{width:360px;}
@@ -244,29 +247,29 @@
   .accordion-header::before { right: 20px; }
   .accordion-header span { margin-left: 16px; font-size: 18px; font-weight: 700; }
   .accordion-content{padding:0px; box-shadow: none;}
-  /* step3-아코디언 내부 */
-  .accordion-content .aline-a, .help-w .aline-a { background: transparent; justify-content: flex-start; padding:28px 0 12px 0;}
-  .accordion-content .aline-a span {margin-left:5px;}
-  .common-section .accordion-content .q .aline-b, .content_box .q .aline-b {padding:0 0 0 0}
-  .tab-content .accordion-content .aline-b { min-height: auto; padding:0}
-  .tab-content .accordion-content .aline-b.n-num .m010:last-child.m-10 {margin: 10px 0 10px 0;}
-  .accordion-content .aline.aline-mail .aline-b.memb .inp.m-0 {margin:0}
-  .accordion-content .aline.aline-mail .aline-b .at {line-height:48px;}
-  .accordion-content .aline .aline_col .aline-b {padding-left:0}
-  .accordion-content .tab-content .aline-b {padding:0}
-  .tab-content .accordion-content .aline-b .inp_dblbtn_wrap .inp_r {flex-direction: row; gap:12px}
-  .tab-content .accordion-content .aline-b.n-num .m010.next{margin-top:0px !important;}
-  .accordion-content .aline-b.n-num.type-btnbig1 .box_inp_chkid .inp_chkid input {margin-bottom:10px}
-  .accordion-content .aline-b.n-num.type-btnbig1 .box_inp_chkid > a {margin-bottom:10px !important;}
-  .accordion-content .q + .q {margin-top:0}
-  .memberjoin-new .accordion-content .q:last-child {margin-bottom:40px;}
+  /* step3-아코디언 내부(memberjoin-new, memberjoin-longterm 공통) */
+  .memberjoin-new .q:not(.basic-info) .aline-a, .accordion-item.info .aline-a, .help-w .aline-a { background: transparent; justify-content: flex-start; padding:28px 0 12px 0;}
+  .memberjoin-new .q:not(.basic-info) .aline-a span, .accordion-item.info .aline-a span {margin-left:5px;}
+  .common-section .memberjoin-new .q:not(.basic-info) .aline-b, .common-section .accordion-item.info .aline-b, .content_box .q .aline-b {padding:0 0 0 0}
+  .tab-content.memberjoin-new .q:not(.basic-info) .aline-b, .tab-content.memberjoin-new .accordion-item.info .aline-b { min-height: auto; padding:0}
+  .tab-content.memberjoin-new .q:not(.basic-info) .aline-b.n-num .m010:last-child.m-10 {margin: 10px 0 10px 0;}
+  .memberjoin-new .q:not(.basic-info) .aline.aline-mail .aline-b.memb .inp.m-0 {margin:0}
+  .memberjoin-new .q:not(.basic-info) .aline.aline-mail .aline-b .at {line-height:48px;}
+  .memberjoin-new .q:not(.basic-info) .aline .aline_col .aline-b, .accordion-item.info .aline .aline_col .aline-b {padding-left:0}
+  .tab-content .memberjoin-new .q:not(.basic-info) .aline-b {padding:0}
+  .tab-content .memberjoin-new .q:not(.basic-info) .aline-b .inp_dblbtn_wrap .inp_r {flex-direction: row; gap:12px}
+  .tab-content .memberjoin-new .q:not(.basic-info) .aline-b.n-num .m010.next{margin-top:0px !important;}
+  .memberjoin-new .q:not(.basic-info) .aline-b.n-num.type-btnbig1 .box_inp_chkid .inp_chkid input {margin-bottom:10px}
+  .memberjoin-new .q:not(.basic-info) .aline-b.n-num.type-btnbig1 .box_inp_chkid > a {margin-bottom:10px !important;}
+  .memberjoin-new .q:not(.basic-info) + .q:not(.basic-info) {margin-top:0}
+  .memberjoin-new .q:not(.basic-info):last-child {margin-bottom:40px;}
   .accordion-content.mb-40 {margin-bottom:40px;}
-  .aline.pw-rules {border-top: 1px solid #ddd; margin-top:38px;}
-  .aline.pw-rules .aline-a::before {content: ""; display: inline-block; width: 34px; height: 34px; margin-right: 8px; background: url('../img/sub/ico_info.svg') no-repeat center / contain;}
-  .aline.pw-rules .aline-a {padding:14px 0 18px 0}
+  .memberjoin-new .q:not(.basic-info) .aline.pw-rules {border-top: 1px solid #ddd; margin-top:38px;}
+  .memberjoin-new .q:not(.basic-info) .aline.pw-rules .aline-a::before {content: ""; display: inline-block; width: 34px; height: 34px; margin-right: 8px; background: url('../img/sub/ico_info.svg') no-repeat center / contain;}
+  .memberjoin-new .q:not(.basic-info) .aline.pw-rules .aline-a {padding:14px 0 18px 0}
   .memberjoin-new .accordion-group .aline {border-bottom:none}
-  .common-section .accordion-content .add_mint {border-top:1px solid #ddd;}
-  .accordion-content .add_mint {margin-top:20px; padding-top:8px;}
+  .common-section .memberjoin-new .q:not(.basic-info) .add_mint, .common-section .accordion-item.info .add_mint {border-top:1px solid #ddd;}
+  .memberjoin-new .q:not(.basic-info) .add_mint, .common-section .accordion-item.info .add_mint {margin-top:20px; padding-top:8px;}
   /* step3-버튼 */
   .btns .check-bt.w-full {width:100%;}
   /* step3-팝업 */
