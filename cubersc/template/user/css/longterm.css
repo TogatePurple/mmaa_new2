@@ -112,7 +112,8 @@
 /* 팝업 스텝 */
 .longterm .h-win .steps input[type="radio"] { display: none; }
 .longterm .h-win .steps .step { display: none; }
-.longterm .h-win .steps .step .step-content { overflow-y: auto; }
+.longterm .step-popup .help-w .h-win {overflow-y:visible}
+.longterm .h-win .steps .step .step-content { overflow-y: auto; max-height: 60vh; }
 .longterm .h-win .steps #step1:checked ~ .step1 { display: block; }
 .longterm .h-win .steps #step2:checked ~ .step2 { display: block; }
 .longterm .h-win .steps #step3:checked ~ .step3 { display: block; }
@@ -123,10 +124,6 @@
 .longterm .h-win .steps .indicators .circle.active { background-color: var(--color-f); border: 2px solid var(--color-blue); color: var(--color-blue)}
 .longterm .h-win .steps .indicators .circle.comp { background-color: var(--color-blue); color: var(--color-f)}
 .longterm .h-win .steps .indicators .circle.active:not(:first-child)::after, .longterm .h-win .steps .indicators .circle.comp:not(:first-child)::after { background-image: repeating-linear-gradient(90deg, var(--color-blue) 0 3px, transparent 3px 6px); }
-
-.prev, .next { display: inline-block; padding: 10px 20px; background: #007bff; color: #fff; border-radius: 6px; cursor: pointer; margin-top: 20px;}
-.btns { display: flex; justify-content: space-between; }
-.longterm .step-popup .help-w .h-win {overflow-y:visible}
 
 /* step3-버튼 */
 .memberjoin-new .btns .check-bt.w-full { width:auto; }
