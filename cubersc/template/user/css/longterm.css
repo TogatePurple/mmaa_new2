@@ -27,6 +27,7 @@
     --color-red: #C6002C;
     --color-text-basic: #1E2124;
     --color-blue: #0074DB;
+    --color-empty: #CCD8E3;
 
     --border-b: 1px solid var(--color-0);
     --border-d: 1px solid var(--color-d);
@@ -66,7 +67,7 @@
 .accordion-group .accordion-content { display: none; }
 .accordion-header { padding: 20px 30px; position: relative; display: flex; align-items: center; box-sizing: border-box; height: 80px; border-radius: 10px; box-shadow: 3px 3px 10px 0px rgba(47, 46, 44, 0.25); cursor: pointer; }
 .accordion-header::before { content: ""; position:absolute; right: 30px; width: 14px; height: 8px; background: url('../../../template/user/img/sub/s3_mybox_bottom.png') no-repeat center / contain; }
-.accordion-header i { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; background-color: #CCD8E3; border-radius: 100px; color: #fff; text-align: center;
+.accordion-header i { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; background-color: var(--color-empty); border-radius: 100px; color: #fff; text-align: center;
   font-size: 14px; font-weight: 400; font-style: normal; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: background-color 0.3s cubic-bezier(.25,.1,.25,1); }
 .accordion-item.on .accordion-header i { background-color: var(--color-blue); }
 .accordion-item.on .accordion-header::before { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); }
@@ -108,6 +109,25 @@
 .longterm .h-win .blue-txt.no-join {color:#000; background: url(../../../../cubersc/template/user/img/sub/no-join.svg) no-repeat top; background-size: 80px 80px;}
 .longterm .h-win .reds {font-size: var(--font-16);}
 .longterm .h-win .grey-popup-card .blue-txt + .common-txt {margin-top: 20px; }
+/* 팝업 스텝 */
+.longterm .h-win .steps input[type="radio"] { display: none; }
+.longterm .h-win .steps .step { display: none; }
+.longterm .h-win .steps .step .step-content { overflow-y: auto; }
+.longterm .h-win .steps #step1:checked ~ .step1 { display: block; }
+.longterm .h-win .steps #step2:checked ~ .step2 { display: block; }
+.longterm .h-win .steps #step3:checked ~ .step3 { display: block; }
+
+.longterm .h-win .steps .indicators { margin: 66px 0 40px 0; display: flex; justify-content: center; gap:33px;}
+.longterm .h-win .steps .indicators .circle {position: relative; width: 42px; height: 42px; display: flex; justify-content: center; align-items: center; border-radius: 50%; background-color: var(--color-empty); color: var(--color-f); font-size: var(--font-24); font-weight: var(--font-w-500); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;}
+.longterm .h-win .steps .indicators .circle:not(:first-child)::after { content: ""; position: absolute; left: -33px; width: 33px; height: 2px; background-image: repeating-linear-gradient(90deg, var(--color-empty) 0 3px, transparent 3px 6px); background-size: auto 2px; }
+.longterm .h-win .steps .indicators .circle.active { background-color: var(--color-f); border: 2px solid var(--color-blue); color: var(--color-blue)}
+.longterm .h-win .steps .indicators .circle.comp { background-color: var(--color-blue); color: var(--color-f)}
+.longterm .h-win .steps .indicators .circle.active:not(:first-child)::after, .longterm .h-win .steps .indicators .circle.comp:not(:first-child)::after { background-image: repeating-linear-gradient(90deg, var(--color-blue) 0 3px, transparent 3px 6px); }
+
+.prev, .next { display: inline-block; padding: 10px 20px; background: #007bff; color: #fff; border-radius: 6px; cursor: pointer; margin-top: 20px;}
+.btns { display: flex; justify-content: space-between; }
+.longterm .step-popup .help-w .h-win {overflow-y:visible}
+
 /* step3-버튼 */
 .memberjoin-new .btns .check-bt.w-full { width:auto; }
 .memberjoin-new .btns .check-bt.tc.w-full button{padding: 0 16px}
