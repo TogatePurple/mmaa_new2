@@ -110,7 +110,7 @@
 .longterm .h-win .reds {font-size: var(--font-16);}
 .longterm .h-win .grey-popup-card .blue-txt + .common-txt {margin-top: 20px; }
 /* 팝업 스텝 */
-.longterm .step-popup .help-w {height: 80vh; max-height: 896px; display: flex; flex-direction: column;}
+.longterm .step-popup .help-w {max-height: 896px; display: flex; flex-direction: column;}
 .longterm .step-popup .help-w .h-win {max-height: none; flex:1; display: flex; flex-direction: column; overflow-y: hidden; }
 .longterm .h-win .steps {flex:1; display: flex; flex-direction: column; }
 .longterm .h-win .steps input[type="radio"] { display: none; }
@@ -118,7 +118,7 @@
 .longterm .h-win .steps #step1:checked ~ .step1 { display: flex; }
 .longterm .h-win .steps #step2:checked ~ .step2 { display: flex; }
 .longterm .h-win .steps #step3:checked ~ .step3 { display: flex; }
-.longterm .h-win .steps .step .step-content { overflow-y: auto; height: 60vh; max-height: 650px; min-height: 0; scrollbar-gutter: stable; }
+.longterm .h-win .steps .step .step-content { overflow-y: auto; max-height: 650px; min-height: 0; scrollbar-gutter: stable; }
 
 .longterm .h-win .steps .indicators { margin: 66px 0 40px 0; display: flex; justify-content: center; gap:33px;}
 .longterm .h-win .steps .indicators .circle {position: relative; width: 42px; height: 42px; display: flex; justify-content: center; align-items: center; border-radius: 50%; background-color: var(--color-empty); color: var(--color-f); font-size: var(--font-24); font-weight: var(--font-w-500); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;}
@@ -382,9 +382,9 @@
   .longterm .tooltip ol li { font-size: var(--font-13); }
   .longterm .tooltip ol li span { position: absolute; left: 0; top: 0; color:var(--color-blue) }
   /* 팝업 */
-  .longterm .help-w {height: 90%}
+  /* .longterm .help-w {height: 90%} */
   .longterm .help_member_join .help-w {height: auto}
-  .longterm .help-bg .btns {margin:0; margin-top:10px !important;}
+  /* .longterm .help-bg .btns {margin:0; margin-top:10px !important;} */
   .longterm .h-win .colorful { top: 18px; }
   .longterm .h-win input[type="text"].wth {width: 88%}
   .longterm .h-win .sub_tit{margin-bottom: 30px;}
