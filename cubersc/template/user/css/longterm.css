@@ -111,8 +111,8 @@
 .longterm .h-win .grey-popup-card .blue-txt + .common-txt {margin-top: 20px; }
 /* 팝업 스텝 */
 .longterm .step-popup .help-w {max-height: 896px; display: flex; flex-direction: column;}
-.longterm .step-popup .help-w .h-win {max-height: none; flex:1; display: flex; flex-direction: column; overflow-y: hidden; }
-.longterm .h-win .steps {flex:1; display: flex; flex-direction: column; }
+.longterm .step-popup .help-w .h-win { flex:1; display: flex; flex-direction: column; overflow-y: hidden; }
+.longterm .h-win .steps {flex:1; display: flex; flex-direction: column; max-height: 70vh;}
 .longterm .h-win .steps input[type="radio"] { display: none; }
 .longterm .h-win .steps .step { display: none; flex:1; flex-direction: column; position: relative; min-height: 0; justify-content: space-between; }
 .longterm .h-win .steps #step1:checked ~ .step1 { display: flex; }
