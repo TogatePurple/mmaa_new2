@@ -399,7 +399,7 @@
   /*---------------------------------------------
       #quick-simulation
   ---------------------------------------------*/
-  .simul.longterm .simul-box {width: calc(100% - 20px);}
+  .simul.longterm .simul-box {width: calc(100% - 40px);}
   .simul.longterm .simul-box .top {margin-bottom: 40px;}
   .simul.longterm .box_simullink_wrap .simul_txt {font-size: inherit; line-height: inherit; font-weight: inherit;}
   .simul.longterm .box_simullink_wrap {overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
