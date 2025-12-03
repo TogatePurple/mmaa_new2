@@ -102,6 +102,32 @@ $(document).ready(function () {
     document.getElementById(disquick3).style.display = "";
     document.getElementById(disquick4).style.display = "";
     // 퀵메뉴 미리 체크 -e-
+
+    // 251202 퍼블 추가
+    if ($("div").hasClass("subs") === true) {
+        $(".simul.longterm .simul-box").css("top", "107px");
+    }
+    // 퀵메뉴 버튼으로 시뮬레이션 토글
+    $(".quick-button").click(function () {
+        if ($(".simul.longterm").hasClass("active")) {
+            $(".simul.longterm").removeClass("active");
+        }
+    });
+    // 화면 리사이징, 크기에 따라 시뮬레이션 토글
+    $(window).resize(function () {
+        if ($(window).width() <= 1600) {
+            $(".simul.longterm").removeClass("active");
+        }
+    });
+    if ($(window).width() <= 1600) {
+        $(".simul.longterm").removeClass("active");
+    }
+    // 시뮬 버튼으로 시뮬레이션 토글
+    $(".quick1, .btn-msimulation")
+        .off("click")
+        .click(function () {
+            $(".simul.longterm").toggleClass("active");
+        });
 });
 
 //4개만 체크되게 하기
