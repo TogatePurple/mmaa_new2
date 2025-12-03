@@ -103,7 +103,8 @@ $(document).ready(function () {
     document.getElementById(disquick4).style.display = "";
     // 퀵메뉴 미리 체크 -e-
 
-    // 251202 퍼블 추가
+    // ⭐ 251202 퍼블 추가
+    //**** 시뮬레이션 토글
     if ($("div").hasClass("subs") === true && $(window).width() > 1024) {
         $(".simul.longterm .simul-box").css("top", "107px");
     }
@@ -132,6 +133,36 @@ $(document).ready(function () {
         .click(function () {
             $(".simul.longterm").toggleClass("active");
         });
+
+    //**** 가로스크롤 indicator
+    var $wrap = $(".box_simullink_wrap");
+    var $left = $(".indicator.left");
+    var $right = $(".indicator.right");
+    // indicator 클릭시
+    $(".indicator").click(function () {
+        var wrapWidth = $wrap.width();
+        var scrollWidth = $wrap[0].scrollWidth;
+
+        if ($(this).hasClass("left")) {
+            $wrap.animate({ scrollLeft: 0 }, 300);
+        } else {
+            $wrap.animate({ scrollLeft: scrollWidth - wrapWidth }, 300);
+        }
+    });
+    // 스크롤시
+    $wrap.on("scroll", function () {
+        var wrapWidth = $wrap.width();
+        var scrollWidth = $wrap[0].scrollWidth;
+        var scrollLeft = $wrap.scrollLeft();
+
+        if (scrollLeft > (scrollWidth - wrapWidth) / 2) {
+            $left.removeClass("on");
+            $right.addClass("on");
+        } else {
+            $left.addClass("on");
+            $right.removeClass("on");
+        }
+    });
 });
 
 //4개만 체크되게 하기

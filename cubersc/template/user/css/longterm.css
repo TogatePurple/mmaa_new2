@@ -23,8 +23,10 @@
     --color-6: #666;
     --color-6c: #6c6c6c;
     --color-d: #DDD;
+    --color-f1: #f1f1f1;
     --color-f: #ffffff;
     --color-red: #C6002C;
+    --color-red-70: #E38298;
     --color-text-basic: #1E2124;
     --color-blue: #0074DB;
     --color-empty: #CCD8E3;
@@ -207,7 +209,7 @@
 .list_half_cardnoti > li .box_line.navy .line { background-color: #3b3772; }
 
 /*---------------------------------------------
-    #quick-simultaion
+    #quick-simulation
 ---------------------------------------------*/
 .simul.longterm {height: 100%; opacity: 1; z-index: 20;}
 .simul.longterm.active { transition:none; }
@@ -221,6 +223,7 @@
 .simul.longterm .box_simullink_wrap > ul li > a { flex-direction: column; justify-content: center; padding: 0; box-shadow: none; background: transparent; border-radius: 0;}
 .simul.longterm .m_hide { display: none }
 .simul.longterm .box_simullink_wrap .simul_txt {width:auto; max-width: 110px; text-align: center; margin-top:10px;}
+.simul.longterm .scroll-indicator {display: none;}
 .btn-msimulation.longterm {z-index: 21 !important;}
 .btn-help.longterm, .btn-top.longterm { z-index: 21}
 
@@ -399,6 +402,8 @@
       #quick-simulation
   ---------------------------------------------*/
   .simul.longterm .simul-box {width: calc(100% - 20px);}
+  .simul.longterm .box_simullink_wrap {overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+  .simul.longterm .box_simullink_wrap::-webkit-scrollbar { display: none; }
 }
 
 /****** MO */
@@ -439,4 +444,13 @@
   ---------------------------------------------*/
   .memberjoin-new .q:not(.basic-info) .add_mint .reds.ko {margin-bottom: 0;}
   .tab-content.memberjoin-new .q:not(.basic-info) .aline-b.idea input.won {width: 88%;}
+}
+
+@media screen and (max-width: 567px) {
+  /*---------------------------------------------
+      #quick-simulation
+  ---------------------------------------------*/
+  .simul.longterm .scroll-indicator {height: 8px; margin-top:40px; display: flex; justify-content: center; gap: 6px; }
+  .simul.longterm .scroll-indicator .indicator {width: 12px; border-radius: 100px; background-color: var(--color-f1); transition: all 0.3s ease; cursor: pointer;}
+  .simul.longterm .scroll-indicator .indicator.on {width: 16px; border: 2px solid var(--color-red-70); background-color: var(--color-red); }
 }
