@@ -211,8 +211,8 @@
 /*---------------------------------------------
     #quick-simulation
 ---------------------------------------------*/
-.simul.longterm {height: 100%; opacity: 1; z-index: 20;}
-.simul.longterm.active { transition:none; }
+.simul.longterm {height: 100%; opacity: 1; z-index: 20; visibility: hidden;}
+.simul.longterm.active { transition:none; visibility: visible; }
 .simul.longterm.active .simul-bg {visibility: hidden;}
 .simul.longterm .simul-box .top {display: none;}
 .simul.longterm .simul-box { display: block; padding: 34px 165px 34px 34px; width: 445px; height:598px; top:122px; left: auto; right: -450px; transform: none; background:var(--color-f); box-shadow: -5px 3px 10px 0 rgba(47, 46, 44, 0.05), 3px 3px 10px 0 rgba(47, 46, 44, 0.10); border-radius: 30px 0 0 30px; transition: right 0.5s;}
@@ -224,8 +224,6 @@
 .simul.longterm .m_hide { display: none }
 .simul.longterm .box_simullink_wrap .simul_txt {width:auto; max-width: 110px; text-align: center; margin-top:10px;}
 .simul.longterm .scroll-indicator {display: none;}
-.btn-msimulation.longterm {z-index: 21 !important;}
-.btn-help.longterm, .btn-top.longterm { z-index: 21}
 
 /*---------------------------------------------
     반응형
@@ -453,8 +451,8 @@
       #quick-simulation
   ---------------------------------------------*/
   .simul.longterm .simul-box .top {flex-direction: row;}
-  .simul.longterm .mask_prev.on { position: absolute; top: 24px; bottom: 35px; left: 15px; width: 74px; z-index: 20; background-image: linear-gradient(to right, var(--color-f) 0, transparent 100%); }
-  .simul.longterm .mask_next.on { position: absolute; top: 24px; bottom: 35px; right: 15px; width: 74px; z-index: 20; background-image: linear-gradient(to left, var(--color-f) 0, transparent 100%); }
+  .simul.longterm .mask_prev.on { position: absolute; top: 24px; bottom: 35px; left: 15px; width: 74px; background-image: linear-gradient(to right, var(--color-f) 0, transparent 100%); }
+  .simul.longterm .mask_next.on { position: absolute; top: 24px; bottom: 35px; right: 15px; width: 74px; background-image: linear-gradient(to left, var(--color-f) 0, transparent 100%); }
   .simul.longterm .scroll-indicator {height: 8px; margin-top:40px; display: flex; justify-content: center; gap: 6px; }
   .simul.longterm .scroll-indicator .indicator {width: 12px; border-radius: 100px; background-color: var(--color-f1); transition: all 0.3s ease; cursor: pointer;}
   .simul.longterm .scroll-indicator .indicator.on {width: 16px; border: 2px solid var(--color-red-70); background-color: var(--color-red); }
