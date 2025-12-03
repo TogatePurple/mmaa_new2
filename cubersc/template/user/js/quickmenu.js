@@ -138,6 +138,9 @@ $(document).ready(function () {
     var $wrap = $(".box_simullink_wrap");
     var $left = $(".indicator.left");
     var $right = $(".indicator.right");
+    var $maskPrev = $(".mask_prev");
+    var $maskNext = $(".mask_next");
+
     // indicator 클릭시
     $(".indicator").click(function () {
         var wrapWidth = $wrap.width();
@@ -158,9 +161,13 @@ $(document).ready(function () {
         if (scrollLeft > (scrollWidth - wrapWidth) / 2) {
             $left.removeClass("on");
             $right.addClass("on");
+            $maskPrev.addClass("on");
+            $maskNext.removeClass("on");
         } else {
             $left.addClass("on");
             $right.removeClass("on");
+            $maskPrev.removeClass("on");
+            $maskNext.addClass("on");
         }
     });
 });

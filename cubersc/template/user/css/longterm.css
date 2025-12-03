@@ -402,6 +402,8 @@
       #quick-simulation
   ---------------------------------------------*/
   .simul.longterm .simul-box {width: calc(100% - 20px);}
+  .simul.longterm .simul-box .top {margin-bottom: 40px;}
+  .simul.longterm .box_simullink_wrap .simul_txt {font-size: inherit; line-height: inherit; font-weight: inherit;}
   .simul.longterm .box_simullink_wrap {overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
   .simul.longterm .box_simullink_wrap::-webkit-scrollbar { display: none; }
 }
@@ -450,6 +452,9 @@
   /*---------------------------------------------
       #quick-simulation
   ---------------------------------------------*/
+  .simul.longterm .simul-box .top {flex-direction: row;}
+  .simul.longterm .mask_prev.on { position: absolute; top: 24px; bottom: 35px; left: 15px; width: 74px; z-index: 20; background-image: linear-gradient(to right, var(--color-f) 0, transparent 100%); }
+  .simul.longterm .mask_next.on { position: absolute; top: 24px; bottom: 35px; right: 15px; width: 74px; z-index: 20; background-image: linear-gradient(to left, var(--color-f) 0, transparent 100%); }
   .simul.longterm .scroll-indicator {height: 8px; margin-top:40px; display: flex; justify-content: center; gap: 6px; }
   .simul.longterm .scroll-indicator .indicator {width: 12px; border-radius: 100px; background-color: var(--color-f1); transition: all 0.3s ease; cursor: pointer;}
   .simul.longterm .scroll-indicator .indicator.on {width: 16px; border: 2px solid var(--color-red-70); background-color: var(--color-red); }
