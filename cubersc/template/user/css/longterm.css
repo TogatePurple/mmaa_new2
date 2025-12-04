@@ -237,21 +237,18 @@
     #isSimulation-longterm
 ---------------------------------------------*/
 .longterm.isSimulation .box_calcwrap .subss .top-txt {margin:0 0 0;}
+.longterm.isSimulation [class*="item"]::before, .longterm.isSimulation .two-boxes::before, .longterm.isSimulation .two-boxes::after { position: absolute; content: ""; mask-repeat: no-repeat; mask-position: center; mask-size: contain; }
 .longterm.isSimulation .two-boxes {z-index: 0; margin-bottom:30px; display: flex; gap:30px; position:relative; }
-.longterm.isSimulation .two-boxes::after { z-index: 1; content:""; position: absolute; width: 72px; height: 72px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background: var(--color-f); }
-.longterm.isSimulation .two-boxes::before { z-index: 2; content: ""; position: absolute; width: 36px; height: 36px; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); mask-repeat: no-repeat; mask-position: center; mask-size: contain; background-color: var(--color-9); }
+.longterm.isSimulation .two-boxes::after { z-index: 1; width: 72px; height: 72px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background: var(--color-f); }
+.longterm.isSimulation .two-boxes::before { z-index: 2; width: 36px; height: 36px; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); background-color: var(--color-9); }
 .longterm.isSimulation .box {padding: 32px 28px 32px 48px; display: flex; justify-content: space-between; background: var(--color-f9); box-shadow: none;}
 .longterm.isSimulation .box.blue {padding: 32px 48px 32px 28px; background: var(--color-skyblue)}
 .longterm.isSimulation .item {display: flex; flex-direction: column; gap:10px; align-items: center;}
-.longterm.isSimulation .item.multiple { position: relative;}
-.longterm.isSimulation .item.multiple::before {position: absolute; content:""; width: 28px; height: 28px; left: -56px; top: 50%; transform: translateY(-50%);
-    mask-image: url("../../../../cubersc/template/user/img/sub/ico_multiple.svg"); mask-repeat: no-repeat; mask-position: center; mask-size: contain;
-    background-color: var(--color-ba); }
-.longterm.isSimulation .item.plus { position: relative;}
-.longterm.isSimulation .item.plus::before {position: absolute; content:""; width: 28px; height: 28px; left: -56px; top: 50%; transform: translateY(-50%);
-    mask-image: url("../../../../cubersc/template/user/img/sub/ico_plus.svg"); mask-repeat: no-repeat; mask-position: center; mask-size: contain;
-    background-color: var(--color-ba); }
+.longterm.isSimulation .item.multiple::before, .longterm.isSimulation .item.plus::before { width: 28px; height: 28px; left: -56px; top: 50%; transform: translateY(-50%); background-color: var(--color-ba); }
+.longterm.isSimulation .item.multiple, .longterm.isSimulation .item.plus { position: relative;}
+.longterm.isSimulation .item.multiple::before { mask-image: url("../../../../cubersc/template/user/img/sub/ico_multiple.svg"); }
+.longterm.isSimulation .item.plus::before { mask-image: url("../../../../cubersc/template/user/img/sub/ico_plus.svg"); }
 .longterm.isSimulation .box.blue .item.multiple::before, .longterm.isSimulation .two-boxes .box.blue .item.plus::before {background-color: var(--color-blue-ico);}
 .longterm.isSimulation .item [class*="-txt"] { color: var(--color-6); font-size: var(--font-14); font-weight: var(--font-w-500); line-height: 150%;}
 .longterm.isSimulation .item .emp-txt {color: var(--color-emp-blue); font-weight: var(--font-w-700);}
