@@ -237,18 +237,17 @@
     #isSimulation-longterm
 ---------------------------------------------*/
 .longterm.isSimulation .box_calcwrap .subss .top-txt {margin:0 0 0;}
-.longterm.isSimulation [class*="item"]::before, .longterm.isSimulation .two-boxes::before, .longterm.isSimulation .two-boxes::after { position: absolute; content: ""; mask-repeat: no-repeat; mask-position: center; mask-size: contain; }
+.longterm.isSimulation .two-boxes::before, .longterm.isSimulation .two-boxes::after { position: absolute; content: ""; mask-repeat: no-repeat; mask-position: center; mask-size: contain; }
 .longterm.isSimulation .two-boxes {z-index: 0; margin-bottom:30px; display: flex; gap:30px; position:relative; }
 .longterm.isSimulation .two-boxes::after { z-index: 1; width: 72px; height: 72px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background: var(--color-f); }
 .longterm.isSimulation .two-boxes::before { z-index: 2; width: 36px; height: 36px; top: 50%; left: 50%; transform: translate(-50%, -50%);
     mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); background-color: var(--color-9); }
-.longterm.isSimulation .box {padding: 32px 28px 32px 48px; display: flex; justify-content: space-between; background: var(--color-f9); box-shadow: none;}
+.longterm.isSimulation .box {padding: 32px 28px 32px 48px; display: flex; justify-content: space-between; align-items: center; background: var(--color-f9); box-shadow: none;}
 .longterm.isSimulation .box.blue {padding: 32px 48px 32px 28px; background: var(--color-skyblue)}
 .longterm.isSimulation .item {display: flex; flex-direction: column; gap:10px; align-items: center;}
-.longterm.isSimulation .item.multiple::before, .longterm.isSimulation .item.plus::before { width: 28px; height: 28px; left: -56px; top: 50%; transform: translateY(-50%); background-color: var(--color-ba); }
-.longterm.isSimulation .item.multiple, .longterm.isSimulation .item.plus { position: relative;}
-.longterm.isSimulation .item.multiple::before { mask-image: url("../../../../cubersc/template/user/img/sub/ico_multiple.svg"); }
-.longterm.isSimulation .item.plus::before { mask-image: url("../../../../cubersc/template/user/img/sub/ico_plus.svg"); }
+.longterm.isSimulation .icon.multiple, .longterm.isSimulation .icon.plus { width: 28px; height: 28px; background-color: var(--color-ba); }
+.longterm.isSimulation .icon.multiple { mask-image: url("../../../../cubersc/template/user/img/sub/ico_multiple.svg"); }
+.longterm.isSimulation .icon.plus { mask-image: url("../../../../cubersc/template/user/img/sub/ico_plus.svg"); }
 .longterm.isSimulation .box.blue .item.multiple::before, .longterm.isSimulation .two-boxes .box.blue .item.plus::before {background-color: var(--color-blue-ico);}
 .longterm.isSimulation .item [class*="-txt"] { color: var(--color-6); font-size: var(--font-14); font-weight: var(--font-w-500); line-height: 150%;}
 .longterm.isSimulation .item .emp-txt {color: var(--color-emp-blue); font-weight: var(--font-w-700);}
@@ -259,9 +258,8 @@
 .longterm.isSimulation .box-one .item .sub-txt {color: var(--color-9); font-size: var(--font-20);}
 .longterm.isSimulation .box-one .item .value {display: flex; align-items: center; gap: 4px; font-size: var(--font-30); font-weight: var(--font-w-700); line-height: 60px; }
 .longterm.isSimulation .box-one .item .won {font-size: var(--font-22);}
-.longterm.isSimulation .box-one .item.plus::before {width: 36px; height: 36px; left: -130px; top: 50%;
-    mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); background-color: var(--color-9); }
-.longterm.isSimulation .box-one .item.result::before {mask-image: url("../../../../cubersc/template/user/img/sub/ico_result.svg");}
+.longterm.isSimulation .box-one .icon.plus {width: 36px; height: 36px; mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); background-color: var(--color-9); }
+.longterm.isSimulation .box-one .icon.result {mask-image: url("../../../../cubersc/template/user/img/sub/ico_result.svg");}
 .longterm.isSimulation .txt_bl {margin-left:18px; font-size: var(--font-20); font-weight: var(--font-w-350);}
 
 /*---------------------------------------------
@@ -312,6 +310,7 @@
   /* step3-팝업 */
   .longterm .aline:not(.half_aline) .inp select {width :360px;}
   .longterm .h-win .aline-b:not(.birth-d) input[type="text"] {width :360px;}
+  
   /*---------------------------------------------
       #SignUpSelection_new
   ---------------------------------------------*/
@@ -426,6 +425,16 @@
   .simul.longterm .box_simullink_wrap > ul li:nth-child(3) { grid-area: 2 / 1; }
   .simul.longterm .box_simullink_wrap > ul li:nth-child(4) { grid-area: 2 / 2; }
   .simul.longterm .box_simullink_wrap > ul li:nth-child(7) { grid-area: 2 / 3; }
+
+  /*---------------------------------------------
+      #isSimulation-longterm
+  ---------------------------------------------*/
+  .longterm.isSimulation .two-boxes {flex-direction: column;}
+  .longterm.isSimulation .box.blue, .longterm.isSimulation .box {padding:24px; padding-bottom:24px;}
+  .longterm.isSimulation .two-boxes {gap:40px;}
+  .longterm.isSimulation .two-boxes::after {display: none;}
+  .longterm.isSimulation .two-boxes::before {width:20px; height:20px;}
+  .longterm.isSimulation .box-one .box{flex-direction: column;}
 }
 
 @media screen and (max-width: 767px) {
