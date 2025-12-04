@@ -128,7 +128,7 @@
 .longterm .h-win .steps #step1:checked ~ .step1 { display: flex; }
 .longterm .h-win .steps #step2:checked ~ .step2 { display: flex; }
 .longterm .h-win .steps #step3:checked ~ .step3 { display: flex; }
-.longterm .h-win .steps .step .step-content { overflow-y: auto; max-height: 650px; min-height: 0; scrollbar-gutter: stable; }
+.longterm .h-win .steps .step .step-content { overflow-y: auto; max-height: 550px; min-height: 0; scrollbar-gutter: stable; }
 
 .longterm .h-win .steps .indicators { margin: 66px 0 40px 0; display: flex; justify-content: center; gap:33px;}
 .longterm .h-win .steps .indicators .circle {position: relative; width: 42px; height: 42px; display: flex; justify-content: center; align-items: center; border-radius: 50%; background-color: var(--color-empty); color: var(--color-f); font-size: var(--font-24); font-weight: var(--font-w-500); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;}
@@ -238,7 +238,7 @@
 ---------------------------------------------*/
 .longterm.isSimulation .box_calcwrap .subss .top-txt {margin:0 0 0;}
 .longterm.isSimulation .two-boxes::before, .longterm.isSimulation .two-boxes::after { position: absolute; content: ""; mask-repeat: no-repeat; mask-position: center; mask-size: contain; }
-.longterm.isSimulation .two-boxes {z-index: 0; margin-bottom:30px; display: flex; gap:30px; position:relative; }
+.longterm.isSimulation .two-boxes {z-index: 0; margin:60px 0 30px; display: flex; gap:30px; position:relative; }
 .longterm.isSimulation .two-boxes::after { z-index: 1; width: 72px; height: 72px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background: var(--color-f); }
 .longterm.isSimulation .two-boxes::before { z-index: 2; width: 36px; height: 36px; top: 50%; left: 50%; transform: translate(-50%, -50%);
     mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); background-color: var(--color-9); }
@@ -255,8 +255,9 @@
 .longterm.isSimulation .item .value { font-size: var(--font-24); font-weight: var(--font-w-500); }
 .longterm.isSimulation .box-one .box { padding: 40px 114px; margin-bottom: 20px; background: var(--color-f); box-shadow: 3px 3px 10px 0 rgba(47, 46, 44, 0.10); }
 .longterm.isSimulation .box-one .item .main-txt {font-size: var(--font-24); font-weight: var(--font-w-400)}
+.longterm.isSimulation .box-one .item .main-txt .plus {display: none;}
 .longterm.isSimulation .box-one .item .sub-txt {color: var(--color-9); font-size: var(--font-20);}
-.longterm.isSimulation .box-one .item .value {display: flex; align-items: center; gap: 4px; font-size: var(--font-30); font-weight: var(--font-w-700); line-height: 60px; }
+.longterm.isSimulation .box-one .item .value {display: flex; align-items: center; gap: 4px; font-size: var(--font-30); font-weight: var(--font-w-700); line-height: 200%; }
 .longterm.isSimulation .box-one .item .won {font-size: var(--font-22);}
 .longterm.isSimulation .box-one .icon.plus {width: 36px; height: 36px; mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); background-color: var(--color-9); }
 .longterm.isSimulation .box-one .icon.result {mask-image: url("../../../../cubersc/template/user/img/sub/ico_result.svg");}
@@ -431,10 +432,14 @@
   ---------------------------------------------*/
   .longterm.isSimulation .two-boxes {flex-direction: column;}
   .longterm.isSimulation .box.blue, .longterm.isSimulation .box {padding:24px; padding-bottom:24px;}
-  .longterm.isSimulation .two-boxes {gap:40px;}
+  .longterm.isSimulation .two-boxes {gap:40px; margin-top:50px; margin-bottom: 40px;}
   .longterm.isSimulation .two-boxes::after {display: none;}
   .longterm.isSimulation .two-boxes::before {width:20px; height:20px;}
-  .longterm.isSimulation .box-one .box{flex-direction: column;}
+  .longterm.isSimulation .box-one .box{padding: 16px 10px 20px; flex-direction: column;}
+  .longterm.isSimulation .box-one .item {padding: 0 10px; width:100%; flex-direction: row; justify-content: space-between; }
+  .longterm.isSimulation .box-one .icon {display: none;}
+  .longterm.isSimulation .box-one .item .main-txt .plus {margin-right: 6px; display: inline-block}
+  .longterm.isSimulation .box-one .item.result {padding-top: 14px; margin-top:10px; border-top: var(--border-d);}
 }
 
 @media screen and (max-width: 767px) {
@@ -452,6 +457,22 @@
   .simul.longterm .box_simullink_wrap .simul_txt {font-size: inherit; line-height: inherit; font-weight: inherit;}
   .simul.longterm .box_simullink_wrap {overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
   .simul.longterm .box_simullink_wrap::-webkit-scrollbar { display: none; }
+
+  /*---------------------------------------------
+      #isSimulation-longterm
+  ---------------------------------------------*/
+  .longterm.isSimulation .two-boxes .item {gap:8px; padding-bottom: 22px; position: relative;}
+  .longterm.isSimulation .two-boxes .item .value {font-size: var(--font-18);}
+  .longterm.isSimulation .item .emp-txt { text-align: center; }
+  .longterm.isSimulation .two-boxes .item .sub-txt { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); white-space: nowrap;}
+  .longterm.isSimulation .icon.multiple, .longterm.isSimulation .icon.plus {width: 20px; height: 20px; mask-size: cover;}
+  .longterm.isSimulation .box-one .item .main-txt {font-size: var(--font-14)}
+  .longterm.isSimulation .box-one .item .value, .longterm.isSimulation .box-one .item .won {font-size: var(--font-16);}
+  .longterm.isSimulation .box-one .item.result .main-txt { font-size: var(--font-16); font-weight: var(--font-w-500); }
+  .longterm.isSimulation .box-one .item.result .sub-txt { font-size: var(--font-14); }
+  .longterm.isSimulation .box-one .item.result .value {font-size: var(--font-20);}
+  .longterm.isSimulation .box-one .box {margin-bottom: 10px; }
+  .longterm.isSimulation .txt_bl {margin-left:0; font-size: var(--font-14);}
 }
 
 /****** MO */
