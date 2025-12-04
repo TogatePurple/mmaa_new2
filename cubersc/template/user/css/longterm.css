@@ -2,6 +2,7 @@
     #공통
 ---------------------------------------------*/
 .longterm, .receipt{
+    --font-12:12px;
     --font-13:13px;
     --font-14:14px;
     --font-15:15px;
@@ -10,6 +11,7 @@
     --font-20:20px;
     --font-22:22px;
     --font-24:24px;
+    --font-30:30px;
 
     --font-w-350:350;
     --font-w-400:400;
@@ -22,13 +24,19 @@
     --color-45: #454545;
     --color-6: #666;
     --color-6c: #6c6c6c;
+    --color-9: #999999;
+    --color-ba: #BABABA;
     --color-d: #DDD;
+    --color-f9: #f9f9f9;
     --color-f1: #f1f1f1;
     --color-f: #ffffff;
     --color-red: #C6002C;
     --color-red-70: #E38298;
     --color-text-basic: #1E2124;
     --color-blue: #0074DB;
+    --color-emp-blue: #2C7DB3;
+    --color-skyblue: #F2F8FD;
+    --color-blue-ico: #9BB2C5;
     --color-empty: #CCD8E3;
 
     --border-b: 1px solid var(--color-0);
@@ -224,6 +232,40 @@
 .simul.longterm .m_hide { display: none }
 .simul.longterm .box_simullink_wrap .simul_txt {width:auto; max-width: 110px; text-align: center; margin-top:10px;}
 .simul.longterm .scroll-indicator {display: none;}
+
+/*---------------------------------------------
+    #isSimulation-longterm
+---------------------------------------------*/
+.longterm.isSimulation .box_calcwrap .subss .top-txt {margin:0 0 0;}
+.longterm.isSimulation .two-boxes {z-index: 0; margin-bottom:30px; display: flex; gap:30px; position:relative; }
+.longterm.isSimulation .two-boxes::after { z-index: 1; content:""; position: absolute; width: 72px; height: 72px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background: var(--color-f); }
+.longterm.isSimulation .two-boxes::before { z-index: 2; content: ""; position: absolute; width: 36px; height: 36px; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); mask-repeat: no-repeat; mask-position: center; mask-size: contain; background-color: var(--color-9); }
+.longterm.isSimulation .box {padding: 32px 28px 32px 48px; display: flex; justify-content: space-between; background: var(--color-f9); box-shadow: none;}
+.longterm.isSimulation .box.blue {padding: 32px 48px 32px 28px; background: var(--color-skyblue)}
+.longterm.isSimulation .item {display: flex; flex-direction: column; gap:10px; align-items: center;}
+.longterm.isSimulation .item.multiple { position: relative;}
+.longterm.isSimulation .item.multiple::before {position: absolute; content:""; width: 28px; height: 28px; left: -56px; top: 50%; transform: translateY(-50%);
+    mask-image: url("../../../../cubersc/template/user/img/sub/ico_multiple.svg"); mask-repeat: no-repeat; mask-position: center; mask-size: contain;
+    background-color: var(--color-ba); }
+.longterm.isSimulation .item.plus { position: relative;}
+.longterm.isSimulation .item.plus::before {position: absolute; content:""; width: 28px; height: 28px; left: -56px; top: 50%; transform: translateY(-50%);
+    mask-image: url("../../../../cubersc/template/user/img/sub/ico_plus.svg"); mask-repeat: no-repeat; mask-position: center; mask-size: contain;
+    background-color: var(--color-ba); }
+.longterm.isSimulation .box.blue .item.multiple::before, .longterm.isSimulation .two-boxes .box.blue .item.plus::before {background-color: var(--color-blue-ico);}
+.longterm.isSimulation .item [class*="-txt"] { color: var(--color-6); font-size: var(--font-14); font-weight: var(--font-w-500); line-height: 150%;}
+.longterm.isSimulation .item .emp-txt {color: var(--color-emp-blue); font-weight: var(--font-w-700);}
+.longterm.isSimulation .item .sub-txt {color: var(--color-6); font-size: var(--font-12); font-weight: var(--font-w-400);}
+.longterm.isSimulation .item .value { font-size: var(--font-24); font-weight: var(--font-w-500); }
+.longterm.isSimulation .box-one .box { padding: 40px 114px; margin-bottom: 20px; background: var(--color-f); box-shadow: 3px 3px 10px 0 rgba(47, 46, 44, 0.10); }
+.longterm.isSimulation .box-one .item .main-txt {font-size: var(--font-24); font-weight: var(--font-w-400)}
+.longterm.isSimulation .box-one .item .sub-txt {color: var(--color-9); font-size: var(--font-20);}
+.longterm.isSimulation .box-one .item .value {display: flex; align-items: center; gap: 4px; font-size: var(--font-30); font-weight: var(--font-w-700); line-height: 60px; }
+.longterm.isSimulation .box-one .item .won {font-size: var(--font-22);}
+.longterm.isSimulation .box-one .item.plus::before {width: 36px; height: 36px; left: -130px; top: 50%;
+    mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); background-color: var(--color-9); }
+.longterm.isSimulation .box-one .item.result::before {mask-image: url("../../../../cubersc/template/user/img/sub/ico_result.svg");}
+.longterm.isSimulation .txt_bl {margin-left:18px; font-size: var(--font-20); font-weight: var(--font-w-350);}
 
 /*---------------------------------------------
     반응형
