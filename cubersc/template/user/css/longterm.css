@@ -297,6 +297,16 @@
 /****** 태블릿 기존 css 수정 */
 @media screen and (max-width: 1240px) {
   .memberjoin-new select {font-size: 18px;}
+
+  /*---------------------------------------------
+      #receipt
+  ---------------------------------------------*/
+  .receipt .bx-container .bx-tit {flex-direction: column; align-items: flex-start;}
+  .receipt .bx-container.ratio-1-2 .bx-tit {flex-direction: row; }
+  /* 탭-수납내역 테이블 */
+  .receipt .st-table table td {font-size: var(--font-14); letter-spacing: -1.5px;}
+  .receipt .st-table table th { letter-spacing: -1.5px; word-break: keep-all; overflow-wrap: normal; white-space: normal;}
+  .receipt  .st-table table td .bl-btn {font-size: var(--font-13); letter-spacing: -1.5px;}
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1024px) {
@@ -425,6 +435,22 @@
   .memberjoin-new .q:not(.basic-info) .add_mint:has(.reds) {margin-top: 10px;}
   .tab-content.memberjoin-new .q:not(.basic-info) .aline-b.idea input.won {width: 94%;}
   .tab-content.memberjoin-new .q:not(.basic-info) .aline-b.idea input.won ~ .txt_lb {margin-left:12px;}
+
+  /*---------------------------------------------
+      #receipt
+  ---------------------------------------------*/
+  /* 첫번째 영역 블루 박스 */
+  .receipt .bx-container {padding: 30px 20px; flex-direction: column; border-radius: 10px; background: #F2FAFF; }
+  .receipt .bx-container .blue-bx {padding:0 0 20px 0; flex-direction: row; justify-content: space-between; }
+  .receipt .bx-container .blue-bx:last-child {border: none; padding: 0;}
+  .receipt .bx-container .blue-bx.flex {align-items: flex-end; }
+  .receipt .bx-container .bigwon {margin-top:0;}
+  .receipt .tab-th .blue-bx .bigwon {font-size: var(--font-24)}
+  /* 첫번째 영역 흰색 영역 */
+  .receipt .bx-container.ratio-1-2 {background: transparent; padding:0;}
+  .receipt .bx-container.ratio-1-2 .bg-grey {background: transparent; flex-direction: column; align-items: stretch}
+  .receipt .bx-container.ratio-1-2 .bx-tit {display: none;}
+
   /*---------------------------------------------
       #SignUpSelection_new
   ---------------------------------------------*/
@@ -462,7 +488,8 @@
   .longterm.isSimulation .box-one .box{padding: 16px 10px 20px; flex-direction: column;}
   .longterm.isSimulation .box-one .item {padding: 0 10px; width:100%; flex-direction: row; justify-content: space-between; }
   .longterm.isSimulation .box-one .icon {display: none;}
-  .longterm.isSimulation .box-one .item .main-txt .plus {margin-right: 6px; display: inline-block}
+  .longterm.isSimulation .box-one .item .main-txt {flex-direction: row;}
+  .longterm.isSimulation .box-one .item .main-txt .plus {margin-right: 6px; display: block;}
   .longterm.isSimulation .box-one .item.result {padding-top: 14px; margin-top:10px; border-top: var(--border-d);}
 }
 
