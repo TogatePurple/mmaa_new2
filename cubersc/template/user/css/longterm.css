@@ -236,7 +236,7 @@
 .simul.longterm .m_hide { display: none }
 .simul.longterm .box_simullink_wrap .simul_txt {width:auto; max-width: 110px; text-align: center; margin-top:10px;}
 .simul.longterm .scroll-indicator {display: none;}
-.simul.longterm .box_simullink_wrap .simul_ico07 { background: url(../../../template/user/img/sub/ico_quicksimul07.svg) no-repeat;}
+.simul.longterm .box_simullink_wrap .simul_ico07 { background: url(../../../template/user/img/sub/ico_quicksimul07.svg) no-repeat; background-size: auto !important;}
 .simul.longterm .box_simullink_wrap li.simul_01 a:hover .simul_ico01 { background:url("../../../template/user/img/sub/ico_quicksimul01.png") no-repeat; }
 .simul.longterm .box_simullink_wrap li.simul_02 a:hover .simul_ico02 { background:url("../../../template/user/img/sub/ico_quicksimul02.png") no-repeat;	 }
 .simul.longterm .box_simullink_wrap li.simul_03 a:hover .simul_ico03 { background:url("../../../template/user/img/sub/ico_quicksimul03.png") no-repeat;	 }
