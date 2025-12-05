@@ -254,6 +254,9 @@
 .simul.longterm .box_simullink_wrap li.simul_06.clicked a .simul_ico06 { background:url("../../../template/user/img/sub/ico_quicksimul06_w.png") no-repeat; }
 .simul.longterm .box_simullink_wrap li.simul_07.clicked a .simul_ico07 { background:url("../../../template/user/img/sub/ico_quicksimul07_w.svg") no-repeat; }
 
+.quick li.q1 > a.quick1.active {background: url(../../../template/user/img/q_icon0_blue.png) center 15px no-repeat;}
+.quick1.active {color: #327BD9;}
+
 /*---------------------------------------------
     #isSimulation-longterm
 ---------------------------------------------*/

@@ -131,7 +131,8 @@ $(document).ready(function () {
     $(".quick1, .btn-msimulation")
         .off("click")
         .click(function () {
-            $(".simul.longterm").toggleClass("active");
+            const isActive = $(".simul.longterm").toggleClass("active").hasClass("active");
+            $(".quick1").toggleClass("active", isActive);
         });
 
     //**** 가로스크롤 indicator
