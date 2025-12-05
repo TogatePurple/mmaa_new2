@@ -266,16 +266,16 @@
 .longterm.isSimulation .two-boxes::after { z-index: 1; width: 72px; height: 72px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 100%; background: var(--color-f); }
 .longterm.isSimulation .two-boxes::before { z-index: 2; width: 36px; height: 36px; top: 50%; left: 50%; transform: translate(-50%, -50%);
     mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); background-color: var(--color-9); }
-.longterm.isSimulation .box {padding: 32px 28px 32px 48px; display: flex; justify-content: space-between; align-items: center; background: var(--color-f9); box-shadow: none;}
-.longterm.isSimulation .box.blue {padding: 32px 48px 32px 28px; background: var(--color-skyblue)}
+.longterm.isSimulation .box {padding: 34px 42px 34px 68px; display: flex; justify-content: space-between; align-items: center; background: var(--color-f9); box-shadow: none;}
+.longterm.isSimulation .box.blue {padding: 34px 68px 34px 42px; background: var(--color-skyblue)}
 .longterm.isSimulation .item {display: flex; flex-direction: column; gap:10px; align-items: center;}
 .longterm.isSimulation .icon.multiple, .longterm.isSimulation .icon.plus { width: 28px; height: 28px; background-color: var(--color-ba); }
 .longterm.isSimulation .icon.multiple { mask-image: url("../../../../cubersc/template/user/img/sub/ico_multiple.svg"); }
 .longterm.isSimulation .icon.plus { mask-image: url("../../../../cubersc/template/user/img/sub/ico_plus.svg"); }
 .longterm.isSimulation .box.blue .item.multiple::before, .longterm.isSimulation .two-boxes .box.blue .item.plus::before {background-color: var(--color-blue-ico);}
-.longterm.isSimulation .item [class*="-txt"] { color: var(--color-6); font-size: var(--font-14); font-weight: var(--font-w-500); line-height: 150%;}
+.longterm.isSimulation .item [class*="-txt"] { display: flex; flex-direction: column; align-items: center; color: var(--color-6); font-size: var(--font-16); font-weight: var(--font-w-500); line-height: 150%;}
 .longterm.isSimulation .item .emp-txt {color: var(--color-emp-blue); font-weight: var(--font-w-700);}
-.longterm.isSimulation .item .sub-txt {color: var(--color-6); font-size: var(--font-12); font-weight: var(--font-w-400);}
+.longterm.isSimulation .item .sub-txt { color: var(--color-6); font-size: var(--font-14); font-weight: var(--font-w-400);}
 .longterm.isSimulation .item .value { font-size: var(--font-24); font-weight: var(--font-w-500); }
 .longterm.isSimulation .box-one .box { padding: 40px 114px; margin-bottom: 20px; background: var(--color-f); box-shadow: 3px 3px 10px 0 rgba(47, 46, 44, 0.10); }
 .longterm.isSimulation .box-one .item .main-txt {font-size: var(--font-24); font-weight: var(--font-w-400)}
@@ -485,9 +485,10 @@
   /*---------------------------------------------
       #isSimulation-longterm
   ---------------------------------------------*/
-  .longterm.isSimulation .two-boxes .item {gap:8px; padding-bottom: 22px; position: relative;}
+  .longterm.isSimulation .two-boxes .item {gap:8px; padding-bottom: 25px; position: relative;}
   .longterm.isSimulation .two-boxes .item .value {font-size: var(--font-18);}
-  .longterm.isSimulation .item .emp-txt { text-align: center; }
+  .longterm.isSimulation .item .emp-txt { text-align: center; font-size: var(--font-14)}
+  .longterm.isSimulation .item .main-txt { text-align: center; font-size: var(--font-14)}
   .longterm.isSimulation .two-boxes .item .sub-txt { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); white-space: nowrap;}
   .longterm.isSimulation .icon.multiple, .longterm.isSimulation .icon.plus {width: 20px; height: 20px; mask-size: cover;}
   .longterm.isSimulation .box-one .item .main-txt {font-size: var(--font-14)}
