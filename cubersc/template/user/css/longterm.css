@@ -228,8 +228,8 @@
 .simul.longterm.active .simul-box {right: 0; transition: right 0.5s;}
 .simul.longterm .box_simullink_wrap {height: 100%;}
 .simul.longterm .box_simullink_wrap > ul {width: 100%; height: 100%; align-content: space-between;}
-.simul.longterm .box_simullink_wrap > ul li {width: 117px; height: 110px; margin-top: 0; font-size: var(--font-14); line-height: 150%; background: var(--color-f); }
-.simul.longterm .box_simullink_wrap > ul li:hover {background-color: var(--color-f0);}
+.simul.longterm .box_simullink_wrap > ul li {width: 117px; height: 110px; margin-top: 0; font-size: var(--font-14); line-height: 150%; background: var(--color-f); transition: background-color 0.5s ease;}
+.simul.longterm .box_simullink_wrap > ul li:hover {background-color: var(--color-f0); }
 .simul.longterm .box_simullink_wrap > ul li > a { flex-direction: column; justify-content: center; padding: 0; box-shadow: none; background: transparent; border-radius: 0;}
 .simul.longterm .box_simullink_wrap > ul li > a:hover { color:var(--color-0)}
 
