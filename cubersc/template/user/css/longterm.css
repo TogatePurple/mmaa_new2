@@ -45,11 +45,11 @@
 }
 
 /* 툴팁 */
-.longterm .info { position: relative; }
+.longterm .info { position: absolute; top:30px; left:140px;}
 .longterm .info-icon { display: inline-block; width: 20px; height: 20px; cursor: pointer; background-color: var(--color-6c); border-radius: 100px;}
 .longterm .info-icon::before { content: ""; position: absolute; top: 50%; left: 50%; width: 70%; height: 70%; transform: translate(-50%, -50%); background-image: url('../../../../cubersc/template/user/img/sub/ico_info_1.svg'); background-size: contain; background-repeat: no-repeat; background-position: center; }
 .longterm .info:hover .info-icon {background-color: var(--color-blue)}
-.longterm .tooltip { width: 425px; position: absolute; left: 55%; bottom: calc(100% + 48px); transform: translateX(-50%); background: var(--color-f); padding: 24px; border-radius: 12px; box-shadow: 3px 3px 10px 0 rgba(47, 46, 44, 0.25);
+.longterm .tooltip { width: 425px; position: absolute; left: 55%; bottom: calc(100% + 16px); transform: translateX(-50%); background: var(--color-f); padding: 24px; border-radius: 12px; box-shadow: 3px 3px 10px 0 rgba(47, 46, 44, 0.25);
     opacity: 0; visibility: hidden; transition: opacity .2s ease, transform .2s ease; pointer-events: none; }
 .longterm .tooltip::after { content: ""; position: absolute; left: 50%; bottom: -12px; transform: translateX(-50%); display:block; width:0; height:0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 12px solid var(--color-f);
     filter: drop-shadow(2px 2px 2px rgba(47,46,44,0.25)); }
@@ -161,7 +161,7 @@
 .receipt .bx-container{ display: flex; gap: 24px; }
 .receipt .bx-container.ratio-1-2{margin-top:24px;}
 .receipt .bx-container.ratio-1-2 .bg-grey:nth-child(1) { flex: 0 0 calc((100% - 24px) / 3); }
-.receipt .bx-container.ratio-1-2 .bg-grey:nth-child(2) { flex: 0 0 calc((100% - 24px) * 2 / 3); }
+.receipt .bx-container.ratio-1-2 .bg-grey:nth-child(2) { flex: 0 0 calc((100% - 24px) * 2 / 3); position:relative; }
 
 .receipt .unit { margin-bottom: 10px; text-align:end; font-size: var(--font-16); font-weight: var(--font-w-350); }
 
@@ -182,10 +182,10 @@
 .receipt .bx-container .bx-row .row-content { color: var(--color-45); font-size: var(--font-22); line-height: 140%; }
 .receipt .bx-container .bx-row .row-content.emp {color: var(--color-0); font-weight: var(--font-w-700); }
 .receipt .bx-container .bx-row .row-content.emp .num {border-bottom: var(--border-b);}
-.receipt .bx-container .bx-row .row-content.tag { padding: 4px 12px; background: var(); border-radius: 100px; color: var(--color-f); font-size: var(--font-16); font-weight: 700; }
+.receipt .bx-container .bx-row .row-content.tag { padding: 4px 12px; background: var(--color-blue); border-radius: 100px; color: var(--color-f); font-size: var(--font-16); font-weight: 700; }
 .receipt .bx-container .bx-row .row-content.tag.not { background: var(--color-red); }
 
-.receipt .caution { color: var(--color-red); font-size: var(--font-16); font-weight: var(--font-w-500); line-height: 22px; margin-top: 28px;}
+.receipt .caution { color: var(--color-red); font-size: var(--font-16); font-weight: var(--font-w-500); line-height: 137.5%; margin-top: 28px;}
 .receipt .caution li + li { margin-top: 12px; }
 
 .caution_bright_container { display: flex; justify-content: space-between; }
@@ -440,6 +440,7 @@
       #receipt
   ---------------------------------------------*/
   /* 첫번째 영역 블루 박스 */
+  .receipt .unit {display: none;}
   .receipt .bx-container {padding: 30px 20px; flex-direction: column; border-radius: 10px; background: #F2FAFF; }
   .receipt .bx-container .blue-bx {padding:0 0 20px 0; flex-direction: row; justify-content: space-between; }
   .receipt .bx-container .blue-bx:last-child {border: none; padding: 0;}
@@ -447,9 +448,14 @@
   .receipt .bx-container .bigwon {margin-top:0;}
   .receipt .tab-th .blue-bx .bigwon {font-size: var(--font-24)}
   /* 첫번째 영역 흰색 영역 */
-  .receipt .bx-container.ratio-1-2 {background: transparent; padding:0;}
+  .receipt .bx-container.ratio-1-2 {background: transparent; padding:0 0 24px; border-bottom: var(--border-d); border-radius: 0;}
   .receipt .bx-container.ratio-1-2 .bg-grey {background: transparent; flex-direction: column; align-items: stretch}
   .receipt .bx-container.ratio-1-2 .bx-tit {display: none;}
+  .receipt .bx-container.ratio-1-2 .bx-row + .bx-row {margin-top:24px;}
+  .receipt .bx-container.ratio-1-2 .bx-row .row-content {color:var(--color-3); font-size: var(--font-20); font-weight: var(--font-w-700); }
+  .receipt .bx-container.ratio-1-2 .bg-grey:nth-child(1) {border-bottom: none; padding-bottom: 0;}
+  .receipt .bx-container.ratio-1-2 .bx-row .row-content.tag {color: var(--color-f); font-size: var(--font-16);}
+  .longterm .info {}
 
   /*---------------------------------------------
       #SignUpSelection_new
@@ -565,6 +571,24 @@
   ---------------------------------------------*/
   .memberjoin-new .q:not(.basic-info) .add_mint .reds.ko {margin-bottom: 0;}
   .tab-content.memberjoin-new .q:not(.basic-info) .aline-b.idea input.won {width: 88%;}
+
+  /*---------------------------------------------
+      #receipt
+  ---------------------------------------------*/
+  .receipt .bx-container {padding: 20px 10px; }
+  .receipt .bx-container .bx-tit {font-size: var(--font-16);}
+  .receipt .bx-container .bx-tit .bx-tit-sub {font-size: var(--font-13);}
+  .receipt .tab-th .blue-bx .bigwon {font-size:var(--font-18)}
+  .receipt .bx-container .bigwon .won {margin-left: 2px; font-size:var(--font-14)}
+  .receipt .bx-container .bx-row .row-title {font-size: var(--font-14)}
+  /* 첫번째 영역 흰배경 */
+  .receipt .bx-container.ratio-1-2 .bx-row .row-content {font-size: var(--font-16)}
+  .receipt .bx-container.ratio-1-2 .bx-row + .bx-row {margin-top: 20px;}
+  .receipt .bx-container.ratio-1-2 {gap:20px; margin-top:20px; padding: 0 0 20px; }
+  .receipt .bx-container.ratio-1-2 .bx-row .row-content.tag { padding: 2px 8px; font-size: var(--font-14); font-weight: var(--font-w-500);}
+  .receipt .bx-container.ratio-1-2 .bx-row .row-content.emp .num {border-bottom:none;}
+  /* 첫번째 영역 caution */
+  .receipt .caution {margin-top: 20px; font-size: var(--font-14); }
 }
 
 @media screen and (max-width: 567px) {
