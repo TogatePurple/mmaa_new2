@@ -55,11 +55,11 @@
         <div id="wrap">
             <div class="subs">
                 <!-- [S] 퀵메뉴 -->
-                <!-- ⭐ -->
-                <button type="button" class="btn-msimulation longterm">저축/대여 시뮬레이션</button>
+                <!-- ⭐[S]: 퍼블 수정 -->
+                <button type="button" class="btn-msimulation longterm" aria-expanded="false" aria-controls="simulPanel">저축/대여 시뮬레이션</button>
                 <button type="button" class="btn-help longterm">채팅 상담</button>
                 <button type="button" class="btn-top longterm">맨 위로 이동</button>
-                <div class="simul longterm">
+                <div id="simulPanel" class="simul longterm">
                     <div class="simul-bg"></div>
                     <div class="simul-box">
                         <a href="javascript:;" title="시뮬레이션 닫기" class="simul-close">시뮬레이션 닫기</a>
@@ -107,14 +107,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="scroll-indicator" role="progressbar" aria-label="가로 스크롤 위치">
+                        <div class="scroll-indicator" aria-hidden="true">
                             <div class="indicator left on"></div>
                             <div class="indicator right"></div>
                         </div>
                         <a href="javascript:;" title="시뮬레이션 닫기" class="simul-close2"><span class="blind">시뮬레이션 닫기</span></a>
                     </div>
                 </div>
-                <!-- ⭐ -->
+                <!-- ⭐[E]: 퍼블 수정 -->
                 <div class="quick">
                     <div class="quick-tit">
                         <p>Quick<br />Menu</p>

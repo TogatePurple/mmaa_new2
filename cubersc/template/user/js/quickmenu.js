@@ -109,6 +109,7 @@ $(document).ready(function () {
     function syncQuick1Active() {
         const isActive = $(".simul.longterm").hasClass("active");
         $(".quick1").toggleClass("active", isActive);
+        $(".btn-msimulation").attr("aria-expanded", isActive);
     }
     // subs 클래스 있을 때
     if ($("div").hasClass("subs") && $(window).width() > 1024) {
