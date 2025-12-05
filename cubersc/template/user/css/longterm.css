@@ -29,6 +29,7 @@
     --color-d: #DDD;
     --color-f9: #f9f9f9;
     --color-f1: #f1f1f1;
+    --color-f0: #F0F0F0;
     --color-f: #ffffff;
     --color-red: #C6002C;
     --color-red-70: #E38298;
@@ -227,11 +228,31 @@
 .simul.longterm.active .simul-box {right: 0; transition: right 0.5s;}
 .simul.longterm .box_simullink_wrap {height: 100%;}
 .simul.longterm .box_simullink_wrap > ul {width: 100%; height: 100%; align-content: space-between;}
-.simul.longterm .box_simullink_wrap > ul li {width: 117px; height: 100px; margin-top: 0; border-radius:0; font-size: var(--font-14); line-height: 150%; }
+.simul.longterm .box_simullink_wrap > ul li {width: 117px; height: 110px; margin-top: 0; font-size: var(--font-14); line-height: 150%; background: var(--color-f); }
+.simul.longterm .box_simullink_wrap > ul li:hover {background-color: var(--color-f0);}
 .simul.longterm .box_simullink_wrap > ul li > a { flex-direction: column; justify-content: center; padding: 0; box-shadow: none; background: transparent; border-radius: 0;}
+.simul.longterm .box_simullink_wrap > ul li > a:hover { color:var(--color-0)}
+
 .simul.longterm .m_hide { display: none }
 .simul.longterm .box_simullink_wrap .simul_txt {width:auto; max-width: 110px; text-align: center; margin-top:10px;}
 .simul.longterm .scroll-indicator {display: none;}
+.simul.longterm .box_simullink_wrap .simul_ico07 { background: url(../../../template/user/img/sub/ico_quicksimul07.svg) no-repeat;}
+.simul.longterm .box_simullink_wrap li.simul_01 a:hover .simul_ico01 { background:url("../../../template/user/img/sub/ico_quicksimul01.png") no-repeat; }
+.simul.longterm .box_simullink_wrap li.simul_02 a:hover .simul_ico02 { background:url("../../../template/user/img/sub/ico_quicksimul02.png") no-repeat;	 }
+.simul.longterm .box_simullink_wrap li.simul_03 a:hover .simul_ico03 { background:url("../../../template/user/img/sub/ico_quicksimul03.png") no-repeat;	 }
+.simul.longterm .box_simullink_wrap li.simul_04 a:hover .simul_ico04 { background:url("../../../template/user/img/sub/ico_quicksimul04.png") no-repeat;	 }
+.simul.longterm .box_simullink_wrap li.simul_05 a:hover .simul_ico05 { background:url("../../../template/user/img/sub/ico_quicksimul05.png") no-repeat;	 }
+.simul.longterm .box_simullink_wrap li.simul_06 a:hover .simul_ico06 { background:url("../../../template/user/img/sub/ico_quicksimul06.png") no-repeat;	 }
+
+.simul.longterm .box_simullink_wrap li.clicked, .simul.longterm .box_simullink_wrap > ul li.clicked:hover {background-color: var(--color-blue); color:var(--color-f)}
+.simul.longterm .box_simullink_wrap > ul li.clicked:hover > a:hover { color:var(--color-f)}
+.simul.longterm .box_simullink_wrap li.simul_01.clicked a .simul_ico01{ background:url("../../../template/user/img/sub/ico_quicksimul01_w.png") no-repeat;}
+.simul.longterm .box_simullink_wrap li.simul_02.clicked a .simul_ico02 { background:url("../../../template/user/img/sub/ico_quicksimul02_w.png") no-repeat; }
+.simul.longterm .box_simullink_wrap li.simul_03.clicked a .simul_ico03 { background:url("../../../template/user/img/sub/ico_quicksimul03_w.png") no-repeat; }
+.simul.longterm .box_simullink_wrap li.simul_04.clicked a .simul_ico04 { background:url("../../../template/user/img/sub/ico_quicksimul04_w.png") no-repeat; }
+.simul.longterm .box_simullink_wrap li.simul_05.clicked a .simul_ico05 { background:url("../../../template/user/img/sub/ico_quicksimul05_w.png") no-repeat; }
+.simul.longterm .box_simullink_wrap li.simul_06.clicked a .simul_ico06 { background:url("../../../template/user/img/sub/ico_quicksimul06_w.png") no-repeat; }
+.simul.longterm .box_simullink_wrap li.simul_07.clicked a .simul_ico07 { background:url("../../../template/user/img/sub/ico_quicksimul07_w.svg") no-repeat; }
 
 /*---------------------------------------------
     #isSimulation-longterm
@@ -261,7 +282,7 @@
 .longterm.isSimulation .box-one .item .won {font-size: var(--font-22);}
 .longterm.isSimulation .box-one .icon.plus {width: 36px; height: 36px; mask-image: url("../../../../cubersc/template/user/img/sub/ico_big_plus.svg"); background-color: var(--color-9); }
 .longterm.isSimulation .box-one .icon.result {mask-image: url("../../../../cubersc/template/user/img/sub/ico_result.svg");}
-.longterm.isSimulation .txt_bl {margin-left:18px; font-size: var(--font-20); font-weight: var(--font-w-350);}
+.longterm.isSimulation .txt_bl {margin-left:18px; font-size: var(--font-20); }
 
 /*---------------------------------------------
     반응형

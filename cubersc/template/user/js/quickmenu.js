@@ -170,6 +170,13 @@ $(document).ready(function () {
             $maskNext.addClass("on");
         }
     });
+    // 시뮬레이션 버튼 클릭
+    $(document).on("touchstart mousedown", ".simul.longterm .box_simullink_wrap li", function (e) {
+        e.preventDefault();
+
+        $(this).closest(".box_simullink_wrap").find("li").removeClass("clicked");
+        $(this).addClass("clicked");
+    });
 });
 
 //4개만 체크되게 하기
