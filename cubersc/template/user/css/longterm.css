@@ -42,6 +42,7 @@
 
     --border-b: 1px solid var(--color-0);
     --border-d: 1px solid var(--color-d);
+    --border-6: 2px solid var(--color-6);
 }
 
 /* 툴팁 */
@@ -158,14 +159,14 @@
 /*---------------------------------------------
     #receipt
 ---------------------------------------------*/
-.receipt .bx-container{ display: flex; gap: 24px; }
-.receipt .bx-container.ratio-1-2{margin-top:24px;}
-.receipt .bx-container.ratio-1-2 .bg-grey:nth-child(1) { flex: 0 0 calc((100% - 24px) / 3); }
-.receipt .bx-container.ratio-1-2 .bg-grey:nth-child(2) { flex: 0 0 calc((100% - 24px) * 2 / 3); position:relative; }
+.receipt .bx-container{ display: flex; gap: 20px; }
+.receipt .bx-container.ratio-1-2{margin-top:20px;}
+.receipt .bx-container.ratio-1-2 .bg-grey:nth-child(1) { flex: 0 0 calc((100% - 40px) / 3); }
+.receipt .bx-container.ratio-1-2 .bg-grey:nth-child(2) { flex: 0 0 calc((100% - 10px) * 2 / 3); position:relative; }
 
 .receipt .unit { margin-bottom: 10px; text-align:end; font-size: var(--font-16); font-weight: var(--font-w-350); }
 
-.receipt .bx-container .blue-bx { flex-direction: column; padding: 30px 25px; margin-top:0 }
+.receipt .bx-container .blue-bx { flex-direction: column; padding: 20px; margin-top:0 }
 .receipt .bx-container .blue-bx.flex { align-items: stretch; }
 .receipt .bx-container .bx-tit { display: flex; align-items: flex-end; gap:6px; text-align: start; font-size: var(--font-20); font-weight: var(--font-w-700); }
 .receipt .bx-container .bx-tit .bx-tit-sub { color: var(--color-6); font-size: var(--font-16); font-weight: var(--font-w-400); }
@@ -185,7 +186,7 @@
 .receipt .bx-container .bx-row .row-content.tag { padding: 4px 12px; background: var(--color-blue); border-radius: 100px; color: var(--color-f); font-size: var(--font-16); font-weight: 700; }
 .receipt .bx-container .bx-row .row-content.tag.not { background: var(--color-red); }
 
-.receipt .caution { color: var(--color-red); font-size: var(--font-16); font-weight: var(--font-w-500); line-height: 137.5%; margin-top: 28px;}
+.receipt .caution { color: var(--color-red); font-size: var(--font-16); font-weight: var(--font-w-500); line-height: 137.5%; margin-top: 10px;}
 .receipt .caution li + li { margin-top: 12px; }
 
 .caution_bright_container { display: flex; justify-content: space-between; }
@@ -212,10 +213,30 @@
 .receipt .tline-b .inp .war-txt span {padding-left: 5px;padding-bottom: 0}
 
 /* 툴팁 */
-.longterm.receipt .info { position: absolute; top:30px; left:140px;}
+.longterm.receipt .info { position: absolute; top:20px; left:140px;}
 .longterm.receipt .tooltip { bottom: calc(100% + 16px); display: block; pointer-events: auto;}
 .longterm.receipt .tooltip.is-open { opacity: 1; visibility: visible; }
 .longterm.receipt .tooltip.is-open ~ .info-icon {background-color: var(--color-blue)}
+
+/* 수납내역 */
+.longterm.receipt .form_left1 { padding-left: 20px; margin-bottom: 20px; position: relative; font-size: var(--font-22); font-weight: var(--font-w-350); line-height: 180%; }
+.longterm.receipt .form_left1::before { content: ''; position: absolute; top: 12px; left: 0; width: 10px; height: 15px; background: url(../../../../cubersc/template/user/img/sub/tit_sub_icon1.png) center center no-repeat; background-size: cover; }
+.longterm.receipt .mo-table {display:none;}
+.longterm.receipt .mo-table {padding: 10px 0 10px; margin-top: 10px; border-top: var(--border-6);}
+.longterm.receipt .acc-wrap {color: var(--color-6); }
+.longterm.receipt .acc-header {padding: 10px 5px 10px 10px; display: flex; justify-content: space-between; align-items: center; font-size: var(--font-18); font-weight: var(--font-w-700);}
+.longterm.receipt .acc-header button {padding: 5px 6px; background: var(--color-skyblue); border-radius: 5px; border: 1px solid var(--color-emp-blue); color: var(--color-emp-blue); font-size: var(--font-13); font-weight: var(--font-w-500); }
+.longterm.receipt .acc-total {padding: 10px; display: flex; justify-content: space-between; font-size: var(--font-15); font-weight: var(--font-w-400); }
+.longterm.receipt .acc-total strong { font-weight: var(--font-w-900); }
+.longterm.receipt .acc-total .blue-txt {color: var(--color-emp-blue); font-weight: var(--font-w-700); }
+.longterm.receipt .accordion {margin: 10px 0; border-radius: 10px; border: var(--border-d);}
+.longterm.receipt dl.acc-block { padding:5px 0; font-size: var(--font-15); font-weight: var(--font-w-350); }
+.longterm.receipt dl.acc-block + dl.acc-block { border-top: var(--border-d);}
+.longterm.receipt dl.acc-block dt { padding: 15px; display: flex; justify-content: space-between; font-weight: var(--font-w-700);}
+.longterm.receipt dl.acc-block dd { display: block; max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.longterm.receipt dl.acc-block dd p { padding: 10px 15px; display: flex; justify-content: space-between; }
+.longterm.receipt .acc-block.acc-open dd { max-height: 500px; opacity: 1; }
+.longterm.receipt .acc-footer-btn { padding:10px; width: 100%; color: var(--color-emp-blue); font-size: var(--font-13); font-weight: var(--font-w-500); border-top: var(--border-d); cursor: pointer; }
 
 /*---------------------------------------------
     #SignUpSelection_new
@@ -355,6 +376,12 @@
       #SignUpSelection_new
   ---------------------------------------------*/
   .list_half_cardnoti > li .box_line.mw-none .line { max-width: none; width:auto; padding: 0 15px; }
+  
+  /*---------------------------------------------
+      #receipt
+  ---------------------------------------------*/
+  .receipt .box_btmborder_tit + .box_calcwrap {padding-top:0}
+  .subs .receipt .sub_tit.mb-none {margin-bottom:0}
 }
 
 /****** MO에서만 */
@@ -366,7 +393,7 @@
   .memberjoin-new .q {margin-bottom:40px;}
   .memberjoin-new .q .aline .aline_col { flex-direction: row; }
   .memberjoin-new .q.basic-info .aline-a {width:50%; padding:14px 0;}
-  .memberjoin-new .q .aline .aline_col.b-bottom {border-bottom: 1px solid #ddd;}
+  .memberjoin-new .q .aline .aline_col.b-bottom {border-bottom: var(--border-d);}
   .memberjoin-new .q:not(.basic-info) {margin-bottom:12px; border-top: none;}
   .tab-content.memberjoin-new .q.basic-info .aline-b {min-height: 0;}
   .common-section .memberjoin-new .q.basic-info .aline-b{padding:14px 0;}
@@ -393,11 +420,11 @@
   .memberjoin-new .q:not(.basic-info) + .q:not(.basic-info) {margin-top:0}
   .memberjoin-new .q:not(.basic-info):last-child {margin-bottom:40px;}
   .accordion-content.mb-40 {margin-bottom:40px;}
-  .memberjoin-new .q:not(.basic-info) .aline.pw-rules {border-top: 1px solid #ddd; margin-top:38px;}
+  .memberjoin-new .q:not(.basic-info) .aline.pw-rules {border-top: var(--border-d); margin-top:38px;}
   .memberjoin-new .q:not(.basic-info) .aline.pw-rules .aline-a::before {content: ""; display: inline-block; width: 34px; height: 34px; margin-right: 8px; background: url('../img/sub/ico_info.svg') no-repeat center / contain;}
   .memberjoin-new .q:not(.basic-info) .aline.pw-rules .aline-a {padding:14px 0 18px 0}
   .memberjoin-new .q:not(.basic-info) .aline, .accordion-item.info .aline {border-bottom:none}
-  .common-section .memberjoin-new .q:not(.basic-info) .add_mint, .common-section .accordion-item.info .add_mint {border-top:1px solid #ddd;}
+  .common-section .memberjoin-new .q:not(.basic-info) .add_mint, .common-section .accordion-item.info .add_mint {border-top:var(--border-d);}
   .memberjoin-new .q:not(.basic-info) .add_mint, .common-section .accordion-item.info .add_mint {margin-top:20px; padding-top:8px;}
   /* step3-버튼 */
   .btns .check-bt.w-full {width:100%;}
@@ -445,7 +472,7 @@
       #receipt
   ---------------------------------------------*/
   /* 첫번째 영역 블루 박스 */
-  .receipt .unit {display: none;}
+  .receipt .unit {font-size: var(--font-14);}
   .receipt .bx-container {padding: 30px 20px; flex-direction: column; border-radius: 10px; background: #F2FAFF; }
   .receipt .bx-container .blue-bx {padding:0 0 20px 0; flex-direction: row; justify-content: space-between; }
   .receipt .bx-container .blue-bx:last-child {border: none; padding: 0;}
@@ -468,6 +495,10 @@
   .longterm.receipt .tooltip p {font-size: var(--font-15); margin-bottom: 6px;}
   .longterm.receipt .tooltip ul {font-size: var(--font-13)}
   .longterm.receipt .tooltip ul li + li {margin-top:4px;}
+  /* 수납내역 */
+  .longterm.receipt .form_left1 {font-size: var(--font-20)}
+  .longterm.receipt .form_left1::before {top:10px;}
+  .longterm.receipt .mo-table {display: block;}
 
   /*---------------------------------------------
       #SignUpSelection_new

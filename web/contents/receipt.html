@@ -131,7 +131,7 @@
                                                                 <div class="tab-th">
                                                                     <div class="box_top_pdb">
                                                                         <div class="subss">
-                                                                            <h4 class="sub_tit">가입사항</h4>
+                                                                            <h4 class="sub_tit mb-none">가입사항</h4>
                                                                         </div>
                                                                         <!-- 가입된 내역 없을 때 -->
                                                                         <!-- <div class="blue-bx m_absolute stxtblue-bx" id="info_empty">
@@ -232,6 +232,7 @@
                                                                                 <h4 class="sub_tit no_mgt">장기간부도약적금 수납내역</h4>
                                                                             </div>
                                                                             <form name="trustInquiryForm" id="trustInquiryForm" method="post" action="">
+                                                                                <div class="form_left1">총 수납내역: <span>6</span>건</div>
                                                                                 <div class="tbl_wrapbox">
                                                                                     <div class="caution_bright_container">
                                                                                         <span class="caution_bright">※ 중도해지 시, 정부지원금 및 정부지원금으로 인한 이자는 지급받을 수 없습니다.</span>
@@ -359,28 +360,38 @@
                                                                                             </tbody>
                                                                                         </table>
                                                                                     </div>
-                                                                                    <div class="app-mb" id="inqTbody_mo">
-                                                                                        <div class="one-app next total-next">
-                                                                                            <div class="cont-mb">
-                                                                                                <div class="bold"><span>합계</span></div>
-                                                                                                <div><span>월 저축금액</span> <span>10,000원</span></div>
-                                                                                                <div><span>이자</span> <span>675원</span></div>
+                                                                                    <div class="mo-table" id="inqTbody_mo">
+                                                                                        <div class="acc-wrap">
+                                                                                            <div class="acc-header">
+                                                                                                <span>1회차 (2025년 06월)</span>
+                                                                                                <button type="button" class="btn_pop" aria-expanded="false">일별 내역보기</button>
                                                                                             </div>
-                                                                                        </div>
-                                                                                        <div class="one-app next">
-                                                                                            <div class="cont-mb">
-                                                                                                <div><span>순번</span><span>1</span></div>
-                                                                                                <div><span>저축월</span><span>2024년 07월</span></div>
-                                                                                                <div><span>월 저축금액</span><span>10,000원</span></div>
-                                                                                                <div><span>이자</span><span>675원</span></div>
-                                                                                                <div>
-                                                                                                    <span>상세보기</span> <span><a href="javascript:;" class="bl-btn btn-line btn_pop" data-name="beta-freestorage_daylist" onclick="detailPopupReceiptInquery('0000000001','202407')">일별 내역보기</a></span>
-                                                                                                </div>
+                                                                                            <div class="acc-total">
+                                                                                                <span><strong>총액</strong> (저축+정부지원금)</span>
+                                                                                                <span class="blue-txt">000,000원</span>
+                                                                                            </div>
+                                                                                            <div class="accordion">
+                                                                                                <dl class="acc-block">
+                                                                                                    <dt><span>월 저축금액 총액</span><span>000,000원</span></dt>
+                                                                                                    <dd>
+                                                                                                        <p><span>공제액</span><span>000,000원</span></p>
+                                                                                                        <p><span>가상계좌 입금액</span><span>00,000원</span></p>
+                                                                                                        <p><span>저축금액 이자</span><span>00,000원</span></p>
+                                                                                                    </dd>
+                                                                                                </dl>
+                                                                                                <dl class="acc-block">
+                                                                                                    <dt><span>정부지원금 총액</span><span>000,000원</span></dt>
+                                                                                                    <dd>
+                                                                                                        <p><span>정부지원금</span><span>00,000원</span></p>
+                                                                                                        <p><span>정부지원금 이자</span><span>00,000원</span></p>
+                                                                                                    </dd>
+                                                                                                </dl>
+                                                                                                <button type="button" class="acc-footer-btn">상세내역 보기</button>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <!-- //장기간부도약적금 지급내역 -->
+                                                                                <!-- //장기간부도약적금 수납내역 -->
                                                                                 <!-- //수납대기내역 -->
                                                                                 <div class="subss">
                                                                                     <h4 class="sub_tit">수납대기 내역</h4>
