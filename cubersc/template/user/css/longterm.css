@@ -53,7 +53,7 @@
     opacity: 0; visibility: hidden; transition: opacity .2s ease, transform .2s ease; pointer-events: none; }
 .longterm .tooltip::after { content: ""; position: absolute; left: 50%; bottom: -12px; transform: translateX(-50%); display:block; width:0; height:0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 12px solid var(--color-f);
     filter: drop-shadow(2px 2px 2px rgba(47,46,44,0.25)); }
-.longterm .info:hover .tooltip { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-2px); }
+.longterm:not(.receipt) .info:hover .tooltip { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-2px); }
 .longterm .tooltip p { font-size: var(--font-18); font-weight: var(--font-w-700); margin-bottom: 8px; }
 .longterm .tooltip ul { color: var(--color-text-basic); font-size: var(--font-14); font-weight: var(--font-w-400); line-height: normal; }
 .longterm .tooltip ul li { padding-left: 20px; position: relative; }
@@ -213,7 +213,8 @@
 
 /* 툴팁 */
 .longterm.receipt .info { position: absolute; top:30px; left:140px;}
-.longterm.receipt .tooltip { bottom: calc(100% + 16px); }
+.longterm.receipt .tooltip { bottom: calc(100% + 16px); display: block; pointer-events: auto;}
+.longterm.receipt .tooltip.is-open { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-2px); }
 
 /*---------------------------------------------
     #SignUpSelection_new
@@ -309,7 +310,7 @@
   /* 탭-수납내역 테이블 */
   .receipt .st-table table td {font-size: var(--font-14); letter-spacing: -1.5px;}
   .receipt .st-table table th { letter-spacing: -1.5px; word-break: keep-all; overflow-wrap: normal; white-space: normal;}
-  .receipt  .st-table table td .bl-btn {font-size: var(--font-13); letter-spacing: -1.5px;}
+  .receipt .st-table table td .bl-btn {font-size: var(--font-13); letter-spacing: -1.5px;}
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1024px) {
