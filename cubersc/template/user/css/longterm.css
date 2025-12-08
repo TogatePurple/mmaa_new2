@@ -504,6 +504,7 @@
   .longterm.receipt .form_left1::before {top:10px;}
   .longterm.receipt .mo-table,.longterm.receipt .mo-btn {display: block;}
   .longterm.receipt .sub-caution {display: none}
+  .longterm.receipt .tbl_wrapbox .app-mb {margin-top: 0 !important;}
 
   /*---------------------------------------------
       #SignUpSelection_new
@@ -645,7 +646,7 @@
   /* 수납내역 */
   .longterm.receipt .caution_bright_container {margin-bottom:10px; align-items: flex-end}
   .longterm.receipt .caution_bright {max-width:50%; line-height: normal;}
-  .longterm.receipt .unit {margin-bottom:0;}
+  .longterm.receipt .caution_bright_container .unit {margin-bottom:0;}
 }
 
 @media screen and (max-width: 567px) {
