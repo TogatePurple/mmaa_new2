@@ -48,7 +48,7 @@
 .longterm .info { position: relative; }
 .longterm .info-icon { display: inline-block; width: 20px; height: 20px; cursor: pointer; background-color: var(--color-6c); border-radius: 100px;}
 .longterm .info-icon::before { content: ""; position: absolute; top: 50%; left: 50%; width: 70%; height: 70%; transform: translate(-50%, -50%); background-image: url('../../../../cubersc/template/user/img/sub/ico_info_1.svg'); background-size: contain; background-repeat: no-repeat; background-position: center; }
-.longterm .info:hover .info-icon {background-color: var(--color-blue)}
+.longterm:not(.receipt) .info:hover .info-icon {background-color: var(--color-blue)}
 .longterm .tooltip { width: 425px; position: absolute; left: 55%; bottom: calc(100% + 48px); transform: translateX(-50%); background: var(--color-f); padding: 24px; border-radius: 12px; box-shadow: 3px 3px 10px 0 rgba(47, 46, 44, 0.25);
     opacity: 0; visibility: hidden; transition: opacity .2s ease, transform .2s ease; pointer-events: none; }
 .longterm .tooltip::after { content: ""; position: absolute; left: 50%; bottom: -12px; transform: translateX(-50%); display:block; width:0; height:0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 12px solid var(--color-f);
@@ -214,7 +214,8 @@
 /* 툴팁 */
 .longterm.receipt .info { position: absolute; top:30px; left:140px;}
 .longterm.receipt .tooltip { bottom: calc(100% + 16px); display: block; pointer-events: auto;}
-.longterm.receipt .tooltip.is-open { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-2px); }
+.longterm.receipt .tooltip.is-open { opacity: 1; visibility: visible; }
+.longterm.receipt .tooltip.is-open ~ .info-icon {background-color: var(--color-blue)}
 
 /*---------------------------------------------
     #SignUpSelection_new
@@ -461,8 +462,12 @@
   .receipt .bx-container.ratio-1-2 .bx-row .row-content.tag {color: var(--color-f); font-size: var(--font-16);}
   /* 툴팁 */
   .longterm.receipt .info {top:6px; left:94px;}
-  .longterm.receipt .tooltip {left: 118px;}
+  .longterm.receipt .tooltip {left: -95px; padding:18px; transform:none; max-width: 425px; width: calc(100vw - 48px);}
   .longterm.receipt .tooltip::after {left:104px;}
+  .longterm.receipt .info-icon {width:18px; height:18px;}
+  .longterm.receipt .tooltip p {font-size: var(--font-15); margin-bottom: 6px;}
+  .longterm.receipt .tooltip ul {font-size: var(--font-13)}
+  .longterm.receipt .tooltip ul li + li {margin-top:4px;}
 
   /*---------------------------------------------
       #SignUpSelection_new
@@ -599,8 +604,8 @@
   /* 툴팁 */
   .longterm.receipt .info {top:2px; left:80px;}
   .longterm.receipt .info-icon::before {margin:0}
-  .longterm.receipt .tooltip {left: 130px;}
-  .longterm.receipt .tooltip::after {left:92px;}
+  .longterm.receipt .tooltip {left: -80px; }
+  .longterm.receipt .tooltip::after {left:88px;}
 }
 
 @media screen and (max-width: 567px) {

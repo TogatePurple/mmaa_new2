@@ -19,7 +19,6 @@ $(document).ready(function () {
     btn.addEventListener("focus", openTip);
     btn.addEventListener("blur", closeTip);
 
-    // 클릭으로 토글
     btn.addEventListener("click", () => {
         tip.hidden ? openTip() : closeTip();
     });
