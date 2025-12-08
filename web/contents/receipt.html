@@ -43,6 +43,7 @@
 
         <!-- 퍼블 확인용: 공통 인클루드 js -->
         <script src="../../web/js/include.js"></script>
+        <script src="../../cubersc/template/user/js/tooltip.js"></script>
         <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/longterm.css" />
     </head>
     <body>
@@ -187,8 +188,8 @@
                                                                             </div>
                                                                             <div class="blue-bx flex bg-grey">
                                                                                 <div class="info">
-                                                                                    <span class="info-icon"></span>
-                                                                                    <div class="tooltip">
+                                                                                    <button class="info-icon" aria-describedby="tooltip1" aria-expanded="false" type="button"></button>
+                                                                                    <div id="tooltip1" role="tooltip" class="tooltip" hidden>
                                                                                         <p>가상계좌 입금 가능 기간</p>
                                                                                         <ul>
                                                                                             <li>매달 1일 ~ 10일까지 가능</li>
