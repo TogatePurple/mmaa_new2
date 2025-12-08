@@ -221,9 +221,11 @@
 /* 수납내역 */
 .longterm.receipt .form_left1 { padding-left: 20px; margin-bottom: 20px; position: relative; font-size: var(--font-22); font-weight: var(--font-w-350); line-height: 180%; }
 .longterm.receipt .form_left1::before { content: ''; position: absolute; top: 12px; left: 0; width: 10px; height: 15px; background: url(../../../../cubersc/template/user/img/sub/tit_sub_icon1.png) center center no-repeat; background-size: cover; }
-.longterm.receipt .mo-table {display:none;}
-.longterm.receipt .mo-table {padding: 10px 0 10px; margin-top: 10px; border-top: var(--border-6);}
-.longterm.receipt .acc-wrap {color: var(--color-6); }
+.longterm.receipt .mo-table, .longterm.receipt .mo-btn {display:none;}
+.longterm.receipt .mo-table {border-top: var(--border-6); max-height: 600px; overflow-y: auto;}
+.longterm.receipt .mo-table.is-open {max-height:none;}
+.longterm.receipt .acc-wrap {padding:10px 0; color: var(--color-6); }
+.longterm.receipt .acc-wrap:not(:nth-child(1)) {border-top: var(--border-6); }
 .longterm.receipt .acc-header {padding: 10px 5px 10px 10px; display: flex; justify-content: space-between; align-items: center; font-size: var(--font-18); font-weight: var(--font-w-700);}
 .longterm.receipt .acc-header button {padding: 5px 6px; background: var(--color-skyblue); border-radius: 5px; border: 1px solid var(--color-emp-blue); color: var(--color-emp-blue); font-size: var(--font-13); font-weight: var(--font-w-500); }
 .longterm.receipt .acc-total {padding: 10px; display: flex; justify-content: space-between; font-size: var(--font-15); font-weight: var(--font-w-400); }
@@ -237,6 +239,8 @@
 .longterm.receipt dl.acc-block dd p { padding: 10px 15px; display: flex; justify-content: space-between; }
 .longterm.receipt .acc-block.acc-open dd { max-height: 500px; opacity: 1; }
 .longterm.receipt .acc-footer-btn { padding:10px; width: 100%; color: var(--color-emp-blue); font-size: var(--font-13); font-weight: var(--font-w-500); border-top: var(--border-d); cursor: pointer; }
+.longterm.receipt .mo-btn {padding: 15px 0; margin:10px 0 20px; width: 100%; border-radius: 8px; border: 1px solid #383B73; color: #383B73; font-size: 16px; font-weight: 400; cursor: pointer;}
+.longterm.receipt .mo-btn.open {margin:20px 0; border: 1px solid var(--color-emp-blue); color: var(--color-emp-blue);}
 
 /*---------------------------------------------
     #SignUpSelection_new
@@ -498,7 +502,7 @@
   /* 수납내역 */
   .longterm.receipt .form_left1 {font-size: var(--font-20)}
   .longterm.receipt .form_left1::before {top:10px;}
-  .longterm.receipt .mo-table {display: block;}
+  .longterm.receipt .mo-table,.longterm.receipt .mo-btn {display: block;}
 
   /*---------------------------------------------
       #SignUpSelection_new

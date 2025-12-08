@@ -34,22 +34,39 @@ $(document).ready(function () {
         }
     });
 
-    // 전체 토글 버튼
-    var allBtn = document.querySelector(".acc-footer-btn");
-    var isAllOpen = true;
+    // 상세내역 개별 토글
+    document.querySelectorAll(".acc-wrap").forEach((wrap) => {
+        var allBtn = wrap.querySelector(".acc-footer-btn");
+        var isOpen = false;
 
-    allBtn.addEventListener("click", () => {
-        var blocks = document.querySelectorAll(".acc-block");
+        allBtn.addEventListener("click", () => {
+            var blocks = wrap.querySelectorAll(".acc-block");
 
-        blocks.forEach((b) => {
-            if (isAllOpen) {
-                b.classList.add("acc-open");
-            } else {
-                b.classList.remove("acc-open");
-            }
+            blocks.forEach((b) => {
+                if (!isOpen) {
+                    b.classList.add("acc-open");
+                } else {
+                    b.classList.remove("acc-open");
+                }
+            });
+
+            allBtn.textContent = !isOpen ? "접기" : "상세내역 보기";
+            isOpen = !isOpen;
         });
+    });
 
-        allBtn.textContent = isAllOpen ? "접기" : "상세내역 보기";
-        isAllOpen = !isAllOpen;
+    // 상세내역 전체 토글
+    function toggleMoTable(isOpen) {
+        $(".mo-table").toggleClass("is-open", isOpen);
+        $(".mo-btn.open").toggleClass("hide", isOpen);
+        $(".mo-btn.close").toggleClass("hide", !isOpen);
+    }
+
+    $(".mo-btn.open").on("click", function () {
+        toggleMoTable(true); // 열기
+    });
+
+    $(".mo-btn.close").on("click", function () {
+        toggleMoTable(false); // 닫기
     });
 });
