@@ -122,7 +122,7 @@
                     <!--container-->
                     <section id="container" class="sub" tabindex="0">
                         <div class="sub_inner">
-                            <!-- ⭐[S] 퍼블 추가  -->
+                            <!-- [S] 퍼블 추가  -->
                             <div class="w longterm">
                                 <div id="contents" class="content-all">
                                     <div class="box_calcarea">
@@ -163,7 +163,7 @@
                                                 </div>
                                                 <!-- tab-Box 끝-->
                                                 <div class="tab-Con">
-                                                    <div id="tab-0" class="tab-content active">
+                                                    <div id="tab-0" class="tab-content">
                                                         <ul class="one-line">
                                                             <li class="one-person">
                                                                 <div class="cbox open b1">
@@ -214,7 +214,7 @@
                                                         </ul>
                                                     </div>
                                                     <!-- tab-0 -->
-                                                    <div id="tab-1" class="tab-content">
+                                                    <div id="tab-1" class="tab-content active">
                                                         <ul class="one-line">
                                                             <li class="one-person">
                                                                 <div class="subss">
@@ -359,6 +359,47 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+
+                                                                    <!-- ⭐ -->
+                                                                    <div class="added-card" tabindex="0">
+                                                                        <h4 class="sub_tit">장기간부도약적금 가입자 신분확인</h4>
+                                                                        <div class="q">
+                                                                            <div class="aline">
+                                                                                <div class="aline-a pt-0">소속<span class="reds">*</span></div>
+                                                                                <div class="aline-b two_verti">
+                                                                                    <div class="inp">
+                                                                                        <label for="afstCd" class="hide">소속 선택</label>
+                                                                                        <select class="select-ac" id="afstCd" name="afstCd">
+                                                                                            <option value="0">소속을 선택하세요.</option>
+                                                                                        </select>
+                                                                                        <div class="reds ko">※ 현역회원은 육군, 해군, 공군, 해병대 선택</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="aline" id="rrnoArea">
+                                                                                <div class="aline-a fstart" style="display: flex; align-items: center">
+                                                                                    군번 <span style="color: #c6002c">*<span class="blind">필수 입력 항목</span></span>
+                                                                                </div>
+                                                                                <div class="aline-b birth-d">
+                                                                                    <div class="inp">
+                                                                                        <label for="solNum" class="hide">군번 앞자리</label>
+                                                                                        <input type="number" id="solNum" class="email" maxlength="2" data-nextinput="" data-inputregex="numberinput" title="군번 앞자리" placeholder="군번을 입력하세요" />
+                                                                                        <div class="mid-line">-</div>
+                                                                                        <label for="rrno2" class="hide">군번 뒷자리</label>
+                                                                                        <input type="number" id="rrno2" class="email" maxlength="7" data-nextinput="" data-inputregex="numberinput" title="군번 뒷자리" placeholder="군번을 입력하세요" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="add_mint"><span class="reds">*</span> 표시는 필수입력 항목입니다.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="caution-card">
+                                                                        <p class="common-txt">위와 같이 소속 및 군번 등 개인정보를 국방부로 전송 및 활용에 동의하시는 경우, <span class="emp">자격확인하기 버튼을 클릭해주세요.</span></p>
+                                                                        <p class="reds">※ 귀하가 입력한 정보가 상이하여 발생한 모든 책임은 본인에게 있습니다.</p>
+                                                                    </div>
+                                                                    <!-- ⭐ -->
+
                                                                     <div class="btns">
                                                                         <div id="alert">
                                                                             <div class="a-w">
@@ -377,7 +418,8 @@
                                                                         </div>
                                                                         <div class="check-bt tc">
                                                                             <!-- <button type="button" class="button" id=checkme onClick="fn_possible('ci');">동의하기(인증)</button> -->
-                                                                            <button type="button" class="button" id="checkme" onclick="changeSteps('tab-2')">동의하기</button>
+                                                                            <!-- ⭐퍼블 문구 수정 -->
+                                                                            <button type="button" class="button" id="checkme" onclick="changeSteps('tab-2')">동의 및 자격확인</button>
                                                                             <!--  <a href="javascript:;" title="동의하기(인증)" class="clickme_linkwrap btn_pop button" data-name="help_member_join">동의하기(인증)</a> -->
                                                                         </div>
                                                                     </div>
@@ -530,7 +572,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- ⭐[E] 퍼블 추가  -->
+                            <!-- [E] 퍼블 추가  -->
                         </div>
                     </section>
                 </div>
