@@ -41,13 +41,19 @@ $(document).ready(function () {
         var isOpen = false;
 
         allBtn.addEventListener("click", () => {
-            var blocks = wrap.querySelectorAll(".acc-block");
+            var targetId = allBtn.getAttribute("aria-controls");
+            var panels = wrap.querySelectorAll(`#${targetId}`);
 
-            blocks.forEach((b) => {
+            panels.forEach((panel) => {
+                panel.hidden = isOpen;
+            });
+
+            wrap.querySelectorAll(".acc-block").forEach((b) => {
                 b.classList.toggle("acc-open", !isOpen);
             });
 
             label.textContent = !isOpen ? "접기" : "상세내역 보기";
+            allBtn.setAttribute("aria-expanded", !isOpen);
             allBtn.classList.toggle("on", !isOpen);
 
             isOpen = !isOpen;

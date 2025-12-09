@@ -196,7 +196,7 @@
 .receipt .pay-receipt .sub-th { color: var(--color-6); font-size: var(--font-14); font-weight: var(--font-w-400); line-height: 22px; }
 
 .receipt .sub-caution { margin-top: 8px; color: var(--color-6); font-size: var(--font-16); font-weight: var(--font-w-500); }
-.receipt .alert { width: 100%; padding: 40px 0; margin-bottom: 26px; display: flex; justify-content: center; border-radius: 10px; border: var(--border-d); }
+.receipt .alert { width: 100%; padding: 40px 20px; margin-bottom: 26px; display: flex; justify-content: center; border-radius: 10px; border: var(--border-d); }
 .receipt .alert.not-empty {margin-bottom: 60px; }
 .receipt .alert .text { padding-top: 100px; text-align: center; color: var(--color-0); font-size: var(--font-24); font-weight: var(--font-w-700); }
 .receipt .alert.empty .text { background: url(../../../../cubersc/template/user/img/sub/ico_alert_empty.svg) no-repeat top; }
@@ -218,10 +218,10 @@
 .longterm.receipt .tooltip.is-open ~ .info-icon {background-color: var(--color-blue)}
 
 /* 수납내역 */
-.longterm.receipt .form_left1 { padding-left: 20px; margin-bottom: 20px; position: relative; font-size: var(--font-22); font-weight: var(--font-w-350); line-height: 180%; }
+.longterm.receipt .form_left1 { padding-left: 20px; margin-bottom: 20px; position: relative; font-size: var(--font-22); font-weight: var(--font-w-400); line-height: 180%; }
 .longterm.receipt .form_left1::before { content: ''; position: absolute; top: 12px; left: 0; width: 10px; height: 15px; background: url(../../../../cubersc/template/user/img/sub/tit_sub_icon1.png) center center no-repeat; background-size: cover; }
 .longterm.receipt .mo-table, .longterm.receipt .mo-btn {display:none;}
-.longterm.receipt .mo-table {border-top: var(--border-6); max-height: 600px; overflow-y: auto;}
+.longterm.receipt .mo-table {border-top: var(--border-6); max-height: 520px; overflow-y: auto;}
 .longterm.receipt .mo-table.is-open {max-height:none;}
 .longterm.receipt .acc-wrap {padding:10px 0; color: var(--color-6); }
 .longterm.receipt .acc-wrap:not(:nth-child(1)) {border-top: var(--border-6); }
@@ -486,6 +486,7 @@
   .receipt .bx-container .blue-bx.flex {align-items: flex-end; }
   .receipt .bx-container .bigwon {margin-top:0;}
   .receipt .tab-th .blue-bx .bigwon {font-size: var(--font-24)}
+  .receipt .bx-container .bx-tit .bx-tit-sub .emp {font-size: var(--font-13)}
   /* 첫번째 영역 흰색 영역 */
   .receipt .bx-container.ratio-1-2 {background: transparent; padding:0 0 24px; border-bottom: var(--border-d); border-radius: 0;}
   .receipt .bx-container.ratio-1-2 .bg-grey {background: transparent; flex-direction: column; align-items: stretch}
@@ -503,10 +504,10 @@
   .longterm.receipt .tooltip ul {font-size: var(--font-13)}
   .longterm.receipt .tooltip ul li + li {margin-top:4px;}
   /* 수납내역 */
-  .longterm.receipt .form_left1 {font-size: var(--font-20)}
-  .longterm.receipt .form_left1::before {top:10px;}
+  .longterm.receipt .form_left1 {padding-left: 35px; font-size: var(--font-16)}
+  .longterm.receipt .form_left1::before {top:6px; left:15px;}
   .longterm.receipt .mo-table,.longterm.receipt .mo-btn {display: block;}
-  .longterm.receipt .tbl_wrapbox .app-mb {margin-top: 0 !important;}
+  .longterm.receipt .tbl_wrapbox .app-mb {margin-top: 0 !important; max-height: none;}
   .longterm.receipt .app-mb .next .cont-mb {border-bottom: var(--border-d)}
   .longterm.receipt .sub-caution { margin-top:10px; font-size: var(--font-14); font-weight: var(--font-w-500); line-height: 150%; }
   /* 지급내역 */
@@ -518,6 +519,17 @@
   .longterm.receipt .app-mb .next .cont-mb div span.tag {background-color: var(--color-emp-blue); color: var(--color-f) !important; font-size: var(--font-14); font-weight: var(--font-w-500); }
   .longterm.receipt .app-mb .next .cont-mb div span.tag.not {background-color: var(--color-red); }
   .longterm.receipt .app-mb .next .cont-mb div span.blue-txt {color: var(--color-emp-blue)!important;}
+  /* 팝업 */
+  .receipt .h-win .subss {flex-direction: column;}
+  .subs .receipt .h-win .subss .sub_tit:after {top:8px;}
+  .receipt .h-win .subss .inp {width: 100%}
+  .receipt .h-win .subss select {margin-top:20px; width: 100%; max-width: none;}
+  .receipt .st-table table thead { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); border: 0; }
+  .receipt .st-table table tbody td { width: 100%; display: flex; justify-content: space-between; align-items: center; white-space: normal; border: none;}
+  .receipt .st-table table tbody td:nth-child(1)::before { content: "순번"; }
+  .receipt .st-table table tbody td:nth-child(2)::before { content: "입금방법"; }
+  .receipt .st-table table tbody td:nth-child(3)::before { content: "저축일"; }
+  .receipt .st-table table tbody td:nth-child(4)::before { content: "저축금액"; }
 
   /*---------------------------------------------
       #SignUpSelection_new
@@ -658,8 +670,10 @@
   .longterm.receipt .tooltip::after {left:88px;}
   /* 수납내역 */
   .longterm.receipt .caution_bright_container {margin-bottom:10px; align-items: flex-end}
-  .longterm.receipt .caution_bright {max-width:50%; line-height: normal;}
+  .longterm.receipt .caution_bright {max-width:80%; line-height: normal;}
   .longterm.receipt .caution_bright_container .unit {margin-bottom:0;}
+  /* 지급내역 */
+  .receipt .alert.not-empty .text .detail > br{display:none;}
 }
 
 @media screen and (max-width: 567px) {
