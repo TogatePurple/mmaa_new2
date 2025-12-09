@@ -114,7 +114,7 @@
 .longterm .h-win .aline-b.birth-d .inp {display: flex; align-items: center;}
 .longterm .h-win .aline-b .box_btmtxt .war-txt { padding-left:0; gap:5px; }
 .longterm .h-win .grey-popup-card {padding: 30px 0; margin-top: 60px; display: flex; width: 100%; flex-direction: column; align-items: center; border-radius: 10px; border: var(--border-d); line-height: 150%; }
-.longterm .h-win .grey-popup-card .common-txt {font-size: var(--font-20); font-weight: var(--font-w-350);}
+.longterm .h-win .grey-popup-card .common-txt {font-size: var(--font-20); font-weight: var(--font-w-400);}
 .longterm .h-win .grey-popup-card .common-txt .emp {font-weight: var(--font-w-500);}
 .longterm .h-win .grey-popup-card .common-txt + .reds {margin-top: 15px; }
 .longterm .h-win .blue-txt { padding-top: 100px; color: var(--color-blue); font-size: var(--font-24); font-weight: var(--font-w-700); background: url(../../../../cubersc/template/user/img/sub/chk.png) no-repeat top; background-size: 68px 68px;}
@@ -164,7 +164,7 @@
 .receipt .bx-container.ratio-1-2 .bg-grey:nth-child(1) { flex: 0 0 calc((100% - 40px) / 3); }
 .receipt .bx-container.ratio-1-2 .bg-grey:nth-child(2) { flex: 0 0 calc((100% - 10px) * 2 / 3); position:relative; }
 
-.receipt .unit { margin-bottom: 10px; text-align:end; font-size: var(--font-16); font-weight: var(--font-w-350); }
+.receipt .unit { margin-bottom: 10px; text-align:end; font-size: var(--font-16); font-weight: var(--font-w-400); }
 
 .receipt .bx-container .blue-bx { flex-direction: column; padding: 20px; margin-top:0 }
 .receipt .bx-container .blue-bx.flex { align-items: stretch; }
@@ -201,7 +201,7 @@
 .receipt .alert .text { padding-top: 100px; text-align: center; color: var(--color-0); font-size: var(--font-24); font-weight: var(--font-w-700); }
 .receipt .alert.empty .text { background: url(../../../../cubersc/template/user/img/sub/ico_alert_empty.svg) no-repeat top; }
 .receipt .alert.not-empty .text { background: url(../../../../cubersc/template/user/img/sub/chk.png) no-repeat top; background-size: 68px 68px;}
-.receipt .alert.not-empty .text .detail { margin-top: 20px; color: var(--color-0); font-size: var(--font-20); font-weight: var(--font-w-350); line-height: 150%; }
+.receipt .alert.not-empty .text .detail { margin-top: 20px; color: var(--color-0); font-size: var(--font-20); font-weight: var(--font-w-400); line-height: 150%; }
 
 /* 팝업 */
 .receipt .h-win .subss {margin-bottom: 20px; display: flex; align-items: center; }
@@ -231,11 +231,11 @@
 .longterm.receipt .acc-total strong { font-weight: var(--font-w-900); }
 .longterm.receipt .acc-total .blue-txt {color: var(--color-emp-blue); font-weight: var(--font-w-700); }
 .longterm.receipt .accordion {margin: 10px 0; border-radius: 10px; border: var(--border-d);}
-.longterm.receipt dl.acc-block { padding:5px 0; font-size: var(--font-15); font-weight: var(--font-w-350); }
+.longterm.receipt dl.acc-block { padding:5px 0; font-size: var(--font-15); font-weight: var(--font-w-400); }
 .longterm.receipt dl.acc-block + dl.acc-block { border-top: var(--border-d);}
 .longterm.receipt dl.acc-block dt { padding: 15px; display: flex; justify-content: space-between; font-weight: var(--font-w-700);}
 .longterm.receipt dl.acc-block dd { display: block; max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-.longterm.receipt dl.acc-block dd p { padding: 10px 15px; display: flex; justify-content: space-between; }
+.longterm.receipt dl.acc-block dd p { padding: 15px; display: flex; justify-content: space-between; }
 .longterm.receipt .acc-block.acc-open dd { max-height: 500px; opacity: 1; }
 .longterm.receipt .acc-footer-btn { padding:10px; width: 100%; color: var(--color-emp-blue); font-size: var(--font-13); font-weight: var(--font-w-500); border-top: var(--border-d); cursor: pointer; }
 .longterm.receipt .acc-footer-btn span {position: relative; display: inline-block; padding-right: 20px;}
