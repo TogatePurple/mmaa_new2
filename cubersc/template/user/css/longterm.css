@@ -599,6 +599,11 @@
   .receipt .h-win .st-table table tfoot tr { width: 100%; display: flex; justify-content: space-between; align-items: center; }
   .receipt .h-win .st-table table tfoot td:first-child {color:var(--color-6)}
   .receipt .h-win .st-table table tfoot td { background:transparent; border: none; padding: 0; display: flex; align-items: flex-end; height:auto; }
+  /* 지급계좌등록 팝업 */
+  .receipt .h-win .tline-b {width: 100%;}
+  .receipt .h-win .tline-b .inp {width: 100%;}
+  .receipt .h-win .tline-b .slc select, .receipt .h-win .tline-b .inp input[type=text] {width: 100%;}
+  .receipt .h-win .tline-b .inp .war-txt { font-size: var(--font-14); }
 
   /*---------------------------------------------
       #quick-simulation
