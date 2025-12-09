@@ -37,20 +37,19 @@ $(document).ready(function () {
     // 상세내역 개별 토글
     document.querySelectorAll(".acc-wrap").forEach((wrap) => {
         var allBtn = wrap.querySelector(".acc-footer-btn");
+        var label = allBtn.querySelector("span");
         var isOpen = false;
 
         allBtn.addEventListener("click", () => {
             var blocks = wrap.querySelectorAll(".acc-block");
 
             blocks.forEach((b) => {
-                if (!isOpen) {
-                    b.classList.add("acc-open");
-                } else {
-                    b.classList.remove("acc-open");
-                }
+                b.classList.toggle("acc-open", !isOpen);
             });
 
-            allBtn.textContent = !isOpen ? "접기" : "상세내역 보기";
+            label.textContent = !isOpen ? "접기" : "상세내역 보기";
+            allBtn.classList.toggle("on", !isOpen);
+
             isOpen = !isOpen;
         });
     });
