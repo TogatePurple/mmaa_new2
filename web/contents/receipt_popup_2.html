@@ -114,6 +114,7 @@
                     <!--container-->
                     <section id="container" class="sub" href="javascript:;" tabindex="0">
                         <div class="sub_inner">
+                            <!-- ⭐[S]: 퍼블 신규 -->
                             <div class="w receipt">
                                 <!-- 장기간부도약적금 일자별 수납내역 팝업 -->
                                 <div class="help-bg" style="display: block">
@@ -132,7 +133,7 @@
                                                         <label for="popup-select" class="hide">선택</label>
                                                         <select class="select-ac" id="" name="popup-select">
                                                             <option value="0">전체</option>
-                                                            <option value="1">공제 입금</option>
+                                                            <option value="1">공제입금</option>
                                                             <option value="2">가상계좌 입금</option>
                                                             <option value="3">정부지원금</option>
                                                         </select>
@@ -143,7 +144,7 @@
                                                     <div class="st-table all_tdview no_mgb" tabindex="0">
                                                         <table id="receiptDetailTable">
                                                             <caption>
-                                                                장기간부도약적금 일자별 수납내역 상세조회
+                                                                장기간부도약적금 일자별 수납내역 목록표(순번, 입금방법, 저축일, 저축금액 포함)
                                                             </caption>
                                                             <colgroup>
                                                                 <col style="width: 25%" />
@@ -161,19 +162,19 @@
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td>3</td>
-                                                                    <td>공제 입금</td>
+                                                                    <td class="blue-txt">3</td>
+                                                                    <td>공제입금</td>
                                                                     <td>2026년 06월 10일</td>
                                                                     <td class="right">100,000원</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>2</td>
+                                                                    <td class="blue-txt">2</td>
                                                                     <td>가상계좌 입금</td>
                                                                     <td>2026년 06월 08일</td>
                                                                     <td class="right">100,000원</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>1</td>
+                                                                    <td class="blue-txt">1</td>
                                                                     <td>가상계좌 입금</td>
                                                                     <td>2026년 06월 03일</td>
                                                                     <td class="right">100,000원</td>
@@ -182,7 +183,7 @@
                                                             <tfoot>
                                                                 <tr>
                                                                     <td colspan="3">합계</td>
-                                                                    <td class="right">300,000원</td>
+                                                                    <td class="right blue-txt">300,000원</td>
                                                                 </tr>
                                                             </tfoot>
                                                         </table>
@@ -200,8 +201,9 @@
                                         <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
                                     </div>
                                 </div>
-                                <!-- //병(兵) 회원 저축 일자별 수납내역 팝업 -->
+                                <!-- //장기간부도약적금 일자별 수납내역 팝업 -->
                             </div>
+                            <!-- ⭐[E]: 퍼블 신규 -->
                         </div>
                     </section>
                 </div>

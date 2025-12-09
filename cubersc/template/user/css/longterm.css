@@ -208,8 +208,10 @@
 .receipt .h-win .subss select {max-width: 170px;}
 .subs .receipt .h-win .sub_tit {margin-bottom:0}
 .receipt .tline-b .slc select, .receipt .tline-b .inp input[type=text] {width: 360px;}
-.receipt .tline-b .inp .war-txt { margin-top: 5px; display: flex; color: var(--color-6); font-size: var(--font-16); }
+.receipt .tline-b .inp {width: auto;}
+.receipt .tline-b .inp .war-txt { margin-top: 6px; display: flex; color: var(--color-6); font-size: var(--font-16); }
 .receipt .tline-b .inp .war-txt span {padding-left: 5px;padding-bottom: 0}
+.receipt .h-win .st-table table td {font-size: var(--font-16); letter-spacing: -1px;}
 
 /* 툴팁 */
 .longterm.receipt .info { position: absolute; top:20px; left:140px;}
@@ -229,7 +231,7 @@
 .longterm.receipt .acc-header button {padding: 5px 6px; background: var(--color-skyblue); border-radius: 5px; border: 1px solid var(--color-emp-blue); color: var(--color-emp-blue); font-size: var(--font-13); font-weight: var(--font-w-500); }
 .longterm.receipt .acc-total {padding: 10px; display: flex; justify-content: space-between; font-size: var(--font-15); font-weight: var(--font-w-400); }
 .longterm.receipt .acc-total strong { font-weight: var(--font-w-900); }
-.longterm.receipt .acc-total .blue-txt {color: var(--color-emp-blue); font-weight: var(--font-w-700); }
+.longterm.receipt .acc-total .blue-txt {color: var(--color-emp-blue); font-size: var(--font-16); font-weight: var(--font-w-700); }
 .longterm.receipt .accordion {margin: 10px 0; border-radius: 10px; border: var(--border-d);}
 .longterm.receipt dl.acc-block { padding:5px 0; font-size: var(--font-15); font-weight: var(--font-w-400); }
 .longterm.receipt dl.acc-block + dl.acc-block { border-top: var(--border-d);}
@@ -520,16 +522,7 @@
   .longterm.receipt .app-mb .next .cont-mb div span.tag.not {background-color: var(--color-red); }
   .longterm.receipt .app-mb .next .cont-mb div span.blue-txt {color: var(--color-emp-blue)!important;}
   /* 팝업 */
-  .receipt .h-win .subss {flex-direction: column;}
   .subs .receipt .h-win .subss .sub_tit:after {top:8px;}
-  .receipt .h-win .subss .inp {width: 100%}
-  .receipt .h-win .subss select {margin-top:20px; width: 100%; max-width: none;}
-  .receipt .st-table table thead { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); border: 0; }
-  .receipt .st-table table tbody td { width: 100%; display: flex; justify-content: space-between; align-items: center; white-space: normal; border: none;}
-  .receipt .st-table table tbody td:nth-child(1)::before { content: "순번"; }
-  .receipt .st-table table tbody td:nth-child(2)::before { content: "입금방법"; }
-  .receipt .st-table table tbody td:nth-child(3)::before { content: "저축일"; }
-  .receipt .st-table table tbody td:nth-child(4)::before { content: "저축금액"; }
 
   /*---------------------------------------------
       #SignUpSelection_new
@@ -579,6 +572,33 @@
   ---------------------------------------------*/
   .list_half_cardnoti {gap:26px;}
   .list_half_cardnoti > li + li{margin:0 }
+
+  /*---------------------------------------------
+      #receipt
+  ---------------------------------------------*/
+  /* 팝업 */
+  .receipt .h-win .subss {flex-direction: column;}
+  .receipt .h-win .subss .inp {width: 100%}
+  .receipt .h-win .subss select {margin-top:20px; padding: 10px!important; width: 100%; max-width: none; height: auto; }
+  /* 팝업-테이블 */
+  .receipt .h-win .st-table table { display: block; }
+  .receipt .h-win .st-table table thead, .receipt .h-win .st-table table colgroup { display: none; }
+  .receipt .help-w .h-win .st-table {overflow-y: hidden;}
+  .receipt .help-w .h-win .st-table table td {height:auto;}
+  .receipt .h-win .st-table table tbody { display: flex; flex-direction: column; max-height: 250px; overflow-y: auto; }
+  .receipt .h-win .st-table table tbody tr { width: 100%; padding: 10px 0; border-bottom: var(--border-d); }
+  .receipt .h-win .st-table table tbody td {padding: 10px; display: flex; justify-content: space-between; align-items: center; border: none; color: var(--color-6); font-size: var(--font-15); letter-spacing: -1px;}
+  .receipt .h-win .st-table table tbody td.blue-txt {color: var(--color-emp-blue)}
+  .receipt .h-win .st-table table tbody td.blue-txt::before { color: var(--color-6); }
+  .receipt .h-win .st-table table tfoot td.blue-txt {color: var(--color-emp-blue); justify-content: flex-end;}
+  .receipt .h-win .st-table table tbody td:nth-child(1)::before { content: "순번"; }
+  .receipt .h-win .st-table table tbody td:nth-child(2)::before { content: "입금방법"; }
+  .receipt .h-win .st-table table tbody td:nth-child(3)::before { content: "저축일"; }
+  .receipt .h-win .st-table table tbody td:nth-child(4)::before { content: "저축금액"; }
+  .receipt .h-win .st-table table tfoot { margin-top:20px; padding: 20px 10px 0 10px; display: block; border-top: var(--border-6); }
+  .receipt .h-win .st-table table tfoot tr { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+  .receipt .h-win .st-table table tfoot td:first-child {color:var(--color-6)}
+  .receipt .h-win .st-table table tfoot td { background:transparent; border: none; padding: 0; display: flex; align-items: flex-end; height:auto; }
 
   /*---------------------------------------------
       #quick-simulation
@@ -674,6 +694,8 @@
   .longterm.receipt .caution_bright_container .unit {margin-bottom:0;}
   /* 지급내역 */
   .receipt .alert.not-empty .text .detail > br{display:none;}
+  /* 팝업 */
+  .subs .receipt .h-win .subss .sub_tit:after {top:5px;}
 }
 
 @media screen and (max-width: 567px) {
@@ -686,4 +708,8 @@
   .simul.longterm .scroll-indicator {height: 8px; margin-top:40px; display: flex; justify-content: center; gap: 6px; }
   .simul.longterm .scroll-indicator .indicator {width: 12px; border-radius: 100px; background-color: var(--color-f1); transition: all 0.3s ease; cursor: pointer;}
   .simul.longterm .scroll-indicator .indicator.on {width: 16px; border: 2px solid var(--color-red-70); background-color: var(--color-red); }
+}
+
+@media screen and (max-width: 540px){
+  .receipt .h-win .st-table.all_tdview td { display: flex !important; }
 }
