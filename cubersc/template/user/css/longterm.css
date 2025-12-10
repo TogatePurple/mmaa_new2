@@ -619,7 +619,8 @@
   .receipt .h-win .st-table table tbody td.blue-txt {color: var(--color-emp-blue)}
   .receipt .h-win .st-table table tbody td.blue-txt::before { color: var(--color-6); }
   .receipt .h-win .st-table table tfoot td.blue-txt {color: var(--color-emp-blue); justify-content: flex-end;}
-  .receipt .h-win .st-table table tbody td:nth-child(1)::before { content: "순번"; }
+  .receipt .h-win .st-table table tbody td:nth-child(1):not([colspan])::before { content: "순번"; }
+  .receipt .h-win .st-table table tbody td:nth-child(1)[colspan] { min-height: 200px; justify-content: center; align-items: center; font-size: var(--font-14); color: var(--color-0); }
   .receipt .h-win .st-table table tbody td:nth-child(2)::before { content: "입금방법"; }
   .receipt .h-win .st-table table tbody td:nth-child(3)::before { content: "저축일"; }
   .receipt .h-win .st-table table tbody td:nth-child(4)::before { content: "저축금액"; }
