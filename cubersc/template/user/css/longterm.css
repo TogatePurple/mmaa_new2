@@ -113,9 +113,14 @@
 .longterm .h-win .mycontent .box-one {margin-bottom: 30px;}
 .longterm .h-win .aline-b.birth-d .inp {display: flex; align-items: center;}
 .longterm .h-win .aline-b .box_btmtxt .war-txt { padding-left:0; gap:5px; }
+.longterm .h-win .grey-popup-card {padding: 30px 0; margin-top: 60px; display: flex; width: 100%; flex-direction: column; align-items: center; border-radius: 10px; border: var(--border-d); line-height: 150%; }
+.longterm .h-win .grey-popup-card .common-txt {font-size: var(--font-20); font-weight: var(--font-w-400);}
+.longterm .h-win .grey-popup-card .common-txt .emp {font-weight: var(--font-w-500);}
+.longterm .h-win .grey-popup-card .common-txt + .reds {margin-top: 15px; }
 .longterm .h-win .blue-txt { padding-top: 100px; color: var(--color-blue); font-size: var(--font-24); font-weight: var(--font-w-700); background: url(../../../../cubersc/template/user/img/sub/chk.png) no-repeat top; background-size: 68px 68px;}
 .longterm .h-win .blue-txt.no-join {color:#000; background: url(../../../../cubersc/template/user/img/sub/no-join.svg) no-repeat top; background-size: 80px 80px;}
 .longterm .h-win .reds {font-size: var(--font-16);}
+.longterm .h-win .grey-popup-card .blue-txt + .common-txt {margin-top: 20px; }
 /* 팝업 스텝 */
 .longterm .step-popup .help-w {max-height: 896px; display: flex; flex-direction: column;}
 .longterm .step-popup .help-w .h-win { flex:1; display: flex; flex-direction: column; overflow-y: hidden; }
@@ -449,6 +454,10 @@
   .subs .longterm .sub_tit:after{top: 50%; transform: translateY(-50%);}
   .subs .longterm .h-win .cbox + .sub_tit {margin-top: 65px;}
   .longterm .h-win .mo-hide {display:none;}
+  .longterm .h-win .grey-popup-card {padding:20px; margin-top:40px; text-align:center; }
+  .longterm .h-win .grey-popup-card .common-txt{font-size: var(--font-16)}
+  .longterm .h-win .grey-popup-card .reds{font-size: var(--font-14)}
+  .longterm .h-win .grey-popup-card .common-txt + .reds {margin-top:5px;}
   .longterm .h-win .mycontent .box-one {margin-bottom:20px;}
   .longterm .h-win .mycontent .box .title:after {width: 20px; height: 20px;}
   .longterm .h-win .mycontent .box .chch { padding-left: 45px !important; }
@@ -459,6 +468,7 @@
   .longterm .h-win .aline + .add_mint {padding-top: 8px; margin-top: 20px; border-top: var(--border-d)}
   .longterm .h-win .blue-txt {padding-top: 50px; font-size: var(--font-20); background-size: 36px 36px;}
   .longterm .h-win .blue-txt.no-join { background-size: 46px 46px;}
+  .longterm .h-win .grey-popup-card .blue-txt + .common-txt {margin-top:10px}
   .longterm .h-win input[type="text"] {width: 100%;}
   .longterm .h-win input[type="text"].wth {width: 94%;}
   .longterm .h-win .txt_lb {margin-left: 12px;}
