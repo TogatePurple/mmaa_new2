@@ -336,6 +336,12 @@
 .longterm.isSimulation .txt_bl {margin-left:18px; font-size: var(--font-20); }
 
 /*---------------------------------------------
+    #mypage
+---------------------------------------------*/
+.content-all .type_col2 .mycontent.flex-end {justify-content: flex-end; }
+.content-all .type_col2 .mycontent.top-gap {padding-top:20px;}
+
+/*---------------------------------------------
     반응형
 ---------------------------------------------*/
 @media screen and (max-width: 1500px) {
@@ -592,6 +598,13 @@
   .longterm.isSimulation .box-one .item .main-txt {flex-direction: row;}
   .longterm.isSimulation .box-one .item .main-txt .plus {margin-right: 6px; display: block;}
   .longterm.isSimulation .box-one .item.result {padding-top: 14px; margin-top:10px; border-top: var(--border-d);}
+  
+  /*---------------------------------------------
+      #mypage
+  ---------------------------------------------*/
+  .content-all .type_col2 .mycontent.flex-end {margin-top:0; padding-top:0;}
+  .content-all .type_col2 .mycontent .box-one:last-child.no-mt {margin-top:0;}
+
 }
 
 @media screen and (max-width: 767px) {
