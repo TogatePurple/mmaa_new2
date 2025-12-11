@@ -1,7 +1,7 @@
 /*---------------------------------------------
     #공통
 ---------------------------------------------*/
-.longterm, .receipt, .box_controw {
+.longterm, .receipt, .box_controw, .longterm-middle-close {
     --font-12:12px;
     --font-13:13px;
     --font-14:14px;
@@ -352,6 +352,15 @@
 .list_freeveiw_allmenu.navy li:hover .box_freeview .dash {color:var(--color-navy);}
 
 /*---------------------------------------------
+    #LongtermMiddleClose
+---------------------------------------------*/
+.longterm-middle-close .wrap_tbl {padding: 50px 30px; border-radius: 10px; box-shadow: 0 0 8px 0 rgba(99, 99, 99, 0.10); }
+.tab-th .longterm-middle-close .wrap_tbl {margin-top:60px; }
+.longterm-middle-close .wrap_tbl .sub_tit {margin-top:0; padding-left: 50px; word-break: keep-all; overflow-wrap: normal; white-space: normal;}
+.subs .longterm-middle-close .wrap_tbl .sub_tit:after {left:25px; }
+.longterm-middle-close .wrap_tbl table th { word-break: keep-all; overflow-wrap: normal; white-space: normal;}
+
+/*---------------------------------------------
     반응형
 ---------------------------------------------*/
 @media screen and (max-width: 1500px) {
@@ -615,6 +624,18 @@
   .content-all .type_col2 .mycontent.flex-end {margin-top:0; padding-top:0;}
   .content-all .type_col2 .mycontent .box-one:last-child.no-mt {margin-top:0;}
 
+
+  /*---------------------------------------------
+      #LongtermMiddleClose
+  ---------------------------------------------*/
+  .longterm-middle-close {padding: 20px 10px 40px; border-radius: 10px; box-shadow: 0 0 8px 0 rgba(99, 99, 99, 0.10); }
+  .tab-th .longterm-middle-close .blue-bx {border-bottom:0; margin-bottom: 35px;}
+  .tab-th .longterm-middle-close .blue-bx .top-sl {padding:0; }
+  .longterm-middle-close .wrap_tbl {padding: 0; border-radius: 0; box-shadow: none; }
+  .tab-th .longterm-middle-close .wrap_tbl {margin-top: 0; }
+  .longterm-middle-close .wrap_tbl .sub_tit {padding-left:25px;}
+  .subs .longterm-middle-close .wrap_tbl .sub_tit:after {left:0;}
+  .longterm-middle-close .app-mb {margin-top:0; max-height: none; border-bottom: var(--border-d)}
 }
 
 @media screen and (max-width: 767px) {
