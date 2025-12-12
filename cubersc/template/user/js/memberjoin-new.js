@@ -1,4 +1,40 @@
 $(document).ready(function () {
+    // ⭐[S] 툴팁(조회와 동일)
+    var btn = document.querySelector(".info-icon");
+    var tip = document.querySelector("#tooltip1");
+
+    function openTip() {
+        tip.hidden = false;
+        tip.classList.add("is-open");
+        btn.setAttribute("aria-expanded", "true");
+    }
+
+    function closeTip() {
+        tip.hidden = true;
+        tip.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+    }
+
+    btn.addEventListener("mouseenter", openTip);
+    btn.addEventListener("mouseleave", closeTip);
+    btn.addEventListener("focus", openTip);
+    btn.addEventListener("blur", closeTip);
+
+    btn.addEventListener("click", () => {
+        tip.hidden ? openTip() : closeTip();
+    });
+
+    btn.addEventListener("keydown", (e) => {
+        if (e.key === " " || e.key === "Enter") {
+            e.preventDefault();
+            tip.hidden ? openTip() : closeTip();
+        }
+        if (e.key === "Escape") {
+            closeTip();
+        }
+    });
+    // ⭐[E] 툴팁
+
     // 아코디언 열릴 때
     function openAccordion(item) {
         item.addClass("on")
@@ -14,12 +50,15 @@ $(document).ready(function () {
                     marginBottom: "",
                 });
             });
+        item.find(".accordion-header").addClass("on").attr("aria-expanded", true); // ⭐aria-expanded 추가
+        item.find(".accordion-content").removeAttr("hidden"); // ⭐hidden 추가
     }
 
     // 아코디언 닫을 때
     function closeAccordion(item) {
         item.removeClass("on").find(".accordion-content").stop().slideUp("fast");
         item.find(".accordion-header").removeClass("on").attr("aria-expanded", false);
+        item.find(".accordion-content").prop("hidden", true); // ⭐hidden 추가
     }
 
     // 1) 아코디언 기본 toggle
