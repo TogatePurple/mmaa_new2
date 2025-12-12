@@ -114,7 +114,7 @@
                     <section id="container" class="sub" tabindex="0">
                         <div class="sub_inner">
                             <div class="w longterm">
-                                <!-- ⭐[S] 25/12/01 퍼블 수정: 장기간부도약적금 자격확인 팝업 -->
+                                <!-- [S] 25/12/01 퍼블 수정: 장기간부도약적금 자격확인 팝업 -->
                                 <div id="popup1" class="help-bg step-popup">
                                     <div class="help-w">
                                         <div class="w-close" tabindex="0">
@@ -483,11 +483,8 @@
                                         <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
                                     </div>
                                 </div>
-                                <!-- ⭐[E] 25/12/01 퍼블 수정: 장기간부도약적금 자격확인 팝업 -->
-
-                                <!-- ⭐25/12/01 퍼블: 장기간부도약적금 가입 팝업 삭제 -->
-
-                                <!-- ⭐[S] 25/12/01 퍼블 추가: 휴대전화번호 인증 팝업 -->
+                                <!-- [E] 25/12/01 퍼블 수정: 장기간부도약적금 자격확인 팝업 -->
+                                <!-- [S] 25/12/01 퍼블 추가: 휴대전화번호 인증 팝업 -->
                                 <!-- 간편인증하기 -->
                                 <div class="help-bg help_member_join" id="help" style="display: block">
                                     <div class="help-w">
@@ -527,7 +524,7 @@
                                     </div>
                                 </div>
                                 <!-- //간편인증하기 -->
-                                <!-- ⭐[E] 25/11/26 퍼블 추가: 휴대전화번호 인증 팝업 -->
+                                <!-- [E] 25/11/26 퍼블 추가: 휴대전화번호 인증 팝업 -->
 
                                 <!-- 기관별 입력항목 팝업 -->
                                 <div class="help-bg det-inputbyinst" style="display: none">
@@ -1517,8 +1514,9 @@
 
                                                             <div class="accordion-group">
                                                                 <div class="accordion-item personal">
-                                                                    <a class="accordion-header"><i>1</i><span>개인 상세정보 입력</span></a>
-                                                                    <div class="accordion-content">
+                                                                    <!-- ⭐251212 퍼블 수정 (button.accordion-header, div.accordion-content) -->
+                                                                    <button class="accordion-header" type="button" aria-expanded="false" aria-controls="section1" id="btn1"><i>1</i><span>개인 상세정보 입력</span></button>
+                                                                    <div class="accordion-content" id="section1" role="region" aria-labelledby="btn1" hidden>
                                                                         <div class="q">
                                                                             <div class="aline" id="rrnoArea">
                                                                                 <div class="aline-a fstart" style="display: flex; align-items: center">
@@ -1668,8 +1666,9 @@
                                                                 </div>
 
                                                                 <div class="accordion-item info">
-                                                                    <a class="accordion-header"><i>2</i><span>소속 및 가입정보 입력</span></a>
-                                                                    <div class="accordion-content mb-40">
+                                                                    <!-- ⭐251212 퍼블 수정 (button.accordion-header, div.accordion-content) -->
+                                                                    <button class="accordion-header" type="button" aria-expanded="false" aria-controls="section1" id="btn1"><i>2</i><span>소속 및 가입정보 입력</span></button>
+                                                                    <div class="accordion-content mb-40" id="section1" role="region" aria-labelledby="btn1" hidden>
                                                                         <div class="aline half_aline bt-2-333">
                                                                             <div class="aline_col">
                                                                                 <div class="aline-a">소속<span class="reds">*</span></div>
@@ -1867,8 +1866,9 @@
                                                                 </div>
 
                                                                 <div class="accordion-item id-pw">
-                                                                    <a class="accordion-header"><i>3</i><span>아이디/비밀번호 설정</span></a>
-                                                                    <div class="accordion-content">
+                                                                    <!-- ⭐251212 퍼블 수정 (button.accordion-header, div.accordion-content) -->
+                                                                    <button class="accordion-header" type="button" aria-expanded="false" aria-controls="section1" id="btn1"><i>3</i><span>아이디/비밀번호 설정</span></button>
+                                                                    <div class="accordion-content" id="section1" role="region" aria-labelledby="btn1" hidden>
                                                                         <div class="q">
                                                                             <div class="aline">
                                                                                 <div class="aline-a fstart">
@@ -1953,8 +1953,8 @@
                                                                 <div class="header">
                                                                     <h4 class="sub_tit no_mgt">장기간부도약적금</h4>
                                                                     <div class="info">
-                                                                        <span class="info-icon"></span>
-                                                                        <div class="tooltip">
+                                                                        <!-- ⭐251212 퍼블 수정 (tooltip) -->
+                                                                        <div id="tooltip1" role="tooltip" class="tooltip" hidden>
                                                                             <p class="main">가입자격 / 금액 / 기간</p>
                                                                             <p class="sub">다음 중에 가입을 희망하는 자에 한해 가입이 가능합니다.</p>
                                                                             <ol>
@@ -1963,6 +1963,7 @@
                                                                                 <li><span>3. </span>군 복무 중 장기복무자로 선발된 장교 및 부사관</li>
                                                                             </ol>
                                                                         </div>
+                                                                        <button class="info-icon" aria-describedby="tooltip1" aria-expanded="false" type="button"></button>
                                                                     </div>
                                                                 </div>
                                                                 <div class="q">
