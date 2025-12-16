@@ -123,6 +123,7 @@
 .longterm .h-win .blue-txt.no-join {color:#000; background: url(../../../../cubersc/template/user/img/sub/no-join.svg) no-repeat top; background-size: 80px 80px;}
 .longterm .h-win .reds {font-size: var(--font-16);}
 .longterm .h-win .grey-popup-card .blue-txt + .common-txt {margin-top: 20px; }
+.longterm .h-win .grey-popup-card.impossible {margin-top: 0;}
 /* 팝업 스텝 */
 .longterm .step-popup .help-w {max-height: 896px; display: flex; flex-direction: column;}
 .longterm .step-popup .help-w .h-win { flex:1; display: flex; flex-direction: column; overflow-y: hidden; }
@@ -132,17 +133,20 @@
 .longterm .h-win .steps #step1:checked ~ .step1 { display: flex; }
 .longterm .h-win .steps #step2:checked ~ .step2 { display: flex; }
 .longterm .h-win .steps #step3:checked ~ .step3 { display: flex; }
-.longterm .h-win .steps .step .step-content { overflow-y: auto; max-height: 550px; min-height: 0; scrollbar-gutter: stable; }
+.longterm .h-win .steps .step .step-content { max-height: 550px; min-height: 0; display: flex; flex-direction: column;}
+.longterm .h-win .steps .step .step-content .scroll-wrap { flex: 1 1 auto; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; }
 
-.longterm .h-win .steps .indicators { margin: 66px 0 40px 0; display: flex; justify-content: center; gap:33px;}
-.longterm .h-win .steps .indicators .circle {position: relative; width: 42px; height: 42px; display: flex; justify-content: center; align-items: center; border-radius: 50%; background-color: var(--color-empty); color: var(--color-f); font-size: var(--font-24); font-weight: var(--font-w-500); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;}
-.longterm .h-win .steps .indicators .circle:not(:first-child)::after { content: ""; position: absolute; left: -33px; width: 33px; height: 2px; background-image: repeating-linear-gradient(90deg, var(--color-empty) 0 3px, transparent 3px 6px); background-size: auto 2px; }
-.longterm .h-win .steps .indicators .circle.active { background-color: var(--color-f); border: 2px solid var(--color-blue); color: var(--color-blue)}
+.longterm .h-win .steps .step-tit-wrap {display: flex; margin:30px 0 20px; justify-content: flex-end; align-items: center;}
+.subs .longterm .h-win .steps .step-tit-wrap .sub_tit {margin:0;}
+.longterm .h-win .steps .indicators {display: flex; justify-content: center; gap:25px;}
+.longterm .h-win .steps .indicators .circle {position: relative; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 50%; background-color: var(--color-empty); color: var(--color-f); font-size: var(--font-16); font-weight: var(--font-w-500); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;}
+.longterm .h-win .steps .indicators .circle:not(:first-child)::after { content: ""; position: absolute; left: -25px; width: 25px; height: 2px; background-image: repeating-linear-gradient(90deg, var(--color-empty) 0 3px, transparent 3px 6px); background-size: auto 2px; }
+.longterm .h-win .steps .indicators .circle.active { background-color: var(--color-f); border: 1.5px solid var(--color-blue); color: var(--color-blue)}
 .longterm .h-win .steps .indicators .circle.comp { background-color: var(--color-blue); color: var(--color-f)}
 .longterm .h-win .steps .indicators .circle.active:not(:first-child)::after, .longterm .h-win .steps .indicators .circle.comp:not(:first-child)::after { background-image: repeating-linear-gradient(90deg, var(--color-blue) 0 3px, transparent 3px 6px); }
 
 .longterm .h-win .steps .mycontent .box .title.all_agree:before {display: none;}
-.longterm .h-win .steps .btns {flex-shrink: 0; margin:20px 0 20px 0; }
+.longterm .h-win .steps .btns {flex-shrink: 0; }
 .longterm .h-win .steps .btns .button { display: flex; align-items: center; justify-content: center; position: static; }
 
 /* step3-버튼 */
@@ -477,7 +481,7 @@
   .subs .longterm .sub_tit:after{top: 50%; transform: translateY(-50%);}
   .subs .longterm .h-win .cbox + .sub_tit {margin-top: 65px;}
   .longterm .h-win .mo-hide {display:none;}
-  .longterm .h-win .grey-popup-card {padding:20px; margin-top:40px; text-align:center; }
+  .longterm .h-win .grey-popup-card {padding:20px; margin:60px 0 20px; text-align:center; }
   .longterm .h-win .grey-popup-card .common-txt{font-size: var(--font-16)}
   .longterm .h-win .grey-popup-card .reds{font-size: var(--font-14)}
   .longterm .h-win .grey-popup-card .common-txt + .reds {margin-top:5px;}
@@ -498,10 +502,10 @@
   .longterm .h-win .colorful { top: 32px; height: 20px; }
   .help-w .aline-a.pt-0 {padding-top:0;}
 
-  .longterm .h-win .steps .indicators { margin: 28px 0; gap:16px;}
-  .longterm .h-win .steps .indicators .circle {width: 24px; height: 24px; font-size: var(--font-14); }
-  .longterm .h-win .steps .indicators .circle:not(:first-child)::after { left: -16px; width: 16px; height: 1px; background-size: auto 1px; }
   .longterm .h-win .steps .indicators .circle.active { border: 1px solid var(--color-blue); }
+  .longterm .h-win .steps .step-tit-wrap {margin:28px 0 20px; }
+  .subs .longterm .h-win .steps .step-tit-wrap .sub_tit {margin:0;}
+  .longterm .h-win .steps .btns {margin-top:20px !important; }
 
   /*---------------------------------------------
       #memberjoin-longterm
@@ -736,6 +740,11 @@
   .longterm .h-win .colorful { top: 18px; }
   .longterm .h-win input[type="text"].wth {width: 88%}
   .longterm .h-win .sub_tit{margin-bottom: 30px;}
+  
+  .longterm .h-win .steps .indicators {gap:10px;}
+  .longterm .h-win .steps .indicators .circle {width: 20px; height: 20px; font-size: 11.5px; }
+  .longterm .h-win .steps .indicators .circle:not(:first-child)::after { left: -10px; width: 10px; height: 1px; background-size: auto 1px; }
+  
   /*---------------------------------------------
       #memberjoin-longterm
   ---------------------------------------------*/
