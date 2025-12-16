@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // ⭐[S] 툴팁(조회와 동일)
+    // ⭐[S]251216 퍼블 추가: 툴팁(조회와 동일)
     var btn = document.querySelector(".info-icon");
     var tip = document.querySelector("#tooltip1");
 
@@ -33,7 +33,7 @@ $(document).ready(function () {
             closeTip();
         }
     });
-    // ⭐[E] 툴팁
+    // ⭐[E]251216 퍼블 추가: 툴팁
 
     // 아코디언 열릴 때
     function openAccordion(item) {
@@ -50,15 +50,15 @@ $(document).ready(function () {
                     marginBottom: "",
                 });
             });
-        item.find(".accordion-header").addClass("on").attr("aria-expanded", true); // ⭐aria-expanded 추가
-        item.find(".accordion-content").removeAttr("hidden"); // ⭐hidden 추가
+        item.find(".accordion-header").addClass("on").attr("aria-expanded", true); // ⭐251216 퍼블 추가: aria-expanded 추가
+        item.find(".accordion-content").removeAttr("hidden"); // ⭐251216 퍼블 추가: hidden 추가
     }
 
     // 아코디언 닫을 때
     function closeAccordion(item) {
         item.removeClass("on").find(".accordion-content").stop().slideUp("fast");
         item.find(".accordion-header").removeClass("on").attr("aria-expanded", false);
-        item.find(".accordion-content").prop("hidden", true); // ⭐hidden 추가
+        item.find(".accordion-content").prop("hidden", true); // ⭐251216 퍼블 추가: hidden 추가
     }
 
     // 1) 아코디언 기본 toggle
