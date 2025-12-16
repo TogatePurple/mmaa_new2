@@ -157,6 +157,11 @@
 .memberjoin-new button:disabled { color: var(--color-3); cursor: not-allowed; }
 .memberjoin-new .btns .check-bt:not(.check-linebt):has(button:disabled):hover {box-shadow: none}
 
+/* 가입 내역 확인 팝업 */
+.longterm .help-w .h-win.check-popup .h-wincont {padding-top:0;}
+.subs .longterm .h-win.check-popup .sub_tit { margin-top:30px;}
+.longterm .h-win.check-popup .txt_point {color: var(--color-emp-blue); font-weight: var(--font-w-700);}
+
 /*---------------------------------------------
     #memberjoin-longterm
 ---------------------------------------------*/
@@ -491,7 +496,7 @@
   .longterm .h-win .aline-b {padding:0}
   .longterm .h-win .aline-b.birth-d .inp {max-width: 100%}
   .longterm .h-win .aline {border-bottom: none;}
-  .longterm .h-win .q {border-top: none;}
+  .longterm .h-win:not(.check-popup) .q {border-top: none;}
   .longterm .h-win .aline + .add_mint {padding-top: 8px; margin-top: 20px; border-top: var(--border-d)}
   .longterm .h-win .blue-txt {padding-top: 50px; font-size: var(--font-20); background-size: 36px 36px;}
   .longterm .h-win .blue-txt.no-join { background-size: 46px 46px;}
@@ -506,6 +511,12 @@
   .longterm .h-win .steps .step-tit-wrap {margin:28px 0 20px; }
   .subs .longterm .h-win .steps .step-tit-wrap .sub_tit {margin:0;}
   .longterm .h-win .steps .btns {margin-top:20px !important; }
+
+  /* 가입 내역 확인 팝업 */
+  .subs .longterm .h-win.check-popup .sub_tit {margin: 28px 0 12px;}
+  .longterm .h-win.check-popup .aline {flex-direction: row; border-bottom: var(--border-d);}
+  .longterm .help-w .h-win.check-popup .aline-a {width: auto; min-width: 100px; padding:20px 0; justify-content:center; background: var(--color-skyblue); font-size:var(--font-14); }
+  .longterm .h-win.check-popup .aline-b { padding:8px; justify-content: center; font-size:var(--font-14);}
 
   /*---------------------------------------------
       #memberjoin-longterm
