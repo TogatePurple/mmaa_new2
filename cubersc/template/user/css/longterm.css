@@ -116,6 +116,7 @@
 .longterm .h-win .aline-b.birth-d .inp {display: flex; align-items: center;}
 .longterm .h-win .aline-b .box_btmtxt .war-txt { padding-left:0; gap:5px; }
 .longterm .h-win .grey-popup-card {padding: 30px 0; margin-top: 60px; display: flex; width: 100%; flex-direction: column; align-items: center; border-radius: 10px; border: var(--border-d); line-height: 150%; }
+.longterm .h-win .step2 .grey-popup-card {margin-top: 112px; }
 .longterm .h-win .grey-popup-card .common-txt {font-size: var(--font-20); font-weight: var(--font-w-400);}
 .longterm .h-win .grey-popup-card .common-txt .emp {font-weight: var(--font-w-500);}
 .longterm .h-win .grey-popup-card .common-txt + .reds {margin-top: 15px; }
@@ -274,14 +275,14 @@
 .list_half_cardnoti > li .box_line.navy .line { background-color: #3b3772; }
 
 /* 사전 절차 안내 팝업 */
-.longterm .h-win.pre-popup .box-calcarea {display: flex; flex-direction: column; max-height: 70vh; }
+.longterm .h-win.pre-popup .box-calcarea {display: flex; flex-direction: column; height: 70vh; max-height: 738px; }
 .longterm .h-win.pre-popup .box_btmborder_tit {flex: 0 0 auto; }
 .longterm .h-win.pre-popup .box_calcwrap { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
 .longterm .h-win.pre-popup .btns { flex: 0 0 auto; }
 .longterm .h-win.pre-popup .box_btmborder_tit + .box_calcwrap {margin-top:40px; padding-top: 0;}
 .longterm .h-win.pre-popup .main-txt { text-align: center; font-size: var(--font-30); font-weight: var(--font-w-700); line-height: 150%; }
 .longterm .h-win.pre-popup .main-txt .blue, .longterm .h-win.pre-popup .grey-popup-card .blue {color: var(--color-emp-blue); font-weight: var(--font-w-700);}
-.longterm .h-win.pre-popup .grey-popup-card {margin-top:40px; padding:30px 0 40px; color: var(--color-3); text-align: center; font-size: var(--font-20); font-weight: var(--font-w-400); line-height: 150%;}
+.longterm .h-win.pre-popup .grey-popup-card {margin-top:40px; padding:24px 0 36px; color: var(--color-3); text-align: center; font-size: var(--font-20); font-weight: var(--font-w-400); line-height: 150%;}
 .longterm .h-win.pre-popup .card {margin-top: 36px; padding: 26px; display: flex; align-items: center; gap: 16px; border-radius: 10px; box-shadow: 2px 2px 6px 0 rgba(47, 46, 44, 0.20);}
 .longterm .h-win.pre-popup .card .logo {padding: 10px; display: flex; align-items: center; color: var(--color-6); text-align: center; font-size: var(--font-16); font-weight: var(--font-w-500);}
 .longterm .h-win.pre-popup .card .logo img {width:200px; padding-right: 16px;}
@@ -294,6 +295,15 @@
 .longterm .h-win.pre-popup .info-txt span {display: flex; align-items: center; }
 .longterm .h-win.pre-popup .info-txt .btn_linkmove {margin:0 20px;}
 .longterm .h-win.pre-popup .check-bt.btn-next {width: auto;padding: 0 26px;}
+/* step2 */
+.longterm .h-win.pre-popup .step2 .main-txt {margin: 150px 0 40px 0;}
+.longterm .h-win.pre-popup .main-txt .normal {font-weight: var(--font-w-500)}
+.longterm .h-win.pre-popup .cards { margin-bottom:30px; display: flex; gap:30px; }
+.longterm .h-win.pre-popup .cards .card { padding: 40px 30px; margin-top:0; flex: 1; flex-direction: column; }
+.longterm .h-win.pre-popup .cards .card .grey-box {width:100%; padding: 30px; display: flex; justify-content: space-between; align-items: center; border-radius: 10px; background: #F8FAFC; color: var(--color-45); font-size: var(--font-20); font-weight: var(--font-w-500); line-height: 150%;}
+.longterm .h-win.pre-popup .cards .card .btn { margin-top: 24px; padding: 20px; align-self: stretch; border-radius: 10px; background: #0074DA; color: var(--color-f); text-align: center; font-size: var(--font-24); font-weight: var(--font-w-700); line-height: 130%; }
+.longterm .h-win.pre-popup .cards .card .btn.navy{background: #2F5C8F;}
+.longterm .h-win.pre-popup .cards .card .yes {display:inline-flex; justify-content: center; align-items: center; border-radius: 100px; min-width: 62px; height: 62px; background-color: var(--color-f); color: #0991EE; font-size: var(--font-18); font-weight: var(--font-w-700);}
 
 /*---------------------------------------------
     #quick-simulation
@@ -533,6 +543,8 @@
   .longterm .h-win .steps .step-tit-wrap {margin:28px 0 20px; }
   .subs .longterm .h-win .steps .step-tit-wrap .sub_tit {margin:0;}
   .longterm .h-win .steps .btns {margin-top:20px !important; }
+  .longterm .h-win .step2 .grey-popup-card {margin-top: 90px;}
+  .longterm .h-win .steps .step.step1 .step-content .cbox {margin-bottom: 70px;}
 
   /* 가입 내역 확인 팝업 */
   .subs .longterm .h-win.check-popup .sub_tit {margin: 28px 0 12px;}
@@ -628,6 +640,7 @@
   .longterm .h-win.pre-popup .card .logo img + span {border-left: none;}
   .longterm .h-win.pre-popup .card .logo span {padding-left:0; padding-top: 20px; height:auto; }
   .longterm .h-win.pre-popup .info-txt {flex-direction: column; align-items: flex-start; gap:8px;}
+  .longterm .h-win.pre-popup .cards { flex-direction: column; }
 
   /*---------------------------------------------
       #quick-simulation
@@ -797,7 +810,9 @@
   .longterm .h-win .steps .indicators {gap:10px;}
   .longterm .h-win .steps .indicators .circle {width: 20px; height: 20px; font-size: 11.5px; }
   .longterm .h-win .steps .indicators .circle:not(:first-child)::after { left: -10px; width: 10px; height: 1px; background-size: auto 1px; }
-  
+  .longterm .h-win .step2 .grey-popup-card {margin-top: 74px;}
+  .longterm .h-win .steps .step.step1 .step-content .cbox {margin-bottom: 180px;}
+
   /*---------------------------------------------
       #memberjoin-longterm
   ---------------------------------------------*/

@@ -6,9 +6,9 @@ $(document).ready(function () {
             $(".btns .btn-next").hide();
             $(".step2").show();
 
-            $(".h-win.check-popup").animate(
+            $(".h-win.pre-popup .box_calcwrap").animate(
                 {
-                    scrollTop: $(".h-win.check-popup").scrollTop() + $(".step2").position().top,
+                    scrollTop: $(".h-win.pre-popup .box_calcwrap").scrollTop() + $(".step2").position().top,
                 },
                 300
             );
