@@ -273,6 +273,10 @@
 ---------------------------------------------*/
 .list_half_cardnoti > li .box_line.navy .line { background-color: #3b3772; }
 
+/* 사전 절차 안내 팝업 */
+.longterm .h-win.pre-popup .box_btmborder_tit + .box_calcwrap {padding-top: 40px;}
+.longterm .h-win.pre-popup .main-txt { text-align: center; font-size: var(--font-30); font-weight: var(--font-w-700); line-height: 150%; }
+
 /*---------------------------------------------
     #quick-simulation
 ---------------------------------------------*/
