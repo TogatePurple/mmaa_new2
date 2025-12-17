@@ -274,8 +274,24 @@
 .list_half_cardnoti > li .box_line.navy .line { background-color: #3b3772; }
 
 /* 사전 절차 안내 팝업 */
-.longterm .h-win.pre-popup .box_btmborder_tit + .box_calcwrap {padding-top: 40px;}
+.longterm .h-win.pre-popup .box-calcarea {display: flex; flex-direction: column; max-height: 70vh; }
+.longterm .h-win.pre-popup .box_btmborder_tit {flex: 0 0 auto; }
+.longterm .h-win.pre-popup .box_calcwrap { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+.longterm .h-win.pre-popup .btns { flex: 0 0 auto; }
+.longterm .h-win.pre-popup .box_btmborder_tit + .box_calcwrap {margin-top:40px; padding-top: 0;}
 .longterm .h-win.pre-popup .main-txt { text-align: center; font-size: var(--font-30); font-weight: var(--font-w-700); line-height: 150%; }
+.longterm .h-win.pre-popup .main-txt .blue, .longterm .h-win.pre-popup .grey-popup-card .blue {color: var(--color-emp-blue); font-weight: var(--font-w-700);}
+.longterm .h-win.pre-popup .grey-popup-card {margin-top:40px; padding:30px 0 40px; color: var(--color-3); text-align: center; font-size: var(--font-20); font-weight: var(--font-w-400); line-height: 150%;}
+.longterm .h-win.pre-popup .card {margin-top: 36px; padding: 26px; display: flex; align-items: center; gap: 16px; border-radius: 10px; box-shadow: 2px 2px 6px 0 rgba(47, 46, 44, 0.20);}
+.longterm .h-win.pre-popup .card .logo {padding: 10px; display: flex; align-items: center; color: var(--color-6); text-align: center; font-size: var(--font-16); font-weight: var(--font-w-500);}
+.longterm .h-win.pre-popup .card .logo img {width:200px; padding-right: 16px;}
+.longterm .h-win.pre-popup .card .logo img + span {border-left: var(--border-d); }
+.longterm .h-win.pre-popup .card .logo span {padding-left: 16px; height: 36px; display: flex; align-items: center; }
+.longterm .h-win.pre-popup .btn_linkmove { line-height:1; }
+.longterm .h-win.pre-popup .info-txt {margin:40px 0 30px; display: flex; justify-content: center; align-items: center; color: var(--color-6); font-size: var(--font-18); font-weight: var(--font-w-400);} 
+.longterm .h-win.pre-popup .info-txt span {display: flex; align-items: center; }
+.longterm .h-win.pre-popup .info-txt .btn_linkmove {margin:0 20px;}
+.longterm .h-win.pre-popup .check-bt.btn-next {width: auto;padding: 0 26px;}
 
 /*---------------------------------------------
     #quick-simulation
@@ -600,6 +616,16 @@
   .list_half_cardnoti {display: flex; flex-wrap:wrap; gap:30px;}
   .list_half_cardnoti > li + li {margin-left:0}
   .list_half_cardnoti > li {height: fit-content;}
+  /* 사전 절차 안내 팝업 */
+  .longterm .h-win.pre-popup .box_calcwrap::-webkit-scrollbar {display: none;}
+  .longterm .h-win.pre-popup .main-txt {font-size: var(--font-24)}
+  .longterm .h-win.pre-popup .grey-popup-card {padding:20px; font-size: var(--font-18) }
+  .longterm .h-win.pre-popup .card {padding:20px; flex-direction: column; }
+  .longterm .h-win.pre-popup .card .logo {flex-direction: column;}
+  .longterm .h-win.pre-popup .card .logo img {width: 120px; padding-right: 0;}
+  .longterm .h-win.pre-popup .card .logo img + span {border-left: none;}
+  .longterm .h-win.pre-popup .card .logo span {padding-left:0; padding-top: 20px; height:auto; }
+  .longterm .h-win.pre-popup .info-txt {flex-direction: column; align-items: flex-start; gap:8px;}
 
   /*---------------------------------------------
       #quick-simulation
@@ -661,6 +687,16 @@
   ---------------------------------------------*/
   .list_half_cardnoti {gap:26px;}
   .list_half_cardnoti > li + li{margin:0 }
+  /* 사전 절차 안내 팝업 */
+  .longterm .h-win.pre-popup .main-txt {font-size: var(--font-18); }
+  .longterm .h-win.pre-popup .btns {margin-top:20px !important; margin-bottom:20px; flex-direction: column-reverse; gap: 10px;}
+  .longterm .h-win.pre-popup .btns .check-bt {margin-right:0;}
+  .longterm .h-win.pre-popup .grey-popup-card {margin-top: 30px; font-size: var(--font-16)}
+  .longterm .h-win.pre-popup .card {margin-top:20px; width: 100%;}
+  .longterm .h-win.pre-popup .card .logo {padding:0;}
+  .longterm .h-win.pre-popup .card .logo span {text-align: center; font-size: 14px; font-weight: 500; }
+  .longterm .h-win.pre-popup .info-txt {margin:30px 0 20px; font-size: var(--font-15); line-height: 150%;}
+  .longterm .h-win.pre-popup .info-txt .btn_linkmove {margin:0 12px; }
 
   /*---------------------------------------------
       #receipt
@@ -801,6 +837,12 @@
   .receipt .alert.not-empty .text .detail > br{display:none;}
   /* 팝업 */
   .subs .receipt .h-win .subss .sub_tit:after {top:5px;}
+
+  /*---------------------------------------------
+      #SignUpSelection_new
+  ---------------------------------------------*/
+  /* 사전 절차 안내 팝업 */
+  .longterm .h-win.pre-popup .btns .check-bt {margin:0 !important}
 }
 
 @media screen and (max-width: 567px) {
