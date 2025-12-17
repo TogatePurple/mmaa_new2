@@ -289,6 +289,8 @@
 .longterm .h-win.pre-popup .card .logo span {padding-left: 16px; height: 36px; display: flex; align-items: center; }
 .longterm .h-win.pre-popup .btn_linkmove { line-height:1; }
 .longterm .h-win.pre-popup .info-txt {margin:40px 0 30px; display: flex; justify-content: center; align-items: center; color: var(--color-6); font-size: var(--font-18); font-weight: var(--font-w-400);} 
+.longterm .h-win.pre-popup .asterisk {position: relative; padding-left: 12px; display: inline-block;}
+.longterm .h-win.pre-popup .asterisk::before {position: absolute; content:"*"; top:0; left:0;}
 .longterm .h-win.pre-popup .info-txt span {display: flex; align-items: center; }
 .longterm .h-win.pre-popup .info-txt .btn_linkmove {margin:0 20px;}
 .longterm .h-win.pre-popup .check-bt.btn-next {width: auto;padding: 0 26px;}
