@@ -402,6 +402,11 @@
 .longterm-middle-close .wrap_tbl table th { word-break: keep-all; overflow-wrap: normal; white-space: normal;}
 
 /*---------------------------------------------
+    #MemcardPrint
+---------------------------------------------*/
+.box_subtabwrap .w-btns div { flex: none; min-width: 210px; }
+
+/*---------------------------------------------
     반응형
 ---------------------------------------------*/
 @media screen and (max-width: 1500px) {
