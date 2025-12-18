@@ -206,7 +206,7 @@
 .receipt .bx-container .bx-row { display: flex; justify-content: space-between; align-items: center; }
 .receipt .bx-container .bx-row .row-title { color: var(--color-6); font-size: var(--font-16); font-weight: var(--font-w-400); }
 .receipt .bx-container .bx-row .row-content { color: var(--color-45); font-size: var(--font-22); line-height: 140%; }
-.receipt .bx-container .bx-row .row-content.emp {color: var(--color-0); font-weight: var(--font-w-700); }
+.receipt .bx-container .bx-row .row-content.emp {display: flex; align-items: center; color: var(--color-0); font-weight: var(--font-w-700); }
 .receipt .bx-container .bx-row .row-content.tag, .receipt .tag { padding: 4px 12px; background: var(--color-blue); border-radius: 100px; color: var(--color-f); font-size: var(--font-16); font-weight: 700; }
 .receipt .bx-container .bx-row .row-content.tag.not, .receipt .tag.not { background: var(--color-red); }
 
@@ -250,7 +250,8 @@
 .longterm.receipt .acc-wrap {padding:10px 0; color: var(--color-6); }
 .longterm.receipt .acc-wrap:not(:nth-child(1)) {border-top: var(--border-6); }
 .longterm.receipt .acc-header {padding: 10px 5px 10px 10px; display: flex; justify-content: space-between; align-items: center; font-size: var(--font-18); font-weight: var(--font-w-700);}
-.longterm.receipt .acc-header button {padding: 5px 6px; background: var(--color-skyblue); border-radius: 5px; border: 1px solid var(--color-emp-blue); color: var(--color-emp-blue); font-size: var(--font-13); font-weight: var(--font-w-500); }
+.longterm.receipt .acc-header button {padding: 5px 6px; background: var(--color-skyblue); border-radius: 5px; border: 1px solid var(--color-emp-blue); color: var(--color-emp-blue); font-size: var(--font-13); font-weight: var(--font-w-500); cursor: pointer; transition: all .3s ease; }
+.longterm.receipt .acc-header button:hover, .longterm.receipt .btn_pop_3:hover { background: var(--color-emp-blue); color: var(--color-f); }
 .longterm.receipt .acc-total {padding: 10px; display: flex; justify-content: space-between; font-size: var(--font-15); font-weight: var(--font-w-400); }
 .longterm.receipt .acc-total strong { font-weight: var(--font-w-900); }
 .longterm.receipt .acc-total .blue-txt {color: var(--color-emp-blue); font-size: var(--font-16); font-weight: var(--font-w-700); }
@@ -266,8 +267,26 @@
 .longterm.receipt .acc-footer-btn span::before { position:absolute; content: ""; display: block; width: 12px; height: 6px; right:2px; top:8px; background-color: var(--color-emp-blue); mask-image: url("../../../../cubersc/template/user/img/sub/s3_mybox_bottom.png"); mask-repeat: no-repeat; mask-size: contain; mask-position: center;
     -webkit-mask-image: url("../../../../cubersc/template/user/img/sub/s3_mybox_bottom.png"); -webkit-mask-repeat: no-repeat; -webkit-mask-size: contain; -webkit-mask-position: center;}
 .longterm.receipt .acc-footer-btn.on span::before { transform: rotate(180deg); }
-.longterm.receipt .mo-btn {padding: 15px 0; margin:10px 0 20px; width: 100%; border-radius: 8px; border: 1px solid #383B73; color: #383B73; font-size: 16px; font-weight: 400; cursor: pointer;}
+.longterm.receipt .mo-btn {padding: 15px 0; margin:10px 0 20px; width: 100%; border-radius: 8px; border: 1px solid #383B73; color: #383B73; font-size: 16px; font-weight: 400; cursor: pointer; transition: all .3s ease;}
 .longterm.receipt .mo-btn.open {margin:20px 0; border: 1px solid var(--color-emp-blue); color: var(--color-emp-blue);}
+.longterm.receipt .mo-btn:hover { background: #383B73; color: var(--color-f);}
+.longterm.receipt .mo-btn.open:hover { background: var(--color-emp-blue); }
+
+/* 공제 의뢰액 변경 신청 */
+.longterm.receipt .btn_pop_3 {padding: 5px 10px; margin-left: 6px; background: var(--color-f); color: var(--color-emp-blue); font-size: var(--font-14); font-weight: var(--font-w-500); line-height: 130%; border: 1px solid var(--color-emp-blue); border-radius: 5px;
+    cursor: pointer; -webkit-transition: all .3s ease; transition: all .3s ease; }
+.receipt .change-popup .fline-a-1, .receipt .change-popup .fline-b-1 {flex-direction: column; }
+.receipt .change-popup .fline-a-1 span, .receipt .change-popup .fline-b-1 span { margin-top: 6px; color: var(--color-6); font-size: var(--font-16); font-weight: var(--font-w-400); }
+.receipt .change-popup .fline-a-2.right { justify-content: flex-end;}
+.receipt .change-popup .fline-b-2 {flex-direction: column; align-items: flex-start; }
+.receipt .change-popup .fline-b-2 .wrap { width: 90%; }
+.receipt .change-popup .fline-b-2 .wrap .input-wrap { width: 100%; display: flex; align-items: center; }
+.receipt .h-win.change-popup .fline-b-2 .wrap input[type="number"] { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #dbdbdb; font-size: var(--font-18); }
+.receipt .change-popup .fline-b-2 .wrap .input-wrap .won {margin: 0 20px; font-size: var(--font-16);}
+.receipt .change-popup .fline-b-2 .box_cntbtnwrap {gap: 10px;}
+.receipt .change-popup .fline-b-2 .box_cntbtnwrap .btn_cnt {width: 100%}
+.receipt .change-popup .reds span {display: block; line-height: 150%;}
+.receipt .change-popup .reds span + span { margin-top: 4px; }
 
 /*---------------------------------------------
     #SignUpSelection_new
@@ -303,6 +322,7 @@
 .longterm .h-win.pre-popup .cards .card .grey-box {width:100%; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-radius: 10px; background: #F8FAFC; color: var(--color-45); font-size: var(--font-20); font-weight: var(--font-w-500); line-height: 150%;}
 .longterm .h-win.pre-popup .cards .card.f7 .grey-box {background-color: #F7F7F7;}
 .longterm .h-win.pre-popup .cards .card .btn { margin-top: 14px; padding: 20px 0; align-self: stretch; border-radius: 10px; background: #0074DA; color: var(--color-f); text-align: center; font-size: var(--font-24); font-weight: var(--font-w-700); line-height: 130%; }
+.longterm .h-win.pre-popup .cards .card .btn:hover {box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, .5);}
 .longterm .h-win.pre-popup .cards .card .btn.navy{background: #2F5C8F;}
 .longterm .h-win.pre-popup .cards .card .yes {display:inline-flex; justify-content: center; align-items: center; border-radius: 100px; min-width: 62px; height: 62px; background-color: var(--color-f); color: #0991EE; font-size: var(--font-18); font-weight: var(--font-w-700);}
 .longterm .h-win.pre-popup .cards .card .yes::after {content:"!";}
@@ -441,6 +461,21 @@
       #mypage
   ---------------------------------------------*/
   #ul_saving_box em.inline {display: inline-block; margin-left: 4px;}
+}
+
+@media screen and (max-width: 1200px) {
+  /*---------------------------------------------
+      #receipt
+  ---------------------------------------------*/
+  /* 공제 의뢰액 변경 신청 */
+  .receipt .h-win.change-popup .fline-a, .receipt .h-win.change-popup .fline-b {flex-direction: column;}
+  .receipt .h-win.change-popup .fline-b {border-bottom: var(--border-d)}
+  .receipt .change-popup .fline-a-1, .receipt .change-popup .fline-b-1 {width: 100%; padding: 0; margin-top:20px; flex-direction: row; justify-content: flex-start; border: none; border-right:none!important; background-color: transparent; text-align: center;}
+  .receipt .change-popup .fline-a-2 {padding:0; margin:20px 0; }
+  .receipt .change-popup .fline-a-2.right {justify-content: flex-start;}
+  .receipt .change-popup .fline-b-2 {padding:0 !important; margin-top:20px;}
+  .receipt .change-popup .fline-b-2 .wrap {width: 100%;}
+  .receipt .change-popup .fline-a-1 span, .receipt .change-popup .fline-b-1 span { margin-top: 0; margin-left: 4px; }
 }
 
 @media screen and (max-width: 1036px) and (min-width: 720px) {
@@ -638,6 +673,8 @@
   .longterm.receipt .app-mb .next .cont-mb div span.blue-txt {color: var(--color-emp-blue)!important;}
   /* 팝업 */
   .subs .receipt .h-win .subss .sub_tit:after {top:8px;}
+  /* 공제 의뢰액 변경 신청 */
+  .longterm.receipt .btn_pop_3 { padding: 4px 10px; font-size: var(--font-13) }
 
   /*---------------------------------------------
       #SignUpSelection_new
@@ -770,6 +807,12 @@
   .receipt .h-win .tline-b .inp {width: 100%;}
   .receipt .h-win .tline-b .slc select, .receipt .h-win .tline-b .inp input[type=text] {width: 100%;}
   .receipt .h-win .tline-b .inp .war-txt { font-size: var(--font-14); }
+  /* 공제 의뢰액 변경 신청 */
+  .receipt .change-popup .fline-a-1 span, .receipt .change-popup .fline-b-1 span {font-size: var(--font-14); }
+  .receipt .change-popup .fline-a-2 {font-size: var(--font-14); }
+  .receipt .change-popup .fline-b-2 {width: 100% !important; margin: 35px 0 15px;}
+  .receipt .change-popup .fline-b-2 .wrap .input-wrap .won {margin: 0 10px; font-size: var(--font-14); }
+  .receipt .change-popup .fline-b-2 .box_cntbtnwrap {gap:0;}
 
   /*---------------------------------------------
       #quick-simulation
