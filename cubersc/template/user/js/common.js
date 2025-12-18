@@ -190,8 +190,18 @@ $(document).ready(function () {
     function boxSlideMoreView(e) {
         var _dataname = $(e).attr("data-name");
         var _targetbox = $("." + _dataname);
+        var _originText = "상세내역 보기";
+        var _activeText = "상세내역 닫기";
 
-        _targetbox.slideToggle(100);
+        if (!$(e).hasClass("active")) {
+            $(e).addClass("active");
+            $(e).text(_activeText);
+            _targetbox.stop().slideDown(100);
+        } else {
+            $(e).removeClass("active");
+            $(e).text(_originText);
+            _targetbox.stop().slideUp(100);
+        }
     }
 
     function boxSlideMoreScroll(e) {
@@ -320,7 +330,10 @@ $(document).ready(function () {
 
         $(".help-bg .check-bt:last-child > button").addClass("last_popbtn");
 
-        $(".help-bg .help-w").append('<div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>');
+        if ($(".help-bg .help-w").find(".w-closeplus").length < 1) {
+            $(".help-bg .help-w").append('<div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>');
+        }
+
         $(".h-win").attr("tabindex", "0");
 
         $(".help-bg .w-closeplus").on("keydown", function (event) {
@@ -1080,40 +1093,47 @@ $(document).ready(function () {
 
         // document title - 활성화 된 depth명 차례로 title에 출력 (breadCrumb 기준)
         function findActiveMenuName() {
-            var _title1 = $(".nav1.on > a > span").text();
-            var _title2 = " > " + $(".nav2.on > a > span").text();
-            var _title3 = "";
-            if ($(".nav3.on > a > span").text()) {
-                _title3 = " > " + $(".nav3.on > a > span").text();
-            }
-            var _title4Chk = " > " + $(".nav4.on > a > span").text();
-            var _title4 = " > " + $(".last_menulist > a > span").text();
-            var _bordertit = $("#contents .box_calcarea > .box_btmborder_tit > h3").text();
-
+            var _title1 = $(".nav1s > .nav1.on > a > span").text();
+            var _title2 = $(".nav2s > .nav2.on > a > span").text();
+            var _title3 = $(".nav3s > .nav3.on > a > span").text();
+            var _title4 = $(".nav4s > .last_menulist.on > a > span").text();
+            var _bordertit = "";
             //console.log(_title4Chk.length);
-
-            if (_title4.length === 3) {
-                if (window.location.pathname === "/web/main/index.do") {
-                    $(document).attr("title", "군인공제회 - " + "메인페이지");
-                } else if (window.location.pathname === "/web/contents/welfaremain.do") {
-                    $(document).attr("title", "군인공제회 - " + "복지포털 메인페이지");
-                } else if (window.location.pathname === "/web/contents/mmaainfo.do") {
-                    $(document).attr("title", "군인공제회 - " + "공제회 소개 메인페이지");
-                } else if (window.location.pathname === "/web/contents/mypage.do") {
-                    $(document).attr("title", "군인공제회 - " + "인터넷 창구 > 마이페이지");
-                } else {
-                    $(document).attr("title", "군인공제회 - " + _bordertit);
-                }
+            /*
+			console.log("_title1: '"+_title1+"'");
+			console.log("_title2: '"+_title2+"'");
+			console.log("_title3: '"+_title3+"'");
+			console.log("_title4: '"+_title4+"'");
+			console.log("_bordertit: '"+_bordertit+"'");
+			*/
+            if (window.location.pathname === "/web/main/index.do") {
+                $(document).attr("title", "군인공제회 - " + "메인페이지");
                 return;
-            } else {
-                if (_title4Chk.length === 3) {
-                    $(document).attr("title", "군인공제회 - " + _title1 + _title2 + _title3);
-                    console.log(_title1 + _title2 + _title3);
-                } else {
-                    $(document).attr("title", "군인공제회 - " + _title1 + _title2 + _title3 + _title4);
-                    console.log(_title1 + _title2 + _title3 + _title4);
+            } else if (window.location.pathname === "/web/contents/welfaremain.do") {
+                $(document).attr("title", "군인공제회 - " + "복지포털 메인페이지");
+                return;
+            } else if (window.location.pathname === "/web/contents/mmaainfo.do") {
+                $(document).attr("title", "군인공제회 - " + "공제회 소개 메인페이지");
+                return;
+            } else if (window.location.pathname === "/web/contents/mypage.do") {
+                $(document).attr("title", "군인공제회 - " + "인터넷 창구 > 마이페이지");
+                return;
+            }
+
+            if (_title1.replace(/\s+/g, "").length > 0) {
+                _bordertit = _title1;
+                if (_title2.replace(/\s+/g, "").length > 0) {
+                    _bordertit += " > " + _title2;
+                    if (_title3.replace(/\s+/g, "").length > 0) {
+                        _bordertit += " > " + _title3;
+                        if (_title4.replace(/\s+/g, "").length > 0) {
+                            _bordertit += " > " + _title4;
+                        }
+                    }
                 }
             }
+
+            $(document).attr("title", "군인공제회 - " + _bordertit);
         }
 
         findActiveMenuName();
