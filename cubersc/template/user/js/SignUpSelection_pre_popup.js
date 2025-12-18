@@ -8,7 +8,7 @@ $(document).ready(function () {
 
             $(".h-win.pre-popup .box_calcwrap").animate(
                 {
-                    scrollTop: $(".h-win.pre-popup .box_calcwrap").scrollTop() + $(".step2").position().top,
+                    scrollTop: $(".h-win.pre-popup .box_calcwrap").scrollTop() + $(".step2 .main-txt").position().top,
                 },
                 300
             );

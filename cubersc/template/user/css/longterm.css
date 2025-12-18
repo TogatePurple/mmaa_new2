@@ -277,7 +277,7 @@
 /* 사전 절차 안내 팝업 */
 .longterm .h-win.pre-popup .box-calcarea {display: flex; flex-direction: column; height: 70vh; max-height: 738px; }
 .longterm .h-win.pre-popup .box_btmborder_tit {flex: 0 0 auto; }
-.longterm .h-win.pre-popup .box_calcwrap { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+.longterm .h-win.pre-popup .box_calcwrap { flex: 1 1 auto; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; }
 .longterm .h-win.pre-popup .btns { flex: 0 0 auto; }
 .longterm .h-win.pre-popup .box_btmborder_tit + .box_calcwrap {margin-top:40px; padding-top: 0;}
 .longterm .h-win.pre-popup .main-txt { text-align: center; font-size: var(--font-30); font-weight: var(--font-w-700); line-height: 150%; }
@@ -299,11 +299,13 @@
 .longterm .h-win.pre-popup .step2 .main-txt {margin: 150px 0 40px 0;}
 .longterm .h-win.pre-popup .main-txt .normal {font-weight: var(--font-w-500)}
 .longterm .h-win.pre-popup .cards { margin-bottom:30px; display: flex; gap:30px; }
-.longterm .h-win.pre-popup .cards .card { padding: 40px 30px; margin-top:0; flex: 1; flex-direction: column; }
-.longterm .h-win.pre-popup .cards .card .grey-box {width:100%; padding: 30px; display: flex; justify-content: space-between; align-items: center; border-radius: 10px; background: #F8FAFC; color: var(--color-45); font-size: var(--font-20); font-weight: var(--font-w-500); line-height: 150%;}
-.longterm .h-win.pre-popup .cards .card .btn { margin-top: 24px; padding: 20px; align-self: stretch; border-radius: 10px; background: #0074DA; color: var(--color-f); text-align: center; font-size: var(--font-24); font-weight: var(--font-w-700); line-height: 130%; }
+.longterm .h-win.pre-popup .cards .card { padding: 30px; margin-top:0; flex: 1; flex-direction: column; }
+.longterm .h-win.pre-popup .cards .card .grey-box {width:100%; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-radius: 10px; background: #F8FAFC; color: var(--color-45); font-size: var(--font-20); font-weight: var(--font-w-500); line-height: 150%;}
+.longterm .h-win.pre-popup .cards .card.f7 .grey-box {background-color: #F7F7F7;}
+.longterm .h-win.pre-popup .cards .card .btn { margin-top: 14px; padding: 20px 0; align-self: stretch; border-radius: 10px; background: #0074DA; color: var(--color-f); text-align: center; font-size: var(--font-24); font-weight: var(--font-w-700); line-height: 130%; }
 .longterm .h-win.pre-popup .cards .card .btn.navy{background: #2F5C8F;}
 .longterm .h-win.pre-popup .cards .card .yes {display:inline-flex; justify-content: center; align-items: center; border-radius: 100px; min-width: 62px; height: 62px; background-color: var(--color-f); color: #0991EE; font-size: var(--font-18); font-weight: var(--font-w-700);}
+.longterm .h-win.pre-popup .cards .card .yes::after {content:"!";}
 
 /*---------------------------------------------
     #quick-simulation
@@ -406,10 +408,11 @@
   .simul.longterm .simul-box {height: 590px;}
 }
 
-/****** 태블릿 기존 css 수정 */
 @media screen and (max-width: 1240px) {
+  /****** 태블릿 기존 css 수정 */
   .memberjoin-new select {font-size: 18px;}
 
+  /****** 태블릿 기존 css 수정 */
   /*---------------------------------------------
       #receipt
   ---------------------------------------------*/
@@ -419,6 +422,13 @@
   .receipt .st-table table td {font-size: var(--font-14); letter-spacing: -1.5px;}
   .receipt .st-table table th { letter-spacing: -1.5px; word-break: keep-all; overflow-wrap: normal; white-space: normal;}
   .receipt .st-table table td .bl-btn {font-size: var(--font-13); letter-spacing: -1.5px;}
+
+  /****** 신규 */
+  /*---------------------------------------------
+      #SignUpSelection_new
+  ---------------------------------------------*/
+  .longterm .h-win.pre-popup .cards .card .grey-box {font-size: var(--font-18);}
+  .longterm .h-win.pre-popup .cards .card .btn {font-size: var(--font-20);}
 }
 
 @media screen and (max-width: 1240px) and (min-width: 1024px) {
@@ -631,7 +641,7 @@
   .list_half_cardnoti > li + li {margin-left:0}
   .list_half_cardnoti > li {height: fit-content;}
   /* 사전 절차 안내 팝업 */
-  .longterm .h-win.pre-popup .box_calcwrap::-webkit-scrollbar {display: none;}
+  .longterm .h-win.pre-popup .box_calcwrap::-webkit-scrollbar {display: none; }
   .longterm .h-win.pre-popup .main-txt {font-size: var(--font-24)}
   .longterm .h-win.pre-popup .grey-popup-card {padding:20px; font-size: var(--font-18) }
   .longterm .h-win.pre-popup .card {padding:20px; flex-direction: column; }
@@ -640,7 +650,7 @@
   .longterm .h-win.pre-popup .card .logo img + span {border-left: none;}
   .longterm .h-win.pre-popup .card .logo span {padding-left:0; padding-top: 20px; height:auto; }
   .longterm .h-win.pre-popup .info-txt {flex-direction: column; align-items: flex-start; gap:8px;}
-  .longterm .h-win.pre-popup .cards { flex-direction: column; }
+  .longterm .h-win.pre-popup .cards { flex-direction: column; margin: 0 6px 0 2px;}
 
   /*---------------------------------------------
       #quick-simulation
@@ -712,6 +722,16 @@
   .longterm .h-win.pre-popup .card .logo span {text-align: center; font-size: 14px; font-weight: 500; }
   .longterm .h-win.pre-popup .info-txt {margin:30px 0 20px; font-size: var(--font-15); line-height: 150%;}
   .longterm .h-win.pre-popup .info-txt .btn_linkmove {margin:0 12px; }
+  /* 사전 절차 안내 팝업-step2 */
+  .longterm .h-win.pre-popup .step2 .main-txt {margin: 100px 0 20px;}
+  .longterm .h-win.pre-popup .step2 .main-txt .normal {display: block;}
+  .longterm .h-win.pre-popup .cards {margin-bottom: 20px; gap: 24px;}
+  .longterm .h-win.pre-popup .cards .card {padding: 16px; gap:10px;}
+  .longterm .h-win.pre-popup .cards .card .grey-box {padding: 16px; flex-direction: column; font-size: var(--font-16)}
+  .longterm .h-win.pre-popup .cards .card .grey-box .box-ask {align-self: flex-start;}
+  .longterm .h-win.pre-popup .cards .card .grey-box .yes {min-width:0; height:auto; padding: 2px 8px; align-self: flex-end; border-radius: 10px; font-size: var(--font-15); line-height: 150%; }
+  .longterm .h-win.pre-popup .cards .card .yes::after {content:"";}
+  .longterm .h-win.pre-popup .cards .card .btn {padding: 18px 10px; margin-top: 10px; font-size: var(--font-14);}
 
   /*---------------------------------------------
       #receipt
