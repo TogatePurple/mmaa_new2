@@ -217,7 +217,8 @@
 .caution_bright { color: #F00; font-size: var(--font-14); font-weight: var(--font-w-500); }
 
 .receipt .pay-receipt tbody tr td:not(.center) {text-align: right;}
-.receipt .pay-receipt th.b-r {border-right:var(--border-d)}
+/* .receipt .pay-receipt th.b-r {border-right:var(--border-d)} */
+.longterm .st-table table th.b-r {border-right:var(--border-d)}
 .receipt .pay-receipt .sub-th { color: var(--color-6); font-size: var(--font-14); font-weight: var(--font-w-400); line-height: 22px; }
 
 .receipt .sub-caution { margin-top: 8px; color: var(--color-6); font-size: var(--font-16); font-weight: var(--font-w-500); }
@@ -321,7 +322,7 @@
 .longterm .h-win.pre-popup .cards .card { padding: 30px; margin-top:0; flex: 1; flex-direction: column; }
 .longterm .h-win.pre-popup .cards .card .grey-box {width:100%; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-radius: 10px; background: #F8FAFC; color: var(--color-45); font-size: var(--font-20); font-weight: var(--font-w-500); line-height: 150%;}
 .longterm .h-win.pre-popup .cards .card.f7 .grey-box {background-color: #F7F7F7;}
-.longterm .h-win.pre-popup .cards .card .btn { margin-top: 14px; padding: 20px 0; align-self: stretch; border-radius: 10px; background: #0074DA; color: var(--color-f); text-align: center; font-size: var(--font-24); font-weight: var(--font-w-700); line-height: 130%; }
+.longterm .h-win.pre-popup .cards .card .btn { margin-top: 14px; padding: 20px 0; align-self: stretch; border-radius: 10px; background: var(--color-blue); color: var(--color-f); text-align: center; font-size: var(--font-24); font-weight: var(--font-w-700); line-height: 130%; }
 .longterm .h-win.pre-popup .cards .card .btn:hover {box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, .5);}
 .longterm .h-win.pre-popup .cards .card .btn.navy{background: #2F5C8F;}
 .longterm .h-win.pre-popup .cards .card .yes {display:inline-flex; justify-content: center; align-items: center; border-radius: 100px; min-width: 62px; height: 62px; background-color: var(--color-f); color: #0991EE; font-size: var(--font-18); font-weight: var(--font-w-700);}
@@ -427,6 +428,27 @@
 .longterm .m_tabswiper.is-end::after { z-index: 1; content: ""; position: absolute; top: 0; right: 0; width: 100px; height: 100%; pointer-events: none; background: linear-gradient(to left, #fff 0%, rgba(255,255,255,0) 100%); }
 .longterm .m_tabswiper.is-start::before { z-index: 2; content: ""; position: absolute; top: 0; left: 0; width: 100px; height: 100%; pointer-events: none; background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%); }
 .longterm .box_subtabwrap .w-btns div { flex: none; min-width: 210px; }
+
+/*---------------------------------------------
+    #i-JoinGuide-longterm
+---------------------------------------------*/
+.longterm .two-col-steps {margin-top: 80px; display: flex; gap: 50px; }
+.longterm .two-col-steps .col-box {display: flex; flex-direction: column; border-radius: 10px; box-shadow: 1px 1px 8px 0 rgba(64, 64, 64, 0.20); }
+.longterm .two-col-steps .col-box.col-right .box-header { background-color: #30466A;}
+.longterm .two-col-steps .col-box .box-header::before {position: absolute; content: ""; width: 142px; height: 126px; bottom:0; left: 0; background-size: cover; background-position: center; }
+.longterm .two-col-steps .col-box.col-left .box-header::before { background-image: url(../../../../cubersc/template/user/img/sub/longterm_step1.png); }
+.longterm .two-col-steps .col-box.col-right .box-header::before { background-image: url(../../../../cubersc/template/user/img/sub/longterm_step2.png); }
+.longterm .two-col-steps .box-header { position: relative; padding: 20px 0 20px 180px; border-top-left-radius: inherit; border-top-right-radius: inherit; border-bottom-left-radius: 0; border-bottom-right-radius: 0; background-color: var(--color-blue); color: var(--color-f); font-size: var(--font-30); font-weight: var(--font-w-700); line-height: 150%; text-align: start; }
+.longterm .two-col-steps .step-list { padding: 32px 20px; flex: 1 1 0; display: flex; flex-direction: column; gap: 30px; }
+.longterm .two-col-steps .step-num {padding: 8px 18px; margin: 8px; display: inline-block; border-radius: 12px 12px 12px 0; background: var(--color-blue); color: var(--color-f); font-size: var(--font-18); font-weight: var(--font-w-700); line-height: 93%; }
+.longterm .two-col-steps .step-content { margin: 8px 0 0 8px; padding: 10px 0 10px 18px; border-left: var(--border-d);}
+.longterm .two-col-steps .step-content p { font-size: var(--font-22); font-weight: var(--font-w-500); line-height: 150%; }
+.longterm .two-col-steps .step-content p + ul {margin-top: 20px; }
+.longterm .two-col-steps .step-content p em {display: block; color: var(--color-blue); font-weight: var(--font-w-700); }
+.longterm .two-col-steps.subss_add .list_dot {display: flex; flex-direction: column; gap: 12px; }
+.longterm .two-col-steps.subss_add .list_dot > li > span {margin-left: 0; padding: 0 0 0 20px; color: var(--color-45); font-weight: var(--font-w-400); line-height: 150%; word-break: normal;}
+.longterm .two-col-steps .btn_linkmove:not(.btn_pop):after {margin-left: 8px; }
+.longterm .two-col-steps .btn_linkmove {margin-top: 10px; padding: 13px 20px; font-size: var(--font-16);}
 
 /*---------------------------------------------
     반응형
@@ -753,6 +775,13 @@
   ---------------------------------------------*/
   .longterm .m_tabswiper.is-end::after { display: none; }
   .longterm .m_tabswiper.is-start::before { display: none; }
+
+  /*---------------------------------------------
+      #i-JoinGuide-longterm
+  ---------------------------------------------*/
+  .longterm .two-col-steps {flex-direction: column;}
+  .longterm .two-col-steps .step-list {text-align: start;}
+  .longterm .two-col-steps .box-header {padding: 20px 180px; }
 }
 
 @media screen and (max-width: 767px) {
@@ -846,6 +875,22 @@
   .longterm.isSimulation .box-one .item.result .value {font-size: var(--font-20);}
   .longterm.isSimulation .box-one .box {margin-bottom: 10px; }
   .longterm.isSimulation .txt_bl {margin-left:0; font-size: var(--font-14);}
+  
+  /*---------------------------------------------
+      #i-JoinGuide-longterm
+  ---------------------------------------------*/
+  .longterm .two-col-steps {margin-top: 40px; gap: 40px;}
+  .longterm .two-col-steps .col-box .box-header::before {width: 90px; height: 80px;}
+  .longterm .two-col-steps .box-header {padding: 16px 0 16px 110px; font-size: var(--font-18); }
+  .longterm .two-col-steps .step-list {padding: 20px 16px; gap: 20px; }
+  .longterm .two-col-steps .step-num {margin: 4px 0; padding: 6px 14px; font-size: var(--font-14); line-height: 100%;}
+  .longterm .two-col-steps .step-content {margin: 4px 0 0 0; padding: 10px 0 10px 12px;}
+  .longterm .two-col-steps .step-content p {font-size: var(--font-16); }
+  .longterm .two-col-steps .step-content p + ul {margin-top:10px;}
+  .longterm .two-col-steps.subss_add .list_dot {gap: 10px;}
+  .longterm .two-col-steps.subss_add .list_dot > li > span {margin-left: 0 !important; padding: 0 0 0 14px;}
+  .longterm .two-col-steps .btn_linkmove {padding: 10px 15px; font-size: var(--font-14)}
+  .longterm .two-col-steps .btn_linkmove .mo-hide {display: none;}
 }
 
 /****** MO */
