@@ -424,7 +424,9 @@
 /*---------------------------------------------
     #MemcardPrint
 ---------------------------------------------*/
-.box_subtabwrap .w-btns div { flex: none; min-width: 210px; }
+.longterm .m_tabswiper.is-end::after { z-index: 1; content: ""; position: absolute; top: 0; right: 0; width: 100px; height: 100%; pointer-events: none; background: linear-gradient(to left, #fff 0%, rgba(255,255,255,0) 100%); }
+.longterm .m_tabswiper.is-start::before { z-index: 2; content: ""; position: absolute; top: 0; left: 0; width: 100px; height: 100%; pointer-events: none; background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%); }
+.longterm .box_subtabwrap .w-btns div { flex: none; min-width: 210px; }
 
 /*---------------------------------------------
     반응형
@@ -734,7 +736,6 @@
   .content-all .type_col2 .mycontent.flex-end {margin-top:0; padding-top:0;}
   .content-all .type_col2 .mycontent .box-one:last-child.no-mt {margin-top:0;}
 
-
   /*---------------------------------------------
       #LongtermMiddleClose
   ---------------------------------------------*/
@@ -746,6 +747,12 @@
   .longterm-middle-close .wrap_tbl .sub_tit {padding-left:25px;}
   .subs .longterm-middle-close .wrap_tbl .sub_tit:after {left:0;}
   .longterm-middle-close .app-mb {margin-top:0; max-height: none; border-bottom: var(--border-d)}
+
+  /*---------------------------------------------
+      #MemcardPrint
+  ---------------------------------------------*/
+  .longterm .m_tabswiper.is-end::after { display: none; }
+  .longterm .m_tabswiper.is-start::before { display: none; }
 }
 
 @media screen and (max-width: 767px) {
