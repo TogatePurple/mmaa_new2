@@ -593,7 +593,7 @@
   .memberjoin-new .q:not(.basic-info):last-child {margin-bottom:40px;}
   .accordion-content.mb-40 {margin-bottom:40px;}
   .memberjoin-new .q:not(.basic-info) .aline.pw-rules {border-top: var(--border-d); margin-top:38px;}
-  .memberjoin-new .q:not(.basic-info) .aline.pw-rules .aline-a::before {content: ""; display: inline-block; width: 34px; height: 34px; margin-right: 8px; background: url('../img/sub/ico_info.svg') no-repeat center / contain;}
+  .memberjoin-new .q:not(.basic-info) .aline.pw-rules .aline-a::before {content: ""; display: inline-block; width: 34px; height: 34px; margin-right: 8px; background: url('../../../../cubersc/template/user/img/sub/ico_info.svg') no-repeat center / contain;}
   .memberjoin-new .q:not(.basic-info) .aline.pw-rules .aline-a {padding:14px 0 18px 0}
   .memberjoin-new .q:not(.basic-info) .aline, .accordion-item.info .aline {border-bottom:none}
   .common-section .memberjoin-new .q:not(.basic-info) .add_mint, .common-section .accordion-item.info .add_mint {border-top:var(--border-d);}
