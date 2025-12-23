@@ -425,9 +425,24 @@
 /*---------------------------------------------
     #MemcardPrint
 ---------------------------------------------*/
-.longterm .m_tabswiper.is-end::after { z-index: 1; content: ""; position: absolute; top: 0; right: 0; width: 100px; height: 100%; pointer-events: none; background: linear-gradient(to left, #fff 0%, rgba(255,255,255,0) 100%); }
-.longterm .m_tabswiper.is-start::before { z-index: 2; content: ""; position: absolute; top: 0; left: 0; width: 100px; height: 100%; pointer-events: none; background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%); }
+/* .longterm .m_tabswiper.is-end::after { z-index: 1; content: ""; position: absolute; top: 0; right: 0; width: 150px; height: 100%; pointer-events: none; background: linear-gradient(to left, #fff 0%, rgba(255,255,255,0) 100%); }
+.longterm .m_tabswiper.is-start::before { z-index: 2; content: ""; position: absolute; top: 0; left: 0; width: 100px; height: 100%; pointer-events: none; background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%); } */
 .longterm .box_subtabwrap .w-btns div { flex: none; min-width: 210px; }
+/* 버튼 */
+.longterm .swiper-button-next, .longterm .swiper-button-prev { top: 50%; transform: translateY(-50%); margin-top: 0; width: 30px; height: 30px; background-color: var(--color-f); border-radius: 100%; border: var(--border-d); background-image: none; transition: background-color 0.5s ease;}
+.longterm .swiper-button-next::before, .longterm .swiper-button-prev::before { content: ""; position: absolute; inset:0; background-color: var(--color-3); -webkit-mask-image: url("../../../../cubersc/template/user/img/sub/s3_mybox_bottom.png"); -webkit-mask-repeat: no-repeat; -webkit-mask-position: center; -webkit-mask-size: auto;
+    mask-image: url("../../../../cubersc/template/user/img/sub/s3_mybox_bottom.png"); mask-repeat: no-repeat; mask-position: center; mask-size: auto; transition: background-color 0.5s ease;}
+.longterm .swiper-button-next { right:0; transform: translateY(-50%) rotate(270deg); }
+.longterm .swiper-button-prev { left:0; transform: translateY(-50%) rotate(90deg); }
+.longterm .swiper-button-next:hover, .longterm .swiper-button-prev:hover {border:none; background-color: var(--color-3);}
+.longterm .swiper-button-next:hover::before, .longterm .swiper-button-prev:hover::before { background-color: var(--color-f); }
+/* 양 옆 여백 */
+.longterm .box_subtabwrap .swiper-container .w-btns {margin-left: 40px;}
+.longterm .box_subtabwrap .w-btns div.tab-spacer {width: 25px; min-width: auto; flex: none;}
+.longterm .w-btns div.tab-spacer {border: none; padding: 0; }
+.subs .longterm .m_tabswiper::before, .subs .longterm .m_tabswiper::after { content: ""; position: absolute; top: 0; width: 40px; height: 100%; background: #fff; z-index: 2; pointer-events: none; }
+.subs .longterm .m_tabswiper::before {left: 0; }
+.subs .longterm .m_tabswiper::after {right: 0; }
 
 /*---------------------------------------------
     #i-JoinGuide-longterm
@@ -910,7 +925,7 @@
   .longterm .notice-wrap .box_contarea .icon-wt .side-tit, .longterm .notice-wrap .box_contarea .side-row>div {line-height: 180%;}
   .longterm .notice-wrap .box_contarea .side-tit + .side-row {margin-top:10px; }
   .longterm .notice-wrap .box_contarea .side-row + .side-row {margin-top:0;}
-  .longterm .notice-wrap .box_contarea .side-row.col .ann_a1 {margin: 10px 0 10px 0;}
+  .longterm .notice-wrap .box_contarea .side-row.col .ann_a1 {margin: 10px 0 10px 0; padding: 0 15px;}
   .longterm .notice-wrap .box_contarea .icon-wt + .icon-wt {margin-top: 20px; padding-top: 20px;}
 
 }
