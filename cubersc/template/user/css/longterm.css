@@ -432,7 +432,7 @@
 /*---------------------------------------------
     #i-JoinGuide-longterm
 ---------------------------------------------*/
-.longterm .two-col-steps {margin-top: 80px; display: flex; gap: 50px; }
+.longterm .two-col-steps {margin-top: 80px; padding-bottom:20px; display: flex; gap: 50px; }
 .longterm .two-col-steps .col-box {display: flex; flex-direction: column; border-radius: 10px; box-shadow: 1px 1px 8px 0 rgba(64, 64, 64, 0.20); }
 .longterm .two-col-steps .col-box.col-right .box-header { background-color: #30466A;}
 .longterm .two-col-steps .col-box .box-header::before {position: absolute; content: ""; width: 142px; height: 126px; bottom:0; left: 0; background-size: cover; background-position: center; }
@@ -449,6 +449,18 @@
 .longterm .two-col-steps.subss_add .list_dot > li > span {margin-left: 0; padding: 0 0 0 20px; color: var(--color-45); font-weight: var(--font-w-400); line-height: 150%; word-break: normal;}
 .longterm .two-col-steps .btn_linkmove:not(.btn_pop):after {margin-left: 8px; }
 .longterm .two-col-steps .btn_linkmove {margin-top: 10px; padding: 13px 20px; font-size: var(--font-16);}
+.longterm .notice-wrap {padding:12px 0 30px; display: flex; gap: 100px; }
+.longterm .notice-wrap::before {content:""; flex-shrink: 0; top: 0; left: 0; width: 180px; height: 180px; background-color: #FAFAFA; border-radius: 100px; background-image: url("../../../../cubersc/template/user/img/sub/visit.svg"); background-repeat: no-repeat; background-position: center; background-size: 75px auto; }
+.longterm .notice-wrap.call::before {background-image: url("../../../../cubersc/template/user/img/sub/call.svg"); }
+.longterm .notice-wrap .box_contarea .side-tit + .side-row {margin-top:20px;}
+.longterm .notice-wrap .box_contarea .side-row {padding-top:0}
+.longterm .notice-wrap .box_contarea .side-row + .side-row {margin-top: 8px;}
+.longterm .notice-wrap .box_contarea .side-row>div {align-items: center;}
+.longterm .notice-wrap .box_contarea .icon-wt .side-txt {width: 100%; color: var(--color-6); line-height: 1.5}
+.longterm .notice-wrap .box_contarea .side-row.col>div {flex-wrap: wrap; flex-direction: column; align-items: start;}
+.longterm .notice-wrap .box_contarea .side-row.col .ann_a1 {padding: 0 9px; margin: 6px 0 0 5px;}
+.longterm .notice-wrap .box_contarea .icon-wt + .icon-wt {margin-top: 30px; padding-top: 30px; border-top: var(--border-d)}
+.longterm .notice-wrap .box_contarea .side-tit + .side-row.mt-6 {margin-top: 6.5px;}
 
 /*---------------------------------------------
     반응형
@@ -890,7 +902,17 @@
   .longterm .two-col-steps.subss_add .list_dot {gap: 10px;}
   .longterm .two-col-steps.subss_add .list_dot > li > span {margin-left: 0 !important; padding: 0 0 0 14px;}
   .longterm .two-col-steps .btn_linkmove {padding: 10px 15px; font-size: var(--font-14)}
-  .longterm .two-col-steps .btn_linkmove .mo-hide {display: none;}
+  .longterm .two-col-steps .btn_linkmove .mo-hide, .longterm .notice-wrap .box_contarea .side-row.col .ann_a1 .mo-hide {display: none;}
+  /* 하단 */
+  .longterm .notice-wrap { padding: 10px 0 30px; flex-direction: column; align-items: center; gap:40px; }
+  .longterm .notice-wrap .box_contarea .icon-wt .side-txt {max-width: 100%;}
+  .longterm .notice-wrap .box_contarea .side-row.col>div {display: flex;}
+  .longterm .notice-wrap .box_contarea .icon-wt .side-tit, .longterm .notice-wrap .box_contarea .side-row>div {line-height: 180%;}
+  .longterm .notice-wrap .box_contarea .side-tit + .side-row {margin-top:10px; }
+  .longterm .notice-wrap .box_contarea .side-row + .side-row {margin-top:0;}
+  .longterm .notice-wrap .box_contarea .side-row.col .ann_a1 {margin: 10px 0 10px 0;}
+  .longterm .notice-wrap .box_contarea .icon-wt + .icon-wt {margin-top: 20px; padding-top: 20px;}
+
 }
 
 /****** MO */
