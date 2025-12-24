@@ -477,6 +477,13 @@
 .longterm .notice-wrap .box_contarea .side-tit + .side-row.mt-6 {margin-top: 6.5px;}
 
 /*---------------------------------------------
+    #SignUpSelection_new_popup
+---------------------------------------------*/
+.subs .longterm .notice-tab.mgtb {margin: 0 0 70px 0; width: 100%;}
+.longterm .subss_add.membership_popup .all_tdview {margin-bottom: 40px; padding-left: 45px; position: relative; border-top: none;}
+.subs .longterm .notices .subss_add.membership_popup table {margin-bottom: 0; border-top: 2px solid #000; }
+
+/*---------------------------------------------
     반응형
 ---------------------------------------------*/
 @media screen and (max-width: 1500px) {
