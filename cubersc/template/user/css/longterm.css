@@ -438,8 +438,7 @@
 .longterm .swiper-button-next:hover::before, .longterm .swiper-button-prev:hover::before { background-color: var(--color-f); }
 /* 양 옆 여백 */
 .longterm .box_subtabwrap .w-btns div:nth-child(1) {margin-left: 40px;}
-.longterm .box_subtabwrap .w-btns div.tab-spacer {width: 25px; min-width: auto; }
-.longterm .w-btns div.tab-spacer {border: none; padding: 0; }
+.longterm .box_subtabwrap .w-btns div:last-child {margin-right: 40px;}
 .subs .longterm .m_tabswiper::before, .subs .longterm .m_tabswiper::after { content: ""; position: absolute; top: 0; width: 40px; height: 100%; background: #fff; z-index: 2; pointer-events: none; }
 .subs .longterm .m_tabswiper::before {left: 0; }
 .subs .longterm .m_tabswiper::after {right: 0; }
@@ -800,8 +799,11 @@
   /*---------------------------------------------
       #MemcardPrint
   ---------------------------------------------*/
-  .longterm .m_tabswiper.is-end::after { display: none; }
-  .longterm .m_tabswiper.is-start::before { display: none; }
+  .longterm .swiper-button-next, .longterm .swiper-button-prev {width: 24px; height: 24px;}
+  .longterm .swiper-button-next::before, .longterm .swiper-button-prev::before { width: 12px; height: 12px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+  .longterm .box_subtabwrap .w-btns div:nth-child(1) {margin-left: 28px;}
+  .longterm .box_subtabwrap .w-btns div:last-child {margin-right: 28px;}
+  .subs .longterm .m_tabswiper::before, .subs .longterm .m_tabswiper::after {width: 28px;}
 
   /*---------------------------------------------
       #i-JoinGuide-longterm
