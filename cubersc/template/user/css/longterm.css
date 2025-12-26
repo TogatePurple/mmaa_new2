@@ -479,9 +479,19 @@
 /*---------------------------------------------
     #SignUpSelection_new_popup
 ---------------------------------------------*/
+.longterm .help-bg.membership_guide .help-w {padding: 20px 30px }
+.longterm .help-bg.membership_guide .help-w .h-win {height: 80vh; overflow-y: hidden;}
+.longterm .help-bg.membership_guide .box_calcarea {height: 100%; display: flex; flex-direction: column;}
+.longterm .help-bg.membership_guide .box_calcwrap {flex: 1 1 auto; overflow-y: auto; min-height: 0; }
+.longterm .help-bg.membership_guide .box_btmborder_tit + .box_calcwrap {padding-top: 0; margin-top: 60px; }
 .subs .longterm .notice-tab.mgtb {margin: 0 0 70px 0; width: 100%;}
-.longterm .subss_add.membership_popup .all_tdview {margin-bottom: 40px; padding-left: 45px; position: relative; border-top: none;}
+.longterm .subss_add.membership_popup .all_tdview { padding-left: 45px; position: relative; border-top: none;}
 .subs .longterm .notices .subss_add.membership_popup table {margin-bottom: 0; border-top: 2px solid #000; }
+.longterm .subss_add .list_dot li.lh-150 span {line-height: 150%; }
+.subs .longterm .notices table td {height: 50px; padding: 5px 20px; text-align: start;}
+.longterm .subss_add .list_dot li span.txt-bl {margin-top: 10px; display: block; color: var(--color-blue)}
+.subs .longterm .h-win .notices {margin-bottom: 0 !important}
+.longterm .help-bg.membership_guide .help-bg .btns {flex-shrink: 0; }
 
 /*---------------------------------------------
     반응형
@@ -818,6 +828,15 @@
   .longterm .two-col-steps {flex-direction: column;}
   .longterm .two-col-steps .step-list {text-align: start;}
   .longterm .two-col-steps .box-header {padding: 20px 180px; }
+
+  /*---------------------------------------------
+      #SignUpSelection_new_popup
+  ---------------------------------------------*/
+  .subs .longterm .notices .subss_add.membership_popup table,
+  .subs .longterm .notices .subss_add.membership_popup tbody,
+  .subs .longterm .notices .subss_add.membership_popup tr {display: block; }
+  .subs .longterm .notices .subss_add.membership_popup th,
+  .subs .longterm .notices .subss_add.membership_popup td { display: block; width: 100%; }
 }
 
 @media screen and (max-width: 767px) {
