@@ -41,6 +41,7 @@
 
         <!-- 퍼블 확인용: 공통 인클루드 js -->
         <script src="../../web/js/include.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../cubersc/template/user/css/longterm.css" />
     </head>
     <body>
         <!-- [S] 퍼블 확인용: 헤더 인클루드 -->
@@ -114,7 +115,8 @@
                     <!--container-->
                     <section id="container" class="sub" href="javascript:;" tabindex="0">
                         <div class="sub_inner">
-                            <div class="w">
+                            <!-- ⭐[S] 퍼블 신규 -->
+                            <div class="w longterm details-page">
                                 <div class="box_contarea">
                                     <!-- 컨텐츠 wrap 용 -->
                                     <div class="box_btmborder_tit">
@@ -145,31 +147,31 @@
                                         </div>
                                         <ul class="txt_img_flex">
                                             <li>
-                                                <figure><img src="../../cubersc/template/user/img/sub/sam1.png" alt="" /></figure>
+                                                <figure><img src="../../cubersc/template/user/img/sub/sp1.png" alt="" /></figure>
                                                 <div class="txt_img_wrap">
-                                                    <strong style="height: 33px">연 4.90% (연금리, 매년지급식, '25.7.1 세전)</strong><span style="height: 27px">시중 금융상품 대비 고이율</span>
+                                                    <strong style="height: 33px">고정금리 5.5%</strong><span style="height: 27px">시중 금융상품 대비 고이율</span>
                                                     <p style="height: 52px">놓치면 안되는 고이율 상품!</p>
                                                 </div>
                                             </li>
                                             <li>
-                                                <figure><img src="../../cubersc/template/user/img/sub/sam2.png" alt="" /></figure>
+                                                <figure><img src="../../cubersc/template/user/img/sub/sp2.png" alt="" /></figure>
                                                 <div class="txt_img_wrap">
-                                                    <strong style="height: 33px">일부는 목돈으로, 일부는 연금으로!</strong><span style="height: 27px">퇴직급여금의 일정금액 신청</span>
-                                                    <p style="height: 52px">필요한 금액만큼만 분할하여 수령하는 제도</p>
+                                                    <strong style="height: 33px">자동 공제로 꼼꼼하게 저축</strong><span style="height: 27px">자동 공제 시스템으로 꼼꼼한 적금관리</span>
+                                                    <p style="height: 52px">월 5만원 이상 30만원 한도<br />설정액만큼 자동으로 적금되는 상품!</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <figure><img src="../../cubersc/template/user/img/sub/sp3.png" alt="" /></figure>
+                                                <div class="txt_img_wrap">
+                                                    <strong style="">정부지원금 지급</strong><span style="">적금금액의 100% 정부지원금 지급</span>
+                                                    <p style="">적금 금액대비 100% 매칭되는<br />정부지원금을 통해 빠른 목돈마련!</p>
                                                 </div>
                                             </li>
                                             <li>
                                                 <figure><img src="../../cubersc/template/user/img/sub/sp4.png" alt="" /></figure>
                                                 <div class="txt_img_wrap">
-                                                    <strong style="">비과세/저율과세 & 금융소득과세 제외</strong><span style="">절세 상품</span>
-                                                    <p style="">재테크 고수라면 과세 금액도 꼼꼼하게!</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <figure><img src="../../cubersc/template/user/img/sub/sp4.png" alt="" /></figure>
-                                                <div class="txt_img_wrap">
-                                                    <strong style="">비과세/저율과세 & 금융소득과세 제외</strong><span style="">절세 상품</span>
-                                                    <p style="">재테크 고수라면 과세 금액도 꼼꼼하게!</p>
+                                                    <strong style="">안정성</strong><span style="">특별법으로 적금 보호</span>
+                                                    <p style="">군인공제회법으로 안심!<br />(군인공제회법 제 15조, 자본금)</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -184,9 +186,7 @@
                                                 <ul class="list_arr">
                                                     <li>
                                                         <span class="form_left1"><em>고정금리 5.5% (정부지원금 계정 적립금 포함)</em></span>
-                                                    </li>
-                                                    <li>
-                                                        <span class=""><a href="javascript:;" class="btn_linkmove btn_pop" data-name="beta-earlycancle_rate_savingtype">중도해약 안내</a></span>
+                                                        <p class="btn_pop_wrapper"><a href="javascript:;" class="btn_linkmove btn_pop" data-name="beta-earlycancle_rate_savingtype">중도해약 안내</a></p>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -198,7 +198,7 @@
                                                     <li>
                                                         <span>재정지원금 지급</span>
                                                         <ul class="list_dot">
-                                                            <li><span>만기해약 시 ‘확인서’를 제출하는 경우에만 제공</span></li>
+                                                            <li><span>적금 만기 시 ‘확인서’를 제출하는 경우에만 제공</span></li>
                                                             <li class="no_dot"><span class="txt_bl">※ 만기 전, 중도해약 및 제적 또는 만기 후 확인서 미 제출의 경우 지급되지 않는다.</span></li>
                                                             <li class="no_dot"><span class="txt_bl">※ 재정지원금 수령 후, 제적되어 의무복무를 마치지 못하는 경우 환수 지급된 재정지원금 환수</span></li>
                                                         </ul>
@@ -263,7 +263,12 @@
                                             <div class="subss_add">
                                                 <ul class="list_arr">
                                                     <li>
-                                                        <span class="form_left1"><em>‘인터넷창구 → 마이페이지 → 증명서 출력 → 저축증명서 탭 클릭 → 장기간부도약적금 탭 클릭’ 후 저축증명서/가입증명서/금융소득원천징수내역 출력하여 담당자 이메일 0000@@mmaa.or.kr로 파일 송부 </em></span>
+                                                        <span class="form_left1">
+                                                            <em>
+                                                                ‘인터넷창구 → 마이페이지 → 증명서 출력 → 저축증명서 탭 클릭 → 장기간부도약적금 탭 클릭’ 후<br />
+                                                                저축증명서/가입증명서/금융소득원천징수내역 출력하여 담당자 이메일 0000@@mmaa.or.kr로 파일 송부
+                                                            </em>
+                                                        </span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -278,46 +283,39 @@
                                     </div>
                                     <!-- //모바일에서만 나오는 하단 고정 버튼 영역 -->
                                 </div>
-                                <div class="help-bg beta-earlycancle_rate_savingtype">
+
+                                <!-- ⭐중도해약 안내 팝업 -->
+                                <div class="help-bg beta-earlycancle_rate_savingtype" style="display: block">
                                     <div class="help-w">
                                         <div class="w-close" tabindex="0">
                                             <a href="javascript:;" title="닫기"><img class="hpage" src="../../cubersc/template/user/img/sub/close1.png" alt="" /></a>
                                         </div>
                                         <div class="h-win" tabindex="0">
                                             <div class="box_btmborder_tit">
-                                                <h3>장기간부도약적금 중도해약 안내</h3>
+                                                <h3>중도해약 안내</h3>
                                             </div>
                                             <div class="h-wincont">
                                                 <div class="box_controw">
                                                     <div class="subss">
-                                                        <h4 class="sub_tit">중도해약 시 ...</h4>
+                                                        <h4 class="sub_tit">장기간부도약적금 중도해약 시 안내사항</h4>
                                                     </div>
-                                                    <div class="st-table sam1 all_tdview" tabindex="0">
-                                                        <table>
-                                                            <caption>
-                                                                중도해약시 금리 내용
-                                                            </caption>
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>가입기간</th>
-                                                                    <th>금리</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>6개월 미만</td>
-                                                                    <td>적용금리의 50% 지급</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>6개월 이상 1년 미만</td>
-                                                                    <td>적용금리의 67% 지급</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>1년 이상</td>
-                                                                    <td>적용금리의 100% 지급</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
+                                                    <div class="subss_add membership_popup">
+                                                        <ul class="list_arr">
+                                                            <li>
+                                                                <span>중도해약 시, 지급 내역</span>
+                                                                <ul class="list_dot">
+                                                                    <li><span>월별 저축금액(공제액+가상계좌 입금액+이자)의 총액</span></li>
+                                                                    <li><span class="reds_noti">장기간부도약적금의 혜택사항 중 하나인 정부지원금과 이에 따른 이자는 중도해약 시 지급되지 않습니다.</span></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <span>정부지원금 환수 안내</span>
+                                                                <ul class="list_dot">
+                                                                    <li><span>중도해약 시, 매달 저축금액에 따라 적금통장에 지급되었던 정부지원금은 중도해약 신청일을 기준으로 군인공제회에 체류되며, 이후 국방부에 환급됩니다.</span></li>
+                                                                    <li><span class="reds_noti txt-gray">정부지원금이란, 장기간부도약적금에 납입하는 금액에 따라 100% 매칭되어 국가에서 제공되는 지원금을 의미합니다.</span></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -330,9 +328,11 @@
                                         <div class="w-closeplus"><a href="javascript:;" title="닫기"></a></div>
                                     </div>
                                 </div>
+                                <!-- //⭐중도해약 안내 팝업 -->
 
                                 <div class="box_toppagewrap mo"></div>
                             </div>
+                            <!-- ⭐[E] 퍼블 신규 -->
                             <!-- //w -->
                         </div>
                         <!-- //sub_inner -->

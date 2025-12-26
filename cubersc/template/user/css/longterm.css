@@ -494,6 +494,14 @@
 .longterm .help-bg.membership_guide .btns {flex-shrink: 0; }
 
 /*---------------------------------------------
+    #i-Details-longterm
+---------------------------------------------*/
+.longterm.details-page .btn_pop_wrapper {margin: 0 0 15px 55px; }
+.longterm.details-page .btn_pop_wrapper .btn_pop {padding: 6px 9px; }
+.longterm.details-page span span.txt_bl {font-weight: 500;}
+.subss_add .list_dot > li > span.reds_noti.txt-gray {color:var(--color-6)}
+
+/*---------------------------------------------
     반응형
 ---------------------------------------------*/
 @media screen and (max-width: 1500px) {
@@ -967,6 +975,12 @@
   .longterm .subss_add.membership_popup .all_tdview {padding-left: 35px; margin: 7px 0 20px;}
   .subs .longterm .notices .subss_add.membership_popup th {min-height: 58px;}
   .subs .longterm .notices .subss_add.membership_popup td {min-height: 50px;}
+
+  /*---------------------------------------------
+      #i-Details-longterm
+  ---------------------------------------------*/
+  .longterm.details-page .form_left1 br {display: none; }
+  .longterm.details-page .btn_pop_wrapper {margin: 5px 0 20px 35px;}
 }
 
 /****** MO */
