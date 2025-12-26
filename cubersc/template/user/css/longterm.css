@@ -502,6 +502,13 @@
 .subss_add .list_dot > li > span.reds_noti.txt-gray {color:var(--color-6)}
 
 /*---------------------------------------------
+    #i-PayGuide-longterm
+---------------------------------------------*/
+.longterm.payguide-page .subss_add .list_dot > li > span.reds_noti:before {top:2px;}
+.longterm.payguide-page .box_contarea .box-content li .has-emp {flex-wrap: wrap;}
+.longterm.payguide-page .box_contarea .box-content li em.emp {margin-top:0; padding:0 4px; color: #111; font-size: var(--font-20); font-weight: var(--font-w-700); }
+
+/*---------------------------------------------
     반응형
 ---------------------------------------------*/
 @media screen and (max-width: 1500px) {
@@ -847,6 +854,10 @@
   .subs .longterm .notices .subss_add.membership_popup td { display: flex; align-content: center; flex-wrap: wrap; justify-content: center; border-right: none; text-align: center;}
   .subs .longterm .notices .subss_add.membership_popup td {height: auto; min-height: 50px; border-bottom: none;}
 
+  /*---------------------------------------------
+      #i-PayGuide-longterm
+  ---------------------------------------------*/
+  .longterm.payguide-page .subss_add .list_dot > li > span.reds_noti:before {left: -24px;}
 }
 
 @media screen and (max-width: 767px) {
@@ -981,6 +992,13 @@
   ---------------------------------------------*/
   .longterm.details-page .form_left1 br {display: none; }
   .longterm.details-page .btn_pop_wrapper {margin: 5px 0 20px 35px;}
+
+  /*---------------------------------------------
+      #i-PayGuide-longterm
+  ---------------------------------------------*/
+  .longterm.payguide-page .box_contarea .box-content li .has-emp {display: flex; }
+  .longterm.payguide-page .box_contarea .box-content li em.emp {font-size: var(--font-16); }
+  .longterm.payguide-page .box_contarea .icon-wt .side-txt {max-width: none;}
 }
 
 /****** MO */
@@ -1070,6 +1088,11 @@
   ---------------------------------------------*/
   /* 사전 절차 안내 팝업 */
   .longterm .h-win.pre-popup .btns .check-bt {margin:0 !important}
+
+  /*---------------------------------------------
+      #i-PayGuide-longterm
+  ---------------------------------------------*/
+  .longterm.payguide-page .subss_add .list_dot > li > span.reds_noti:before {left: -18px;}
 }
 
 @media screen and (max-width: 567px) {
