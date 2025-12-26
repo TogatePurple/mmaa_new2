@@ -486,12 +486,12 @@
 .longterm .help-bg.membership_guide .box_btmborder_tit + .box_calcwrap {padding-top: 0; margin-top: 60px; }
 .subs .longterm .notice-tab.mgtb {margin: 0 0 70px 0; width: 100%;}
 .longterm .subss_add.membership_popup .all_tdview { padding-left: 45px; position: relative; border-top: none;}
-.subs .longterm .notices .subss_add.membership_popup table {margin-bottom: 0; border-top: 2px solid #000; }
-.longterm .subss_add .list_dot li.lh-150 span {line-height: 150%; }
-.subs .longterm .notices table td {height: 50px; padding: 5px 20px; text-align: start;}
-.longterm .subss_add .list_dot li span.txt-bl {margin-top: 10px; display: block; color: var(--color-blue)}
-.subs .longterm .h-win .notices {margin-bottom: 0 !important}
-.longterm .help-bg.membership_guide .help-bg .btns {flex-shrink: 0; }
+.subs .longterm .help-bg.membership_guide .notices .subss_add.membership_popup table {margin-bottom: 0; border-top: 2px solid #000; }
+.longterm .subss_add.membership_popup .list_dot li.lh-150 span {line-height: 150%; }
+.subs .longterm .help-bg.membership_guide .notices table td {height: 50px; padding: 5px 20px; text-align: start;}
+.longterm .subss_add.membership_popup .list_dot li span.txt-bl {margin-top: 10px; display: block; color: var(--color-blue)}
+.subs .longterm .help-bg.membership_guide .h-win .notices {margin-bottom: 0 !important}
+.longterm .help-bg.membership_guide .btns {flex-shrink: 0; }
 
 /*---------------------------------------------
     반응형
@@ -958,6 +958,15 @@
   .longterm .notice-wrap .box_contarea .side-row.col .ann_a1 {margin: 10px 0 10px 0; padding: 0 15px;}
   .longterm .notice-wrap .box_contarea .icon-wt + .icon-wt {margin-top: 20px; padding-top: 20px;}
 
+  /*---------------------------------------------
+      #SignUpSelection_new_popup
+  ---------------------------------------------*/
+  .longterm .help-bg.membership_guide .help-w {padding: 20px;}
+  .longterm .help-bg.membership_guide .box_btmborder_tit + .box_calcwrap {margin-top: 30px;}
+  .longterm .help-bg.membership_guide .sub_tit {margin-bottom: 10px;}
+  .longterm .subss_add.membership_popup .all_tdview {padding-left: 35px; margin: 7px 0 20px;}
+  .subs .longterm .notices .subss_add.membership_popup th {min-height: 58px;}
+  .subs .longterm .notices .subss_add.membership_popup td {min-height: 50px;}
 }
 
 /****** MO */
