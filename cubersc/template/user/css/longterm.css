@@ -836,7 +836,9 @@
   .subs .longterm .notices .subss_add.membership_popup tbody,
   .subs .longterm .notices .subss_add.membership_popup tr {display: block; }
   .subs .longterm .notices .subss_add.membership_popup th,
-  .subs .longterm .notices .subss_add.membership_popup td { display: block; width: 100%; }
+  .subs .longterm .notices .subss_add.membership_popup td { display: flex; align-content: center; flex-wrap: wrap; justify-content: center; border-right: none; text-align: center;}
+  .subs .longterm .notices .subss_add.membership_popup td {height: auto; min-height: 50px; border-bottom: none;}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1061,4 +1063,9 @@
 
 @media screen and (max-width: 540px){
   .receipt .h-win .st-table.all_tdview td { display: flex !important; }
+
+  /*---------------------------------------------
+      #SignUpSelection_new_popup
+  ---------------------------------------------*/
+  .subs .longterm .notices .subss_add.membership_popup th, .subs .longterm .notices .subss_add.membership_popup td {display: flex !important;}
 }
