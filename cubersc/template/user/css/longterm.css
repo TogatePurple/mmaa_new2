@@ -485,10 +485,10 @@
 .longterm .help-bg.membership_guide .box_calcwrap {flex: 1 1 auto; overflow-y: auto; min-height: 0; }
 .longterm .help-bg.membership_guide .box_btmborder_tit + .box_calcwrap {padding-top: 0; margin-top: 60px; }
 .subs .longterm .notice-tab.mgtb {margin: 0 0 70px 0; width: 100%;}
-.longterm .subss_add.membership_popup .all_tdview { padding-left: 45px; position: relative; border-top: none;}
+.longterm .subss_add.membership_popup .all_tdview { max-height:none; padding-left: 45px; position: relative; border-top: none;}
 .subs .longterm .help-bg.membership_guide .notices .subss_add.membership_popup table {margin-bottom: 0; border-top: 2px solid #000; }
 .longterm .subss_add.membership_popup .list_dot li.lh-150 span {line-height: 150%; }
-.subs .longterm .help-bg.membership_guide .notices table td {height: 50px; padding: 5px 20px; text-align: start;}
+.subs .longterm .help-bg.membership_guide .notices table td {height:auto; min-height: 50px; padding: 5px 20px; text-align: start;}
 .longterm .subss_add.membership_popup .list_dot li span.txt-bl {margin-top: 10px; display: block; color: var(--color-blue)}
 .subs .longterm .help-bg.membership_guide .h-win .notices {margin-bottom: 0 !important}
 .longterm .help-bg.membership_guide .btns {flex-shrink: 0; }
@@ -986,12 +986,15 @@
   .longterm .subss_add.membership_popup .all_tdview {padding-left: 35px; margin: 7px 0 20px;}
   .subs .longterm .notices .subss_add.membership_popup th {min-height: 58px;}
   .subs .longterm .notices .subss_add.membership_popup td {min-height: 50px;}
+  .subs .longterm .help-bg.membership_guide .notices table td {text-align: center;}
 
   /*---------------------------------------------
       #i-Details-longterm
   ---------------------------------------------*/
   .longterm.details-page .form_left1 br {display: none; }
   .longterm.details-page .btn_pop_wrapper {margin: 5px 0 20px 35px;}
+  .longterm.details-page .sub_tit {word-break: keep-all;}
+  .subs .longterm.details-page .sub_tit:after {top: 5px; transform: none; }
 
   /*---------------------------------------------
       #i-PayGuide-longterm
