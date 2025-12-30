@@ -860,6 +860,7 @@
       #i-PayGuide-longterm
   ---------------------------------------------*/
   .longterm.payguide-page .subss_add .list_dot > li > span.reds_noti:before {left: -24px;}
+  .subs .longterm.payguide-page .m_tabswiper3 .notice-tab li a {padding:0; min-width: 102px;}
 }
 
 @media screen and (max-width: 767px) {
@@ -882,7 +883,7 @@
   .longterm .h-win.pre-popup .step2 .main-txt {margin: 100px 0 20px;}
   .longterm .h-win.pre-popup .step2 .main-txt .normal {display: block;}
   .longterm .h-win.pre-popup .cards {margin-bottom: 20px; gap: 24px;}
-  .longterm .h-win.pre-popup .cards .card {padding: 16px; gap:10px;}
+  .longterm .h-win.pre-popup .cards .card {padding: 16px 16px 20px 16px; gap:10px;}
   .longterm .h-win.pre-popup .cards .card .grey-box {padding: 16px; flex-direction: column; font-size: var(--font-16)}
   .longterm .h-win.pre-popup .cards .card .grey-box .box-ask {align-self: flex-start;}
   .longterm .h-win.pre-popup .cards .card .grey-box .yes {min-width:0; height:auto; padding: 2px 8px; align-self: flex-end; border-radius: 10px; font-size: var(--font-15); line-height: 150%; }
