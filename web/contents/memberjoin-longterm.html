@@ -62,62 +62,10 @@
                 <!-- [E] 퍼블 확인용: 퀵메뉴 인클루드 -->
 
                 <div id="containers">
-                    <!-- bread crumb -->
-                    <div class="box_toppagewrap pc on" href="javascript:;">
-                        <div class="nav on" href="javascript:;">
-                            <div class="nav-all on" href="javascript:;">
-                                <ul class="nav-tabs on" href="javascript:;">
-                                    <li class="home" href="javascript:;"><a href="javascript:;" title="군인공제회 메인으로 이동">홈</a></li>
-                                    <li class="nav-list on" href="javascript:;">
-                                        <ul class="nav1s on" href="javascript:;" style="left: 56px; width: 165px">
-                                            <li class="nav1 on" id="" href="javascript:;">
-                                                <a href="javascript:;" title="[1depth title]" name="0" tabindex="0"><span>[1depth title]</span></a>
-                                                <ul class="nav2s on" href="javascript:;" style="left: 165px; width: 167px">
-                                                    <li class="nav2 on" id="" href="javascript:;">
-                                                        <a href="javascript:;" title="[2depth title]" name="0" tabindex="0"><span>[2depth title]</span></a>
-                                                        <ul class="nav3s on" href="javascript:;" style="left: 167px; width: 167px">
-                                                            <li class="nav3 on de4" id="" href="javascript:;">
-                                                                <a href="javascript:;" title="[3depth title]" name="0" tabindex="0"><span>[3depth title]</span></a>
-                                                                <ul class="nav4s on last_ul" href="javascript:;" style="left: 167px; width: 115px">
-                                                                    <li class="nav4 on active last_menulist" id="" href="javascript:;">
-                                                                        <a href="javascript:;" title="[4depth title]" name="0" tabindex="0"><span>[4depth title]</span></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-
-                                <ul class="nav-btn" href="javascript:;">
-                                    <li class="n-url" title="링크 복사하기" onclick="copyUrl();return false;">
-                                        <a href="javascript:;" class="btn_addshare copy" title="새창 열림" tabindex="0">링크 복사하기</a>
-                                    </li>
-                                    <li class="n-link" title="공유하기" tabindex="0">
-                                        공유하기
-                                        <ul class="links">
-                                            <li class="kakao" title="카카오톡" onclick="fn_send('kakao');return false;">
-                                                <a href="javascript:;" class="btn_share kakao" title="새창 열림" tabindex="-1">카카오톡</a>
-                                            </li>
-                                            <li class="facebook" title="페이스북" onclick="fn_send('facebook');return false;">
-                                                <a href="javascript:;" class="btn_share facebook" title="새창 열림" tabindex="-1">페이스북</a>
-                                            </li>
-                                            <li class="naver" title="네이버" onclick="fn_send('naver');return false;">
-                                                <a href="javascript:;" class="btn_share naver" title="새창 열림" tabindex="-1">네이버</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="n-print" title="인쇄하기" onclick="toPrint();return false;" tabindex="-1">
-                                        <a href="javascript:;" class="btn_addshare print" title="새창 열림">인쇄하기</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //bread crumb -->
+                    <!-- ⭐251230 퍼블 수정: 브래드크럼 내용 X -->
+                    <!-- [S] 퍼블 확인용: 브레드크럼 인클루드 -->
+                    <div data-include="../../web/includes/breadcrumb.html"></div>
+                    <!-- [E] 퍼블 확인용: 브레드크럼 인클루드 -->
 
                     <!--container-->
                     <section id="container" class="sub" tabindex="0">
@@ -360,7 +308,7 @@
                                                                         </div>
                                                                     </div>
 
-                                                                    <!-- ⭐ -->
+                                                                    <!--  -->
                                                                     <div class="added-card" tabindex="0">
                                                                         <h4 class="sub_tit">장기간부도약적금 가입자 신분확인</h4>
                                                                         <div class="q">
@@ -398,7 +346,7 @@
                                                                         <p class="common-txt">위와 같이 소속 및 군번 등 개인정보를 국방부로 전송 및 활용에 동의하시는 경우, <span class="emp">자격확인하기 버튼을 클릭해주세요.</span></p>
                                                                         <p class="reds">※ 귀하가 입력한 정보가 상이하여 발생한 모든 책임은 본인에게 있습니다.</p>
                                                                     </div>
-                                                                    <!-- ⭐ -->
+                                                                    <!--  -->
 
                                                                     <div class="btns">
                                                                         <div id="alert">
@@ -418,7 +366,7 @@
                                                                         </div>
                                                                         <div class="check-bt tc">
                                                                             <!-- <button type="button" class="button" id=checkme onClick="fn_possible('ci');">동의하기(인증)</button> -->
-                                                                            <!-- ⭐퍼블 문구 수정 -->
+                                                                            <!-- 퍼블 문구 수정 -->
                                                                             <button type="button" class="button" id="checkme" onclick="changeSteps('tab-2')">동의 및 자격확인</button>
                                                                             <!--  <a href="javascript:;" title="동의하기(인증)" class="clickme_linkwrap btn_pop button" data-name="help_member_join">동의하기(인증)</a> -->
                                                                         </div>
@@ -440,7 +388,8 @@
                                                                         <div class="inp">
                                                                             <label for="won" class="hide">원</label>
                                                                             <input type="text" id="won" name="won" class="email won" maxlength="6" data-notfirstzero="" data-inputregex="numberinput" title="공제금액" /><span class="txt_lb">원</span>
-                                                                            <p class="reds ko" id="sddYm">※ 매월 10일 공제액으로, 최대 30만원까지 입력 가능합니다.</p>
+                                                                            <!-- ⭐251230 퍼블 수정: p 텍스트 수정 -->
+                                                                            <p class="reds ko" id="sddYm">※ 매월 10일에 공제되는 금액으로, 최대 30만원까지 입력 가능합니다.</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
